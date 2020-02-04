@@ -7,32 +7,20 @@
 	max-height: 80px;
 	width: 100%;
 	margin-top: auto;
-
+	
 	}
 }
 
 @media only screen and (min-width: 1024px) and (max-height: 768px) {
-	nav.navbar {
-		max-height: 100px;
-		width: 100%;
-		margin-top: auto;
-	}
+
 }
 
 @media only screen and (min-width: 768px) and (max-height: 1024px) {
-	nav.navbar {
-		max-height: 90px;
-		width: 100%;
-		margin-top: auto;
-	}
+	
 }
 
 @media only screen and (min-width: 375px) and (max-height: 667px) {
-	nav.navbar {
-		max-height: 60px;
-		width: 100%;
-		margin-top: auto;
-	}
+
 }
 /* Kopfzeile auf 80 pixel setzen */
 
@@ -41,7 +29,7 @@
 
 .imgcard {
 	width: 100%;
-	height: 324px;
+	height: 250px;
 }
 
 /*grösse der schrift im card (flexbox)*/
@@ -54,41 +42,7 @@
 	left: 0;
 }
 
-/*bilder vom slide rund gemacht und eine passende grösse hinzugefügt*/
-.mySlides {
-	width: 348px;
-	height: 348px;
-	border-radius: 50%;
-}
 
-/*slideshow blaue farbe und grösse*/
-.slideshow {
-	margin-top: 10%;
-	width: 100%;
-	height: 45%;
-	background-color: #007bff;
-}
-/*slideshow blaue farbe und grösse*/
-
-.kreis {
-	border-radius: 50%;
-	height: 25%;
-	width: 15%;
-	margin-left: 20%;
-	margin-top: 4%;
-	position: absolute;
-	
-}
-
-/*zitat für die slideshow position und farbe*/
-.zitat {
-	font-size: 36px;
-	color: white;
-	position: absolute;
-	margin-left: 45%;
-	margin-top: 10%;
-	text-align: center;
-}
 /*Bild angepasst */
 
 .hintergrundbild {
@@ -138,6 +92,7 @@ border-radius: 50%;
 .logo{
 	height: 70px;
 	width: 140px;
+	
 }
 /*
 .button{
@@ -149,3 +104,78 @@ border-radius: 50%;
 }
 */
 	
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  width: 100%;
+  height: 250px;
+  position: relative;
+  margin: auto;
+  background: linear-gradient(90deg, rgb(0, 123, 255), rgb(0, 22, 146));
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 10px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 10em;
+  text-align: center;
+  vertical-align: middle; 
+  line-height: 200px;
+  margin-left: auto;
+  overflow:hidden;
+}
+
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: rgb(5, 83, 167);
+  border-radius: 50%;
+  border-width: 2px;
+  border-color: indianred;
+  display: inline-block;
+  transition: background-color 0.8s ease;
+}
+
+.active, .dot:hover {
+  background-color: white;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+.font-color{
+	color: rgb(0, 123, 255);
+}
+
+.text-kurse{
+	
+	width: 500px;
+	height: 200px;
+}

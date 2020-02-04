@@ -15,11 +15,5 @@ class Homepage_con extends CI_Controller {
 		$this->load->view('footer');
 
 	}
-	/*helper function damit bilder etc gefunden werden*/
-
-    public function __construct(){
-		parent::__construct();
-		$this->load->helper('url');
-	}
    
 }

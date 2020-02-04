@@ -1,5 +1,4 @@
-
-<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-primary">
+<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-primary" style="height:80px;">
   <div class="container">
     <div class="logo">
      <a class="navbar-brand"><img src="../../assets/images/Logo.png" class="card-img-top"  alt="Bild ladet nicht!"></a>
@@ -20,9 +19,7 @@
       </li>
       
       <li class="nav-item">
-      <a class="nav-link">
-        <div class="btn btn-primary" style="border-radius:40px; border-color:white;" >Login</div>
-        </a>
+        <div class="nav-link btn btn-primary" style="border-radius:40px; border-color:white; width:100px; height:auto" >Login</div>
       </li>
 
     </ul>   
