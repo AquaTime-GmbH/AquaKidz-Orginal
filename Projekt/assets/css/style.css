@@ -1,28 +1,28 @@
 
-@media only screen and (min-width: 1920px) and (max-height: 1080px) {
-	.container {
-		max-width: 1336px !important;
-	}
-	nav.navbar {
-	max-height: 80px;
-	width: 100%;
-	margin-top: auto;
-	
-	}
-}
-
-@media only screen and (min-width: 1024px) and (max-height: 768px) {
-.container, .container-md{
-  max-width: 768px;
-}
-}
-
-@media only screen and (min-width: 768px) and (max-height: 1024px) {
+@media (max-width: 1920px) and (max-height: 1080px) {
   
- 
+  .container {
+    max-width: 1336px !important;
+	}
 }
 
-@media only screen and (min-width: 375px) and (max-height: 667px) {
+@media  (max-width: 1024px) and (max-height: 768px) {
+
+}
+
+@media  (max-width:1000px) {
+ .navbar-toggler{
+   margin-left:20px;
+ }
+.nav-link{
+  width:60%;
+  justify-content: space-around;
+
+}
+
+}
+
+@media (min-width: 375px) and (max-height: 667px) {
 
 }
 /* Kopfzeile auf 80 pixel setzen */
@@ -99,48 +99,54 @@ border-radius: 50%;
 }
 
 	
-* {box-sizing: border-box}
-body {font-family: Verdana, sans-serif; margin:0}
-.mySlides {display: none}
-img {vertical-align: middle;}
 
 /* Slideshow container */
 .slideshow-container {
   width: 100%;
   height: 300px;
-  position: relative;
+  position: absolute;
   margin: auto;
   background: linear-gradient(90deg, rgb(0, 123, 255), rgb(0, 22, 146));
 }
-
+.slideshow-text-container{
+  overflow: hidden;
+  
+}
 /* Caption text */
 .text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 10px 12px;
+  
+  color: white;
   position: absolute;
   bottom: 8px;
-  width: 10em;
+  width: 100px;
   text-align: center;
-  line-height: 200px;
-  margin-left: 45%;
-  margin-right: 40%;
-  overflow:hidden;
+  margin-bottom: 120px;
+  margin-left: 25%;
+  margin-right: 20%;
+  float: center;
+  
 }
-
+  .h3_ueberschrift{
+    margin-top:10px;
+    text-align:center;
+    color: white;
+  }
 
 /* The dots/bullets/indicators */
 .dot {
+  
   cursor: pointer;
   height: 15px;
   width: 15px;
   margin: 0 2px;
-  margin-top: 280px;
+  margin-top: 215px;
   background-color: rgb(5, 83, 167);
   border-radius: 50%;
   border-width: 2px;
   display: inline-block;
   transition: background-color 0.8s ease;
+  text-align: center;
+  margin-top: 230px;
 }
 
 .active, .dot:hover {
@@ -148,42 +154,32 @@ img {vertical-align: middle;}
 }
 
 /* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
 
-@-webkit-keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
 
-@keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
 
 .font-color{
 	color: rgb(0, 123, 255);
 }
-
+.textcontainer{
+  width: 700px;
+  margin-left: 20%;
+}
 .text-kurse{
 	
 	width: 500px;
 	height: 200px;
 }
-.text-Spezialangebote{
-	
+/*.text-Spezialangebote{
+	position: absolute;
 	width: 800px;
 	height: 200px;
-}
+}*/
 
 .labelshape{
-  border-radius:0px 20px 20px 20px; 
+  border-radius:0px 30px 0px 30px; 
   border-color:rgb(0, 123, 255); 
   border-width: 2px;
+  
 }
 /* The 3 Card buttons */
 .btn_card1{
@@ -228,6 +224,7 @@ img {vertical-align: middle;}
 .card-4-sizing{
   max-width: 570px; 
   border-radius:20px;
+  
 }
 
 .bnts_card4{
@@ -241,4 +238,23 @@ img {vertical-align: middle;}
 .card-4-img{
   border-radius:20px 0px 20px 0px; 
   height:200px;
+}
+.col-md-3{
+  width:100%;
+  float:left;
+  margin:0;
+}
+/* ------footer -----*/
+.footer{
+  border-radius:0px 20px 0px 0px;
+  background-color: rgb(1, 77, 158);
+  width: 50%;
+  height: 300px;
+  position: absolute;
+  
+}
+.footer-text{
+  color: white;
+  opacity: 0.7;
+
 }

@@ -17,7 +17,7 @@
     <ul class="navbar-nav"> 
    
         <li class="nav-item">
-            <a class="nav-link" href="#">Schwimmkurse</a>
+            <a class="nav-link" href="<?= base_url();?>Homepage_con/sites" target="_blank">Schwimmkurse</a>
         </li>
       
         <li class="nav-item">
@@ -43,10 +43,10 @@
       <li class="nav-item">
         <div class="nav-link btn btn-primary" style="border-radius:40px; border-color:white; width:100px; height:37px" >Login</div>
       </li>
-      
+
       </ul>  
       </div> 
     </div>
-  </div>
+
 </nav>
 <body>
