@@ -8,7 +8,7 @@
     <div class="collapse navbar-collapse" id="collapse_target">
       <div class="col-1">
         <div class="logo">
-          <img src="../../assets/images/Logo.png" class="card-img-top"  alt="Bild ladet nicht!">
+          <img src="../assets/images/Logo.png" class="card-img-top"  alt="Bild ladet nicht!">
         </div>
       </div>
 
