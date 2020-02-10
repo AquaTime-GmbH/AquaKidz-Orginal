@@ -3,11 +3,10 @@
 <footer class="footer">
    <div class="container">
         <div class="row">
-            <div class="col-2"></div>
                 <div class="col-2">
                     
                         <p class="footer-links">
-                        <a class="footer-text" href="#">Kurse</a>
+                        <a class="footer-text" href="#">KURSE</a>
                             <a class="footer-text" href="#">AquaBaby</a>
                             
                             <a class="footer-text" href="#">AquaKidz Mini</a>
@@ -19,9 +18,7 @@
                         
             </div>
         </div>
-    </fotter>
-
-       </body>
+    </footer>
 
     </body>
 
