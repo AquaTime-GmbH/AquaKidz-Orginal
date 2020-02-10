@@ -15,9 +15,20 @@ class Homepage_con extends CI_Controller {
 		$this->load->view('footer');
 
 	}
-	public function sites(){
+	public function kursorte(){
+		$this->load->view('header');
+		$this->load->view('navbar');
 		$this->load->view('kursorte');
+		$this->load->view('footer');
 	}
+	public function about_us(){
+		$this->load->view('abaout_us');
+	}
+	public function schwimmkurse(){
+		$this->load->view('header');
+		$this->load->view('schwimmkurse');
+	}
+
 	/*
 	public function sites(){
 

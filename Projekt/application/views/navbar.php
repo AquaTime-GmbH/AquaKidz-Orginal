@@ -14,19 +14,24 @@
 
     <div class="col-4"></div>
     <div class="col-7">
-    <ul class="navbar-nav"> 
-   
+
+    
+      <li class="nav-item">
+          <div class="nav-link btn" style="width:100px; height:37px color:white; float:right;">LOGIN</div>
+      </li>
+ 
+    <ul class="navbar-nav" style="float:right;"> 
         <li class="nav-item">
-            <a class="nav-link" href="<?= base_url();?>Homepage_con/sites" target="_blank">Schwimmkurse</a>
+            <a class="nav-link font-link" href="<?= base_url();?>Homepage_con/schwimmkurse" target="_blank" style="border-radius:20px 0px 0px 0px; background-color:white; color:rgb(0, 123, 255);">SCHWIMMKURSE</a>
         </li>
       
         <li class="nav-item">
-            <a class="nav-link" href="#">Kursort</a>
+            <a class="nav-link" href="#" style="background-color:white; color:rgb(0, 123, 255);">KURSORT</a>
         </li>
       
       <ul class="navbar-nav">
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" data-target="dropdown_target">Über uns</a>
+          <a class="nav-link dropdown-toggle" href="<?= base_url();?>Homepage_con/sites" target="_blank" data-toggle="dropdown" data-target="dropdown_target" style="background-color:white; color:rgb(0, 123, 255);">ÜBER UNS</a>
             <div class="dropdown-menu" aria-labelledby="dropdowntarget">
             <a class="dropdown-item"> dropdown 1</a>
             <div class="dropdown-divider"></div>
@@ -37,14 +42,13 @@
       </ul>
       
       <li class="nav-item ">
-          <a class="nav-link" href="#">Kontakt</a>
+          <a class="nav-link" href="#" style="border-radius:0px 20px 0px 0px; background-color:white; color:rgb(0, 123, 255);">KONTAKT</a>
       </li>
       
-      <li class="nav-item">
-        <div class="nav-link btn btn-primary" style="border-radius:40px; border-color:white; width:100px; height:37px" >Login</div>
-      </li>
+   
 
       </ul>  
+    
       </div> 
     </div>
 
