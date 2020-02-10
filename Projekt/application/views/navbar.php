@@ -1,5 +1,8 @@
-<nav class="navbar sticky-top navbar-expand-md navbar-dark bg-primary" style="height:80px;">
-  <div class="container">
+<body>
+  <div class="sticky-top" style="height:80px; background-color: #416cb2;">
+      <div class="container" style="border-bottom: 4px solid white;">
+        <nav class="navbar sticky-top navbar-expand-md navbar-dark " style="height:80px; background-color:#416cb2;">
+    
     <!--Der (Burger) wenn die seite kleiner wird-->
       <button class="navbar-toggler" data-toggle="collapse" data-target="#collapse_target">
         <span class="navbar-toggler-icon"></span>
@@ -13,13 +16,8 @@
       </div>
 
     <div class="col-4"></div>
-    <div class="col-7">
-
-    
-      <li class="nav-item">
-          <div class="nav-link btn" style="width:100px; height:37px color:white; float:right;">LOGIN</div>
-      </li>
- 
+    <div class="col-7 navbar-pos">
+   
     <ul class="navbar-nav" style="float:right;"> 
         <li class="nav-item">
             <a class="nav-link font-link" href="<?= base_url();?>Homepage_con/schwimmkurse" target="_blank" style="border-radius:20px 0px 0px 0px; background-color:white; color:rgb(0, 123, 255);">SCHWIMMKURSE</a>
@@ -44,13 +42,12 @@
       <li class="nav-item ">
           <a class="nav-link" href="#" style="border-radius:0px 20px 0px 0px; background-color:white; color:rgb(0, 123, 255);">KONTAKT</a>
       </li>
+     
+       
       
-   
-
       </ul>  
     
       </div> 
     </div>
-
+  </div>
 </nav>
-<body>

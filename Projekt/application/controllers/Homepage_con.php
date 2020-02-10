@@ -26,7 +26,9 @@ class Homepage_con extends CI_Controller {
 	}
 	public function schwimmkurse(){
 		$this->load->view('header');
+		$this->load->view('navbar');
 		$this->load->view('schwimmkurse');
+		$this->load->view('footer');
 	}
 
 	/*
