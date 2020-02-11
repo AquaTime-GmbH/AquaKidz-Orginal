@@ -47,7 +47,7 @@
 }
 
 .imgshape{
-  border-radius:20px 20px 0px 0px;
+  border-radius:30px 30px 0px 0px;
 }
 
 
@@ -64,8 +64,11 @@
 /*Bild angepasst */
 
 .hintergrundbild {
-	background-image: url(../images/Banner2.PNG);
-	background-size: cover;
+  background-image: url(../images/Banner2.PNG);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
 	width: 100%;
 	height: 720px;
 	padding: 10px;
@@ -79,14 +82,20 @@
 	width: auto;
   background-color: white;
 }
-
-
+/*card ganz oben startseite*/
+.first-card{
+  height:39rem; 
+  width: 22rem; 
+  margin-top:15%; 
+  margin-bottom:30%; 
+  border-radius:20px; 
+  opacity: 0.9;
+}
 /* Slideshow container */
 
 .slideshow-container {
   width: 100%;
   height: 300px;
-  position: absolute;
   background: linear-gradient(90deg, #749cd2, #416cb2);
 }
 
@@ -106,19 +115,18 @@
 /* The dots/bullets/indicators */
 
 .dot {
-  
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  margin-top: 215px;
-  background-color: rgb(5, 83, 167);
-  border-radius: 50%;
-  border-width: 2px;
-  display: inline-block;
-  transition: background-color 0.8s ease;
-  text-align: center;
-  bottom:0;
+cursor: pointer;
+height: 15px;
+width: 15px;
+margin: 0 2px;
+background-color: #416cb2;
+border-radius: 50%;
+display: inline-block;
+transition: background-color 0.8s ease;
+text-align: center;
+border: 1px solid white;
+bottom: 0;
+
 }
 
 .active, .dot:hover {
@@ -158,6 +166,7 @@
   width: 150px;
   padding:5px;
   float:right !important;
+  margin:-1px;
  
 }
   .btn_card2{
@@ -167,7 +176,7 @@
     width: 150px;
     padding:5px;
     float:right !important;
-    
+    margin:-1px;
   }
     .btn_card3{
       border-color: #d95c9d; 
@@ -176,7 +185,7 @@
       padding:5px;
       float:right !important;
       border-radius:20px 0px 20px 0px; 
-      
+      margin:-1px;
     }
     /* 2 cards  */
     .card-1-sizing{
@@ -184,12 +193,16 @@
       max-width: 570px; 
       border-radius:35px;
       height: 225px;
+      box-shadow: 0px 6px 3px rgba(0, 0, 0, .2);
+
     }
     .card-2-sizing{
       border-top: 40px solid #95c02f;
       max-width: 570px; 
       border-radius:35px;
       height: 225px;
+      box-shadow: 0px 6px 3px rgba(0, 0, 0, .2);
+
     }
       .btn_email{
         border-color: #95c02f;
@@ -201,6 +214,7 @@
         position: absolute;
         bottom: 0;
         right: 0;
+    
       }
       .btn_auf{
         border-color: #95c02f;
@@ -216,6 +230,7 @@
 /* ------The 3 Card sizes -----*/
 
 .card-sizing{
+  box-shadow: 0px 6px 3px rgba(0, 0, 0, .2);
   max-width: 500px; 
   border-radius:30px; 
   height:570px;
@@ -223,10 +238,16 @@
 .abstand{
   margin-top: 100px;
 }
+/* ----- Kurse für jedes jahr -----*/
+.kurse-text{
+  color:var(--maincolor); 
+  margin-top:60px;
+}
 
 /* ------The 4 Cards -----*/
 
 .card-4-sizing{
+  box-shadow: 0px 6px 3px rgba(0, 0, 0, .2);
   max-width: 570px; 
   border-radius:35px;
 }
