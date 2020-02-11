@@ -58,7 +58,7 @@
 
 
 
-<!--  <div class="aqua-navbar" style="">
+<div class="aqua-navbar" style="">
         <nav class="navbar sticky-top navbar-expand-md navbar-dark " style="height:80px; background-color:c">
     
    Der (Burger) wenn die seite kleiner wird-
@@ -78,7 +78,7 @@
    
     <ul class="navbar-nav" style="float:right;"> 
         <li class="nav-item ">
-            <a class="nav-link " href="<?/*= base_url();*/?>Homepage_con/schwimmkurse" target="_blank" style="border-radius:20px 0px 0px 0px;  background-color: white; color:#416cb2;">SCHWIMMKURSE</a>
+            <a class="nav-link " href="<?= base_url();?>Homepage_con/schwimmkurse" target="_blank" style="border-radius:20px 0px 0px 0px;  background-color: white; color:#416cb2;">SCHWIMMKURSE</a>
         </li>
       
         <li class="nav-item">
@@ -111,4 +111,4 @@
 
 
   </nav>
-</div>-->
+</div>
