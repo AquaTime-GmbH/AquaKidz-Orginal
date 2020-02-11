@@ -173,10 +173,20 @@
       width: 150px;
       padding:5px;
       float:right !important;
-      border-radius:20px 0px 0px 20px; 
+      border-radius:20px 0px 20px 0px; 
       
     }
-    /* Weitere Buttons */
+    /* 2 cards  */
+    .card-1-sizing{
+      border-top: 30px solid #ebd73f;
+      max-width: 570px; 
+      border-radius:35px;
+    }
+    .card-2-sizing{
+      border-top: 30px solid #95c02f;
+      max-width: 570px; 
+      border-radius:35px;
+    }
       .btn_email{
         border-color: #95c02f;
         background-color: #95c02f;
@@ -186,7 +196,7 @@
         position: absolute;
         bottom: 0;
         right: 0;
-        margin-right: auto;
+        margin-right: 170px;
       }
       .btn_auf{
         border-color: #95c02f;
@@ -215,7 +225,6 @@
 .card-4-sizing{
   max-width: 570px; 
   border-radius:20px;
-  
 }
 
 .bnts_card4{
@@ -238,7 +247,7 @@
 /* ------footer -----*/
 .footer{
   border-radius:0px 20px 0px 0px;
-  background-color: rgb(1, 77, 158);
+  background-color: ;
   width: 50%;
   height: 300px;
   position: absolute;
@@ -261,4 +270,12 @@
   right: 0;
 }
 
+/* ------text akutelle spezialangebote -----*/
+.text-spiezial{
+  color:rgb(8, 51, 194); 
+  text-align:center; 
+  margin-top:50px;
+}
+.text-sp{
 
+}
