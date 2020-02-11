@@ -150,30 +150,54 @@
 }
 /* The 3 Card buttons */
 .btn_card1{
-  border-color:rgb(166, 227, 11); 
+  border-color:#95c02f;  
+  background-color: #95c02f;
   border-radius:20px 0px 20px 0px; 
   width: 150px;
   padding:5px;
   float:right !important;
-  background-color: rgb(166, 227, 11)
+ 
 }
   .btn_card2{
-    border-color:rgb(209, 17, 17); 
+    border-color:#e0533d; 
+    background-color: #e0533d;
     border-radius:20px 0px 20px 0px; 
     width: 150px;
     padding:5px;
     float:right !important;
-    background-color: rgb(209, 17, 17);
+    
   }
     .btn_card3{
-      border-color: rgb(194, 8, 194); 
-      background-color: rgb(194, 8, 194); 
+      border-color: #d95c9d; 
+      background-color: #d95c9d; 
       width: 150px;
       padding:5px;
       float:right !important;
-      border-radius:20px 0px 20px 0px; 
+      border-radius:20px 0px 0px 20px; 
       
     }
+    /* Weitere Buttons */
+      .btn_email{
+        border-color: #95c02f;
+        background-color: #95c02f;
+        width: 150px;
+        padding: 5px;
+        border-radius: 20px 20px 0px 0px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        margin-right: auto;
+      }
+      .btn_auf{
+        border-color: #95c02f;
+        background-color: #95c02f;
+        width: 150px;
+        border-radius:20px 0px 20px 0px; 
+        position:absolute;
+        right:0;
+        margin: -1px;
+        bottom:0;
+      }
 
 /* ------The 3 Card sizes -----*/
 
@@ -191,6 +215,7 @@
 .card-4-sizing{
   max-width: 570px; 
   border-radius:20px;
+  
 }
 
 .bnts_card4{

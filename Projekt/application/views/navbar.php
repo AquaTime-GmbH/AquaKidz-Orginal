@@ -1,4 +1,4 @@
-<body>
+
 
 <style>
     .testnav{
@@ -34,7 +34,7 @@
 </style>
 <section class="testnav2">
 <nav class="testnav">
-    <section>
+    
         <ul>
             <li>
                 <a href=”#”>SCHWIMMKURSE</a>
@@ -51,15 +51,6 @@
         </ul>
 
     </section>
-
-
-
-
-
-
-
-
-
 </nav>
 </section>
 
