@@ -59,7 +59,7 @@
 
 
 <!--  <div class="aqua-navbar" style="">
-        <nav class="navbar sticky-top navbar-expand-md navbar-dark " style="height:80px; background-color:var(--maincolor);">
+        <nav class="navbar sticky-top navbar-expand-md navbar-dark " style="height:80px; background-color:c">
     
    Der (Burger) wenn die seite kleiner wird-
       <button class="navbar-toggler" data-toggle="collapse" data-target="#collapse_target">
