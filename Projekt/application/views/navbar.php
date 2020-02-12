@@ -95,7 +95,7 @@
     </div> 
   </div>
       <div class="login-pos">
-        <a class="btn" href="../../login" target="_blank" style="color:white;">LOGIN</a>
+        <a class="btn" href="../../" target="_blank" style="color:white;">LOGIN</a>
       </div>
   
 

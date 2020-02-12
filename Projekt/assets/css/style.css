@@ -64,7 +64,9 @@
 	width: 100%;
 	height: 720px;
 	padding: 10px;
-	position: absolute;
+  position: absolute;
+  border-bottom: 10px solid  ;
+  border-color: linear-gradient(90deg, #d27474, #416cb2);
 }
 /*alle bilder im card(flexbox) gleiche grösse machen */
 
