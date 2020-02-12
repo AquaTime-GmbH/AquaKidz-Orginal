@@ -20,7 +20,8 @@
   }
   .container {
     max-width: 1336px !important;
-  
+    margin-left: auto;
+    margin-right: auto;
 	}
 }
 
@@ -38,26 +39,17 @@
 @media (max-width: 375px) and (max-height: 667px) {
 
 }
+/* ------navbar -----*/
 
-/*alle bilder im card(flexbox) gleiche grösse machen */
-
-.imgcard {
-	width: 100%;
-	height: 250px;
+.navbar-pos{
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
 
-.imgshape{
-  border-radius:30px 30px 0px 0px;
-}
-
-
-/*footer am boden der webseite fixen */
-#footer {
-  
-	width: 100%;
-	position: absolute;
-	bottom: 0;
-	left: 0;
+.login-pos{
+  float: right;
+  margin-top: -37.5px;
 }
 
 
@@ -74,7 +66,27 @@
 	padding: 10px;
 	position: absolute;
 }
+/*alle bilder im card(flexbox) gleiche grösse machen */
 
+.imgcard {
+	width: 100%;
+	height: 250px;
+}
+
+.imgshape{
+  border-radius:30px 30px 0px 0px;
+}
+
+/*alle text in den cards */
+.card-title-style{
+  color:var(--maincolor);
+}
+.font-color{
+  color:var(--secondcolor) !important;
+}
+.under-font{
+  color: rgb(66, 155, 245);
+}
 /*Card decks verschoben */
 
 .logo{
@@ -82,21 +94,37 @@
 	width: auto;
   background-color: white;
 }
+
 /*card ganz oben startseite*/
 .first-card{
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 35px;
   height:39rem; 
   width: 22rem; 
   margin-top:15%; 
   margin-bottom:30%; 
   border-radius:20px; 
-  opacity: 0.9;
+  
 }
-/* Slideshow container */
 
-.slideshow-container {
-  width: 100%;
-  height: 300px;
-  background: linear-gradient(90deg, #749cd2, #416cb2);
+.labelshape{
+  border-radius:0px 20px 20px 20px; 
+  border-color:rgb(0, 123, 255); 
+  border-width: 2px;
+}
+.search-buttom{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: -1px;
+  border-radius:0px 0px 20px 20px;
+  font-size:20px;
+  background-color: var(--maincolor);
+  color: white;
+}
+.search-buttom:hover{
+  color: white;
 }
 
 /* Caption text */
@@ -112,6 +140,117 @@
     color: white;
   }
 
+
+/* ------The 3 Card sizes -----*/
+.text-card1{
+  font-size:26px; 
+  color: #95c02f;
+}
+  .text-card2{
+    font-size:26px; 
+    color: #e0533d;
+  }
+    .text-card3{
+      font-size:26px; 
+      color: #d95c9d;
+    }
+
+.card-sizing{
+  box-shadow: 0px 6px 3px rgba(0, 0, 0, .2);
+  max-width: 500px; 
+  border-radius:30px; 
+  height:570px;
+}
+.abstand{
+  margin-top: 100px;
+}
+
+/* The 3 Card BUTTOMS */
+.btn_card1{
+  border-color:#95c02f;  
+  background-color: #95c02f;
+  border-radius:20px 0px 20px 0px; 
+  width: 150px;
+  padding:5px;
+  float:right !important;
+  margin:-1px;
+  color: white;
+}
+  .btn_card2{
+    border-color:#e0533d; 
+    background-color: #e0533d;
+    border-radius:20px 0px 20px 0px; 
+    width: 150px;
+    padding:5px;
+    float:right !important;
+    margin:-1px;
+    color: white;
+  }
+    .btn_card3{
+      border-color: #d95c9d; 
+      background-color: #d95c9d; 
+      width: 150px;
+      padding:5px;
+      float:right !important;
+      border-radius:20px 0px 20px 0px; 
+      margin:-1px;
+      color: white;
+    }
+    
+/* ----- Kurse für jedes jahr -----*/
+.kurse-text{
+  color:var(--maincolor); 
+  margin-top:60px;
+}
+/* text über 4 cards */
+
+
+.textcontainer{
+  right:0;
+  left:0;
+  width: 800px;
+  margin-left: 20%;
+}
+.text-kurse{
+	color:var(--secondcolor);
+	width: 500px;
+	height: 200px;
+}
+/* ------The 4 Cards -----*/
+
+.card-4-sizing{
+  box-shadow: 0px 6px 3px rgba(0, 0, 0, .2);
+  max-width: 570px; 
+  border-radius:35px;
+}
+
+.bnts_card4{
+  border-color: var(--maincolor);
+  background-color: var(--maincolor);
+  border-radius:20px 0px 20px 0px; 
+  position:absolute;
+  right:0;
+  margin: -1px;
+  bottom:0;
+  color: white;
+}
+
+.card-4-img{
+  border-radius:20px 0px 20px 0px; 
+  height:200px;
+}
+.col-md-3{
+  width:100%;
+  float:left;
+  margin:0;
+}
+/* Slideshow container */
+
+.slideshow-container {
+  width: 100%;
+  height: 300px;
+  background: linear-gradient(90deg, #749cd2, #416cb2);
+}
 /* The dots/bullets/indicators */
 
 .dot {
@@ -126,68 +265,59 @@ transition: background-color 0.8s ease;
 text-align: center;
 border: 1px solid white;
 bottom: 0;
-
 }
 
 .active, .dot:hover {
   background-color: white;
 }
-
-/* Fading animation */
-
-
-
-.font-color{
-	color: rgb(0, 123, 255);
+/* ------text akutelle spezialangebote -----*/
+.text-spiezial{
+  color:var(--maincolor); 
+  text-align:center; 
+  margin-top:50px;
 }
-.textcontainer{
-  right:0;
-  left:0;
-  width: 800px;
-  margin-left: 20%;
+.text-sp{
+  text-align:center;
+  color:var(--secondcolor);
 }
-.text-kurse{
-	
-	width: 500px;
-	height: 200px;
+/* ------ card5 im hintergrund -----*/
+.card5-size{
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 35px;
+    height:39rem; 
+    width:30rem; 
+    margin-top:15%; 
+    margin-bottom:30%; 
+    border-radius:20px; 
 }
-
-.labelshape{
-  border-radius:0px 20px 20px 20px; 
-  border-color:rgb(0, 123, 255); 
-  border-width: 2px;
+.btn-card5{
+  border-color: #e0533d;
+  background-color: #e0533d;
+  border-radius: 20px 0px 20px 0px;
+  position: absolute;
+  right: 0;
+  margin: -1px;
+  bottom: 0;
+  color: white;
+}
+  
+.hintergrundbild-card5 {
+  background-image: url(../images/Banner.PNG);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+	width: 100%;
+	height: 720px;
+	padding: 10px;
+  position: absolute;
   
 }
-/* The 3 Card buttons */
-.btn_card1{
-  border-color:#95c02f;  
-  background-color: #95c02f;
-  border-radius:20px 0px 20px 0px; 
-  width: 150px;
-  padding:5px;
-  float:right !important;
-  margin:-1px;
- 
+.text-card5{
+  color: #e0533d;
+  font-size: 32px;
 }
-  .btn_card2{
-    border-color:#e0533d; 
-    background-color: #e0533d;
-    border-radius:20px 0px 20px 0px; 
-    width: 150px;
-    padding:5px;
-    float:right !important;
-    margin:-1px;
-  }
-    .btn_card3{
-      border-color: #d95c9d; 
-      background-color: #d95c9d; 
-      width: 150px;
-      padding:5px;
-      float:right !important;
-      border-radius:20px 0px 20px 0px; 
-      margin:-1px;
-    }
-    /* 2 cards  */
+/* 2 cards  */
     .card-1-sizing{
       border-top: 40px solid #ebd73f;
       max-width: 570px; 
@@ -214,7 +344,7 @@ bottom: 0;
         position: absolute;
         bottom: 0;
         right: 0;
-    
+        color: white;
       }
       .btn_auf{
         border-color: #95c02f;
@@ -225,52 +355,13 @@ bottom: 0;
         right:0;
         margin: -1px;
         bottom:0;
+        color: white;
       }
-
-/* ------The 3 Card sizes -----*/
-
-.card-sizing{
-  box-shadow: 0px 6px 3px rgba(0, 0, 0, .2);
-  max-width: 500px; 
-  border-radius:30px; 
-  height:570px;
-}
-.abstand{
-  margin-top: 100px;
-}
-/* ----- Kurse für jedes jahr -----*/
-.kurse-text{
-  color:var(--maincolor); 
-  margin-top:60px;
-}
-
-/* ------The 4 Cards -----*/
-
-.card-4-sizing{
-  box-shadow: 0px 6px 3px rgba(0, 0, 0, .2);
-  max-width: 570px; 
-  border-radius:35px;
-}
-
-.bnts_card4{
-  border-color: var(--maincolor);
-  background-color: var(--maincolor);
-  border-radius:20px 0px 20px 0px; 
-  position:absolute;
-  right:0;
-  margin: -1px;
-  bottom:0;
-}
-
-.card-4-img{
-  border-radius:20px 0px 20px 0px; 
-  height:200px;
-}
-.col-md-3{
-  width:100%;
-  float:left;
-  margin:0;
-}
+        .mehr-erfahren{
+          background-color:#ebd73f; 
+          border-color:#ebd73f;
+          color: white;
+        }
 /* ------footer -----*/
 .footer{
   margin-top: 100px;
@@ -285,26 +376,52 @@ bottom: 0;
   color: white;
   opacity: 0.7;
 }
-/* ------navbar -----*/
-.font-link{
-  background-color: white;
-  color:rgb(0, 123, 255);
 
+
+/*.test{
+  background-color: red;
+  width: 100%;
+  height: 300px;
+  position: relative;
 }
-
-.navbar-pos{
-  position: absolute;
+.dot-stest{
+  border-radius: 50%;
+  background-color: black;
+  height: 30px;
+  width: 30px;
+  margin: 0 auto;
   bottom: 0;
-  right: 0;
+  padding-top: 100%;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/* ------text akutelle spezialangebote -----*/
-.text-spiezial{
-  color:rgb(8, 51, 194); 
-  text-align:center; 
-  margin-top:50px;
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #416cb2;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.8s ease;
+  text-align: center;
+  border: 1px solid white;
+  bottom: 0;
+  }
+  
+  .bullet-testing{
+    list-style: none;
+  }*/
+
+  .bullet-testing li:before{ 
+    content: "\2022";
+    color: red;
+    font-weight: bold;
+    font-size:20px;
+    display: inline-block; 
+    margin-left: -1em;
 }
-.text-sp{
-  text-align:center;
-  color: rgb(0, 123, 255);
-}
+

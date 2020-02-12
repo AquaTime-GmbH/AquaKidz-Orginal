@@ -8,32 +8,44 @@ class Homepage_con extends CI_Controller {
 
 	public function index(){
 		
-		$data['title'] = 'Homepage';
-		$this->load->view('header',$data);
+		$this->load->view('headers/header');
 		$this->load->view('navbar');
-		
 		$this->load->view('home');
 		$this->load->view('footer');
 
 	}
-	
-	public function kursorte(){
-		$this->load->view('header');
+	public function schwimmkurse(){
+
+		$this->load->view('headers/header_swimm');
 		$this->load->view('navbar');
-		$this->load->view('kursorte');
+		$this->load->view('home');
 		$this->load->view('footer');
+	}
+
+	public function kursorte(){
+	
+		$this->load->view('headers/header_kurs');
+		$this->load->view('navbar');
+		$this->load->view('home');
+		$this->load->view('footer');
+
 	}
 
 	public function about_us(){
-		$this->load->view('abaout_us');
-	}
 
-	public function schwimmkurse(){
-		$this->load->view('header');
+		$this->load->view('headers/header_about');
 		$this->load->view('navbar');
-		$this->load->view('schwimmkurse');
+		$this->load->view('home');
 		$this->load->view('footer');
 	}
+	public function contact(){
+
+		$this->load->view('headers/header_contact');
+		$this->load->view('navbar');
+		$this->load->view('home');
+		$this->load->view('footer');
+	}
+	
 }
 
 /*public function view($page = 'home')
