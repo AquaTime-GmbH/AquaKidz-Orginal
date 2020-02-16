@@ -1,27 +1,54 @@
-<!-- footer --> 
+<!-- footer 
+
+
+--> 
 
 <footer class="footer">
    <div class="container">
         <div class="row">
-                <div class="col-2">
-                    
-                        <p class="footer-links">
-                        <a class="footer-text" href="#">KURSE</a>
-                            <a class="footer-text" href="#">AquaBaby</a>
-                            
-                            <a class="footer-text" href="#">AquaKidz Mini</a>
-                            
-                            <a class="footer-text" href="#">AquaKidz Maxi
-                            <small>ca 24wochen 10min</small>
-                        </a>
-                        </p>
-                        
-            </div>
+            <div class="col-sm-4"></div>
+        <div class="col-sm-2"style="width:246px; height:279;">
+
+            <p class="footer-links" >
+                <a class="footer-text" href="#">KURSE
+                </a>
+                <a class="footer-text" href="#">AquaBaby
+                <small>ca. 10 Wochen - 24 Monate</small>
+                </a>
+
+                <a class="footer-text" href="#">AquaKidz Mini
+                <small>ca. 2 bis 3 Jahre</small>
+                </a>
+
+                <a class="footer-text" href="#">AquaKidz Maxi
+                    <small>ca. 3,5 bis 7,5 Jahre</small>
+                </a>
+                
+                <a class="footer-text" href="#">AquaKidz Mixed
+                    <small>Ab ca. 7 Jahre</small>
+                </a>
+
+            </p>  
         </div>
         
-    </footer>
+        <div class="col-sm-2">
+        <p class="footer-links">
+                <a class="footer-text" href="#">ÜBER UNS
+                </a>
+                <a class="footer-text" href="#">Von Eltern für Kinder</a>
 
-    </body>
+                <a class="footer-text" href="#">Motivation</a>
+
+                <a class="footer-text" href="#">Unsere Qualitätsstandards</a>
+                
+                <a class="footer-text" href="#">Unser Team</a>
+                
+            </p>  
+            </div>
+    </div>
+</footer>
+
+</body>
 
 </html>
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>    

@@ -465,6 +465,15 @@ bottom: 0;
         bottom:0;
         color: white;
       }
+      .btn_email:hover{
+        background-color: var(--colorgreen-hover) !important;
+        color: white;
+      }
+      .btn_auf:hover{
+        background-color: var(--colorgreen-hover) !important;
+        color: white;
+      }
+      
         .mehr-erfahren{
             color: white;
             background-color: var(--coloryellow); 
