@@ -30,7 +30,7 @@
 
             </p>  
         </div>
-        
+
         <div class="col-sm-2">
         <p class="footer-links">
                 <a class="footer-text" href="#">ÜBER UNS
