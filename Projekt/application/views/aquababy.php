@@ -34,8 +34,9 @@
 
             <input class="form-control labelshape"  id="search_start" name="search_start" type="date" placeholder="DD.MM.YY">
         </div>
+        
     </div>
-    <a href="#"  class="btn  btn_suchen_aqua" >Auf Kursort</a>
+    <a href="#"  class="btn  btn_suchen_aqua" >Suchen</a>
     <div class="block-card-aqua"></div>
     <div class="col-md-12">
     <div class="card card-aqua-sizing">
@@ -49,8 +50,7 @@
                 <div class="col-md-8">
                 
             </div>
-            
-                </div>  
+        </div>  
             
             <a href="#"  class="btn  btn_kursort" >Auf Kursort</a>
             <a href="#"  class="btn  bnts_card4">Mehr Erfahren</a>
