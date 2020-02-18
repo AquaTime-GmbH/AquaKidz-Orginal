@@ -140,6 +140,7 @@
   border-radius:0px 35px 0px 35px; 
   border-color:rgb(0, 123, 255); 
   border-width: 2px;
+  
 }
 .search-buttom{
   height: 73px;
@@ -156,6 +157,20 @@
 .search-buttom:hover{
   color: white;
 }
+/* ------ Dropdown -----*/
+
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding:.75em 1em .5em 1em;
+  background-color:rgb(255, 255, 255);
+  color:white;
+}
+
+
+
 
 /* Caption text */
 
@@ -558,3 +573,81 @@ bottom: 0;
     margin-left: -1em;
 }
 
+
+
+
+/*<------------------------------------------------------------------------>*/
+/*<--------------------------------AQUABABY-------------------------------->*/
+/*<------------------------------------------------------------------------>*/
+
+
+
+
+.Card-find-aqua{
+  border-radius:35px; 
+  height:600px;
+  width: 100%;
+  background-color: white;
+  margin-bottom: 100px;
+  box-shadow: 0px 6px 3px rgba(0, 0, 0, .2);
+}
+
+.block-card-aqua{
+  
+  width:100%;
+  height: 100px;
+  background-color: var(--maincolor);
+  margin-top: 50px;
+}
+.text-card-aqua{
+  font-size: 21px;
+  line-height: 25px;
+}
+
+.card-aqua-sizing{
+  margin-top: 20px;
+  border-color:(10px solid var(--maincolor)); 
+  border-radius: 35px 0px 35px 0px;
+  box-shadow: 0px 6px 3px rgba(0, 0, 0, .2);
+  width: 100%;
+  height: 199px;
+  
+}
+.card-aqua-img{
+  border-radius:35px 0px 35px 0px; 
+  height:199px;
+  width: 199px;
+
+}
+.btn_kursort{
+  font-size: 22px;
+  font-family: 'Fjalla One', sans-serif;
+  width: 187px;
+  height: 58px;
+  background-color: var(--maincolor);
+  margin-right: 220px;
+  width: 150px;
+  padding: 5px;
+  border-radius: 35px 30px 0px 0px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  color: white;
+  padding-top: 11px;
+}
+.btn_suchen_aqua{
+  font-size: 22px;
+  font-family: 'Fjalla One', sans-serif;
+  width: 187px;
+  height: 58px;
+  background-color: var(--maincolor);
+  margin-right: 220px;
+  width: 150px;
+  padding: 5px;
+  border-radius: 35px 30px 0px 0px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  color: white;
+  padding-top: 11px;
+}

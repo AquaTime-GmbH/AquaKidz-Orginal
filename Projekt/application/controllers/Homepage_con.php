@@ -45,7 +45,13 @@ class Homepage_con extends CI_Controller {
 		$this->load->view('contact');
 		$this->load->view('footer');
 	}
-	
+	public function aquababy(){
+
+		$this->load->view('headers/header_aquababy');
+		$this->load->view('navbar');
+		$this->load->view('aquababy');
+		$this->load->view('footer');
+	}
 }
 
 /*public function view($page = 'home')

@@ -22,7 +22,7 @@
 </div>
 </div>
 <div class="container">
-    <div class="col-5">
+    <div class="col-sm-5">
 
     <form action=""  method="post" >
         <div class="card first-card">
@@ -42,13 +42,62 @@
                     </div>
 
                     <label class="col-8 col-form-label first-card-text">Wie alt ist ihr Kind ?</label>
+                    
                     <div class="col-12">
+                        <div class="dropdown-firstcard">
+                            <?php
+                            if($cookie_kursalter == "1"){
+                                ?>
+                                <Select class="form-control labelshape" id="search_alt" name="search_alt" type="text" value="<?= $cookie_kursalter ?>">
+                                <option value="1" selected>CA. 10 WOCHEN - 24 MONATE</option>
+                                <option value="2">CA. 2 BIS 3 JAHRE</option>
+                                <option value="4">CA. 3,5 BIS 7,5 JAHRE</option>
+                                <option value="7">AB CA. 7 JAHRE</option>
+                            </select><?php
+                            }
+                            elseif($cookie_kursalter == "2"){
+                                ?>
+                                <Select class="form-control labelshape" id="search_alt" name="search_alt" type="text" value="<?= $cookie_kursalter ?>">
+                                <option value="1">CA. 10 WOCHEN - 24 MONATE</option>
+                                <option value="2" selected>CA. 2 BIS 3 JAHRE</option>
+                                <option value="4">CA. 3,5 BIS 7,5 JAHRE</option>
+                                <option value="7">AB CA. 7 JAHRE</option>
+                            </select><?php
+                            }
+                            elseif($cookie_kursalter == "4"){
+                                ?>
+                                <Select class="form-control labelshape" id="search_alt" name="search_alt" type="text" value="<?= $cookie_kursalter ?>">
+                                <option value="1">CA. 10 WOCHEN - 24 MONATE</option>
+                                <option value="2">CA. 2 BIS 3 JAHRE</option>
+                                <option value="4" selected>CA. 3,5 BIS 7,5 JAHRE</option>
+                                <option value="7">AB CA. 7 JAHRE</option>
+                            </select><?php
+                            }
+                            elseif($cookie_kursalter == "7"){
+                                ?>
+                                <Select class="form-control labelshape" id="search_alt" name="search_alt" type="text" value="<?= $cookie_kursalter ?>">
+                                <option value="1">CA. 10 WOCHEN - 24 MONATE</option>
+                                <option value="2">CA. 2 BIS 3 JAHRE</option>
+                                <option value="4">CA. 3,5 BIS 7,5 JAHRE</option>
+                                <option value="7" selected>AB CA. 7 JAHRE</option>
+                            </select><?php
+                            }
+                            else{
+                                ?>
+                                <Select class="form-control labelshape" id="search_alt" name="search_alt" type="text" value="<?= $cookie_kursalter ?>">
+                                <option disabled selected value style="color:white;"></option>
+                                <option value="1">CA. 10 WOCHEN - 24 MONATE</option>
+                                <option value="2">CA. 2 BIS 3 JAHRE</option>
+                                <option value="4">CA. 3,5 BIS 7,5 JAHRE</option>
+                                <option value="7">AB CA. 7 JAHRE</option>
+                            </select><?php
+                            }
+                            ?>
                         
-                        <input class="form-control labelshape" id="search_alt" name="search_alt" type="text" value="<?= $cookie_kursalter ?>">
                     </div>
-
                 </div>
-                <button href="#" class="btn search-buttom" name="search_button" value="">Suchen</button>
+                </div>
+                <input type="submit" href="#" class="btn search-buttom" name="search_button" value="Suchen">
             </div>
         </div>
     </div>
@@ -67,14 +116,30 @@
                 setcookie("kursort","$viewsearch_ort",time()+(3600*168)); 
 
 
+
+                if($viewsearch_alt == "1"){
+
                 header('location: schwimmkurse');
-                exit();
+                    exit();
+                }elseif($viewsearch_alt == "2"){
+                    header('location: schwimmkurse');
+                    exit();
+                }elseif($viewsearch_alt == "4"){
+                    header('location: schwimmkurse');
+                    exit();
+                }elseif($viewsearch_alt == "7"){
+                    header('location: schwimmkurse');
+                    exit();
+                }
+
+
+               
                 
                 }
                 else{
                     setcookie("kursstart","$viewsearch_start",time()+(3600*168)); 
                     setcookie("kursort","$viewsearch_ort",time()+(3600*168)); 
-                    
+
                     header('location: kursorte');
                     exit();
                 }
@@ -323,7 +388,7 @@
 
 
 
-
+<!-- Bootstrap Multi-Card Carousel -->
 
 
 
@@ -413,11 +478,6 @@
     </a>
   </div>
 </div>
-
-
-
-
-
 
 
 
