@@ -18,25 +18,94 @@
 </div>
 
 
+    <form action=""  method="post">
 <div class="Card-find-aqua"> 
 <div style="background-color:var(--maincolor);  border-top: 20px solid var(--maincolor);
   border-radius:35px 35px 0 0; padding-bottom:10px;" ><h1 style="margin-left: 10px; color:white;">AQUABABY KURSE FINDEN</h1></div>
     
     <div class="row">
         <div class="col-4" style="margin-left:30px;">
-        <label  class="col-6 col-form-label text-card-aqua">Kurs Start</label>
+        <label  class="col-6 col-form-label text-card-aqua">Ort</label>
 
-            <input class="form-control labelshape"  id="search_start" name="search_start" type="text" placeholder="überall">
+            <input class="form-control labelshape"  id="search_aquababy_ort" name="search_aquababy_ort" type="text" placeholder="überall" value="<?php $viewsearch_aquababy_ort?>">
         </div>
 
         <div class="col-3">
         <label  class="col-6 col-form-label text-card-aqua">Kurs Start</label>
 
-            <input class="form-control labelshape"  id="search_start" name="search_start" type="date" placeholder="DD.MM.YY">
+            <input class="form-control labelshape"  id="search_start" name="search_aquababy_kursstart" type="date" placeholder="DD.MM.YY" value="<?php $viewsearch_aquababy_kursstart?>">
         </div>
-        
+       
+<input href="#" type="submit" class="btn  btn_suchen_aqua" name="search_button" value="Suchen">
     </div>
-    <a href="#"  class="btn  btn_suchen_aqua" >Suchen</a>
+</form>
+
+<?php
+
+
+
+if(isset($_POST['search_button'])){
+    $viewsearch_aquababy_ort = $_POST['search_aquababy_ort']; 
+    $viewsearch_aquababy_kursstart = $_POST['search_aquababy_kursstart']; 
+
+
+if ($viewsearch_aquababy_ort == ""){
+    $viewsearch_aquababy_ort = "";
+}
+
+if ($viewsearch_aquababy_kursstart == ""){
+
+    $viewsearch_aquababy_kursstart  = date('d.m.Y');
+    
+}
+//HOST
+$db_host = "localhost";
+
+//USER
+$db_user = "root";
+
+//PASSWORT
+$db_password = "root";
+
+//DATENBANK
+$db_database = "AquaTime-Neu";
+$con = new mysqli($db_host, $db_user, $db_password, $db_database);
+if($viewsearch_aquababy_ort == ""){
+    $result = mysqli_query($con,"SELECT * FROM kurse  order by starttermin desc");
+}
+else{
+    $result = mysqli_query($con,"SELECT * FROM kurse where ort='$viewsearch_aquababy_ort' order by starttermin desc");
+}
+
+
+
+while($row = mysqli_fetch_array($result))
+{
+    $view_kursort = $row['ort'];
+    $view_kursstart = new DateTime($row['starttermin']);
+
+
+   
+
+
+    if ($view_kursstart->format('d.m.Y') >= $viewsearch_aquababy_kursstart) {   
+          echo $view_kursort;
+        echo       $view_kursstart->format('d.m.Y');
+    } else {}
+
+
+
+if($viewsearch_aquababy_kursstart <= $view_kursstart->format('d.m.Y')){
+
+
+}
+    
+    
+}
+mysqli_close($con);
+}
+
+?>
     <div class="block-card-aqua"></div>
     <div class="col-md-12">
     <div class="card card-aqua-sizing">
@@ -52,7 +121,7 @@
             </div>
         </div>  
             
-            <a href="#"  class="btn  btn_kursort" >Auf Kursort</a>
+            <a href="#"  class="btn  btn_kursort_aqua" >Auf Kursort</a>
             <a href="#"  class="btn  bnts_card4">Mehr Erfahren</a>
         </div>
     </div>

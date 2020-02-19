@@ -1,3 +1,22 @@
+<?php
+//DATENBANK//
+
+//HOST
+$db_host = "localhost";
+
+//USER
+$db_user = "root";
+
+//PASSWORT
+$db_password = "root";
+
+//DATENBANK
+$db_database = "AquaTime-Neu";
+
+$con = mysqli_connect("$db_host", "$db_user", "$db_password", "$db_database");
+
+?>
+
 <?php 
 
  if( isset($_COOKIE['kursstart'])) {
@@ -24,7 +43,7 @@
 <div class="container">
     <div class="col-sm-5">
 
-    <form action=""  method="post" >
+    <form action="aquababy"  method="post">
         <div class="card first-card">
             <div class="card-body">
                 <div class="font-color">
@@ -103,7 +122,10 @@
     </div>
     </form>
 
-            <?php if(isset($_POST['search_button'])){
+            <?php 
+            
+            
+            if(isset($_POST['search_button'])){
                 $viewsearch_ort = $_POST['search_ort']; 
                 $viewsearch_start = $_POST['search_start']; 
                 $viewsearch_alt = $_POST['search_alt']; 
@@ -118,8 +140,8 @@
 
 
                 if($viewsearch_alt == "1"){
-
-                header('location: schwimmkurse');
+                
+                header('location: aquababy');
                     exit();
                 }elseif($viewsearch_alt == "2"){
                     header('location: schwimmkurse');
@@ -143,7 +165,10 @@
                     header('location: kursorte');
                     exit();
                 }
-            } ?>
+            } 
+
+        
+            ?>
 
      <!-- Das sind alle 3 Cards(flexboxen) in der mitte der Webseite -->
         <div class="row">
