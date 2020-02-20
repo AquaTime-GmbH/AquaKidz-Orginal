@@ -1,0 +1,6 @@
+#Verlinkung ohne .php Endung
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
+
+DirectoryIndex Index.php index.php index.html
