@@ -1,0 +1,662 @@
+
+/*Standart werte*/
+:root{
+    --maincolor:#416cb2;
+    --secondcolor:#749cd2;
+    --colorgreen:#95c02f;
+    --colorpink:#d95c9d;
+    --colorred:#e0533d;
+    --coloryellow:#ebd73f;
+  
+    --fontsizeh1:32px;
+   
+    --maincolor-hover:#33558d;
+    --secondcolor-hover:#5a7aa5;
+    --colorgreen-hover:#719225;
+    --colorpink-hover:#963e6b;
+    --colorred-hover:#aa3e2d;
+    --coloryellow-hover:rgb(206, 179, 49);
+  }
+  
+   h1{
+    font-family: 'Fjalla One', sans-serif;
+    }
+    p{
+      font-family: 'Lato', sans-serif;
+    }
+  @media screen and (min-width: 1025px) and (max-width: 1920px) {
+    .aqua-navbar{
+      height:80px; 
+      background-color: var(--maincolor);
+      border-bottom: 4px solid white;
+      padding:0 16% 0 17%;
+      position: fixed;
+      top: 0;
+      right: 0;
+      left: 0;
+      z-index: 1030;
+    }
+    .container {
+      max-width: 1336px !important;
+      margin-left: auto;
+      margin-right: auto;
+      }
+  }
+  
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+  
+  }
+  
+  @media  (max-width:1000px) {
+   .navbar-toggler{
+     margin-left:20px;
+   }
+  
+  }
+  
+  @media (max-width: 375px) and (max-height: 667px) {
+  
+  }
+  /* ------navbar -----*/
+  
+  .navbar-pos{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+  
+  .login-pos{
+    float: right;
+    margin-top: -37.5px;
+  }
+  
+  
+  /*Bild angepasst */
+  
+  .hintergrundbild {
+    background-image: url(../images/Banner2.PNG);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+      width: 100%;
+      height: 624px;
+    position: absolute;
+    
+  }
+  .border_under{
+    width:100%; 
+    height:10px; 
+    background: linear-gradient(90deg,var(--colorred), var(--colorgreen), var(--secondcolor),var(--maincolor),var(--colorpink));
+    position: absolute;
+    bottom: 0;
+  }
+  /*alle bilder im card(flexbox) gleiche grösse machen */
+  
+  .imgcard {
+      width: 414px;
+      height: 254px;
+  }
+  
+  .imgshape{
+    border-radius:30px 30px 0px 0px;
+  }
+  
+  /*alle text in den cards */
+  .card-title-style{
+    color:var(--maincolor);
+  }
+  .font-color{
+    color:var(--secondcolor) !important;
+  }
+  .under-font{
+    color: rgb(66, 155, 245);
+  }
+  /*Card decks verschoben */
+  
+  .logo{
+      height: 80px;
+      width: auto;
+    background-color: white;
+  }
+  
+  /*card ganz oben startseite*/
+  .first-card{
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 35px;
+    height:557px; 
+    width: 414px; 
+    margin-top:15%; 
+    margin-bottom:30%; 
+    border-radius:35px; 
+    top:30px;
+    bottom:30px;
+  }
+  .first-card-text{
+    font-size: 21px;
+    line-height: 25px;
+  }
+  .labelshape{
+    border-radius:0px 35px 0px 35px; 
+    border-color:rgb(0, 123, 255); 
+    border-width: 2px;
+    
+  }
+  .search-buttom{
+    height: 73px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: -1px;
+    border-radius:0px 0px 35px 35px;
+    font-size:32px;
+    background-color: var(--maincolor);
+    color: white;
+  }
+  .search-buttom:hover{
+    color: white;
+  }
+  /* ------ Dropdown -----*/
+  
+  
+  select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding:.75em 1em .5em 1em;
+    background-color:rgb(255, 255, 255);
+    color:white;
+  }
+  
+  
+  
+  
+  /* Caption text */
+  
+  .text {
+    color: white;
+    text-align: center;
+    margin-top: 100px;
+  }
+    .h3_ueberschrift{
+      margin-top:10px;
+      text-align:center;
+      color: white;
+    }
+  
+  
+  /* ------The 3 Card sizes -----*/
+  .title-card1{
+    height: 56px;
+    width: 360px;
+    font-size:22px; 
+    color: var(--colorgreen);
+  }
+    .title-card2{
+      height: 56px;
+      width: 360px;
+      font-size:22px; 
+      color: var(--colorred);
+    }
+      .title-card3{
+        height: 56px;
+        width: 360px;
+        font-size:22px; 
+        color: var(--colorpink);
+      }
+      .imgshape{
+        border-radius:30px 30px 0px 0px;
+      }
+      .img-border1{
+        border-bottom: 8px solid var(--colorgreen);
+      }
+      .img-border2{
+        border-bottom: 8px solid var(--colorred);
+      }
+      .img-border3{
+        border-bottom: 8px solid var(--colorpink);
+      }
+  .card-sizing{
+    box-shadow: 0px 6px 3px rgba(0, 0, 0, .2);
+    width: 415px; 
+    border-radius:35px; 
+    height:553px;
+  }
+  .abstand{
+    margin-top: 100px;
+  }
+  
+  /* The 3 Card BUTTOMS */
+  .btn_card1{
+    
+    background-color: var(--colorgreen);
+    border-radius:35px 0px 35px 0px; 
+    width: 187px;
+    height: 58px;
+    float:right !important;
+    margin:-1px;
+    color: white;
+    font-size: 22px;
+    font-family: 'Fjalla One', sans-serif;
+    padding-top: 11px;
+  }
+    .btn_card2{
+      
+      background-color: var(--colorred);
+      border-radius:35px 0px 35px 0px; 
+      width: 187px;
+      height: 58px; 
+      float:right !important;
+      margin:-1px;
+      color: white;
+      font-size: 22px;
+      font-family: 'Fjalla One', sans-serif;
+      padding-top: 11px;
+    }
+      .btn_card3{
+        
+        background-color: var(--colorpink); 
+        width: 187px;
+        height: 58px;
+        float:right !important;
+        border-radius:35px 0px 35px 0px; 
+        margin:-1px;
+        color: white;
+        font-size: 22px;
+        font-family: 'Fjalla One', sans-serif;
+        padding-top: 11px;
+      }
+  .btn_card1:hover{
+    background-color: var(--colorgreen-hover) !important;
+    color: white;
+  }
+  .btn_card2:hover{
+    background-color: var(--colorred-hover) !important;
+    color: white;
+  }
+  .btn_card3:hover{
+    background-color: var(--colorpink-hover) !important;
+    color: white;
+  }
+  
+  /* text über 4 cards */
+  
+  .kurse-text{
+    height: 53px;
+    color:var(--maincolor); 
+    margin-top:75px;
+  }
+  
+  .text-kurse{
+      color:var(--secondcolor);
+      width: 659px;
+    height: 149px;
+    font-size: 21px;
+    margin-bottom: 21px;
+  }
+  
+  .textcontainer{
+    right:0;
+    left:0;
+    width: 800px;
+    margin-left: 20%;
+  }
+  
+  
+  /* ------The 4 Cards -----*/
+  
+  .card-4-sizing{
+    box-shadow: 0px 6px 3px rgba(0, 0, 0, .2);
+    width: 639px;
+    height: 314px;
+    border-radius:35px;
+  }
+  
+  .bnts_card4{
+    background-color: var(--maincolor);
+    border-radius:35px 0px 35px 0px; 
+    position:absolute;
+    right:0;
+    margin: -1px;
+    bottom:0;
+    color: white;
+    height: 58px;
+    width: 187px;
+    font-size: 22px;
+    font-family: 'Fjalla One', sans-serif;
+    padding-top: 11px;
+  }
+  .bnts_card4:hover{
+    background-color: var(--maincolor-hover) !important;
+    color: white;
+  }
+  
+  .card-4-img{
+    border-radius:35px 0px 35px 0px; 
+    height:199px;
+    width: 199px;
+  }
+  .col-md-3{
+    width:100%;
+    float:left;
+    margin:0;
+  }
+  /* Slideshow container */
+  
+  .slideshow-container {
+    width: 100%;
+    height: 300px;
+    background: linear-gradient(90deg, var(--secondcolor), var(--maincolor));
+  }
+  /* The dots/bullets/indicators */
+  
+  .dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: var(--maincolor);
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.8s ease;
+  text-align: center;
+  border: 1px solid white;
+  bottom: 0;
+  }
+  
+  .active, .dot:hover {
+    background-color: white;
+  }
+  /* ------text akutelle spezialangebote -----*/
+  .text-spiezial{
+    color:var(--maincolor); 
+    text-align:center; 
+    margin-top:75px;
+    
+  }
+  .text-sp{
+    text-align:center;
+    color:var(--secondcolor);
+  }
+  /* ------ card5 im hintergrund -----*/
+  .card5-size{
+      background-color: rgba(255, 255, 255, 0.9);
+      border-radius: 35px;
+      height:652px; 
+      width:635px; 
+      margin-top:144px; 
+      margin-bottom:144px; 
+      border-radius:35px; 
+  
+  }
+  .btn-card5{
+   
+    background-color: var(--colorred);
+    border-radius:35px 0px 35px 0px; 
+    width: 187px;
+    height: 58px;
+    padding:5px;
+    float:right !important;
+    margin:-1px;
+    color: white;
+    font-size: 22px;
+    font-family: 'Fjalla One', sans-serif;
+    padding-top: 11px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+  .btn-card5:hover{
+    background-color: var(--colorred-hover) !important;
+    color: white;
+  }
+  .hintergrundbild-card5 {
+    background-image: url(../images/Banner.PNG);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+      width: 100%;
+      height: 943px;
+      padding: 10px;
+    position: absolute;
+    
+  }
+  .text-card5{
+    color: var(--colorred);
+    font-size: 36px;
+    height: 110px;
+    width: 530px;
+  }
+  .font-sizing-card5{
+    font-size: 22px;
+    font-family: 'Lato', sans-serif;
+  }
+  /* 2 cards  */
+      .card-1-sizing{
+        border-top: 40px solid #ebd73f;
+        width: 637px; 
+        border-radius:35px;
+        height: 254px;
+        box-shadow: 0px 6px 3px rgba(0, 0, 0, .2);
+  
+      }
+      .card-2-sizing{
+        border-top: 40px solid var(--colorgreen);
+        width: 637px;
+        border-radius:35px;
+        height: 254px;
+        box-shadow: 0px 6px 3px rgba(0, 0, 0, .2);
+  
+      }
+        .btn_email{
+          font-size: 22px;
+          font-family: 'Fjalla One', sans-serif;
+          width: 187px;
+          height: 58px;
+          background-color: var(--colorgreen);
+          margin-right: 220px;
+          width: 150px;
+          padding: 5px;
+          border-radius: 35px 30px 0px 0px;
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          color: white;
+          padding-top: 11px;
+        }
+        .btn_auf{
+          font-size: 22px;
+          font-family: 'Fjalla One', sans-serif;
+          background-color: var(--colorgreen);
+          width: 187px;
+          height: 58px;
+          padding-top: 11px;
+          border-radius:35px 0px 35px 0px; 
+          position:absolute;
+          right:0;
+          margin: -1px;
+          bottom:0;
+          color: white;
+        }
+        .btn_email:hover{
+          background-color: var(--colorgreen-hover) !important;
+          color: white;
+        }
+        .btn_auf:hover{
+          background-color: var(--colorgreen-hover) !important;
+          color: white;
+        }
+        
+          .mehr-erfahren{
+              color: white;
+              background-color: var(--coloryellow); 
+              width: 187px;
+              height: 58px;
+              padding:5px;
+              float:right !important;
+              border-radius:35px 0px 35px 0px; 
+              margin:-1px;
+              color: white;
+              font-size: 22px;
+              font-family: 'Fjalla One', sans-serif;
+              padding-top: 11px;
+              position: absolute;
+              bottom: 0;
+              right: 0;
+            }
+          .mehr-erfahren:hover{
+            background-color: var(--coloryellow-hover) !important;
+            color: white;
+          }
+  /* ------footer -----*/
+  .footer{
+    margin-top: 100px;
+    border-radius:0px 20px 0px 0px;
+    background-color:var(--maincolor); 
+    width: 50%;
+    height: 300px;
+    position: absolute;
+    
+  }
+  .footer-text{
+    color: white;
+    opacity: 0.7;
+  }
+  
+  
+  /*.test{
+    background-color: red;
+    width: 100%;
+    height: 300px;
+    position: relative;
+  }
+  .dot-stest{
+    border-radius: 50%;
+    background-color: black;
+    height: 30px;
+    width: 30px;
+    margin: 0 auto;
+    bottom: 0;
+    padding-top: 100%;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: var(--maincolor);
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.8s ease;
+    text-align: center;
+    border: 1px solid white;
+    bottom: 0;
+    }
+    
+    .bullet-testing{
+      list-style: none;
+    }*/
+  
+    .bullet-testing li:before{ 
+      content: "\2022";
+      color: red;
+      font-weight: bold;
+      font-size:25px;
+      display: inline-block; 
+      margin-left: -1em;
+  }
+  
+  
+  
+  
+  /*<------------------------------------------------------------------------>*/
+  /*<--------------------------------AQUABABY-------------------------------->*/
+  /*<------------------------------------------------------------------------>*/
+  
+  
+  
+  
+  .Card-find-aqua{
+    border-radius:35px; 
+    height:600px;
+    width: 100%;
+    background-color: white;
+    margin-bottom: 100px;
+    box-shadow: 0px 6px 3px rgba(0, 0, 0, .2);
+  }
+  
+  .block-card-aqua{
+    
+    width:100%;
+    height: 100px;
+    background-color: var(--maincolor);
+  }
+  
+  .text-card-aqua{
+    font-size: 21px;
+    line-height: 25px;
+  }
+  
+  .card-aqua-sizing{
+    margin-top: 20px;
+    border-color:(10px solid var(--maincolor)); 
+    border-radius: 35px 0px 35px 0px;
+    box-shadow: 0px 6px 3px rgba(0, 0, 0, .2);
+    width: 100%;
+    height: 201px; 
+  }
+  
+  .card-aqua-img{
+    border-radius:35px 0px 35px 0px; 
+    height:199px;
+    width: 199px;
+  }
+  
+  .btn_kursort_aqua{
+    font-size: 22px;
+    font-family: 'Fjalla One', sans-serif;
+    width: 187px;
+    height: 58px;
+    background-color: var(--maincolor);
+    margin-right: 220px;
+    padding: 5px;
+    border-radius: 35px 30px 0px 0px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    color: white;
+    padding-top: 11px;
+  }
+  
+  .btn_suchen_aqua{
+    font-size: 22px;
+    font-family: 'Fjalla One', sans-serif;
+    width: 187px;
+    height: 58px;
+    background-color: var(--maincolor);
+    margin-right: 220px;
+    padding: 5px;
+    border-radius: 35px 30px 0px 0px;
+    bottom: 0;
+    right: 0;
+    color: white;
+    padding-top: 11px;
+    margin-top: auto;
+  
+  }
+  
+  .btn_suchen_aqua:hover{
+    background-color: var(--maincolor-hover) !important;
+    color: white;
+  }
+  .btn_kursort_aqua:hover{
+    background-color: var(--maincolor-hover) !important;
+    color: white;
+  }
