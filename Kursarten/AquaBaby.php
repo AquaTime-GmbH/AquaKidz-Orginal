@@ -97,7 +97,7 @@ if($viewsearch_aquababy_ort == ""){
 }
 
 else{
-    $result = mysqli_query($con_mysqli,"SELECT * FROM kurse WHERE ort LIKE '%Luz%' order by starttermin DESC");
+    $result = mysqli_query($con_mysqli,"SELECT * FROM kurse WHERE ort LIKE '%$viewsearch_aquababy_ort%' order by starttermin DESC");
 }
 
 
@@ -125,7 +125,8 @@ while($row = mysqli_fetch_array($result))
     <div class="card card-aqua-sizing">
         <div class="no-gutters">
             <div class="col-md-4">
-                <img src="<?php echo $url_helper;?>images/little-boy-learning-to-swim-in-a-swimming-pool-P93KRDN.jpg" class="card-img card-aqua-img" alt="Bild Konnte nicht Geladen werden!"><div class="card-body">
+                <img src="<?php echo $url_helper;?>images/little-boy-learning-to-swim-in-a-swimming-pool-P93KRDN.jpg" class="card-img card-aqua-img" alt="Bild Konnte nicht Geladen werden!">
+                <div class="card-body">
                     <h5 class="card-title card-title-style">AquaBaby -  Babyschwimmen</h5>
                     <p class="card-text under-font"><small>CA. 10 Wochen - 24 Monate</small></p>
                    

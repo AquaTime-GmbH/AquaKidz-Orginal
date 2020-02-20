@@ -5,9 +5,6 @@ $url_helper= "";
 
 ?>
 
-
-
-
 <!DOCTYPE html>
 <head>
 <title>AquaKidz</title>
@@ -31,24 +28,6 @@ include 'include/navbar.php';
 <!--------------ende der einbindung------------------>
 
 
-<?php
-//DATENBANK//
-
-//HOST
-$db_host = "localhost";
-
-//USER
-$db_user = "root";
-
-//PASSWORT
-$db_password = "root";
-
-//DATENBANK
-$db_database = "AquaTime-Neu";
-
-$con = mysqli_connect("$db_host", "$db_user", "$db_password", "$db_database");
-
-?>
 
 <?php 
 
@@ -76,7 +55,7 @@ $con = mysqli_connect("$db_host", "$db_user", "$db_password", "$db_database");
 <div class="container">
     <div class="col-sm-5">
 
-    <form action="Kursarten/AquaBaby"  method="post">
+    <form action=""  method="post">
         <div class="card first-card">
             <div class="card-body">
                 <div class="font-color">
@@ -85,12 +64,12 @@ $con = mysqli_connect("$db_host", "$db_user", "$db_password", "$db_database");
 
                     <label class="col-4 col-form-label first-card-text">Ort</label>
                     <div class="col-12">
-                        <input class="form-control labelshape" id="search_ort" name="search_ort" type="text" value="<?= $cookie_kursort ?>">
+                        <input class="form-control labelshape" id="search_ort" name="search_ort" type="text" value="<?= $cookie_kursort; ?>">
                     </div>
 
                     <label  class="col-6 col-form-label first-card-text">Kurs Start</label>
                     <div class="col-12">
-                        <input class="form-control labelshape"  id="search_start" name="search_start" type="date" value="<?php echo $cookie_kursstart ?>">
+                        <input class="form-control labelshape"  id="search_start" name="search_start" type="date" value="<?php echo $cookie_kursstart; ?>">
                     </div>
 
                     <label class="col-8 col-form-label first-card-text">Wie alt ist ihr Kind ?</label>
@@ -100,7 +79,7 @@ $con = mysqli_connect("$db_host", "$db_user", "$db_password", "$db_database");
                             <?php
                             if($cookie_kursalter == "1"){
                                 ?>
-                                <Select class="form-control labelshape" id="search_alt" name="search_alt" type="text" value="<?= $cookie_kursalter ?>">
+                                <Select class="form-control labelshape" id="search_alt" name="search_alt" type="text" value="<?= $cookie_kursalter; ?>">
                                 <option value="1" selected>CA. 10 WOCHEN - 24 MONATE</option>
                                 <option value="2">CA. 2 BIS 3 JAHRE</option>
                                 <option value="4">CA. 3,5 BIS 7,5 JAHRE</option>
@@ -109,7 +88,7 @@ $con = mysqli_connect("$db_host", "$db_user", "$db_password", "$db_database");
                             }
                             elseif($cookie_kursalter == "2"){
                                 ?>
-                                <Select class="form-control labelshape" id="search_alt" name="search_alt" type="text" value="<?= $cookie_kursalter ?>">
+                                <Select class="form-control labelshape" id="search_alt" name="search_alt" type="text" value="<?= $cookie_kursalter; ?>">
                                 <option value="1">CA. 10 WOCHEN - 24 MONATE</option>
                                 <option value="2" selected>CA. 2 BIS 3 JAHRE</option>
                                 <option value="4">CA. 3,5 BIS 7,5 JAHRE</option>
@@ -118,7 +97,7 @@ $con = mysqli_connect("$db_host", "$db_user", "$db_password", "$db_database");
                             }
                             elseif($cookie_kursalter == "4"){
                                 ?>
-                                <Select class="form-control labelshape" id="search_alt" name="search_alt" type="text" value="<?= $cookie_kursalter ?>">
+                                <Select class="form-control labelshape" id="search_alt" name="search_alt" type="text" value="<?= $cookie_kursalter; ?>">
                                 <option value="1">CA. 10 WOCHEN - 24 MONATE</option>
                                 <option value="2">CA. 2 BIS 3 JAHRE</option>
                                 <option value="4" selected>CA. 3,5 BIS 7,5 JAHRE</option>
@@ -127,7 +106,7 @@ $con = mysqli_connect("$db_host", "$db_user", "$db_password", "$db_database");
                             }
                             elseif($cookie_kursalter == "7"){
                                 ?>
-                                <Select class="form-control labelshape" id="search_alt" name="search_alt" type="text" value="<?= $cookie_kursalter ?>">
+                                <Select class="form-control labelshape" id="search_alt" name="search_alt" type="text" value="<?= $cookie_kursalter; ?>">
                                 <option value="1">CA. 10 WOCHEN - 24 MONATE</option>
                                 <option value="2">CA. 2 BIS 3 JAHRE</option>
                                 <option value="4">CA. 3,5 BIS 7,5 JAHRE</option>
@@ -136,7 +115,7 @@ $con = mysqli_connect("$db_host", "$db_user", "$db_password", "$db_database");
                             }
                             else{
                                 ?>
-                                <Select class="form-control labelshape" id="search_alt" name="search_alt" type="text" value="<?= $cookie_kursalter ?>">
+                                <Select class="form-control labelshape" id="search_alt" name="search_alt" type="text" value="<?= $cookie_kursalter; ?>">
                                 <option disabled selected value style="color:white;"></option>
                                 <option value="1">CA. 10 WOCHEN - 24 MONATE</option>
                                 <option value="2">CA. 2 BIS 3 JAHRE</option>
@@ -149,20 +128,18 @@ $con = mysqli_connect("$db_host", "$db_user", "$db_password", "$db_database");
                     </div>
                 </div>
                 </div>
-                <input type="submit" href="#" class="btn search-buttom" name="search_button" value="Suchen">
+                <input type="submit" href="" class="btn search-buttom" name="search_button" value="Suchen">
             </div>
         </div>
     </div>
     </form>
 
             <?php 
-            
-            
+             
             if(isset($_POST['search_button'])){
                 $viewsearch_ort = $_POST['search_ort']; 
                 $viewsearch_start = $_POST['search_start']; 
                 $viewsearch_alt = $_POST['search_alt']; 
-
 
                 if($viewsearch_alt != ''){
                     
@@ -171,36 +148,30 @@ $con = mysqli_connect("$db_host", "$db_user", "$db_password", "$db_database");
                 setcookie("kursort","$viewsearch_ort",time()+(3600*168)); 
 
 
-
                 if($viewsearch_alt == "1"){
-                
-                header('location: aquababy');
-                    exit();
+                    header('location: Kursarten/AquaBaby');
+
                 }elseif($viewsearch_alt == "2"){
-                    header('location: schwimmkurse');
-                    exit();
+                    header('location: Kursarten/AquaKidz-Mini');
+                  
                 }elseif($viewsearch_alt == "4"){
-                    header('location: schwimmkurse');
-                    exit();
+                    header('location: Kursarten/AquaKidz-Maxi');
+                    
                 }elseif($viewsearch_alt == "7"){
-                    header('location: schwimmkurse');
-                    exit();
-                }
+                    header('location: Kursarten/AquaKidz-Mixed');
+                  
+                    }
 
-
-               
-                
                 }
                 else{
                     setcookie("kursstart","$viewsearch_start",time()+(3600*168)); 
                     setcookie("kursort","$viewsearch_ort",time()+(3600*168)); 
 
-                    header('location: kursorte');
-                    exit();
+                    header('location: Kursorte');
+                
                 }
             } 
 
-        
             ?>
 
      <!-- Das sind alle 3 Cards(flexboxen) in der mitte der Webseite -->
