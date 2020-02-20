@@ -1,13 +1,15 @@
-
-<?php 
-
+<!-- organisation der url -->
+<?php
 $url_helper= "";
+/* einbingung der database connection*/
+include  $url_helper .'include/database.php';
+
 
 ?>
 
 <!DOCTYPE html>
 <head>
-<title>AquaKidz</title>
+    <title>AquaKidz</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -23,7 +25,8 @@ $url_helper= "";
 
 <!--navbar wird eingebunden-->
 <?php
-include 'include/navbar.php';
+include $url_helper .'include/navbar.php';
+
 ?>
 <!--------------ende der einbindung------------------>
 
@@ -46,6 +49,7 @@ include 'include/navbar.php';
     } else {
         $cookie_kursalter = "";
   }
+
 ?>
 
 <div class="hintergrundbild">
@@ -69,7 +73,7 @@ include 'include/navbar.php';
 
                     <label  class="col-6 col-form-label first-card-text">Kurs Start</label>
                     <div class="col-12">
-                        <input class="form-control labelshape"  id="search_start" name="search_start" type="date" value="<?php echo $cookie_kursstart; ?>">
+                        <input class="form-control labelshape"  id="search_start" name="search_start" type="date" value="<?php echo $cookie_kursstart;  ?>">
                     </div>
 
                     <label class="col-8 col-form-label first-card-text">Wie alt ist ihr Kind ?</label>
@@ -85,8 +89,7 @@ include 'include/navbar.php';
                                 <option value="4">CA. 3,5 BIS 7,5 JAHRE</option>
                                 <option value="7">AB CA. 7 JAHRE</option>
                             </select><?php
-                            }
-                            elseif($cookie_kursalter == "2"){
+                            } elseif($cookie_kursalter == "2"){
                                 ?>
                                 <Select class="form-control labelshape" id="search_alt" name="search_alt" type="text" value="<?= $cookie_kursalter; ?>">
                                 <option value="1">CA. 10 WOCHEN - 24 MONATE</option>
@@ -94,8 +97,7 @@ include 'include/navbar.php';
                                 <option value="4">CA. 3,5 BIS 7,5 JAHRE</option>
                                 <option value="7">AB CA. 7 JAHRE</option>
                             </select><?php
-                            }
-                            elseif($cookie_kursalter == "4"){
+                            } elseif($cookie_kursalter == "4"){
                                 ?>
                                 <Select class="form-control labelshape" id="search_alt" name="search_alt" type="text" value="<?= $cookie_kursalter; ?>">
                                 <option value="1">CA. 10 WOCHEN - 24 MONATE</option>
@@ -103,28 +105,30 @@ include 'include/navbar.php';
                                 <option value="4" selected>CA. 3,5 BIS 7,5 JAHRE</option>
                                 <option value="7">AB CA. 7 JAHRE</option>
                             </select><?php
-                            }
-                            elseif($cookie_kursalter == "7"){
+                            } elseif($cookie_kursalter == "7"){
                                 ?>
-                                <Select class="form-control labelshape" id="search_alt" name="search_alt" type="text" value="<?= $cookie_kursalter; ?>">
+                                <Select class="form-control labelshape" id="search_alt" name="search_alt" type="text" value="">
                                 <option value="1">CA. 10 WOCHEN - 24 MONATE</option>
                                 <option value="2">CA. 2 BIS 3 JAHRE</option>
                                 <option value="4">CA. 3,5 BIS 7,5 JAHRE</option>
                                 <option value="7" selected>AB CA. 7 JAHRE</option>
                             </select><?php
-                            }
-                            else{
+                            } else{
                                 ?>
-                                <Select class="form-control labelshape" id="search_alt" name="search_alt" type="text" value="<?= $cookie_kursalter; ?>">
+                                <Select class="form-control labelshape" id="search_alt" name="search_alt" type="text" value="">
                                 <option disabled selected value style="color:white;"></option>
                                 <option value="1">CA. 10 WOCHEN - 24 MONATE</option>
                                 <option value="2">CA. 2 BIS 3 JAHRE</option>
                                 <option value="4">CA. 3,5 BIS 7,5 JAHRE</option>
-                                <option value="7">AB CA. 7 JAHRE</option>
+                                <option value="7" about="Trs" content="Test" ></option>
                             </select><?php
+
+
+
+                                setcookie("1111","Max",0);
                             }
+                            setcookie("2222","Max",0);
                             ?>
-                        
                     </div>
                 </div>
                 </div>
@@ -162,8 +166,7 @@ include 'include/navbar.php';
                   
                     }
 
-                }
-                else{
+                } else{
                     setcookie("kursstart","$viewsearch_start",time()+(3600*168)); 
                     setcookie("kursort","$viewsearch_ort",time()+(3600*168)); 
 

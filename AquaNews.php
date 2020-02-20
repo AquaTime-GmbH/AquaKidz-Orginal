@@ -1,13 +1,13 @@
- <!-- organisation der url -->
- <?php 
-$url_helper= "../";
+<!-- organisation der url -->
+<?php
+$url_helper= "";
 /* einbingung der database connection*/
 include  $url_helper .'include/database.php';
 ?>
 
 <!DOCTYPE html>
 <head>
-<title>AquaKidz</title>
+    <title>AquaKidz</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
