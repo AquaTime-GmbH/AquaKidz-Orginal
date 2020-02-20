@@ -76,7 +76,7 @@ $con = mysqli_connect("$db_host", "$db_user", "$db_password", "$db_database");
 <div class="container">
     <div class="col-sm-5">
 
-    <form action="aquababy"  method="post">
+    <form action="Kursarten/AquaBaby"  method="post">
         <div class="card first-card">
             <div class="card-body">
                 <div class="font-color">

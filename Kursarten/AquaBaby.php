@@ -87,27 +87,17 @@ if ($viewsearch_aquababy_kursstart == ""){
     $viewsearch_aquababy_kursstart  = date('d.m.Y');
     
 }
-//HOST
-$db_host = "localhost";
 
-//USER
-$db_user = "root";
-
-//PASSWORT
-$db_password = "root";
-
-//DATENBANK
-$db_database = "AquaTime-Neu";
-$con = new mysqli($db_host, $db_user, $db_password, $db_database);
+$con_mysqli = new mysqli($db_host, $db_user, $db_password, $db_database);
 
 
 
 if($viewsearch_aquababy_ort == ""){
-    $result = mysqli_query($con,"SELECT * FROM kurse  order by starttermin desc");
+    $result = mysqli_query($con_mysqli,"SELECT * FROM kurse  order by starttermin desc");
 }
 
 else{
-    $result = mysqli_query($con,"SELECT * FROM kurse WHERE ort LIKE '%Luz%' order by starttermin DESC");
+    $result = mysqli_query($con_mysqli,"SELECT * FROM kurse WHERE ort LIKE '%Luz%' order by starttermin DESC");
 }
 
 
@@ -126,7 +116,7 @@ while($row = mysqli_fetch_array($result))
     } else {}
  
 }
-    mysqli_close($con);
+    mysqli_close($con_mysqli);
 }
 
 ?>
