@@ -1,5 +1,5 @@
 
-html,body { height: 100%;  margin: 0; }
+
 
 /*Standart werte*/
 :root{
@@ -594,10 +594,10 @@ html,body { height: 100%;  margin: 0; }
   
   .card-aqua-sizing{
     margin-top: 20px;
-    border-color:(10px solid var(--maincolor)); 
+    border: 3px solid var(--maincolor);
     border-radius: 35px 0px 35px 0px;
     box-shadow: 0px 6px 3px rgba(0, 0, 0, .2);
-    width: 100%;
+ 
     height: 201px; 
   }
   
@@ -605,6 +605,9 @@ html,body { height: 100%;  margin: 0; }
     border-radius:35px 0px 35px 0px; 
     height:199px;
     width: 199px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
   
   .btn_kursort_aqua{
@@ -637,14 +640,36 @@ html,body { height: 100%;  margin: 0; }
     color: white;
     padding-top: 11px;
     margin-top: auto;
-  
   }
   
   .btn_suchen_aqua:hover{
     background-color: var(--maincolor-hover) !important;
     color: white;
   }
+
   .btn_kursort_aqua:hover{
     background-color: var(--maincolor-hover) !important;
     color: white;
   }
+
+.btn_mehr_laden{
+  font-size: 22px;
+  font-family: 'Fjalla One', sans-serif;
+  width: 100%;
+  height: 58px;
+  background-color: var(--maincolor);
+  margin-right: 220px;
+  padding: 5px;
+  border-radius: 0px 0px 35px 35px;
+  bottom: 0;
+  color: white;
+  text-align: center;
+  margin-top:60px;
+}
+
+.btn_mehr_laden:hover{
+  background-color: var(--maincolor-hover) !important;
+  color: white;
+}
+
+.row{margin-left: 0 !important; margin-right: 0 !important;}

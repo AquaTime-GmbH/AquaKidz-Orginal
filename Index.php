@@ -114,7 +114,6 @@ include $url_helper .'include/navbar.php';
                                 <option value="7" selected>AB CA. 7 JAHRE</option>
                             </select><?php
                             } else{
-                                setcookie("cookietest","Max",0);
                                 ?>
                                 <Select class="form-control labelshape" id="search_alt" name="search_alt" type="text" value="">
                                 <option disabled selected value style="color:white;"></option>
@@ -126,9 +125,11 @@ include $url_helper .'include/navbar.php';
 
 
 
-                                setcookie("1111","Max",0);
+
+
+                            
                             }
-                            setcookie("2222","Max",0);
+                          
                             ?>
                     </div>
                 </div>

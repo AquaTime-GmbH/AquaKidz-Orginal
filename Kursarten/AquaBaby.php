@@ -62,7 +62,7 @@ include $url_helper .'include/navbar.php';
         <div class="col-4" style="margin-left:30px;">
 
         
-        <label  class="col-6 col-form-label text-card-aqua"><span>Ort</span></label><?php setcookie("l","ogfdgdfgfdk",time()+(3600*168)); ?>
+        <label  class="col-6 col-form-label text-card-aqua"><span>Ort</span></label>
 
             <input class="form-control labelshape"  id="search_aquababy_ort" name="search_aquababy_ort" type="text" placeholder="überall" value="<?= $viewsearch_aquababy_ort_cookie; ?>">
         </div>
@@ -86,8 +86,8 @@ if(isset($_POST['search_button'])){
     $viewsearch_aquababy_ort = $_POST['search_aquababy_ort']; 
     $viewsearch_aquababy_kursstart = $_POST['search_aquababy_kursstart']; 
 
-    setcookie("lkopkiip","$viewsearch_aquababy_kursstart",time()+(3600*168)); 
-  
+    setcookie("search_aquababy_ort","$viewsearch_aquababy_ort",time()+(3600*168)); 
+    setcookie("search_aquababy_kursstart","$viewsearch_aquababy_kursstart",time()+(3600*168));
 
 if ($viewsearch_aquababy_ort == ""){
     $viewsearch_aquababy_ort = "x";
@@ -126,12 +126,13 @@ while($row = mysqli_fetch_array($result))
 }
 
 ?>
+
     <div class="block-card-aqua"></div>
-    <div class="col-md-12">
+    <!--<div class="col-md-12">
     <div class="card card-aqua-sizing">
         <div class="no-gutters">
             <div class="col-md-4">
-                <img src="<?php echo $url_helper;?>images/little-boy-learning-to-swim-in-a-swimming-pool-P93KRDN.jpg" class="card-img card-aqua-img" alt="Bild Konnte nicht Geladen werden!">
+                
                 <div class="card-body">
                     <h5 class="card-title card-title-style">AquaBaby -  Babyschwimmen</h5>
                     <p class="card-text under-font"><small>CA. 10 Wochen - 24 Monate</small></p>
@@ -146,10 +147,32 @@ while($row = mysqli_fetch_array($result))
             <a href="#"  class="btn  bnts_card4">Mehr Erfahren</a>
         </div>
     </div>
+</div>-->
+
+
+<div class="card-aqua-sizing">
+<div class="row">
+<div class="col-md-12">
+</div>
+    <img src="<?php echo $url_helper;?>images/little-boy-learning-to-swim-in-a-swimming-pool-P93KRDN.jpg" class="card-img card-aqua-img" alt="Bild Konnte nicht Geladen werden!">
+            <div class="col-md-4">
+                
+                <div class="card-body">
+                    <h5 class="card-title card-title-style">AquaBaby -  Babyschwimmen</h5>
+                    <p class="card-text under-font"><small>CA. 10 Wochen - 24 Monate</small></p>
+                   
+                </div>  
+          
+            </div>  
+                
+        </div>
+    </div>
+  <input type="submit" name="mehr_anzeigen" class="btn btn_mehr_laden" value ="Mehr Laden">
+
+    </div>
 </div>
 
-</div>
-</div>
+
 
     <div class="slideshow-container"></div>
 

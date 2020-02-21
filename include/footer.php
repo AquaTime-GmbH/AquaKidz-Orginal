@@ -146,7 +146,7 @@
 
     <div class="copyright-box">
         <div class="copyright-text">
-            <?= "&copy AquaTime GmbH " . "2015 - " . date('Y');?>
+            <?= "&copy AquaTime GmbH " . "2014 - " . date('Y');?>
         </div>
     </div>
 
