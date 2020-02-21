@@ -3,6 +3,12 @@
 $url_helper= "../";
 /* einbingung der database connection*/
 include  $url_helper .'include/database.php';
+
+
+$viewsearch_aquababy_ort_cookie = $_COOKIE["kursort"];
+$viewsearch_aquababy_kursstart_cookie = $_COOKIE["kursstart"];
+
+
 ?>
 
 <!DOCTYPE html>
@@ -47,21 +53,24 @@ include $url_helper .'include/navbar.php';
 
 
     <form action=""  method="post">
+        
 <div class="Card-find-aqua"> 
 <div style="background-color:var(--maincolor);  border-top: 20px solid var(--maincolor);
   border-radius:35px 35px 0 0; padding-bottom:10px;" ><h1 style="margin-left: 10px; color:white;">AQUABABY KURSE FINDEN</h1></div>
     
     <div class="row">
         <div class="col-4" style="margin-left:30px;">
-        <label  class="col-6 col-form-label text-card-aqua">Ort</label>
 
-            <input class="form-control labelshape"  id="search_aquababy_ort" name="search_aquababy_ort" type="text" placeholder="überall" value="<?php $viewsearch_aquababy_ort?>">
+        
+        <label  class="col-6 col-form-label text-card-aqua"><span>Ort</span></label><?php setcookie("l","ogfdgdfgfdk",time()+(3600*168)); ?>
+
+            <input class="form-control labelshape"  id="search_aquababy_ort" name="search_aquababy_ort" type="text" placeholder="überall" value="<?= $viewsearch_aquababy_ort_cookie; ?>">
         </div>
 
         <div class="col-3">
         <label  class="col-6 col-form-label text-card-aqua">Kurs Start</label>
 
-            <input class="form-control labelshape"  id="search_start" name="search_aquababy_kursstart" type="date" placeholder="DD.MM.YY" value="<?php $viewsearch_aquababy_kursstart?>">
+            <input class="form-control labelshape"  id="search_start" name="search_aquababy_kursstart" type="date" placeholder="DD.MM.YY" value="<?= $viewsearch_aquababy_kursstart_cookie; ?>">
         </div>
        
 <input href="#" type="submit" class="btn  btn_suchen_aqua" name="search_button" value="Suchen">
@@ -73,13 +82,15 @@ include $url_helper .'include/navbar.php';
 
 
 if(isset($_POST['search_button'])){
-
+    
     $viewsearch_aquababy_ort = $_POST['search_aquababy_ort']; 
     $viewsearch_aquababy_kursstart = $_POST['search_aquababy_kursstart']; 
 
+    setcookie("lkopkiip","$viewsearch_aquababy_kursstart",time()+(3600*168)); 
+  
 
 if ($viewsearch_aquababy_ort == ""){
-    $viewsearch_aquababy_ort = "";
+    $viewsearch_aquababy_ort = "x";
 }
 
 if ($viewsearch_aquababy_kursstart == ""){
@@ -88,15 +99,10 @@ if ($viewsearch_aquababy_kursstart == ""){
     
 }
 
-$con_mysqli = new mysqli($db_host, $db_user, $db_password, $db_database);
 
-
-
-if($viewsearch_aquababy_ort == ""){
+if($viewsearch_aquababy_ort == "x"){
     $result = mysqli_query($con_mysqli,"SELECT * FROM kurse  order by starttermin desc");
-}
-
-else{
+} else{
     $result = mysqli_query($con_mysqli,"SELECT * FROM kurse WHERE ort LIKE '%$viewsearch_aquababy_ort%' order by starttermin DESC");
 }
 

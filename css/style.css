@@ -1,4 +1,6 @@
 
+html,body { height: 100%;  margin: 0; }
+
 /*Standart werte*/
 :root{
     --maincolor:#416cb2;
@@ -511,59 +513,45 @@
             color: white;
           }
   /* ------footer -----*/
-  .footer{
-    margin-top: 100px;
+.footer-pos{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+}
+  .footer-blau{
+    
     border-radius:0px 20px 0px 0px;
     background-color:var(--maincolor); 
-    width: 50%;
+    margin-top: 100px;
     height: 300px;
-    position: absolute;
-    
+   
   }
+  .footer-white{
+    margin-top: 100px;
+    height: 300px;
+  }
+
   .footer-text{
     color: white;
     opacity: 0.7;
   }
   
   
-  /*.test{
-    background-color: red;
-    width: 100%;
-    height: 300px;
-    position: relative;
-  }
-  .dot-stest{
-    border-radius: 50%;
-    background-color: black;
-    height: 30px;
-    width: 30px;
-    margin: 0 auto;
-    bottom: 0;
-    padding-top: 100%;
-    position: absolute;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
-  
-  .dot {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: var(--maincolor);
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.8s ease;
+  .copyright-text{
+    color: white;
     text-align: center;
-    border: 1px solid white;
-    bottom: 0;
-    }
+    margin-top: 12px;
+
+  }
+
+  .copyright-box{
+    background-color: var(--maincolor-hover) !important;
+    width: 100% !important;
+    height: 44px !important;
+    position: absolute;
     
-    .bullet-testing{
-      list-style: none;
-    }*/
-  
+  }
+
     .bullet-testing li:before{ 
       content: "\2022";
       color: red;
@@ -574,7 +562,7 @@
   }
   
   
-  
+  footer .row{margin-left: 0 !important; margin-right: 0 !important;}
   
   /*<------------------------------------------------------------------------>*/
   /*<--------------------------------AQUABABY-------------------------------->*/

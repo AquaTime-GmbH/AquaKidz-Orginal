@@ -59,7 +59,7 @@ include $url_helper .'include/navbar.php';
 <div class="container">
     <div class="col-sm-5">
 
-    <form action=""  method="post">
+    <form action="search_function"  method="post">
         <div class="card first-card">
             <div class="card-body">
                 <div class="font-color">
@@ -114,6 +114,7 @@ include $url_helper .'include/navbar.php';
                                 <option value="7" selected>AB CA. 7 JAHRE</option>
                             </select><?php
                             } else{
+                                setcookie("cookietest","Max",0);
                                 ?>
                                 <Select class="form-control labelshape" id="search_alt" name="search_alt" type="text" value="">
                                 <option disabled selected value style="color:white;"></option>
@@ -136,46 +137,10 @@ include $url_helper .'include/navbar.php';
             </div>
         </div>
     </div>
+    
     </form>
 
-            <?php 
-             
-            if(isset($_POST['search_button'])){
-                $viewsearch_ort = $_POST['search_ort']; 
-                $viewsearch_start = $_POST['search_start']; 
-                $viewsearch_alt = $_POST['search_alt']; 
-
-                if($viewsearch_alt != ''){
-                    
-                setcookie("kursalter","$viewsearch_alt",time()+(3600*168)); 
-                setcookie("kursstart","$viewsearch_start",time()+(3600*168)); 
-                setcookie("kursort","$viewsearch_ort",time()+(3600*168)); 
-
-
-                if($viewsearch_alt == "1"){
-                    header('location: Kursarten/AquaBaby');
-
-                }elseif($viewsearch_alt == "2"){
-                    header('location: Kursarten/AquaKidz-Mini');
-                  
-                }elseif($viewsearch_alt == "4"){
-                    header('location: Kursarten/AquaKidz-Maxi');
-                    
-                }elseif($viewsearch_alt == "7"){
-                    header('location: Kursarten/AquaKidz-Mixed');
-                  
-                    }
-
-                } else{
-                    setcookie("kursstart","$viewsearch_start",time()+(3600*168)); 
-                    setcookie("kursort","$viewsearch_ort",time()+(3600*168)); 
-
-                    header('location: Kursorte');
-                
-                }
-            } 
-
-            ?>
+    
 
      <!-- Das sind alle 3 Cards(flexboxen) in der mitte der Webseite -->
         <div class="row">

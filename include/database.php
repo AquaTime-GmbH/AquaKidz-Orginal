@@ -29,6 +29,23 @@ $pdo_PDO = new PDO('mysql:host=' . $db_host . ';dbname=' . $db_database . '', "$
 ///////////
 $con_mysqli = new mysqli($db_host, $db_user, $db_password, $db_database);
 
+
+//DATENBANK ERROR HANDELING FOR 
+
+if ($con_mysqli_connect -> connect_errno) {
+  echo "Failed to connect to MySQL: " . $con_mysqli_connect -> connect_error;
+  exit();
+}
+
+//DATENBANK ERROR HANDELING FOR 
+
+if ($pdo_PDO-> connect_errno) {
+  echo "Failed to connect to MySQL: " . $pdo_PDO -> connect_error;
+  exit();
+}
+
+//DATENBANK ERROR HANDELING FOR MYSQLI
+
 if ($con_mysqli -> connect_errno) {
     echo "Failed to connect to MySQL: " . $con_mysqli -> connect_error;
     exit();
