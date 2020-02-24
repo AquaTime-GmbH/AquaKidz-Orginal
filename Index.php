@@ -123,11 +123,7 @@ include $url_helper .'include/navbar.php';
                                 <option value="7" about="Trs" content="Test" ></option>
                             </select><?php
 
-
-
-
-
-                            
+                      
                             }
                           
                             ?>

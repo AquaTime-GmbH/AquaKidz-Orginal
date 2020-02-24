@@ -573,7 +573,7 @@
   
   .Card-find-aqua{
     border-radius:35px; 
-    height:600px;
+    height:1050px;
     width: 100%;
     background-color: white;
     margin-bottom: 100px;
@@ -581,7 +581,7 @@
   }
   
   .block-card-aqua{
-    
+   
     width:100%;
     height: 100px;
     background-color: var(--maincolor);
@@ -601,15 +601,17 @@
     height: 201px; 
   }
   
-  .card-aqua-img{
+  .card-aqua-img 
+  {
     border-radius:35px 0px 35px 0px; 
-    height:199px;
+    height:195px;
     width: 199px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
   }
-  
+  .col-2{ padding-left: 0;}
+
   .btn_kursort_aqua{
     font-size: 22px;
     font-family: 'Fjalla One', sans-serif;
@@ -632,14 +634,14 @@
     width: 187px;
     height: 58px;
     background-color: var(--maincolor);
-    margin-right: 220px;
+    margin-left: auto;
     padding: 5px;
-    border-radius: 35px 30px 0px 0px;
+    border-radius: 35px 0px 0px 0px;
     bottom: 0;
     right: 0;
     color: white;
     padding-top: 11px;
-    margin-top: auto;
+    margin-top: 40px;
   }
   
   .btn_suchen_aqua:hover{
@@ -664,7 +666,7 @@
   bottom: 0;
   color: white;
   text-align: center;
-  margin-top:60px;
+  margin-top: 45px;
 }
 
 .btn_mehr_laden:hover{
@@ -673,3 +675,59 @@
 }
 
 .row{margin-left: 0 !important; margin-right: 0 !important;}
+
+/*---------------Buttons Kursorte--------------*/
+
+.btn_kursort_aqua{
+  font-size: 22px;
+  font-family: 'Fjalla One', sans-serif;
+  width: 187px;
+  height: 58px;
+  background-color: var(--maincolor);
+  margin-right: 160px;
+  width: 150px;
+  padding: 5px;
+  border-radius: 35px 30px 0px 0px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  color: white;
+  padding-top: 11px;
+  margin-bottom: -1px;
+
+}
+
+.btn_kursort_aqua:hover{
+  background-color: var(--maincolor-hover) !important;
+  color: white;
+}
+
+
+/*---------------Buttons Kurs--------------*/
+
+
+
+.btn_kurs_aqua{
+  font-size: 22px;
+  font-family: 'Fjalla One', sans-serif;
+  width: 187px;
+  height: 58px;
+  background-color: var(--maincolor);
+  margin-bottom: -1px;
+
+  width: 150px;
+  padding: 5px;
+  border-radius:35px 0px 35px 0px; 
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  color: white;
+  padding-top: 11px;
+  
+}
+
+.btn_kurs_aqua:hover{
+  background-color: var(--maincolor-hover) !important;
+  color: white;
+}
+
