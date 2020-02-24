@@ -6,12 +6,8 @@ include  $url_helper .'include/database.php';
 
 
 $viewsearch_aquababy_ort_cookie = $_COOKIE["kursort"];
+$countergebnisse = 0;
 
-if($viewsearch_aquababy_kursstart_cookie < date('d.m.Y')){
-
-    $viewsearch_aquababy_kursstart_cookie = date('d.m.Y');
-
-}
 $viewsearch_aquababy_kursstart_cookie = $_COOKIE["kursstart"];
 ?>
 
@@ -81,7 +77,7 @@ include $url_helper .'include/navbar.php';
        
 <input href="#" type="submit" class="btn  btn_suchen_aqua" name="search_button" value="Suchen">
   </div>
-  <div class="block-card-aqua"></div>
+  <div class="block-card-aqua">  <p style="font-size: 12px">Gefundene Datensätze: <?php echo $countergebnisse; ?></p></div>
 </form>
 
 <?php
@@ -116,18 +112,49 @@ if($viewsearch_aquababy_ort == "x"){
 
 
 while($row = mysqli_fetch_array($result))
-{
+{  
+    
+ 
+    $countergebnisse = ++$countergebnisse;
     $view_kursort = $row['ort'];
     $view_kursstart = new DateTime($row['starttermin']);
+?>
 
+<div class="col-md-12">
+<div class="card-aqua-sizing">
+
+<div class="row">
+
+    <div class="col-2">
+        <img src="<?php echo $url_helper;?>images/little-boy-learning-to-swim-in-a-swimming-pool-P93KRDN.jpg" class="card-img card-aqua-img" alt="Bild Konnte nicht Geladen werden!">
+    </div>
+        <div class="col-md-4">
+            <div class="card-body">
+                    <h5 class="card-title card-title-style"><?= date('d.m.Y') . " - ". $view_kursstart->format('d.m.Y'). " " . $view_kursort;  ?></h5>
+                    <p class="card-text under-font"><small>CA. 10 Wochen - 24 Monate</small></p>
+                </div>  
+            </div>  
 
    
+    <div class="col-6">
+        <div class="row"> 
+            <a href="#"  class="btn  btn_kursort_aqua" >Zum Kursort</a>
+     
+            <a href="#"  class="btn  btn_kurs_aqua" >Zum Kurs</a>
+        </div>
+    </div>
 
-    if ($view_kursstart->format('d.m.Y') >= $viewsearch_aquababy_kursstart) {   
-        echo $view_kursort;
-        echo $view_kursstart->format('d.m.Y');
-    } else {}
- 
+</div>
+</div>
+</div>
+
+
+<?php
+   
+ if ($view_kursstart->format('d.m.Y') >= $viewsearch_aquababy_kursstart) {   
+        
+     } else {}
+  
 }
     mysqli_close($con_mysqli);
 }
@@ -135,118 +162,11 @@ while($row = mysqli_fetch_array($result))
 ?>
 
     
-    <!--<div class="col-md-12">
-    <div class="card card-aqua-sizing">
-        <div class="no-gutters">
-            <div class="col-md-4">
-                
-                <div class="card-body">
-                    <h5 class="card-title card-title-style">AquaBaby -  Babyschwimmen</h5>
-                    <p class="card-text under-font"><small>CA. 10 Wochen - 24 Monate</small></p>
-                   
-                </div>  
-                <div class="col-md-8">
-                
-            </div>
-        </div>  
-            
-            <a href="#"  class="btn  btn_kursort_aqua" >Auf Kursort</a>
-            <a href="#"  class="btn  bnts_card4">Mehr Erfahren</a>
-        </div>
-    </div>
-</div>-->
+   
 
-<div class="col-md-12">
-    <div class="card-aqua-sizing">
 
-    <div class="row">
 
-        <div class="col-2">
-            <img src="<?php echo $url_helper;?>images/little-boy-learning-to-swim-in-a-swimming-pool-P93KRDN.jpg" class="card-img card-aqua-img" alt="Bild Konnte nicht Geladen werden!">
-        </div>
-            <div class="col-md-4">
-                <div class="card-body">
-                        <h5 class="card-title card-title-style"><?= date('d.m.Y') . " - ". $viewsearch_aquababy_kursstart_cookie . " " . $viewsearch_aquababy_ort_cookie;  ?></h5>
-                        <p class="card-text under-font"><small>CA. 10 Wochen - 24 Monate</small></p>
-                    </div>  
-                </div>  
-
-<!-- Button Row-->
-
-       
-        
-        <div class="col-6">
-            <div class="row"> 
-                <a href="#"  class="btn  btn_kursort_aqua" >Zum Kursort</a>
-         
-                <a href="#"  class="btn  btn_kurs_aqua" >Zum Kurs</a>
-            </div>
-        </div>
-
-    </div>
 </div>
-
-
-
-<div class="card-aqua-sizing">
-
-<div class="row">
-        <div class="col-2">
-            <img src="<?php echo $url_helper;?>images/little-boy-learning-to-swim-in-a-swimming-pool-P93KRDN.jpg" class="card-img card-aqua-img" alt="Bild Konnte nicht Geladen werden!">
-        </div>
-
-            <div class="col-md-4">
-                <div class="card-body">
-                        <h5 class="card-title card-title-style"><?= date('d.m.Y') . " - ". $viewsearch_aquababy_kursstart_cookie . " " . $viewsearch_aquababy_ort_cookie;  ?></h5>
-                        <p class="card-text under-font"><small>CA. 10 Wochen - 24 Monate</small></p>
-                    </div>  
-                </div>  
-
-<!-- Button Row-->
-        
-<div class="col-6">
-            <div class="row"> 
-                <a href="#"  class="btn  btn_kursort_aqua" >Zum Kursort</a>
-         
-                <a href="#"  class="btn  btn_kurs_aqua" >Zum Kurs</a>
-            </div>
-        </div>
-
-
-    </div>
-</div>
-
-<div class="card-aqua-sizing">
-
-<div class="row">
-        <div class="col-2">
-            <img src="<?php echo $url_helper;?>images/little-boy-learning-to-swim-in-a-swimming-pool-P93KRDN.jpg" class="card-img card-aqua-img" alt="Bild Konnte nicht Geladen werden!">
-        </div>
-            <div class="col-md-4">
-                <div class="card-body">
-                        <h5 class="card-title card-title-style"><?= date('d.m.Y') . " - ". $viewsearch_aquababy_kursstart_cookie . " " . $viewsearch_aquababy_ort_cookie; ?></h5>
-                        <p class="card-text under-font"><small>CA. 10 Wochen - 24 Monate</small></p>
-                    </div>  
-                </div> 
-
-<!-- Button Row-->
-
-
-        <div class="col-6">
-            <div class="row"> 
-                <a href="#"  class="btn  btn_kursort_aqua" >Zum Kursort</a>
-         
-                <a href="#"  class="btn  btn_kurs_aqua" >Zum Kurs</a>
-            </div>
-        </div>
-
-
-
-
-        </div>
-    </div>
-</div>
-
         <input type="submit" name="mehr_anzeigen" class="btn btn_mehr_laden" value ="Mehr Laden">
     </div>
 </div>
