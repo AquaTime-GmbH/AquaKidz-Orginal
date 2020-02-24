@@ -4,9 +4,10 @@ $url_helper= "../";
 /* einbingung der database connection*/
 include  $url_helper .'include/database.php';
 
+$countergebnisse = 0;
 
 $viewsearch_aquababy_ort_cookie = $_COOKIE["kursort"];
-$countergebnisse = 0;
+
 
 $viewsearch_aquababy_kursstart_cookie = $_COOKIE["kursstart"];
 ?>
@@ -77,7 +78,7 @@ include $url_helper .'include/navbar.php';
        
 <input href="#" type="submit" class="btn  btn_suchen_aqua" name="search_button" value="Suchen">
   </div>
-  <div class="block-card-aqua">  <p style="font-size: 12px">Gefundene Datensätze: <?php echo $countergebnisse; ?></p></div>
+  <div class="block-card-aqua">  <p style="font-size: 12px">Gefunden: <?php echo $countergebnisse; ?></p></div>
 </form>
 
 <?php
@@ -114,7 +115,6 @@ if($viewsearch_aquababy_ort == "x"){
 while($row = mysqli_fetch_array($result))
 {  
     
- 
     $countergebnisse = ++$countergebnisse;
     $view_kursort = $row['ort'];
     $view_kursstart = new DateTime($row['starttermin']);
@@ -162,8 +162,6 @@ while($row = mysqli_fetch_array($result))
 ?>
 
     
-   
-
 
 
 </div>
