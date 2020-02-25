@@ -4,7 +4,7 @@ $url_helper= "../";
 /* einbingung der database connection*/
 include  $url_helper .'include/database.php';
 
-$countergebnisse = 0;
+
 
 $viewsearch_aquababy_ort_cookie = $_COOKIE["kursort"];
 
@@ -78,11 +78,15 @@ include $url_helper .'include/navbar.php';
        
 <input href="#" type="submit" class="btn  btn_suchen_aqua" name="search_button" value="Suchen">
   </div>
+<?php
+$countergebnisse = 0;
+?>
   <div class="block-card-aqua">  <p style="font-size: 12px">Gefunden: <?php echo $countergebnisse; ?></p></div>
 </form>
 
 <?php
 
+//ist der wert vom index value nicht gleich wie der wert von aquababy dann delete cookie and set a new one 
 
 
 if(isset($_POST['search_button'])){
@@ -109,7 +113,6 @@ if($viewsearch_aquababy_ort == "x"){
 } else{
     $result = mysqli_query($con_mysqli,"SELECT * FROM kurse WHERE ort LIKE '%$viewsearch_aquababy_ort%' order by starttermin DESC");
 }
-
 
 
 while($row = mysqli_fetch_array($result))
@@ -161,6 +164,7 @@ while($row = mysqli_fetch_array($result))
 
 ?>
 
+<p style="font-size: 12px" id="counter">Gefunden: <?= $countergebnisse; ?></p>
     
 
 
