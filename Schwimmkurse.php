@@ -23,6 +23,14 @@ include  $url_helper .'include/database.php';
 
 <!--navbar wird eingebunden-->
 <?php
+
+
+$aktivschwimmkurse = 'aktiv';
+$aktivkursort = '';
+$aktivueberuns = '';
+$aktivkontakt = '';
+
+
 include $url_helper .'include/navbar.php';
 ?>
 <!--------------ende der einbindung------------------>

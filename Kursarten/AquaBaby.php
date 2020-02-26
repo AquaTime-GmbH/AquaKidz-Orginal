@@ -182,9 +182,9 @@ while($row = mysqli_fetch_array($result))
 
     
 
-
+<input type="submit" name="mehr_anzeigen" class="btn btn_mehr_laden" value ="Mehr Laden">
 </div>
-        <input type="submit" name="mehr_anzeigen" class="btn btn_mehr_laden" value ="Mehr Laden">
+        
     </div>
 </div>
  

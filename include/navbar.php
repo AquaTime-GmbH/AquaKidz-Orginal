@@ -17,31 +17,34 @@
   
     <div class="col-3"></div>
     <div class="col-7 navbar-pos">
+    
    
-    <ul class="navbar-nav" style="float:right;"> 
+    <ul class="navbar-nav " style="float:right;"> 
         <li class="nav-item ">
-            <a class="nav-link " href="<?php echo $url_helper;?>Schwimmkurse" style="border-radius:20px 0px 0px 0px;  background-color: white; color:#416cb2;">SCHWIMMKURSE</a>
+            <a class="nav-link <?= $aktivschwimmkurse; ?>" href="<?php echo $url_helper;?>Schwimmkurse" style="border-radius:20px 0px 0px 0px;  background-color: white; color:#416cb2; font-family: 'Fjalla One', sans-serif;">SCHWIMMKURSE</a>
+        </li>
+ 
+
+    
+        <li class="nav-item ">
+            <a class="nav-link <?= $aktivkursort;  ?>" href="<?php echo $url_helper;?>Kursorte" style="background-color:white; color:#416cb2; font-family: 'Fjalla One', sans-serif;">KURSORT</a>
         </li>
       
-        <li class="nav-item">
-            <a class="nav-link" href="<?php echo $url_helper;?>Kursorte" style="background-color:white; color:#416cb2;">KURSORT</a>
-        </li>
       
-      
-        <li class="nav-item">
-          <a class="nav-link" href="<?php echo $url_helper;?>Ueber-uns"  style="background-color:white; color:#416cb2;">ÜBER UNS</a>
+        <li class="nav-item ">
+          <a class="nav-link <?= $aktivueberuns;  ?>" href="<?php echo $url_helper;?>Ueber-uns"  style="background-color:white; color:#416cb2; font-family: 'Fjalla One', sans-serif;">ÜBER UNS</a>
         </li>
      
       
       <li class="nav-item ">
-          <a class="nav-link" href="<?php echo $url_helper;?>Kontakt" style="border-radius:0px 20px 0px 0px; background-color:white; color:#416cb2;">KONTAKT</a>
+          <a class="nav-link <?= $aktivkontakt; ?>" href="<?php echo $url_helper;?>Kontakt" style="border-radius:0px 20px 0px 0px; background-color:white; color:#416cb2; font-family: 'Fjalla One', sans-serif;">KONTAKT</a>
       </li>
       
       </ul>  
     </div> 
   </div>
       <div class="login-pos">
-        <a class="btn" href="<?php echo $url_helper;?>Index" target="_blank" style="color:white;">LOGIN</a>
+        <a class="btn" href="<?php echo $url_helper;?>Index" target="_blank" style="color:white; font-family: 'Fjalla One', sans-serif;">LOGIN</a>
       </div>
   
 
