@@ -79,7 +79,9 @@ include $url_helper .'include/navbar.php';
 <input href="#" type="submit" class="btn  btn_suchen_aqua" name="search_button" value="Suchen">
   </div>
 <?php
+
 $countergebnisse = 0;
+
 ?>
   <div class="block-card-aqua"> </div>
 </form>
@@ -93,7 +95,8 @@ if(isset($_POST['search_button'])){
     
     $viewsearch_aquababy_ort = $_POST['search_aquababy_ort']; 
     $viewsearch_aquababy_kursstart = $_POST['search_aquababy_kursstart']; 
-
+   
+ 
     setcookie("search_aquababy_ort","$viewsearch_aquababy_ort",time()+(3600*168)); 
     setcookie("search_aquababy_kursstart","$viewsearch_aquababy_kursstart",time()+(3600*168));
 //if(){
@@ -116,23 +119,36 @@ if ($viewsearch_aquababy_ort == ""){
 if ($viewsearch_aquababy_kursstart == ""){
 
     $viewsearch_aquababy_kursstart  = date('d.m.Y');
-    
+    $viewsearch_aquababy_kursstart = date("d.m.Y", strtotime("$viewsearch_aquababy_kursstart") - (3600 * 24 * 14)); 
+}else{
+    $viewsearch_aquababy_kursstart = date("d.m.Y", strtotime("$viewsearch_aquababy_kursstart") - (3600 * 24 * 14)); 
 }
 
-
+   echo $viewsearch_aquababy_kursstart ;
 if($viewsearch_aquababy_ort == "x"){
-    $result = mysqli_query($con_mysqli,"SELECT * FROM kurse  order by starttermin desc");
+    $result = mysqli_query($con_mysqli,"SELECT * FROM kurse  order by starttermin ASC");
 } else{
-    $result = mysqli_query($con_mysqli,"SELECT * FROM kurse WHERE ort LIKE '%$viewsearch_aquababy_ort%' order by starttermin DESC");
+    $result = mysqli_query($con_mysqli,"SELECT * FROM kurse WHERE ort LIKE '%$viewsearch_aquababy_ort%' order by starttermin ASC");
 }
 
 
 while($row = mysqli_fetch_array($result))
 {  
     
-    $countergebnisse = ++$countergebnisse;
-    $view_kursort = $row['ort'];
+    $sql_kursort = $row['ort'];
     $view_kursstart = new DateTime($row['starttermin']);
+    $sql_anzahlteilnehmer = $row['anzahl_teilnehmer_total'];
+    $sql_anzahlbestaetigt = $row['anzahl_teilnehmer_bestaetigt'];
+    $sql_anzahlwartend = $row['anzahl_teilnehmer_wartend'];
+    $sql_anzahlreserviert = $row['anzahl_teilnehmer_reserviert'];
+    $sql_max_teilnehmer = $row['max_teilnehmer'];
+    $sql_kurs_id = $row['kurs_id'];
+    $sql_kurs_id = $row['kurs_fm_id'];
+
+    $nochteilnehmer =$sql_max_teilnehmer -  $sql_anzahlbestaetigt ;
+
+    if ($view_kursstart->format('d.m.Y') >= $viewsearch_aquababy_kursstart) {     
+           $countergebnisse = ++$countergebnisse;
 ?>
 
 <div class="col-md-12">
@@ -145,7 +161,73 @@ while($row = mysqli_fetch_array($result))
     </div>
         <div class="col-md-4">
             <div class="card-body">
-                    <h5 class="card-title card-title-style"><?= date('d.m.Y') . " - ". $view_kursstart->format('d.m.Y'). " " . $view_kursort;  ?></h5>
+                    <h5 class="card-title card-title-style"><?=  $view_kursstart->format('d.m.Y'). " - end datum " . $sql_kursort;  ?></h5>
+                    <p class="card-text under-font"><small>CA. 10 Wochen - 24 Monate</small></p>
+                </div>  
+            </div>  
+
+   
+    <div class="col-6">
+        <?php if($nochteilnehmer != '0'){?>
+
+        <a href="#" class="btn  btn_kursort_aqua_noch" >Noch <span style="color:red;"><?= $nochteilnehmer;?></span> Frei </a>
+        <?php }else{?>
+            <a href="#" class="btn  btn_kursort_aqua_noch" >Warteliste</a>
+            <?php }?>
+        <div class="row"> 
+
+            
+            <a href="#"  class="btn  btn_kursort_aqua" >Zum Kursort</a>
+     
+            <a href="#"  class="btn  btn_kurs_aqua" >Zum Kurs</a>
+        </div>
+    </div>
+
+</div>
+</div>
+</div>
+
+
+<?php
+   
+
+        
+     } else {}
+  
+}
+
+   
+
+
+
+
+
+
+    if($countergebnisse == '0'){ 
+        $result = mysqli_query($con_mysqli,"SELECT * FROM kurse order by starttermin limit 3 " );
+       
+        while($row = mysqli_fetch_array($result))
+{  
+    
+
+    $sql_kursort = $row['ort'];
+    $view_kursstart = new DateTime($row['starttermin']);
+
+
+      
+?>
+
+<div class="col-md-12">
+<div class="card-aqua-sizing">
+
+<div class="row">
+
+    <div class="col-2">
+        <img src="<?php echo $url_helper;?>images/little-boy-learning-to-swim-in-a-swimming-pool-P93KRDN.jpg" class="card-img card-aqua-img" alt="Bild Konnte nicht Geladen werden!">
+    </div>
+        <div class="col-md-4">
+            <div class="card-body">
+                    <h5 class="card-title card-title-style"><?= date('d.m.Y') . " - ". $view_kursstart->format('d.m.Y'). " " . $sql_kursort;  ?></h5>
                     <p class="card-text under-font"><small>CA. 10 Wochen - 24 Monate</small></p>
                 </div>  
             </div>  
@@ -166,19 +248,27 @@ while($row = mysqli_fetch_array($result))
 
 <?php
    
- if ($view_kursstart->format('d.m.Y') >= $viewsearch_aquababy_kursstart) {   
+
         
-     } else {}
+}
+}
   
-}
-    mysqli_close($con_mysqli);
-}
 
+        mysqli_close($con_mysqli);
+    }
+   
 ?>
-
-
+<?php
+if($countergebnisse != '0'){ ?>
 <p style="font-size: 12px margin-bottom: auto; position: absolute; top: 1009px; color:white; margin-left:10px;" id="counter"> <?= " " . " von " . $countergebnisse . " Ergebnissen"; ?></p>
+<?php }
+else{
+    ?>
+    <p style="font-size: 12px margin-bottom: auto; position: absolute; top: 1009px; color:white; margin-left:10px;" id="counter">Leider haben wir nichts gefunden - Alternativ Termie </p>
 
+    <?php
+}
+?>
 
     
 

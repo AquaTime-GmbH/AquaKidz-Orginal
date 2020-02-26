@@ -748,4 +748,24 @@
   background-color: var(--maincolor-hover) !important;
   color: white;
 }
+/*---------------Buttons noch--------------*/
 
+.btn_kursort_aqua_noch{
+  font-size: 22px;
+  font-family: 'Fjalla One', sans-serif;
+  width: 187px;
+  height: 38px;
+  background-color: var(--maincolor);
+  padding: 5px;
+  border-radius: 0px 0px 0px 35px;
+  position: absolute;
+  right: 0;
+  color: white;
+  padding-top: 1px;
+  margin-bottom: -1px;
+  cursor: default;
+}
+
+.btn_kursort_aqua_noch:hover{
+  color: white;
+}
