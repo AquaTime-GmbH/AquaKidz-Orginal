@@ -81,7 +81,7 @@ include $url_helper .'include/navbar.php';
 <?php
 $countergebnisse = 0;
 ?>
-  <div class="block-card-aqua">  <p style="font-size: 12px">Gefunden: <?php echo $countergebnisse; ?></p></div>
+  <div class="block-card-aqua"> </div>
 </form>
 
 <?php
@@ -96,6 +96,18 @@ if(isset($_POST['search_button'])){
 
     setcookie("search_aquababy_ort","$viewsearch_aquababy_ort",time()+(3600*168)); 
     setcookie("search_aquababy_kursstart","$viewsearch_aquababy_kursstart",time()+(3600*168));
+//if(){
+
+//delete cookie 
+// unset($_COOKIE['search_aquababy_ort']);
+// empty value and expiration of cookie
+// setcookie('search_aquababy_ort', '', time() - 3600);
+
+// delete cookie 
+// unset($_COOKIE['search_aquababy_kursstart']);
+// empty value and expiration of cookie
+// setcookie('search_aquababy_kursstart', '', time() - 3600);
+// }
 
 if ($viewsearch_aquababy_ort == ""){
     $viewsearch_aquababy_ort = "x";
@@ -164,7 +176,10 @@ while($row = mysqli_fetch_array($result))
 
 ?>
 
-<p style="font-size: 12px" id="counter">Gefunden: <?= $countergebnisse; ?></p>
+
+<p style="font-size: 12px margin-bottom: auto; position: absolute; top: 1009px; color:white; margin-left:10px;" id="counter"> <?= " " . " von " . $countergebnisse . " Ergebnissen"; ?></p>
+
+
     
 
 
