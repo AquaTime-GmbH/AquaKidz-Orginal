@@ -143,7 +143,9 @@ while($row = mysqli_fetch_array($result))
     $sql_anzahlreserviert = $row['anzahl_teilnehmer_reserviert'];
     $sql_max_teilnehmer = $row['max_teilnehmer'];
     $sql_kurs_id = $row['kurs_id'];
-    $sql_kurs_id = $row['kurs_fm_id'];
+    $sql_kurs_fm_id = $row['kurs_fm_id'];
+    $sql_marke = $row['marke'];
+    $sql_nieveau = $row['niveau'];
 
     $nochteilnehmer =$sql_max_teilnehmer -  $sql_anzahlbestaetigt ;
 
@@ -179,7 +181,7 @@ while($row = mysqli_fetch_array($result))
             
             <a href="#"  class="btn  btn_kursort_aqua" >Zum Kursort</a>
      
-            <a href="#"  class="btn  btn_kurs_aqua" >Zum Kurs</a>
+            <a href="<?php echo $url_helper;?>Kurs?<?= $sql_marke."-".$sql_nieveau."&id=".$sql_kurs_id; ?>"  class="btn  btn_kurs_aqua" >Zum Kurs</a>
         </div>
     </div>
 
