@@ -52,6 +52,7 @@ while($row = mysqli_fetch_array($result))
     $sql_updated_at = new DateTime($row['updated_at']);
     $sql_created_at = new DateTime($row['created_at']);
 
+
 }
 ?>
 
@@ -78,24 +79,48 @@ include $url_helper .'include/navbar.php';
 <!--------------ende der einbindung------------------>
 
 <div class="hintergrundbild"></div>
-<div class="container">
-    <div class="col-5">
-
-
-        <div class="card first-card">
-            <div class="card-body">
+    <div class="container">
+    
+        <div class="col-5">
+        
+            <div class="card first-card">
+                <div class="card-body">
                 <div class="font-color">
-                <h1 class="card-title card-title-style" style="font-size:32px"> AQUABABY</h1>
-                    <small class="card-text" style="font-size:16px" >Frühförderung im Wasser, Schutz- und Lernerfahrung für Ihr Kind</small>
-                    <p class="card-text" style="font-size:18px" >Das erste Mal im Wasser ist eine ganz besondere Erfahrung. Gemeinsam mit Ihnen erlernt Ihr Kind früh Sicherheit im Schwimmbecken zu erhalten. Sie fördern die körperliche und geistige Entwicklung in den ersten Lebensjahren nachhaltig und unterstützen einen gesunden Umgang mit dem Wasser. In überschaubaren Gruppen vermitteln unsere Trainer wichtige Grundlagen die ein Kind für die erste Wassergewöhnung braucht. Mit verschiedenen Übungen und Geduld, stärken sie in einer Gruppe von gleichgesinnten Eltern die Fähigkeiten Ihres Kleinen, sein Immunsystem und Ihre Bindung mit Ihm.</p>
-                    
+                    <h1 class="card-title card-title-style" style="font-size:32px"> AQUABABY</h1>
+            <?php
+               
+
+ $result = mysqli_query($con_mysqli,"SELECT * FROM termine where kurs_fm_id=$sql_kurs_fm_id order by date ASC");
+
+        while($row = mysqli_fetch_array($result))
+        {  
+            $sql_termin_termin_id = $row['termin_id'];
+            $sql_termin_termin_fm_id = $row['termin_fm_id'];
+            $sql_termin_kurs_id = $row['kurs_fm_id'];
+            $sql_termin_date = $row['date'];
+            $sql_termin_startzeit = new DateTime($row['startzeit']);
+            $sql_termin_endzeit = $row['endzeit'];
+            $sql_termin_created_at = new DateTime($row['created_at']);
+            $sql_termin_updated_at = new DateTime($row['updated_at']);
+            
+        
+  ?> 
+        
+
+                <ul style="list-style-type:none;">
+                    <li> <?= $sql_termin_date; ?></li>
+               </ul>
+<?php } ?>
             </div>
         </div>
     </div>
 </div>
+
+        <div class="col-4">
+            <a href="#"  class="btn  btn_aquababy_zum_kursanmelden" >Zum Kursort</a>
+        </div>
+    </div>
 </div>
-
-
 
 
 

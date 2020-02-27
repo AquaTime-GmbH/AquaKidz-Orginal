@@ -124,7 +124,7 @@ if ($viewsearch_aquababy_kursstart == ""){
     $viewsearch_aquababy_kursstart = date("d.m.Y", strtotime("$viewsearch_aquababy_kursstart") - (3600 * 24 * 14)); 
 }
 
-   echo $viewsearch_aquababy_kursstart ;
+   
 if($viewsearch_aquababy_ort == "x"){
     $result = mysqli_query($con_mysqli,"SELECT * FROM kurse  order by starttermin ASC");
 } else{
@@ -199,11 +199,6 @@ while($row = mysqli_fetch_array($result))
 }
 
    
-
-
-
-
-
 
     if($countergebnisse == '0'){ 
         $result = mysqli_query($con_mysqli,"SELECT * FROM kurse order by starttermin limit 3 " );

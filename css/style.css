@@ -769,3 +769,18 @@
 .btn_kursort_aqua_noch:hover{
   color: white;
 }
+
+.btn_aquababy_zum_kursanmelden{
+  font-size: 22px;
+  font-family: 'Fjalla One', sans-serif;
+  width: 400px;
+  height: 58px;
+  background-color: red;
+  color: var(--maincolor);
+  padding: 5px;
+  border-radius: 35px 35px 35px 35px;
+  position: absolute;
+  bottom: 0;
+  padding-top: 11px;
+  margin-bottom: 200px;
+}
