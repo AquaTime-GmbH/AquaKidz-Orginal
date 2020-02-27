@@ -85,7 +85,7 @@ include $url_helper .'include/navbar.php';
         // SQL Abfrage, welche alle Werte der News Tabelle ausgibt
         // mit den Werten: "status" = Online und "firma" = AquaTime und diese nach Datum und ID sortieren
         // Durch das Ändern der "firma" kann die News für die anderen Seite verwendet werden (zb. AquaKidz)
-        $result = mysqli_query($con_mysqli, "SELECT * FROM news WHERE status = 'Online' AND firma = 'AquaTime' ORDER BY online_datum DESC, news_id DESC");
+        $result = mysqli_query($con_mysqli, "SELECT * FROM news WHERE status = 'Online' AND firma = 'AquaKidz' ORDER BY online_datum DESC, news_id DESC");
 
         //Jedes gefundende Resultat wird nun durch eine Schleife geleitet
         //In dieser Schleife werden die Variablen festgelegt und dementsprechend die News Blöcke erstellt
@@ -175,7 +175,7 @@ include $url_helper .'include/navbar.php';
                             </div>
                             <!-- Pfad des Bildes vervollständigen und die Border Farbe analog der Kategorie festlegen -->
                             <img class="card-img-right flex-auto d-none d-lg-block newsbild" alt=""
-                                 style="width: 400px; height: 250px; background-image: url('/AquaTime-Dashboard/<?php echo $newssview_bild; ?>'); border-left: solid 5px; border-color: <?php echo $newssview_kategorie_farbe; ?>;  "
+                                 style="width: 400px; height: 250px; background-image: url('../dashboard/<?php echo $newssview_bild; ?>'); border-left: solid 5px; border-color: <?php echo $newssview_kategorie_farbe; ?>;  "
                                  data-holder-rendered="true">
                         </div>
                     </div>

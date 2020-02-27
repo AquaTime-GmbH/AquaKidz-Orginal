@@ -79,7 +79,7 @@ if ($viewnews_status != 'Online') {
 
 
 
-?>
+
 
 <!DOCTYPE html>
 <head>
@@ -176,7 +176,7 @@ include $url_helper .'include/navbar.php';
             <div class="col-8">
                 <!-- Pfad des Bildes vervollständigen -->
                 <div class="NewsBanner"
-                     style="background-image: url('/AquaTime-Dashboard/<?php echo $viewnews_newsbild ?>'); "></div>
+                     style="background-image: url('../dashboard/<?php echo $viewnews_newsbild ?>'); "></div>
             </div>
             <div class="col-2"></div>
         </div>
@@ -233,7 +233,7 @@ include $url_helper .'include/navbar.php';
 
                             <!-- Empfehlungs Beschreibung  -->
                             <p>Immer Aktuell bleiben!</p>
-                            <form action="../AquaTime/News" method="post">
+                            <form action="News" method="post">
                                 <input class="btn btn-secondary" type="submit" value="Details &raquo;"
                                        name="empfehlungzaeler">
                             </form>
@@ -243,7 +243,7 @@ include $url_helper .'include/navbar.php';
                             ?>
                             <!-- Pfad des Bildes vervollständigen -->
                             <img class="bd-placeholder-img rounded-circle KreisNewsBild"
-                                 style="background-image: url('/AquaTime-Dashboard/<?php echo $viewnews_empbild1 ?>')">
+                                 style="background-image: url('../dashboard/<?php echo $viewnews_empbild1 ?>')">
 
                             <!-- Titel der Empfehlung einfügen -->
                             <h2><?php echo $viewnews_emptitel1 ?></h2>
@@ -287,7 +287,7 @@ include $url_helper .'include/navbar.php';
                             ?>
                             <!-- Pfad des Bildes vervollständigen -->
                             <img class="bd-placeholder-img rounded-circle KreisNewsBild"
-                                 style="background-image: url('/AquaTime-Dashboard/<?php echo $viewnews_empbild2 ?>')">
+                                 style="background-image: url('../dashboard/<?php echo $viewnews_empbild2 ?>')">
 
                             <!-- Titel der Empfehlung einfügen -->
                             <h2><?php echo $viewnews_emptitel2 ?></h2>
@@ -329,7 +329,7 @@ include $url_helper .'include/navbar.php';
                             ?>
                             <!-- Pfad des Bildes vervollständigen -->
                             <img class="bd-placeholder-img rounded-circle KreisNewsBild"
-                                 style="background-image: url('/AquaTime-Dashboard/<?php echo $viewnews_empbild3 ?>')">
+                                 style="background-image: url('../dashboard/<?php echo $viewnews_empbild3 ?>')">
 
                             <!-- Titel der Empfehlung einfügen -->
                             <h2><?php echo $viewnews_emptitel3 ?></h2>

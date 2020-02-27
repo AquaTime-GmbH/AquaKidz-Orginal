@@ -147,7 +147,7 @@ while($row = mysqli_fetch_array($result))
     $sql_marke = $row['marke'];
     $sql_nieveau = $row['niveau'];
 
-    $nochteilnehmer =$sql_max_teilnehmer -  $sql_anzahlbestaetigt ;
+    $nochteilnehmer = $sql_max_teilnehmer -  $sql_anzahlbestaetigt ;
 
     if ($view_kursstart->format('d.m.Y') >= $viewsearch_aquababy_kursstart) {     
            $countergebnisse = ++$countergebnisse;

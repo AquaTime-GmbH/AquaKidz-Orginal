@@ -93,7 +93,7 @@
   /*Bild angepasst */
   
   .hintergrundbild {
-    background-image: url(../images/Banner2.PNG);
+    background-image: url(images/Banner2.PNG);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

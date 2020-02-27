@@ -119,7 +119,7 @@
                 
                 <a class="footer-text" href="<?php echo $url_helper;?>">Unser Team</a>
 
-                <a class="footer-text" href="<?php echo $url_helper;?>">Unser Team</a>
+                <a class="footer-text" href="<?php echo $url_helper;?>News">News</a>
                 
             </p>  
         </div>
