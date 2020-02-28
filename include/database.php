@@ -1,30 +1,17 @@
 <?php
 //DATENBANK//
 
-//HOST OFFLINE
+// //HOST ONLINE
 $db_host = "localhost";
 
 //USER
-$db_user = "root";
+$db_user = "web156";
 
 //PASSWORT
-$db_password = "root";
+$db_password = "tpVjHF1R";
 
 //DATENBANK
-$db_database = "AquaTime-Neu";
-
-
-// //HOST ONLINE
-// $db_host = "localhost";
-
-// //USER
-// $db_user = "web156";
-
-// //PASSWORT
-// $db_password = "tpVjHF1R";
-
-// //DATENBANK
-// $db_database = "usr_web156_22";
+$db_database = "usr_web156_22";
 
 
 ///////////

@@ -15,40 +15,38 @@ $result = mysqli_query($con_mysqli,"SELECT * FROM kurse WHERE kurs_id=$Getid ");
 while($row = mysqli_fetch_array($result))
 {  
     $sql_kurs_id = $row['kurs_id'];
-    $sql_kurs_fm_id = $row['kurs_fm_id'];
-    $sql_kurs_nummer = $row['kurs_nummer'];
-    $sql_max_teilnehmer = $row['max_teilnehmer'];
-    $sql_niveau = $row['niveau'];
-    $sql_niveau_desctiption_internet = $row['niveau_desctiption_internet'];
-    $sql_alter_kurs = $row['alter_kurs'];
-    $sql_ort = $row['ort'];
-    $sql_marke = $row['marke'];
-    $sql_status = $row['status'];
-    $sql_anzahl_termine = $row['anzahl_termine'];
-    $sql_anzahl_teilnehmer_total = $row['anzahl_teilnehmer_total'];
-    $sql_anzahl_teilnehmer_bestaetigt = $row['anzahl_teilnehmer_bestaetigt'];
-    $sql_anzahl_teilnehmer_wartend = $row['anzahl_teilnehmer_wartend'];
-    $sql_anzahl_teilnehmer_reserviert = $row['anzahl_teilnehmer_reserviert'];
-    $sql_summe_kurskosten = $row['summe_kurskosten'];
-    $sql_summe_transportkosten = $row['summe_transportkosten'];
-    $sql_summe_sonstige_kosten = $row['summe_sonstige_kosten'];
-    $sql_bad_name_druck = $row['bad_name_druck'];
-    $sql_markenfamilie = $row['markenfamilie'];
-    $sql_kurstrainer_liste = $row['kurstrainer_liste'];
-    $sql_wochentag = $row['wochentag'];
-    $sql_startzeit = $row['startzeit'];
-    $sql_dauer = $row['dauer'];
-    $sql_wiederholungen = $row['wiederholungen'];
-    $sql_starttermin = new DateTime($row['starttermin']);
-    $sql_offene_plaetze = $row['offene_plaetze'];
-    $sql_taeglich = $row['taeglich'];
-    $sql_von_datum = $row['von_datum'];
-    $sql_bis_datum = $row['bis_datum'];
-    $sql_termin_liste = $row['termin_liste'];
-    $sql_notiz = $row['notiz'];
-    $sql_letzter_termin = $row['letzter_termin'];
-    $sql_bad_eintritt = $row['bad_eintritt'];
-    $sql_datei_pfad = $row['datei_pfad'];
+    $sql_fm_kurs_id = $row['fm_kurs_id'];
+    $sql_fm_bad_id = $row['fm_bad_id'];
+    $sql_fm_bad_name_druck = $row['fm_bad_name_druck'];
+    $sql_fm_bad_strasse = $row['fm_bad_strasse'];
+    $sql_fm_bad_ort = $row['fm_bad_ort'];
+    $sql_fm_offene_plaetze = $row['fm_offene_plaetze'];
+    $sql_fm_von_datum_html = new DateTime($row['fm_von_datum_html']);
+    $sql_fm_bis_datum_html = new DateTime($row['fm_bis_datum_html']);
+    $sql_fm_text_kursinfo = $row['fm_text_kursinfo'];
+    $sql_fm_kurskosten = $row['fm_kurskosten'];
+    $sql_fm_kurstrainer_erster_id = $row['fm_kurstrainer_erster_id'];
+    $sql_fm_marken_id = $row['fm_marken_id'];
+    $sql_fm_marke = $row['fm_marke'];
+    $sql_fm_markenfamilie = $row['fm_markenfamilie'];
+    $sql_fm_Niveau_Description_Internet = $row['fm_Niveau_Description_Internet'];
+    $sql_fm_Alter = $row['fm_Alter'];
+    $sql_fm_wochentag = $row['fm_wochentag'];
+    $sql_fm_Startzeit = new DateTime($row['fm_Startzeit']);
+    $sql_fm_Dauer = $row['fm_Dauer'];
+    $sql_fm_taeglich = $row['fm_taeglich'];
+    $sql_fm_Bad_Eintritt = $row['fm_Bad_Eintritt'];
+    $sql_fm_sonst_Kosten = $row['fm_sonst_Kosten'];
+    $sql_diagramm_kz1_text = $row['diagramm_kz1_text'];
+    $sql_diagramm_kz2_text = $row['diagramm_kz2_text'];
+    $sql_diagramm_kz3_text = $row['diagramm_kz3_text'];
+    $sql_diagramm_kz4_text = $row['diagramm_kz4_text'];
+    $sql_diagramm_kz5_text = $row['diagramm_kz5_text'];
+    $sql_diagramm_kz6_text = $row['diagramm_kz6_text'];
+    $sql_diagramm_kz7_text = $row['diagramm_kz7_text'];
+    $sql_diagramm_kz8_text = $row['diagramm_kz8_text'];
+    $sql_fm_status = $row['fm_status'];
+    $sql_counter = $row['counter'];
     $sql_updated_at = new DateTime($row['updated_at']);
     $sql_created_at = new DateTime($row['created_at']);
 
@@ -119,9 +117,24 @@ include $url_helper .'include/navbar.php';
         <div class="col-4">
             <a href="#"  class="btn  btn_aquababy_zum_kursanmelden" >Zum Kursort</a>
         </div>
-    </div>
-</div>
+    
 
+<!--test in variabeln gespeichert-->
+<?php 
+
+
+$ueber_den_Kurs= "ÜBER DEN KURS" ;
+
+?>
+
+<p class="title_of_text"><?= $ueber_den_Kurs ?></p>
+
+
+
+
+
+</div>
+</div>
 
 
 

@@ -26,7 +26,14 @@
     p{
       font-family: 'Lato', sans-serif;
     }
-
+    .title_of_text{
+      font-size: 32px;
+      color: var(--maincolor);
+    }
+ul{
+  
+  padding-inline-start: 0px;
+}
   @media screen and (min-width: 1025px) and (max-width: 1920px) {
     .aqua-navbar{
       height:80px; 
@@ -93,7 +100,7 @@
   /*Bild angepasst */
   
   .hintergrundbild {
-    background-image: url(images/Banner2.PNG);
+    background-image: url('../images/Banner2.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -101,8 +108,8 @@
       width: 100%;
       height: 624px;
     position: absolute;
-    
   }
+
   .border_under{
     width:100%; 
     height:10px; 
@@ -595,7 +602,7 @@
     background-color: white;
     margin-bottom: 100px;
     box-shadow: 0px 6px 3px rgba(0, 0, 0, .2);
-    overflow: scroll;
+   
   }
   
   .block-card-aqua{
@@ -775,12 +782,12 @@
   font-family: 'Fjalla One', sans-serif;
   width: 400px;
   height: 58px;
-  background-color: red;
+  background-color: rgb(255, 255, 255);
   color: var(--maincolor);
   padding: 5px;
   border-radius: 35px 35px 35px 35px;
   position: absolute;
   bottom: 0;
   padding-top: 11px;
-  margin-bottom: 200px;
+  margin-bottom: 170px;
 }
