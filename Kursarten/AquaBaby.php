@@ -1,10 +1,10 @@
  <!-- organisation der url -->
- <?php 
+ <?php
 $url_helper= "../";
 /* einbingung der database connection*/
 include  $url_helper .'include/database.php';
 
-
+ setcookie("kursort","TTTTTTTTTTTT",time()- 3600000000);
 
 $viewsearch_aquababy_ort_cookie = $_COOKIE["kursort"];
 
@@ -94,12 +94,15 @@ $countergebnisse = 0;
 
 if(isset($_POST['search_button'])){
     
-    $viewsearch_aquababy_ort = $_POST['search_aquababy_ort']; 
-    $viewsearch_aquababy_kursstart = $_POST['search_aquababy_kursstart']; 
-   
- 
-    setcookie("search_aquababy_ort","$viewsearch_aquababy_ort",time()+(3600*168)); 
-    setcookie("search_aquababy_kursstart","$viewsearch_aquababy_kursstart",time()+(3600*168));
+    $viewsearch_aquababy_ort = $_POST['search_aquababy_ort'];
+    $viewsearch_aquababy_kursstart = $_POST['search_aquababy_kursstart'];
+
+
+    setcookie("kursort","$viewsearch_aquababy_ort",time()+(3600*168));
+
+    setcookie("kursstart","$viewsearch_aquababy_kursstart",time()+(3600*168));
+
+
 //if(){
 
 //delete cookie 
@@ -277,7 +280,6 @@ while($row = mysqli_fetch_array($result))
 }
   
 
-        mysqli_close($con_mysqli);
     }
    
 ?>
@@ -300,7 +302,7 @@ else{
         
     </div>
 </div>
- 
+
 
 
 
