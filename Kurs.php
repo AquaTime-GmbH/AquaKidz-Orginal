@@ -50,6 +50,7 @@ while($row = mysqli_fetch_array($result))
     $sql_updated_at = new DateTime($row['updated_at']);
     $sql_created_at = new DateTime($row['created_at']);
 
+    
 
 }
 ?>
@@ -67,6 +68,7 @@ while($row = mysqli_fetch_array($result))
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="<?php echo $url_helper;?>css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Lato&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.2.1/build/ol.js"></script>
 </head>
 <body>
 
@@ -85,6 +87,7 @@ include $url_helper .'include/navbar.php';
                 <div class="card-body">
                 <div class="font-color">
                     <h1 class="card-title card-title-style" style="font-size:32px"> AQUABABY</h1>
+                     <?= $sql_fm_bad_ort; ?>
             <?php
                
 
@@ -101,14 +104,20 @@ include $url_helper .'include/navbar.php';
             $sql_termin_created_at = new DateTime($row['created_at']);
             $sql_termin_updated_at = new DateTime($row['updated_at']);
             
-        
-  ?> 
-        
 
-                <ul style="list-style-type:none;">
-                    <li> <?= $sql_termin_date; ?></li>
-               </ul>
+
+  ?> 
+
+              
 <?php } ?>
+       
+                <ul style="list-style-type:none;">
+                    <li></li>
+                    <li>KURSLETIUNG: <?= $sql_fm_kurstrainer_erster_id; ?> </li>
+                    <li>KURSLEKTIONEN:......LEKTIONEN</li>
+                    <li>KURSGELD: <?= $sql_fm_kurskosten; ?> CHF</li>
+               </ul>
+
             </div>
         </div>
     </div>
@@ -126,14 +135,43 @@ include $url_helper .'include/navbar.php';
 $ueber_den_Kurs= "ÜBER DEN KURS" ;
 
 ?>
+</div>
 
-<p class="title_of_text"><?= $ueber_den_Kurs ?></p>
+<div class="big-box-text">
+    <div class="container">
+        <p class="title_of_text"><?= $ueber_den_Kurs ?></p>
+    </div>
+</div>
+</div>
 
+<div class="big-box-map">
+<div class="container">
 
+    <div id="map" class="map"></div>
+    <script type="text/javascript">
+      var map = new ol.Map({
+        target: 'map',
+        layers: [
+          new ol.layer.Tile({
+            source: new ol.source.OSM()
+          })
+        ],
+        view: new ol.View({
+          center: ol.proj.fromLonLat([37.41, 8.82]),
+          zoom: 4
+        })
+      });
+    </script>
+    
 
 
 
 </div>
+
+
+
+
+    </div>
 </div>
 
 

@@ -25,6 +25,7 @@ $viewsearch_aquababy_kursstart_cookie = $_COOKIE["kursstart"];
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="<?php echo $url_helper;?>css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Lato&display=swap" rel="stylesheet">
+   
 </head>
 <body>
 
@@ -177,7 +178,7 @@ while($row = mysqli_fetch_array($result))
      
     
 
-    if ($sql_fm_von_datum_html->format('d.m.Y') <= $viewsearch_aquababy_kursstart) {     
+    if ($sql_fm_von_datum_html->format('d.m.Y') >= $viewsearch_aquababy_kursstart) {     
            $countergebnisse = ++$countergebnisse;
            
 ?>
