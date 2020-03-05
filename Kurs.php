@@ -6,7 +6,7 @@ include  $url_helper .'include/database.php';
 
 
 $Getid = $_GET['id'];
-$Getmid = $_GET['id'];
+
 
 
 $result = mysqli_query($con_mysqli,"SELECT * FROM kurse WHERE kurs_id=$Getid ");
@@ -50,17 +50,16 @@ while($row = mysqli_fetch_array($result))
     $sql_counter = $row['counter'];
     $sql_updated_at = new DateTime($row['updated_at']);
     $sql_created_at = new DateTime($row['created_at']);
-    
-    
 
+    
 }
+$result_mitarbeiter = mysqli_query($con_mysqli,"SELECT * FROM mitarbeiter  WHERE mitarbeiter_id=$Getid ");
 
-$result_mitarbeiter = mysqli_query($con_mysqli,"SELECT * FROM mitarbeiter WHERE mitarbeiter_id=$Getmid ");
 
 
 while($row = mysqli_fetch_array($result_mitarbeiter))
 {  
-    $sql_fm_mitarbeiter_id = $row['mitarbeiter_id'];
+    $sql_fm_mitarbeiter_fm_id= $row['mitarbeiter_fm_id'];
     $sql_fm_vorname = $row['vorname'];
     $sql_fm_nachname= $row['nachname'];
 }
@@ -124,12 +123,12 @@ include $url_helper .'include/navbar.php';
        
                 <ul style="list-style-type:none;">
                     <li></li>
-                    <?php if($sql_fm_vorname == "" )
-                       $keinkursleiter = "leider kein Kursleiter angegeben";
+                 
+                    <?php if($sql_fm_vorname == "") { 
+                    $keinkursleiter = "Leider kein Kursleiter angegeben";
                     ?>
-
-                    <li>KURSLETIUNG: <?= $sql_fm_vorname  . "  " . $sql_fm_nachname;?> <?= $keinkursleiter?> </li>
-                    
+                    <li>KURSLETIUNG: <?=$sql_fm_vorname . " ". $sql_fm_nachname?> <?= $keinkursleiter?></li>
+                    <?php } ?>
                     <li>KURSLEKTIONEN:......LEKTIONEN</li>
                     <li>KURSGELD: <?= $sql_fm_kurskosten; ?> CHF</li>
                </ul>
