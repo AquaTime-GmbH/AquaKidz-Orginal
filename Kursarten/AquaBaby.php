@@ -1,13 +1,13 @@
  <!-- organisation der url -->
  <?php
+ //session starten
+session_start();
+
 $url_helper= "../";
 /* einbingung der database connection*/
 include  $url_helper .'include/database.php';
-
- setcookie("kursort","TTTTTTTTTTTT",time()- 3600000000);
-
+include 'cookie.js';
 $viewsearch_aquababy_ort_cookie = $_COOKIE["kursort"];
-
 
 $viewsearch_aquababy_kursstart_cookie = $_COOKIE["kursstart"];
 ?>

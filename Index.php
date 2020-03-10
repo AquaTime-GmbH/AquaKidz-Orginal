@@ -1,8 +1,12 @@
 <!-- organisation der url -->
 <?php
+//session starten
+session_start();
+
 $url_helper= "";
 /* einbingung der database connection*/
 include  $url_helper .'include/database.php';
+
 
 
 ?>
@@ -20,6 +24,7 @@ include  $url_helper .'include/database.php';
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="<?php echo $url_helper;?>css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Lato&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="cookie.js"></script>
 </head>
 <body>
 
@@ -37,6 +42,16 @@ include $url_helper .'include/navbar.php';
 
 ?>
 <!--------------ende der einbindung------------------>
+
+<?php
+
+if( isset($_COOKIE['setCookieHinweis']) ) { 
+  $showPopup = false;
+} else {
+  $showPopup = true;
+}    
+?>
+
 
 
 
@@ -59,6 +74,9 @@ include $url_helper .'include/navbar.php';
   }
 
 ?>
+
+
+
 
 <div class="hintergrundbild">
 <div class="border_under">
@@ -149,7 +167,35 @@ include $url_helper .'include/navbar.php';
     
     </form>
 
+<?php if($showPopup) { ?>
+  <div id="cookie-popup">
+    <div class="hinweis">
+      <p>Wir verwenden Cookies. Durch die weitere Nutzung der Webseite stimmen Sie der Verwendung von Cookies zu.</p>
+    </div> 
+    <span class="more">
+      <a href="datenschutz.php">Details</a>
+    </span>
+    <button class="btn" type="submit" name="ok_cookie">OK, ich bin einverstanden.</button>
+    <?php 
+}
+?>
+
+
+    <!-- wenn er auf den button soll er auf der index seite bleiben und cookies werdenverwendet wenn er nicht akzeptiert wird er auf eine andere seite gebraucht -->
+    <?php if (isset($_POST['ok_cookie'])){
+     echo '<script> window.location="index.php";</script>';
     
+
+    ?>
+
+    <button class="btn" type="submit" name="ok_cookie">OK, ich bin einverstanden.</button>
+  </div>
+  
+<?php 
+exit;
+
+}; 
+?>
 
      <!-- Das sind alle 3 Cards(flexboxen) in der mitte der Webseite -->
         <div class="row">

@@ -9,7 +9,11 @@
 
 
                 if($viewsearch_alt != ''){
-                setcookie("kursstart","$viewsearch_start",time()+(3600*168));
+
+                    //session start mit den übergebenen werten 
+
+                    //$_SESSION['username'] = $name;
+                    setcookie("kursstart","$viewsearch_start",time()+(3600*168));
                     setcookie("kursalter","$viewsearch_alt",time()+(3600*168));
                     setcookie("kursort","$viewsearch_ort",time()+(3600*168));
                 
