@@ -11,3 +11,17 @@ function cookieOk() {
     document.cookie = "kursalter = set; secure; expires=" + enddate;*/
     document.getElementById("cookie-popup").classList.add("hidden");
   }
+
+  function cookiealert() {
+    var answer = confirm("Wenn Sie die Cookies ablehnen, kann dies Auswirkungen auf die Suchfunktion haben.")
+    if (answer) {
+
+     window.location="index_session";
+     
+  } else { 
+    //wenn er auf abbrechen drückt 
+    //document.getElementById("cookie-popup").classList.add("hidden");
+      
+    }
+
+  }

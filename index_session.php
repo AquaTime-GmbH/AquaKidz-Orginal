@@ -43,34 +43,20 @@ include $url_helper .'include/navbar.php';
 ?>
 <!--------------ende der einbindung------------------>
 
-<?php
-
-if( isset($_COOKIE['setCookieHinweis']) ) { 
-  $showPopup = false;
-} else {
-  $showPopup = true;
-}    
-?>
-
-
-
-
-
-
 <?php 
 
- if( isset($_COOKIE['kursstart'])) {
-    $cookie_kursstart = $_COOKIE["kursstart"]; 
+ if( isset($_SESSION['kursstart'])) {
+    $cookie_kursstart = $_SESSION["kursstart"]; 
     } else {
         $cookie_kursstart = "";
   }
-  if( isset($_COOKIE['kursort'])) {
-    $cookie_kursort = $_COOKIE["kursort"]; 
+  if( isset($_SESSION['kursort'])) {
+    $cookie_kursort = $_SESSION["kursort"]; 
     } else {
         $cookie_kursort = "";
   }
-  if( isset($_COOKIE['kursalter'])) {
-    $cookie_kursalter = $_COOKIE["kursalter"]; 
+  if( isset($_SESSION['kursalter'])) {
+    $cookie_kursalter = $_SESSION["kursalter"]; 
     } else {
         $cookie_kursalter = "";
   }
@@ -91,7 +77,7 @@ if( isset($_COOKIE['setCookieHinweis']) ) {
         <div class="card first-card">
             <div class="card-body">
                 <div class="font-color">
-                <h1 class="card-title card-title-style" style="font-size:32px">SCHWIMMEN LERNEN, SCHWIMMEN LIEBEN</h1>
+                <h1 class="card-title card-title-style" style="font-size:32px">Sfdsgfgfdsgg</h1>
                     <p class="card-text first-card-text" >Sichere und altersgerechte Kurse für Babys und Kinder. Denn schwimmen lernen soll Spass machen.</p>
 
                     <label class="col-4 col-form-label first-card-text">Ort</label>
@@ -169,23 +155,6 @@ if( isset($_COOKIE['setCookieHinweis']) ) {
     
     </form>
 
-<?php if($showPopup) { ?>
-  <div id="cookie-popup">
-    <div class="hinweis">
-      <p>Wir verwenden Cookies. Durch die weitere Nutzung der Webseite stimmen Sie der Verwendung von Cookies zu.</p>
-    </div> 
-    <span class="more">
-      <a href="datenschutz.php">Details</a>
-    </span>
-  <!-- beim klicken von dem button bleibt manauf der seite und der pop up fenster verschwindet -->
-    <button onclick='cookieOk()'class="btn btn_ok_cookie" type="submit" name="ok_cookie">Akzeptieren</button>
-      <!-- beim klicken von diesem button kommt eine altert warnung die sagt ob man wirklich die cookies ablehnen will und wird dann auf die seite von session weiter geleitet -->
-    <button onclick='cookiealert()'class="btn btn_alert_cookie" type="submit" name="alert_cookie">Verweigern</button>
-  </div>
-<?php 
-
-}; 
-?>
 
      <!-- Das sind alle 3 Cards(flexboxen) in der mitte der Webseite -->
         <div class="row">
