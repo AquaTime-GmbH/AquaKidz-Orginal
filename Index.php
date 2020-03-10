@@ -55,6 +55,8 @@ if( isset($_COOKIE['setCookieHinweis']) ) {
 
 
 
+
+
 <?php 
 
  if( isset($_COOKIE['kursstart'])) {
@@ -175,24 +177,10 @@ if( isset($_COOKIE['setCookieHinweis']) ) {
     <span class="more">
       <a href="datenschutz.php">Details</a>
     </span>
-    <button class="btn" type="submit" name="ok_cookie">OK, ich bin einverstanden.</button>
-    <?php 
-}
-?>
 
-
-    <!-- wenn er auf den button soll er auf der index seite bleiben und cookies werdenverwendet wenn er nicht akzeptiert wird er auf eine andere seite gebraucht -->
-    <?php if (isset($_POST['ok_cookie'])){
-     echo '<script> window.location="index.php";</script>';
-    
-
-    ?>
-
-    <button class="btn" type="submit" name="ok_cookie">OK, ich bin einverstanden.</button>
+    <button onclick='cookieOk()'class="btn btn_ok_cookie" type="submit" name="ok_cookie">OK, ich bin einverstanden.</button>
   </div>
-  
 <?php 
-exit;
 
 }; 
 ?>

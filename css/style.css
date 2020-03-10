@@ -829,3 +829,21 @@ ul{
 #cookie-popup.hidden {
   display: none;
 }
+.btn_ok_cookie{
+  font-size: 15px;
+    font-family: 'Fjalla One', sans-serif;
+    width: 200px;
+    height: 30px;
+    background-color: var(--maincolor);
+    margin-left: auto;
+    padding: 5px;
+    border-radius: 35px ;
+    bottom: 0;
+    right: 0;
+    color: white;
+}
+
+.btn_ok_cookie:hover{
+  color: white;
+  background-color: var(--maincolor-hover);
+}
