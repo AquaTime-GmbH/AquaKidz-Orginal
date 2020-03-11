@@ -24,9 +24,15 @@ include  $url_helper .'include/database.php';
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="<?php echo $url_helper;?>css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Lato&display=swap" rel="stylesheet">
+
+     <!--einbindung der cookie.js datei-->
     <script type="text/javascript" src="cookie.js"></script>
+
+   
+    <script src="js-for-cookie/src/js.cookie.js"></script>
 </head>
 <body>
+
 
 <!--navbar wird eingebunden-->
 <?php
@@ -42,20 +48,6 @@ include $url_helper .'include/navbar.php';
 
 ?>
 <!--------------ende der einbindung------------------>
-
-<?php
-
-if( isset($_COOKIE['setCookieHinweis']) ) { 
-  $showPopup = false;
-} else {
-  $showPopup = true;
-}    
-?>
-
-
-
-
-
 
 <?php 
 
@@ -76,8 +68,6 @@ if( isset($_COOKIE['setCookieHinweis']) ) {
   }
 
 ?>
-
-
 
 
 <div class="hintergrundbild">
@@ -167,25 +157,35 @@ if( isset($_COOKIE['setCookieHinweis']) ) {
         </div>
     </div>
     
-    </form>
+   <?php
+ 
+?>
+</form>
+ <form action="cookie_accept" method="post">
 
-<?php if($showPopup) { ?>
-  <div id="cookie-popup">
+
+  <div id="cookie_popup">
     <div class="hinweis">
       <p>Wir verwenden Cookies. Durch die weitere Nutzung der Webseite stimmen Sie der Verwendung von Cookies zu.</p>
     </div> 
+
     <span class="more">
       <a href="datenschutz.php">Details</a>
     </span>
-  <!-- beim klicken von dem button bleibt manauf der seite und der pop up fenster verschwindet -->
-    <button onclick='cookieOk()'class="btn btn_ok_cookie" type="submit" name="ok_cookie">Akzeptieren</button>
-      <!-- beim klicken von diesem button kommt eine altert warnung die sagt ob man wirklich die cookies ablehnen will und wird dann auf die seite von session weiter geleitet -->
-    <button onclick='cookiealert()'class="btn btn_alert_cookie" type="submit" name="alert_cookie">Verweigern</button>
-  </div>
-<?php 
 
-}; 
-?>
+
+    <!-- beim klicken von dem button bleibt manauf der seite und der pop up fenster verschwindet -->
+        <button onclick='popup_hide()' class="btn btn_ok_cookie" type="submit" name="ok_cookie_button" value="yes" >Akzeptieren</button>   
+
+
+    <!-- beim klicken von diesem button kommt eine altert warnung die sagt ob man wirklich die cookies ablehnen will und wird dann auf die seite von session weiter geleitet -->
+        <button onclick='cookiealert()'class="btn btn_alert_cookie" type="submit" name="alert_cookie">Verweigern</button>
+
+  </div>
+
+
+
+</form>
 
      <!-- Das sind alle 3 Cards(flexboxen) in der mitte der Webseite -->
         <div class="row">

@@ -6,7 +6,7 @@ session_start();
 $url_helper= "../";
 /* einbingung der database connection*/
 include  $url_helper .'include/database.php';
-include 'cookie.js';
+
 $viewsearch_aquababy_ort_cookie = $_COOKIE["kursort"];
 
 $viewsearch_aquababy_kursstart_cookie = $_COOKIE["kursstart"];
