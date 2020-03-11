@@ -1,10 +1,11 @@
 
 
-    
+  
     function popup_hide(){
       document.getElementById("cookie-popup").classList.add("hidden");
     }
-    
+    setCookie('HideDiv','true',1);
+    $(".collectionhaircookies").css('display','none');
     function cookiealert() {
     //wenne r auf verweigern drückt zeigt er den text an 
     var answer = confirm("Wenn Sie die Cookies ablehnen, kann dies Auswirkungen auf die Suchfunktion haben.")
