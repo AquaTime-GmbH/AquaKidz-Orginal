@@ -77,7 +77,7 @@ include $url_helper .'include/navbar.php';
         <div class="card first-card">
             <div class="card-body">
                 <div class="font-color">
-                <h1 class="card-title card-title-style" style="font-size:32px">Sfdsgfgfdsgg</h1>
+                <h1 class="card-title card-title-style" style="font-size:32px">SCHWIMMEN LERNEN, SCHWIMMEN LIEBEN</h1>
                     <p class="card-text first-card-text" >Sichere und altersgerechte Kurse für Babys und Kinder. Denn schwimmen lernen soll Spass machen.</p>
 
                     <label class="col-4 col-form-label first-card-text">Ort</label>

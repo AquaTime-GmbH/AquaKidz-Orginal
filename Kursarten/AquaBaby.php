@@ -57,7 +57,7 @@ include $url_helper .'include/navbar.php';
     <form action=""  method="post">
         
 <div class="Card-find-aqua"> 
-<div style="overflow: scroll;">
+<div style="overflow: hidden;">
 <div style="background-color:var(--maincolor);  border-top: 20px solid var(--maincolor);
   border-radius:35px 35px 0 0; padding-bottom:10px;" ><h1 style="margin-left: 10px; color:white;">AQUABABY KURSE FINDEN</h1></div>
     

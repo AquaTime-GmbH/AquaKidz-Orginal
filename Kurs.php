@@ -53,7 +53,7 @@ while($row = mysqli_fetch_array($result))
 
     
 }
-$result_mitarbeiter = mysqli_query($con_mysqli,"SELECT * FROM mitarbeiter  WHERE mitarbeiter_id=$Getid order by mitarbeiter_fm_id");
+$result_mitarbeiter = mysqli_query($con_mysqli,"SELECT * FROM mitarbeiter  WHERE mitarbeiter_id=$Getid");
 
 
 
@@ -118,7 +118,6 @@ include $url_helper .'include/navbar.php';
 
   ?> 
 
-              
 <?php } ?>
        
                 <ul style="list-style-type:none;">

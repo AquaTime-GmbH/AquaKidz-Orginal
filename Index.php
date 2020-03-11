@@ -1,23 +1,21 @@
-<!-- organisation der url --> 
-
 
 
 <?php
 //session starten
-session_start();
 
+// organisation der url
 $url_helper= "";
 /* einbingung der database connection*/
 include  $url_helper .'include/database.php';
 
 
-
 ?>
+
 
 <!DOCTYPE html>
 <head>
     <title>AquaKidz</title>
-    <!-- Required meta tags -->
+    
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
@@ -27,11 +25,13 @@ include  $url_helper .'include/database.php';
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="<?php echo $url_helper;?>css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Lato&display=swap" rel="stylesheet">
-    <!--einbindung der cookie.js datei-->
+
+<!-- Required meta tags -->    <!--einbindung der cookie.js datei-->
     <script type="text/javascript" src="cookie.js"></script>
-    
-   
+
+     <!--einbindung des jqeury cookie plugins-->
     <script src="js-for-cookie/src/js.cookie.js"></script>
+
 </head>
 <body>
 
@@ -166,56 +166,69 @@ include $url_helper .'include/navbar.php';
 
 
   <div id="cookie_popup">
-    <div class="hinweis">
-      <p>Wir verwenden Cookies. Durch die weitere Nutzung der Webseite stimmen Sie der Verwendung von Cookies zu.</p>
-    </div> 
+        <div class="hinweis">
+        <p>Wir verwenden Cookies. Durch die weitere Nutzung der Webseite stimmen Sie der Verwendung von Cookies zu.</p>
+        </div> 
 
-    <span class="more">
-      <a href="datenschutz.php">Details</a>
-    </span>
+        <span class="more">
+        <a href="datenschutz.php">Details</a>
+        </span>
 
 
     <!-- beim klicken von dem button bleibt manauf der seite und der pop up fenster verschwindet -->
-        <button  oncklick='test()' class="btn btn_ok_cookie" type="submit" name="ok_cookie_button" >Akzeptieren</button>   
-
-
+        <button   class="btn btn_ok_cookie" type="submit" name="ok_cookie_button">Akzeptieren</button>   
+        
     <!-- beim klicken von diesem button kommt eine altert warnung die sagt ob man wirklich die cookies ablehnen will und wird dann auf die seite von session weiter geleitet -->
-        <button oncklick='cookiealert()' class="btn btn_alert_cookie" type="submit" name="alert_cookie">Verweigern</button>
+        <button  onclick='myfunction()' class="btn btn_alert_cookie" type="submit" name="alert_cookie">Verweigern</button>
 
   </div>
-  <!-- <?php
 
 
+<?php
+if (isset($_POST['ok_cookie_button'])){
 
+setcookie('Cookie_accepted','yes',time()+(3600*168));
 
-// if (isset($_POST['ok_cookie_button'])){
+echo " <script
+document.getElementById(\"cookie_popup\").classList.add(\"hidden\");
+window.location=\"index\";
 
-// setcookie('Cookie_accepted','yes',time()+(3600*168));
+</script>";
 
-// echo ' <script> window.location="index";</script>';
-// exit();
                    
-// }else{
+}else{
 
-// }    
+}     
 
-//   if (isset($_POST['alert_cookie'])){
-  ?>
-  <div class="alert alert-dark alert-dismissible fade show">
-    <strong>Dark!</strong> This is a simple dark alert box.
-    <button type="button" class="close" data-dismiss="alert">&times;</button>
+  if (isset($_POST['alert_cookie'])){
+    echo "<script language=\"JavaScript\">
+    function myfunction(){
+        var alert = confirm(\"Wenn Sie die Cookies ablehnen, kann dies Auswirkungen auf die Suchfunktion haben.\");
+    }
+  if(alert){
+    window.location=\"index_session\";
+  }else{
+
+  }
+
+
+    
+        </script>";
+?>
+  
+    
+    <button type="submit" class="close" data-dismiss="alert">&times;</button>
 </div>
 
 <?php
     
-// }else{
+}else{
 
-// }    
-
-
-?> -->
-
-
+}    
+if (isset($_POST['go_to_session'])){
+    echo ' <script> window.location="index_session";</script>';
+}
+?>
 </form>
 
      <!-- Das sind alle 3 Cards(flexboxen) in der mitte der Webseite -->
