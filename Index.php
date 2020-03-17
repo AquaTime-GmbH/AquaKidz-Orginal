@@ -162,72 +162,56 @@ include $url_helper .'include/navbar.php';
 
 </form>
 
- <form method="post">
+ <form action="cookie_set" method="post">
 
 
-  <div id="cookie_popup">
+  <!-- <div id="cookie_popup">
         <div class="hinweis">
         <p>Wir verwenden Cookies. Durch die weitere Nutzung der Webseite stimmen Sie der Verwendung von Cookies zu.</p>
         </div> 
 
         <span class="more">
         <a href="datenschutz.php">Details</a>
-        </span>
+        </span> -->
 
 
     <!-- beim klicken von dem button bleibt manauf der seite und der pop up fenster verschwindet -->
-        <button   class="btn btn_ok_cookie" type="submit" name="ok_cookie_button">Akzeptieren</button>   
+        <!--<button   class="btn btn_ok_cookie" type="submit" name="ok_cookie_button">Akzeptieren</button>   -->
         
     <!-- beim klicken von diesem button kommt eine altert warnung die sagt ob man wirklich die cookies ablehnen will und wird dann auf die seite von session weiter geleitet -->
-        <button  onclick='myfunction()' class="btn btn_alert_cookie" type="submit" name="alert_cookie">Verweigern</button>
+        <!--<button  onclick='myfunction()' class="btn btn_alert_cookie" type="submit" name="alert_cookie">Verweigern</button> -->
 
-  </div>
+  <!--</div>-->
 
 
 <?php
-if (isset($_POST['ok_cookie_button'])){
+   
+  //if (isset($_POST['alert_cookie'])){
+    //echo "<script language=\"JavaScript\">
+    //function myfunction(){
+        //var alert = confirm(\"Wenn Sie die Cookies ablehnen, kann dies Auswirkungen auf die Suchfunktion haben.\");
+    //}
+  //if(alert){
+    //window.location=\"index_session\";
+  //}else{
 
-setcookie('Cookie_accepted','yes',time()+(3600*168));
-
-echo " <script
-document.getElementById(\"cookie_popup\").classList.add(\"hidden\");
-window.location=\"index\";
-
-</script>";
-
-                   
-}else{
-
-}     
-
-  if (isset($_POST['alert_cookie'])){
-    echo "<script language=\"JavaScript\">
-    function myfunction(){
-        var alert = confirm(\"Wenn Sie die Cookies ablehnen, kann dies Auswirkungen auf die Suchfunktion haben.\");
-    }
-  if(alert){
-    window.location=\"index_session\";
-  }else{
-
-  }
-
-
-    
-        </script>";
+ // }
+      //  </script>";
 ?>
   
     
-    <button type="submit" class="close" data-dismiss="alert">&times;</button>
-</div>
+    <!--<button type="submit" class="close" data-dismiss="alert">&times;</button>
+</div> -->
 
 <?php
     
-}else{
+//}else{
 
-}    
-if (isset($_POST['go_to_session'])){
-    echo ' <script> window.location="index_session";</script>';
-}
+//}    
+//if (isset($_POST['go_to_session'])){
+    
+    //echo " <script language=\"JavaScript\"> window.location=\"index_session\";</script>";
+//}
 ?>
 </form>
 

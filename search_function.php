@@ -1,6 +1,5 @@
 <?php 
             
-            
              
             if(isset($_POST['search_button'])){
                 $viewsearch_ort = $_POST['search_ort']; 
@@ -18,8 +17,6 @@
                     setcookie("kursort","$viewsearch_ort",time()+(3600*168));
                 
             
-               
-
 
             if($viewsearch_alt == "1"){
                 

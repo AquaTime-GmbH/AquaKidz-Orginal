@@ -29,9 +29,6 @@
   
   
   
-  
-  
-  
     // <div id="cookieControlOnLoad">
     // <div class="container">
     //     ....
@@ -42,6 +39,7 @@
     // if (getCookie('HideDiv') === 'true') {
     //   $('.cookieControlOnLoad').css('display', 'none')
     // }
+
     // function CheckCookieAndHideDiv() {
     //            setCookie('HideDiv', 'true', 1);
     //            $(".cookieControlOnLoad").css('display', 'none');
