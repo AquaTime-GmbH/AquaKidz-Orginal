@@ -1,31 +1,31 @@
 
-    function popup_hide(){
-      var date = new Date();
-      date.setTime(date.getTime()+(30*60*1000));
-      var expires = date.toGMTString();
-      var offset= -date.getTimezoneOffset()/60;
-      document.cookie_akzeptiert = 'timezone='+offset+';expires='+expires+';';
+    //function popup_hide(){
+     // var date = new Date();
+     // date.setTime(date.getTime()+(30*60*1000));
+    //  var expires = date.toGMTString();
+     // var offset= -date.getTimezoneOffset()/60;
+     // document.cookie_akzeptiert = 'timezone='+offset+';expires='+expires+';';
 
-      document.getElementById("cookie_popup").classList.add("hidden");
-    }
+   //   document.getElementById("cookie_popup").classList.add("hidden");
+  //  }
     
     // setCookie('HideDiv','true',1);
     // $(".collectionhaircookies").css('display','none');
-
-    function cookiealert() {
+//
+    //function cookiealert() {
     //wenn er auf verweigern drückt zeigt er den text an 
-    var answer = confirm("Wenn Sie die Cookies ablehnen, kann dies Auswirkungen auf die Suchfunktion haben.")
-    if (answer) {
+  //  var answer = confirm("Wenn Sie die Cookies ablehnen, kann dies Auswirkungen auf die Suchfunktion haben.")
+  //  if (answer) {
     //wenn er auf verweigern gedrückt hat und dann auf ok dann wird er auf eine andere seite geleitet
-     window.location="index_session";
+   //  window.location="index_session";
      
-    } else { 
+   // } else { 
     //wenn er auf abbrechen drückt wird wieder derstandtart pop up angezeigt
     
       
-    }
+   // }
     
-    }  
+  //  }  
   
   
   

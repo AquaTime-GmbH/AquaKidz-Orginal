@@ -162,7 +162,7 @@
 
 
 
-<!-- Cookie Banner Script Start -->
+<!-- Cookie popup style -->
 <div id="cookie_popup">
  <div class="hinweis">
         <p>Wir verwenden Cookies. Durch die weitere Nutzung der Webseite stimmen Sie der Verwendung von Cookies zu.</p>
@@ -173,17 +173,42 @@
 
     <!-- beim klicken von dem button bleibt manauf der seite und der pop up fenster verschwindet -->
         <button  onClick="var d = new Date(); d = new Date(d.getTime() +1000*60*60*24*730); document.cookie = 'Akzeptiert=1; expires='+ d.toGMTString() + ';'; document.getElementById('cookie_popup').style.display = 'none';"  class="btn btn_ok_cookie" type="submit" name="ok_cookie_button">Akzeptieren</button>   
-        
+        <form action="" method="post" >
     <!-- beim klicken von diesem button kommt eine altert warnung die sagt ob man wirklich die cookies ablehnen will und wird dann auf die seite von session weiter geleitet -->
-        <button oncClick=" " class="btn btn_alert_cookie" type="submit" name="alert_cookie">Verweigern</button>
-
+        <button class="btn btn_alert_cookie" type="submit" name="session_cookie">Verweigern</button>
+        </form>
   </div>
 </div>
 <script>
 var r = 0;
-a = document.cookie;while(a != ''){while(a.substr(0,1) == ' '){a = a.substr(1,a.length);}cn = a.substring(0,a.indexOf('='));if(a.indexOf(';') != -1){cw = a.substring(a.indexOf('=')+1,a.indexOf(';'));}else{cw = a.substr(a.indexOf('=')+1,a.length);}if(cn == 'Akzeptiert'){r = cw;}i = a.indexOf(';')+1;if(i == 0){i = a.length}a = a.substring(i,a.length);}if(r == '1') document.getElementById('cookie_popup').style.display = 'none';
+a = document.cookie;while(a != ''){while(a.substr(0,1) == ' '){a = a.substr(1,a.length);}cn = a.substring(0,a.indexOf('='));
+if(a.indexOf(';') != -1){cw = a.substring(a.indexOf('=')+1,a.indexOf(';'));
+
+}else{
+    cw = a.substr(a.indexOf('=')+1,a.length);
+}
+if(cn == 'Akzeptiert'){
+    r = cw;
+}
+i = a.indexOf(';')+1;
+if(i == 0){
+    i = a.length
+}
+a = a.substring(i,a.length);
+}
+if(r == '1') document.getElementById('cookie_popup').style.display = 'none';
+
+//Cookie popup Script End 
 </script>
-<!-- Cookie Banner Script End -->
+
+<?php
+
+if (isset($_POST['session_cookie'])){
+    echo ' <script> window.location="index_session";</script>';
+   
+}
+
+?>
 
 
 </body>
