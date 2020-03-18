@@ -160,11 +160,16 @@
         <button  onClick="var d = new Date(); d = new Date(d.getTime() +1000*60*60*24*730); document.cookie = 'Akzeptiert=1; expires='+ d.toGMTString() + ';'; document.getElementById('cookie_popup').style.display = 'none';"  class="btn btn_ok_cookie" type="submit" name="ok_cookie_button">Akzeptieren</button>   
        
     <!-- beim klicken von diesem button kommt eine altert warnung die sagt ob man wirklich die cookies ablehnen will und wird dann auf die seite von session weiter geleitet -->
-        <button class="btn btn_alert_cookie" type="submit" name="session_cookie">Verweigern</button>
+        <button onClick="var d = new Date(); d = new Date(d.getTime() +1000*60*60*24*730); document.cookie = 'Verweigern=1; expires='+ d.toGMTString() + ';'; document.getElementById('cookie_popup').style.display = 'none';" class="btn btn_alert_cookie" type="submit" name="session_cookie">Verweigern</button>
         </form> 
       
     </div>
 </div>
+
+
+
+
+<!-- Script für Akzeptieren-->
 <script>
 
 var r = 0;
@@ -187,12 +192,49 @@ if(r == '1') document.getElementById('cookie_popup').style.display = 'none';
 
 //Cookie popup Script End 
 </script>
+
+
+
+
+
+<!-- Script für Verweigern-->
+
+<script>
+
+var r = 0;
+a = document.cookie;while(a != ''){while(a.substr(0,1) == ' '){a = a.substr(1,a.length);}cn = a.substring(0,a.indexOf('='));
+if(a.indexOf(';') != -1){cw = a.substring(a.indexOf('=')+1,a.indexOf(';'));
+
+}else{
+    cw = a.substr(a.indexOf('=')+1,a.length);
+}
+if(cn == 'Verweigern'){
+    r = cw;
+}
+i = a.indexOf(';')+1;
+if(i == 0){
+    i = a.length
+}
+a = a.substring(i,a.length);
+}
+if(r == '1') document.getElementById('cookie_popup').style.display = 'none';
+
+//Cookie popup Script End 
+</script>
+
+
+
+
+
+
+
+
 <!--wenn der Verweigern button gedrückt wird -->
 <?php
 
 if (isset($_POST['session_cookie'])){
     echo ' <script> window.location="index_session";</script>';
-   
+   exit();
 }
 
 ?>
