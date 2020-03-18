@@ -1,7 +1,6 @@
 
 
 <?php
-//session starten
 
 // organisation der url
 $url_helper= "";
@@ -93,7 +92,7 @@ include $url_helper .'include/navbar.php';
 
                     <label  class="col-6 col-form-label first-card-text">Kurs Start</label>
                     <div class="col-12">
-                        <input class="form-control labelshape"  id="search_start" name="search_start" type="date" value="<?php echo $cookie_kursstart;  ?>">
+                        <input class="form-control labelshape"  id="search_start" name="search_start" type="date" value="<?= $cookie_kursstart;  ?>">
                     </div>
 
                     <label class="col-8 col-form-label first-card-text">Wie alt ist ihr Kind ?</label>
