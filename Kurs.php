@@ -1,4 +1,4 @@
- <!-- organisation der url -->
+<!-- organisation der url -->
  <?php 
 $url_helper= "";
 /* einbingung der database connection*/
@@ -88,16 +88,163 @@ include $url_helper .'include/navbar.php';
 ?>
 <!--------------ende der einbindung------------------>
 
-<div class="hintergrundbild"></div>
+
+
+<div class="hintergrundbild">
+<div class="container">
+<div class="form-pos">
+<form>
+<div class="font-color">
+  <div class="form-row">
+  
+    <div class="form-group col-md-6">
+      <label class="first-card-text" >Kurs</label>
+      <input type="email" class="form-control labelshape">
+    </div>
+    <div class="form-group col-md-6">
+      <label class="first-card-text">Name Kind*</label>
+      <input type="password" class="form-control labelshape">
+    </div>
+  </div>
+  <div class="form-group ">
+    <label class="first-card-text">Vorname Kind*</label>
+    <input type="text" class="form-control labelshape">
+  </div>
+  <div class="form-group">
+    <label class="first-card-text">Geburtsdatum Kind*</label>
+    <input type="text" class="form-control labelshape">
+  </div>
+
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label class="first-card-text">Gesundheitsstatus</label>
+      <input type="text" class="form-control labelshape">
+    </div>
+
+
+
+    <div class="form-group col-md-6">
+      <label >Plz</label>
+      <input type="text" class="form-control labelshape">
+    </div>
+  </div>
+
+  <div class="form-group">
+  <div class="dropdown-firstcard">
+    <Select class="form-control labelshape" id="search_alt" name="search_alt" type="text" value="<?= $cookie_kursalter; ?>">
+        <option disabled selected value style="color:white;"></option>
+        <option  >test</option>
+        <option >test2</option>
+        <option >test3</option>
+        <option >test4</option>
+    </select>
+  </div>
+ 
+</form>
+</div>
+
+</div>
+</div>
+</div>
+
+</div>
+
+<!--test in variabeln gespeichert-->
+<?php 
+
+
+$ueber_den_Kurs= "ÜBER DEN KURS" ;
+
+?>
+
+
+<div class="container">
+    <div class="big-box-text">
+        <p class="title_of_text"><?= $ueber_den_Kurs ?></p>
+    </div>
+</div>
+
+
+
+
+<div class="big-box-map">
+    <div class="container">
+        <div id="map" class="map"></div>
+            <script type="text/javascript">
+            var map = new ol.Map({
+                target: 'map',
+                layers: [
+                new ol.layer.Tile({
+                    source: new ol.source.OSM()
+                })
+                ],
+                view: new ol.View({
+                center: ol.proj.fromLonLat([37.41, 8.82]),
+                zoom: 4
+                })
+            });
+    </script>
+
+    </div>
+</div>
+
+
+
+
+<div class="container">
+
+    <h2 class="text-spiezial">BRAUCHEN SIE MEHR INFORMATIONEN?</h2>
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="card card-1-sizing">
+                <div class="row no-gutters">
+                    <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title" style="color:rgb(8, 51, 194);">WISSEN FÜR ELTERN</h5>
+                        <p class="card-text font-color">Wir haben die wichtigsten Informationen für Eltern von Babys und jungen Kindern zusammengestellt, damit sie Wissen worauf es ankommt.</p>
+                    </div> 
+                    </div>
+                        <a href="#"  class="btn  mehr-erfahren">Mehr Erfahren</a>
+                    
+                    </div> 
+                </div>
+            </div>
+
+    <div class="col-sm-6">
+        <div class="card card-2-sizing">
+            <div class="row no-gutters">
+                <div class="col-md-8">
+                <div class="card-body">
+                    <h5 class="card-title" style="color:rgb(8, 51, 194);">RUFEN SIE UNS AN</h5>
+                    <p class="card-text under-font"><small>AquaTime GmbH</small></p>
+                    <p class="card-text font-color">Bahnhofstrasse 32, 6403 Küssnacht am Rig</p>
+                    <p class="card-text font-color">Mobil 077 423 58 38; Festnetz 041 852 05 53</p>
+                
+                </div> 
+                </div>
+            
+                    <a href="#"  class="btn  btn_email" >Email</a>
+                
+                    <a href="#"  class="btn  btn_auf" >Anrufen</a>
+                    </div> 
+                </div>
+            </div>
+        </div>
+</div>
+
+
+    <div class="big-box-more">
+
     <div class="container">
     
         <div class="col-5">
         
-            <div class="card first-card">
+            <div class="card first-card-kurs">
                 <div class="card-body">
                 <div class="font-color">
                     <h1 class="card-title card-title-style" style="font-size:32px"> AQUABABY</h1>
                      <?= $sql_fm_bad_ort; ?>
+                     
             <?php
                
 
@@ -137,58 +284,13 @@ include $url_helper .'include/navbar.php';
     </div>
 </div>
 
+
         <div class="col-4">
             <a href="#"  class="btn  btn_aquababy_zum_kursanmelden" >Zum Kursort</a>
         </div>
     
 
-<!--test in variabeln gespeichert-->
-<?php 
-
-
-$ueber_den_Kurs= "ÜBER DEN KURS" ;
-
-?>
-</div>
-
-<div class="big-box-text">
-    <div class="container">
-        <p class="title_of_text"><?= $ueber_den_Kurs ?></p>
     </div>
-</div>
-</div>
-
-<div class="big-box-map">
-<div class="container">
-
-    <div id="map" class="map"></div>
-    <script type="text/javascript">
-      var map = new ol.Map({
-        target: 'map',
-        layers: [
-          new ol.layer.Tile({
-            source: new ol.source.OSM()
-          })
-        ],
-        view: new ol.View({
-          center: ol.proj.fromLonLat([37.41, 8.82]),
-          zoom: 4
-        })
-      });
-    </script>
-    
-
-
-
-</div>
-
-
-
-
-    </div>
-</div>
-
-
 
 
 

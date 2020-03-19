@@ -24,7 +24,7 @@ session_start();
 
             if($viewsearch_alt == "1"){
                 
-             echo ' <script> window.location="Kursarten/AquaBaby";</script>';
+             echo ' <script> window.location="Kursarten/AquaBaby_session";</script>';
                     exit();
                     
 

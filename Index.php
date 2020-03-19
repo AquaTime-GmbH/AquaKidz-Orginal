@@ -447,6 +447,8 @@ include $url_helper .'include/navbar.php';
             </div>
         </div>
     </div>
+
+    
 </div>
 </div>
 

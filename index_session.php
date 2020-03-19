@@ -58,7 +58,7 @@ include $url_helper .'include/navbar.php';
     } else {
         $session_kursalter = "";
   }
-
+ 
 ?>
 
 
@@ -391,6 +391,6 @@ include $url_helper .'include/navbar.php';
 
 <!--footer wird eingebunden-->
 <?php
-include 'include/footer.php';
+include 'include/footer_session.php';
 ?>
 <!--------------ende der einbindung------------------>
