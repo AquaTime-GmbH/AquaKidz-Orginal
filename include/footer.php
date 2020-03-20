@@ -149,11 +149,25 @@
 <!-- Cookie popup style -->
 <div id="cookie_popup">
  <div class="hinweis">
+    
         <p>Wir verwenden Cookies. Durch die weitere Nutzung der Webseite stimmen Sie der Verwendung von Cookies zu.</p>
-        </div> 
-     <form action="" method="post" >
+        </div>        
+        <ok>
+        
+            <div id="overlay" onclick="off()">
+                <div class="show-box-details" id="text"></div>
+            </div>
+    <div class="row" class="pos">
+        <div class="col-4">
+            <button class="btn btn_details" onclick="on()">Details</button>
+    </div>
+
+     <form method="post" >
         <span class="more">
-        <a href="datenschutz.php">Details</a>
+
+           
+
+
         </span>
 
     <!-- beim klicken von dem button bleibt manauf der seite und der pop up fenster verschwindet -->
@@ -161,11 +175,14 @@
        
     <!-- beim klicken von diesem button kommt eine altert warnung die sagt ob man wirklich die cookies ablehnen will und wird dann auf die seite von session weiter geleitet -->
         <button class="btn btn_alert_cookie" type="submit" name="session_cookie">Verweigern</button>
+    </div>
+</ok>
         </form> 
-      
+   
     </div>
 </div>
 
+    
 
 
 
@@ -191,14 +208,25 @@ a = a.substring(i,a.length);
 if(r == '1') document.getElementById('cookie_popup').style.display = 'none';
 
 //Cookie popup Script End 
+
+
+
+
 </script>
 
 
+<!--Detais script beginn-->
+<script>
+function on() {
+  document.getElementById("overlay").style.display = "block";
+}
 
+function off() {
+  document.getElementById("overlay").style.display = "none";
+}
 
-
-
-
+</script>
+<!--Detais script ende-->
 
 
 

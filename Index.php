@@ -28,8 +28,7 @@ include  $url_helper .'include/database.php';
 <!-- Required meta tags -->    <!--einbindung der cookie.js datei-->
     <script type="text/javascript" src="cookie.js"></script>
 
-     <!--einbindung des jqeury cookie plugins-->
-    <script src="js-for-cookie/src/js.cookie.js"></script>
+ 
 
 </head>
 <body>
