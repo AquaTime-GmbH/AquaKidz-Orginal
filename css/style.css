@@ -587,7 +587,7 @@ ul{
 
   ok .row{  flex-direction:column !important; flex-wrap:wrap !important; justify-content: space-between !important;}
 
-  .col-4 { max-width: 39%; }
+  .col-4 { max-width: 34.333% !important;}
   
   /*<------------------------------------------------------------------------>*/
   /*<--------------------------------AQUABABY-------------------------------->*/
@@ -963,13 +963,14 @@ margin-bottom: 153px;
     width: 100px;
     height: 30px;
     background-color: var(--coloryellow);
-    margin-left: auto;
     padding: 5px;
     border-radius: 35px ;
     bottom: 0;
     right: 0;
     color: white;
     overflow: hidden;
+    float:revert;
+    
 }
 
 .btn_details:hover{
@@ -1008,4 +1009,18 @@ margin-bottom: 153px;
   display: none;
   overflow: hidden;
   background-color: #f1f1f1;
+}
+
+.border-boxd{
+  width: 100%;
+  height: 70px;
+  background-color: var(--maincolor);
+  border-radius: 35px 35px 0px 0px;
+}
+
+.text-pos-popup{
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
 }
