@@ -11,7 +11,9 @@
     <div class="collapse navbar-collapse" id="collapse_target">
       <div class="col-2">
         <div class="logo">
+        <a href="">
           <img src="<?php echo $url_helper;?>images/Logo.png" href="<?php echo $url_helper;?>Index" class="card-img-top"  alt="Bild ladet nicht!">
+        </a>
         </div>
       </div>
   

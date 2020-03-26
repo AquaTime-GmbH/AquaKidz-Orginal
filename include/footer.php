@@ -156,7 +156,7 @@
  
         <p class="text-pos-popup">Wir verwenden Cookies. Durch die weitere Nutzung der Webseite stimmen Sie der Verwendung von Cookies zu.</p>
         </div>        
-        <ok>
+      
         
           
 
