@@ -158,21 +158,19 @@
         </div>        
       
         
-          
-
 
 
         <!-- The Modal -->
 <div id="myModal" class="modal">
-<div class="border-boxd">
 
-</div>
         <!-- Modal content -->
     <div class="modal-content">
+<div class="border-boxd">
+
 
     <!-- Das Kreuz zum schliessen -->
     <span class="close">&times;</span>
-
+</div>
         
     <button type="button" class="collapsible">Geltungsbereich</button>
     <div class="content">
@@ -309,8 +307,6 @@ a = a.substring(i,a.length);
 if(r == '1') document.getElementById('cookie_popup').style.display = 'none';
 
 //Cookie popup Script End 
-
-
 
 
 </script>

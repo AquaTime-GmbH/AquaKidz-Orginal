@@ -43,6 +43,18 @@ include $url_helper .'include/navbar.php';
 
 <?php 
 
+$email = $_POST['email-text'];
+$_SESSION['email'] = $email;
+
+
+if (!isset($_SESSION['email'])){
+
+}else{
+    
+}
+
+
+
  if( isset($_SESSION['kursstart'])) {
     $session_kursstart = $_SESSION["kursstart"]; 
     } else {
@@ -85,7 +97,7 @@ include $url_helper .'include/navbar.php';
 
                     <label  class="col-6 col-form-label first-card-text">Kurs Start</label>
                     <div class="col-12">
-                        <input class="form-control labelshape"  id="search_start" name="search_start" type="date" value="<?php echo $session_kursstart;  ?>">
+                        <input class="form-control labelshape"  id="search_start" name="search_start" type="date" value="<?= $session_kursstart;  ?>">
                     </div>
 
                     <label class="col-8 col-form-label first-card-text">Wie alt ist ihr Kind ?</label>
