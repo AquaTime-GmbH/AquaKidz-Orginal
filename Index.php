@@ -77,7 +77,7 @@ include $url_helper .'include/navbar.php';
 </div>
 </div>
 <div class="container">
-    <div class="col-sm-5">
+    <div class="col-sm-5" style="height:624px;">
 
     <form action="search_function"  method="post">
         <div class="card first-card">
@@ -214,10 +214,10 @@ include $url_helper .'include/navbar.php';
 //}
 ?>
 </form>
-
+<index-row>
      <!-- Das sind alle 3 Cards(flexboxen) in der mitte der Webseite -->
-        <div class="row">
-        <div class="col-sm-4">
+        <div class="row" >
+        <div class="col-md-4">
            
                 <div class="card card-sizing">
                     <img class="imgcard imgshape card-img-top img-border1" src="images/Block1.png"  alt="Bild ladet nicht!">
@@ -232,7 +232,7 @@ include $url_helper .'include/navbar.php';
             </div>
         </div>
     
-    <div class="col-sm-4">
+    <div class="col-md-4">
         <div class="card card-sizing">
             <img class="imgcard imgshape card-img-top img-border2" src="images/Block2.png"   alt="Bild ladet nicht!">
         <div class="card-body">
@@ -256,7 +256,7 @@ include $url_helper .'include/navbar.php';
         </div>
     </div>
 
-    <div class="col-sm-4">
+    <div class="col-md-4">
         <div class="card card-sizing">
             <img class="imgcard imgshape card-img-top img-border3" src="images/Block3.png" alt="Bild ladet nicht!">
         <div class="card-body">
@@ -269,7 +269,7 @@ include $url_helper .'include/navbar.php';
             </div>
         </div>
   </div>
-
+</index-row>
     <!-- text über den 4 cards -->
 
     <h2 class="kurse-text">KURSE FÜR JEDES ALTER</h2>
@@ -282,7 +282,7 @@ include $url_helper .'include/navbar.php';
     include 'include/Kursbloecke.php';
 ?>
 <!-- Das ist die Slideshow -->
-
+<slider>
     <div class="slideshow-container">
 
     <div class="h3_ueberschrift">       
@@ -315,7 +315,8 @@ include $url_helper .'include/navbar.php';
         <span class="dot" onclick="currentSlide(4)"></span>
         <span class="dot" onclick="currentSlide(5)"></span>
     </div>
-   
+</slider>
+
     <!--javascript für die Slideshow-->
      <script>
      var slideIndex = 1;
@@ -369,6 +370,82 @@ include $url_helper .'include/navbar.php';
 </div>
 
 
+
+
+
+
+
+<!-- Slider -->
+
+<div class="slideshow-container">
+
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides fade">
+    
+    <img src="img1.jpg" style="width:100%">
+    <div class="text">Caption Text</div>
+  </div>
+
+  <div class="mySlides fade">
+    
+    <img src="img2.jpg" style="width:100%">
+    <div class="text">Caption Two</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 3</div>
+    <img src="img3.jpg" style="width:100%">
+    <div class="text">Caption Three</div>
+  </div>
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+
+
+<!-- slider javascript-->
+<script>
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+
+</script>
+   
 
 
 

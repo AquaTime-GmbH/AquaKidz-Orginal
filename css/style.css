@@ -31,6 +31,11 @@ ul{
   
   padding-inline-start: 0px;
 }
+
+/*------------------ Desktop version -------------------*/
+
+
+
   @media screen and (min-width: 1025px) and (max-width: 1920px) {
     .aqua-navbar{
       height:80px; 
@@ -45,21 +50,46 @@ ul{
     }
     .container {
       max-width: 1336px !important;
-      margin-left: auto;
-      margin-right: auto;
+      margin-left: auto !important;
+      margin-right: auto !important;
       }
+      index-row .row{ margin-top: 38px !important;}
+    
   }
-  
+
+
+  /*----------------- tablet version -----------------------*/
+
+
+
   @media screen and (min-width: 768px) and (max-width: 1024px) {
-  
+   .aqua-navbar{
+     background-color: var(--maincolor); 
+     border-bottom: 4px solid white;
+    }
+    .logo{
+      margin-left: 73px;
+    }
+    .container {
+      max-width: 874px !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+    }
+
+    .first-card{
+      width: 414px !important;
+      height: 507px !important;
+      margin-top: 0 !important;
+    }
+
+    .search-buttom{
+      margin-top: 30px !important;
+    }
+    index-row .row{ margin-top: 102px !important;}
   }
   
-  @media  (max-width:1000px) {
-   .navbar-toggler{
-     margin-left:20px;
-   }
+
   
-  }
   
   @media (max-width: 375px) and (max-height: 667px) {
   
@@ -119,7 +149,13 @@ ul{
   .imgshape{
     border-radius:30px 30px 0px 0px;
   }
-  
+  .card-img-top{
+   
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+  }
   /*alle text in den cards */
   .card-title-style{
     color:var(--maincolor);
@@ -133,8 +169,12 @@ ul{
   /*Card decks verschoben */
   
   .logo{
-      height: 80px;
-      width: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    height: 85px;
+    width: 99pxd;
     background-color: white;
   }
   
@@ -365,7 +405,7 @@ ul{
   }
   /* Slideshow container */
   
-  .slideshow-container {
+  slider .slideshow-container {
     width: 100%;
     height: 300px;
     background: linear-gradient(90deg, var(--secondcolor), var(--maincolor));
@@ -400,6 +440,103 @@ ul{
     text-align:center;
     color:var(--secondcolor);
   }
+
+
+  /*-- slider index site --*/
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+ .slider-card-sizing{
+    box-shadow: 0px 6px 3px rgba(0, 0, 0, .2);
+    width: 378px; 
+    border-radius:35px; 
+    height:474px;
+  }
+
   /* ------ card5 im hintergrund -----*/
   .card5-size{
       background-color: rgba(255, 255, 255, 0.9);
@@ -1026,3 +1163,5 @@ margin-bottom: 153px;
   right: 0;
   left: 0;
 }
+
+

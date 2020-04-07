@@ -10,6 +10,10 @@ include  $url_helper .'include/database.php';
 $viewsearch_aquababy_ort_cookie = $_COOKIE["kursort"];
 
 $viewsearch_aquababy_kursstart_cookie = $_COOKIE["kursstart"];
+
+
+$kursort = $_SESSION['session_kursort'];
+$kursstart = $_SESSION['session_kursstart'];
 ?>
 
 <!DOCTYPE html>

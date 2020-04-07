@@ -43,15 +43,13 @@ include $url_helper .'include/navbar.php';
 
 <?php 
 
-$email = $_POST['email-text'];
-$_SESSION['email'] = $email;
 
-
-if (!isset($_SESSION['email'])){
-
-}else{
     
-}
+$kursort = $_POST['search_ort'];
+$kursstart = $_POST['search_start'];
+
+$_SESSION['session_kursort'] = $kursort;
+$_SESSION['session_kursstart'] = $kursstart;
 
 
 
