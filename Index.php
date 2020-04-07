@@ -288,10 +288,13 @@ include $url_helper .'include/navbar.php';
     <div class="h3_ueberschrift">       
         <h4>Was unsere Kunden sagen</h4>
     </div>
-
-    <div class="slides ">
-        <div class="text">CaptionOnehgdfhgfdhgfdhgfdhfgdhfdghfdghfgdhfgdhgfdhfgdhgfdhfgdhfgdhgfdhfgdhgfdhgfdhfgdhfgdhgfdhghghdfhfgdhfgdhfgdhfgdhfgdhfgdhfgdgfdhgfhdfghgfdhfgdhgfdhfgdhgfdhfgdhfgdhgffd</div>
+<div class="text-slider-container">
+ <div class="slides ">
+        <div class="text ">CaptionOnehgdfhgfdhgfdhgfdhfgdhfdghfdghfgdhfgdhgfdhfgdhgfdhfgdhfgdhgfdhfgdhgfdhgfdhfgdhfgdhgfdhghghdfhfgdhfgdhfgdhfgdhfgdhfgdhfgdgfdhgfhdfghgfdhfgdhgfdhfgdhgfdhfgdhfgdhgffd</div>
     </div>
+
+</div>
+   
 
     <div class="slides ">
         <div class="text">Caption Two</div>
