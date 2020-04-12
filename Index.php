@@ -391,7 +391,7 @@ include $url_helper .'include/navbar.php';
 <!--slider-->
 <div class="container">
 <div class="row">
-<div class="w3-left w3-hover-text-khaki arrow-left" style="margin-top:auto; margin-bottom:auto;" onclick="plusDivs(-1)"></div>
+<div class="w3-left  arrow-left" style="margin-top:auto; margin-bottom:auto;" onclick="plusDivs(-1)"></div>
     
 
     
@@ -425,7 +425,7 @@ include $url_helper .'include/navbar.php';
                 </div>
         </div>
 
-    <div class="w3-right w3-hover-text-khaki arrow-right" style="margin-top:auto; margin-bottom:auto;" onclick="plusDivs(1)"></div>
+    <div class="w3-right arrow-right" style="margin-top:auto; margin-bottom:auto;" onclick="plusDivs(1)"></div>
 
     </div>
 </div>
