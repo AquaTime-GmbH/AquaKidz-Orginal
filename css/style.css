@@ -420,8 +420,8 @@ ul{
   
   .dot {
     cursor: pointer;
-    height: 15px;
-    width: 15px;
+    height: 32px;
+    width: 32px;
     margin: 0 2px;
     background-color: var(--maincolor);
     border-radius: 50%;
@@ -491,6 +491,9 @@ ul{
       font-size: 22px;
       font-family: 'Fjalla One', sans-serif;
       padding-top: 11px;
+      position: absolute;
+      bottom: 0;
+      right: 0;
   }
 
     .slider-card-button2{
@@ -504,6 +507,19 @@ ul{
       font-size: 22px;
       font-family: 'Fjalla One', sans-serif;
       padding-top: 11px;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+  }
+
+   .slider-card-button1:hover{
+    background-color: var(--coloryellow-hover);
+    color:white;
+  }
+
+  .slider-card-button2:hover{
+    background-color: var(--colorpink-hover);
+    color:white;
   }
 
   /*img card slider*/
@@ -532,6 +548,7 @@ ul{
         border-style: solid;
         border-width: 29px 68px 29px 0;
         border-color: transparent var(--maincolor) transparent transparent;
+        cursor:pointer;
       }
 
       .arrow-right {
@@ -540,7 +557,28 @@ ul{
         border-style: solid;
         border-width: 29px 0 29px 68px;
         border-color: transparent transparent transparent var(--maincolor);
+        cursor:pointer;
       }
+
+  .dot-slider {
+    cursor: pointer;
+    height: 32px;
+    width: 32px;
+    margin: 0 2px;
+    background-color: white;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.8s ease;
+    text-align: center;
+    border: 1px solid var(--maincolor);
+    bottom: 0;
+  }
+
+  .active, .dot-slider:hover {
+    background-color: var(--maincolor) ;
+  }
+ 
+
 
       /*.arrow-left:hover, .arrow-right:hover{ color: var(--maincolor-hover);}*/
   /* ------ card5 im hintergrund -----*/

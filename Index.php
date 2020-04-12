@@ -373,10 +373,12 @@ include $url_helper .'include/navbar.php';
 
 
 
+
+
+
 <!--slider style-->
 <style>
 .mySlides {display:none}
-.w3-left, .w3-right, .w3-badge {cursor:pointer}
 .w3-badge {height:13px;width:13px;padding:0}
 </style>
 
@@ -390,16 +392,21 @@ include $url_helper .'include/navbar.php';
 
 <!--slider-->
 <div class="container">
+
+
+
+
+<!----------------------------------------fist slide cards------------------------->
 <div class="row">
-<div class="w3-left  arrow-left" style="margin-top:auto; margin-bottom:auto;" onclick="plusDivs(-1)"></div>
+<div class="arrow-left" style="margin-top:auto; margin-bottom:auto;" onclick="plusDivs(-1)"></div>
     
 
     
-        <div class="card slider-card-sizing">
+        <div class="card slider-card-sizing mySlides ">
             <img class="imgcard-slider imgshape-slider  img-border-slider1" src="images/Block3.png" alt="Bild ladet nicht!">
                 <div class="card-body">
 
-                    <h2 class="card-title slider-title-card1">SICHER SCHWIMMEN LERNEN MUSS SPASS MACHEN</h2>
+                    <h2 class="card-title slider-title-card1">first slide</h2>
                     <p class="card-text font-color" style="height:149px; width:366px;">Kinder lernen wenn sie richtig gefördert werden. Unsere Kurse sind auf die Fähigkeiten und das alter unserer Schüler zugeschnitten. Wir setzen auf erfahrene Lehrpersonen die die Zeit im Wasser zu einem wunderbaren Erlebnis machen.</p>     
 
 
@@ -410,24 +417,223 @@ include $url_helper .'include/navbar.php';
         </div>
 
 
-        <div class="card slider-card-sizing">
+
+        <div class="card slider-card-sizing mySlides">
             <img class="imgcard-slider  imgshape-slider img-border-slider2" src="images/Block3.png" alt="Bild ladet nicht!">
                 <div class="card-body">
 
 
-                    <h2 class="card-title slider-title-card2">SICHER SCHWIMMEN LERNEN MUSS SPASS MACHEN</h2>
+                    <h2 class="card-title slider-title-card2">first slide</h2>
                     <p class="card-text font-color" style="height:149px; width:366px;">Kinder lernen wenn sie richtig gefördert werden. Unsere Kurse sind auf die Fähigkeiten und das alter unserer Schüler zugeschnitten. Wir setzen auf erfahrene Lehrpersonen die die Zeit im Wasser zu einem wunderbaren Erlebnis machen.</p>   
+
+                <div style="float:right;">
+                    <a href="#"  class="btn  slider-card-button2">Mehr Erfahren</a>
+                </div>
+
+                </div>
+                 
+        </div>
+
+    </div>
+
+
+
+
+
+
+<!----------------------------------------second 2 slide cards------------------------->
+
+    <div class="row">
+
+    
+    
+        <div class="card slider-card-sizing mySlides">
+            <img class="imgcard-slider imgshape-slider  img-border-slider1" src="images/Block3.png" alt="Bild ladet nicht!">
+                <div class="card-body">
+
+                    <h2 class="card-title slider-title-card1">second slide</h2>
+                    <p class="card-text font-color" style="height:149px; width:366px;">Kinder lernen wenn sie richtig gefördert werden. Unsere Kurse sind auf die Fähigkeiten und das alter unserer Schüler zugeschnitten. Wir setzen auf erfahrene Lehrpersonen die die Zeit im Wasser zu einem wunderbaren Erlebnis machen.</p>     
 
 
                 </div>
-                  <div style="float:right;">
-                    <a href="#"  class="btn  slider-card-button2">Mehr Erfahren</a>
+                 <div style="float:right;">
+                    <a href="#"  class="btn  slider-card-button1">Mehr Erfahren</a>
                 </div>
         </div>
 
-    <div class="w3-right arrow-right" style="margin-top:auto; margin-bottom:auto;" onclick="plusDivs(1)"></div>
 
+
+        <div class="card slider-card-sizing mySlides">
+            <img class="imgcard-slider  imgshape-slider img-border-slider2" src="images/Block3.png" alt="Bild ladet nicht!">
+                <div class="card-body">
+
+
+                    <h2 class="card-title slider-title-card2">second slide</h2>
+                    <p class="card-text font-color" style="height:149px; width:366px;">Kinder lernen wenn sie richtig gefördert werden. Unsere Kurse sind auf die Fähigkeiten und das alter unserer Schüler zugeschnitten. Wir setzen auf erfahrene Lehrpersonen die die Zeit im Wasser zu einem wunderbaren Erlebnis machen.</p>   
+
+                <div style="float:right;">
+                    <a href="#"  class="btn  slider-card-button2">Mehr Erfahren</a>
+                </div>
+
+                </div>
+                 
+        </div>
+
+      
     </div>
+
+
+
+
+
+
+<!----------------------------------------third slide cards------------------------->
+
+    <div class="row">
+
+    
+    
+
+    
+        <div class="card slider-card-sizing mySlides">
+            <img class="imgcard-slider imgshape-slider  img-border-slider1" src="images/Block3.png" alt="Bild ladet nicht!">
+                <div class="card-body">
+
+                    <h2 class="card-title slider-title-card1">third slide</h2>
+                    <p class="card-text font-color" style="height:149px; width:366px;">Kinder lernen wenn sie richtig gefördert werden. Unsere Kurse sind auf die Fähigkeiten und das alter unserer Schüler zugeschnitten. Wir setzen auf erfahrene Lehrpersonen die die Zeit im Wasser zu einem wunderbaren Erlebnis machen.</p>     
+
+
+                </div>
+                 <div style="float:right;">
+                    <a href="#"  class="btn  slider-card-button1">Mehr Erfahren</a>
+                </div>
+        </div>
+
+
+
+        <div class="card slider-card-sizing mySlides">
+            <img class="imgcard-slider  imgshape-slider img-border-slider2" src="images/Block3.png" alt="Bild ladet nicht!">
+                <div class="card-body">
+
+
+                    <h2 class="card-title slider-title-card2">third slide</h2>
+                    <p class="card-text font-color" style="height:149px; width:366px;">Kinder lernen wenn sie richtig gefördert werden. Unsere Kurse sind auf die Fähigkeiten und das alter unserer Schüler zugeschnitten. Wir setzen auf erfahrene Lehrpersonen die die Zeit im Wasser zu einem wunderbaren Erlebnis machen.</p>   
+
+                <div style="float:right;">
+                    <a href="#"  class="btn  slider-card-button2">Mehr Erfahren</a>
+                </div>
+
+                </div>
+                 
+        </div>
+
+
+      
+    </div>
+
+
+
+
+
+
+
+<!----------------------------------------four slide cards------------------------->
+
+    <div class="row">
+  
+    
+        <div class="card slider-card-sizing mySlides">
+            <img class="imgcard-slider imgshape-slider  img-border-slider1" src="images/Block3.png" alt="Bild ladet nicht!">
+                <div class="card-body">
+
+                    <h2 class="card-title slider-title-card1">four slide</h2>
+                    <p class="card-text font-color" style="height:149px; width:366px;">Kinder lernen wenn sie richtig gefördert werden. Unsere Kurse sind auf die Fähigkeiten und das alter unserer Schüler zugeschnitten. Wir setzen auf erfahrene Lehrpersonen die die Zeit im Wasser zu einem wunderbaren Erlebnis machen.</p>     
+
+
+                </div>
+                 <div style="float:right;">
+                    <a href="#"  class="btn  slider-card-button1">four slide</a>
+                </div>
+        </div>
+
+        <div class="card slider-card-sizing mySlides">
+            <img class="imgcard-slider  imgshape-slider img-border-slider2" src="images/Block3.png" alt="Bild ladet nicht!">
+                <div class="card-body">
+
+
+                    <h2 class="card-title slider-title-card2">four slide</h2>
+                    <p class="card-text font-color" style="height:149px; width:366px;">Kinder lernen wenn sie richtig gefördert werden. Unsere Kurse sind auf die Fähigkeiten und das alter unserer Schüler zugeschnitten. Wir setzen auf erfahrene Lehrpersonen die die Zeit im Wasser zu einem wunderbaren Erlebnis machen.</p>   
+
+                <div style="float:right;">
+                    <a href="#"  class="btn  slider-card-button2">Mehr Erfahren</a>
+                </div>
+
+                </div>
+                 
+        </div>
+
+
+      
+    </div>
+
+
+
+
+<!----------------------------------------five slide cards------------------------->
+
+    <div class="row">
+
+    
+
+        <div class="card slider-card-sizing mySlides ">
+            <img class="imgcard-slider imgshape-slider  img-border-slider1" src="images/Block3.png" alt="Bild ladet nicht!">
+                <div class="card-body">
+
+                    <h2 class="card-title slider-title-card1">five slide</h2>
+                    <p class="card-text font-color" style="height:149px; width:366px;">Kinder lernen wenn sie richtig gefördert werden. Unsere Kurse sind auf die Fähigkeiten und das alter unserer Schüler zugeschnitten. Wir setzen auf erfahrene Lehrpersonen die die Zeit im Wasser zu einem wunderbaren Erlebnis machen.</p>     
+
+
+                </div>
+                 <div style="float:right;">
+                    <a href="#"  class="btn  slider-card-button1">Mehr Erfahren</a>
+                </div>
+        </div>
+
+
+
+        <div class="card slider-card-sizing mySlides ">
+            <img class="imgcard-slider  imgshape-slider img-border-slider2" src="images/Block3.png" alt="Bild ladet nicht!">
+                <div class="card-body">
+
+
+                    <h2 class="card-title slider-title-card2">five slide</h2>
+                    <p class="card-text font-color" style="height:149px; width:366px;">Kinder lernen wenn sie richtig gefördert werden. Unsere Kurse sind auf die Fähigkeiten und das alter unserer Schüler zugeschnitten. Wir setzen auf erfahrene Lehrpersonen die die Zeit im Wasser zu einem wunderbaren Erlebnis machen.</p>   
+
+                <div style="float:right;">
+                    <a href="#"  class="btn  slider-card-button2">Mehr Erfahren</a>
+                </div>
+
+                </div>
+                 
+        </div>
+
+   <div class="arrow-right" style="margin-top:auto; margin-bottom:auto;" onclick="plusDivs(1)"></div>
+       
+      
+    </div>
+
+
+
+
+
+    <div style="text-align:center">
+        <span class="dot-slider" onclick="currentSlide(1)"></span> 
+        <span class="dot-slider" onclick="currentSlide(2)"></span> 
+        <span class="dot-slider" onclick="currentSlide(3)"></span>
+        <span class="dot-slider" onclick="currentSlide(4)"></span>
+        <span class="dot-slider" onclick="currentSlide(5)"></span>
+    </div>
+
 </div>
 
 
