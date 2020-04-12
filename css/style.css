@@ -451,19 +451,98 @@ ul{
   }
 
 
-  /*-- slider index site --*/
+  /*------------------------------- slider index site ---------------------------*/
 
-
-
-
-
- .slider-card-sizing{
-    box-shadow: 0px 6px 3px rgba(0, 0, 0, .2);
-    width: 378px; 
-    border-radius:35px; 
-    height:474px;
+  .slider-title-card1{
+    height: 56px;
+    width: 360px;
+    font-size:22px; 
+    color: var(--coloryellow);
   }
 
+    .slider-title-card2{
+    height: 56px;
+    width: 360px;
+    font-size:22px; 
+    color: var(--colorpink);
+  }
+
+
+  .slider-card-sizing{
+      box-shadow: 0px 6px 3px rgba(0, 0, 0, .2);
+      width: 520px; 
+      border-radius:35px; 
+      height:543px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 50px;
+      margin-top: 52px;
+    }
+
+  /*button für slider*/
+    .slider-card-button1{
+      background-color: var(--coloryellow);
+      border-radius:35px 0px 35px 0px; 
+      width: 187px;
+      height: 58px;
+      float:right !important;
+      margin:-1px;
+      color: white;
+      font-size: 22px;
+      font-family: 'Fjalla One', sans-serif;
+      padding-top: 11px;
+  }
+
+    .slider-card-button2{
+      background-color: var(--colorpink);
+      border-radius:35px 0px 35px 0px; 
+      width: 187px;
+      height: 58px;
+      float:right !important;
+      margin:-1px;
+      color: white;
+      font-size: 22px;
+      font-family: 'Fjalla One', sans-serif;
+      padding-top: 11px;
+  }
+
+  /*img card slider*/
+  .imgcard-slider {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    width: 520px;
+    height: 266px;
+  }
+   .imgshape-slider{
+      border-radius:35px 35px 0px 0px;
+  }
+  .img-border-slider1{
+        border-bottom: 8px solid var(--coloryellow);
+      }
+      .img-border-slider2{
+        border-bottom: 8px solid var(--colorpink);
+      }
+
+
+      .arrow-left {
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 29px 68px 29px 0;
+        border-color: transparent var(--maincolor) transparent transparent;
+      }
+
+      .arrow-right {
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 29px 0 29px 68px;
+        border-color: transparent transparent transparent var(--maincolor);
+      }
+
+      /*.arrow-left:hover, .arrow-right:hover{ color: var(--maincolor-hover);}*/
   /* ------ card5 im hintergrund -----*/
   .card5-size{
       background-color: rgba(255, 255, 255, 0.9);

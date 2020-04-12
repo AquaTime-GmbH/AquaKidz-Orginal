@@ -373,22 +373,93 @@ include $url_helper .'include/navbar.php';
 
 
 
-
-
-
-
-<!-- Slider -->
-
-
-
-<!-- slider javascript-->
-
-   
+<!--slider style-->
+<style>
+.mySlides {display:none}
+.w3-left, .w3-right, .w3-badge {cursor:pointer}
+.w3-badge {height:13px;width:13px;padding:0}
+</style>
 
 
 
 
 
+
+
+
+
+<!--slider-->
+<div class="container">
+<div class="row">
+<div class="w3-left w3-hover-text-khaki arrow-left" style="margin-top:auto; margin-bottom:auto;" onclick="plusDivs(-1)"></div>
+    
+
+    
+        <div class="card slider-card-sizing">
+            <img class="imgcard-slider imgshape-slider  img-border-slider1" src="images/Block3.png" alt="Bild ladet nicht!">
+                <div class="card-body">
+
+                    <h2 class="card-title slider-title-card1">SICHER SCHWIMMEN LERNEN MUSS SPASS MACHEN</h2>
+                    <p class="card-text font-color" style="height:149px; width:366px;">Kinder lernen wenn sie richtig gefördert werden. Unsere Kurse sind auf die Fähigkeiten und das alter unserer Schüler zugeschnitten. Wir setzen auf erfahrene Lehrpersonen die die Zeit im Wasser zu einem wunderbaren Erlebnis machen.</p>     
+
+
+                </div>
+                 <div style="float:right;">
+                    <a href="#"  class="btn  slider-card-button1">Mehr Erfahren</a>
+                </div>
+        </div>
+
+
+        <div class="card slider-card-sizing">
+            <img class="imgcard-slider  imgshape-slider img-border-slider2" src="images/Block3.png" alt="Bild ladet nicht!">
+                <div class="card-body">
+
+
+                    <h2 class="card-title slider-title-card2">SICHER SCHWIMMEN LERNEN MUSS SPASS MACHEN</h2>
+                    <p class="card-text font-color" style="height:149px; width:366px;">Kinder lernen wenn sie richtig gefördert werden. Unsere Kurse sind auf die Fähigkeiten und das alter unserer Schüler zugeschnitten. Wir setzen auf erfahrene Lehrpersonen die die Zeit im Wasser zu einem wunderbaren Erlebnis machen.</p>   
+
+
+                </div>
+                  <div style="float:right;">
+                    <a href="#"  class="btn  slider-card-button2">Mehr Erfahren</a>
+                </div>
+        </div>
+
+    <div class="w3-right w3-hover-text-khaki arrow-right" style="margin-top:auto; margin-bottom:auto;" onclick="plusDivs(1)"></div>
+
+    </div>
+</div>
+
+
+<!--slider javascript-->
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" w3-white", "");
+  }
+  x[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " w3-white";
+}
+</script>
 
     <!--card 5 -->
     <div class="hintergrundbild-card5"></div>
