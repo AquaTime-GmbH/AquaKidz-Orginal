@@ -136,10 +136,7 @@ include $url_helper .'include/navbar.php';
         <a href="#"  class="btn  btn_aquababy_zum_kursanmelden" >Zum Kursort</a>
     </div>
 
-<section id="section1">
-	<h1>Scroll Down Button #1</h1>
-	<a href="#section2"><span></span>Scroll</a>
-</section>
+
 <!---button zum kurs ort-->
         
             
@@ -147,7 +144,10 @@ include $url_helper .'include/navbar.php';
     
 
         </div>
-
+        
+<section calss="selection-pos-kurs" id="section1">
+	<a href="#section2">Jetzt Buchen!</a>
+</section>
 
         </div>
     </div>
