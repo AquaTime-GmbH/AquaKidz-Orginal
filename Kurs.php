@@ -88,66 +88,74 @@ include $url_helper .'include/navbar.php';
 ?>
 <!--------------ende der einbindung------------------>
 
+<div class="blue-box-kurs">
+    <div class="container">
+        <div class="col-5">
+        
+            <div class="card first-card-kurs">
+                <div class="card-body">
+                <div class="font-color">
+                    <h1 class="card-title card-title-style" style="font-size:32px"> AQUABABY</h1>
+                     <?= $sql_fm_bad_ort; ?>
+                     
+            <?php
+               
+                $result = mysqli_query($con_mysqli,"SELECT * FROM termine where kurs_fm_id=$sql_kurs_fm_id order by date ASC");
+
+                        while($row = mysqli_fetch_array($result))
+                        {  
+                            $sql_termin_termin_id = $row['termin_id'];
+                            $sql_termin_termin_fm_id = $row['termin_fm_id'];
+                            $sql_termin_kurs_id = $row['kurs_fm_id'];
+                            $sql_termin_date = $row['date'];
+                            $sql_termin_startzeit = new DateTime($row['startzeit']);
+                            $sql_termin_endzeit = $row['endzeit'];
+                            $sql_termin_created_at = new DateTime($row['created_at']);
+                            $sql_termin_updated_at = new DateTime($row['updated_at']);
+                ?> 
+
+                    <?php } ?>
+       
 
 
-<div class="hintergrundbild">
-<div class="container">
-<div class="form-pos">
-<form>
-<div class="font-color">
-  <div class="form-row">
-  
-    <div class="form-group col-md-6">
-      <label class="first-card-text" >Kurs</label>
-      <input type="email" class="form-control labelshape">
+
+                <ul style="list-style-type:none;">
+                    <li></li>
+                 
+                    <?php if($sql_fm_vorname == "") { 
+                    $keinkursleiter = "Leider kein Kursleiter angegeben";
+                    ?>
+                    <li>KURSLETIUNG: <?=$sql_fm_vorname . " ". $sql_fm_nachname?> <?= $keinkursleiter?></li>
+                    <?php } ?>
+                    <li>KURSLEKTIONEN:......LEKTIONEN</li>
+                    <li>KURSGELD: <?= $sql_fm_kurskosten; ?> CHF</li>
+               </ul>
+
+            </div>
+        </div>
+        <a href="#"  class="btn  btn_aquababy_zum_kursanmelden" >Zum Kursort</a>
     </div>
-    <div class="form-group col-md-6">
-      <label class="first-card-text">Name Kind*</label>
-      <input type="password" class="form-control labelshape">
+
+<section id="section1">
+	<h1>Scroll Down Button #1</h1>
+	<a href="#section2"><span></span>Scroll</a>
+</section>
+<!---button zum kurs ort-->
+        
+            
+     
+    
+
+        </div>
+
+
+        </div>
     </div>
-  </div>
-  <div class="form-group ">
-    <label class="first-card-text">Vorname Kind*</label>
-    <input type="text" class="form-control labelshape">
-  </div>
-  <div class="form-group">
-    <label class="first-card-text">Geburtsdatum Kind*</label>
-    <input type="text" class="form-control labelshape">
-  </div>
+ </div>
 
-  <div class="form-row">
-    <div class="form-group col-md-6">
-      <label class="first-card-text">Gesundheitsstatus</label>
-      <input type="text" class="form-control labelshape">
-    </div>
-
-
-
-    <div class="form-group col-md-6">
-      <label >Plz</label>
-      <input type="text" class="form-control labelshape">
-    </div>
-  </div>
-
-  <div class="form-group">
-  <div class="dropdown-firstcard">
-    <Select class="form-control labelshape" id="search_alt" name="search_alt" type="text" value="<?= $cookie_kursalter; ?>">
-        <option disabled selected value style="color:white;"></option>
-        <option  >test</option>
-        <option >test2</option>
-        <option >test3</option>
-        <option >test4</option>
-    </select>
-  </div>
- 
-</form>
-</div>
-
-</div>
-</div>
-</div>
-
-</div>
+   
+    
+     
 
 <!--test in variabeln gespeichert-->
 <?php 
@@ -158,7 +166,7 @@ $ueber_den_Kurs= "ÜBER DEN KURS" ;
 ?>
 
 
-<div class="container">
+<div class="container" >
     <div class="big-box-text">
         <p class="title_of_text"><?= $ueber_den_Kurs ?></p>
     </div>
@@ -232,65 +240,71 @@ $ueber_den_Kurs= "ÜBER DEN KURS" ;
         </div>
 </div>
 
+<!--Anfang Buchungs form-->
 
-    <div class="big-box-more">
+ <div class="big-box-more" >
 
-    <div class="container">
-    
-        <div class="col-5">
-        
-            <div class="card first-card-kurs">
-                <div class="card-body">
-                <div class="font-color">
-                    <h1 class="card-title card-title-style" style="font-size:32px"> AQUABABY</h1>
-                     <?= $sql_fm_bad_ort; ?>
-                     
-            <?php
-               
-
- $result = mysqli_query($con_mysqli,"SELECT * FROM termine where kurs_fm_id=$sql_kurs_fm_id order by date ASC");
-
-        while($row = mysqli_fetch_array($result))
-        {  
-            $sql_termin_termin_id = $row['termin_id'];
-            $sql_termin_termin_fm_id = $row['termin_fm_id'];
-            $sql_termin_kurs_id = $row['kurs_fm_id'];
-            $sql_termin_date = $row['date'];
-            $sql_termin_startzeit = new DateTime($row['startzeit']);
-            $sql_termin_endzeit = $row['endzeit'];
-            $sql_termin_created_at = new DateTime($row['created_at']);
-            $sql_termin_updated_at = new DateTime($row['updated_at']);
-            
-
-
-  ?> 
-
-<?php } ?>
-       
-                <ul style="list-style-type:none;">
-                    <li></li>
-                 
-                    <?php if($sql_fm_vorname == "") { 
-                    $keinkursleiter = "Leider kein Kursleiter angegeben";
-                    ?>
-                    <li>KURSLETIUNG: <?=$sql_fm_vorname . " ". $sql_fm_nachname?> <?= $keinkursleiter?></li>
-                    <?php } ?>
-                    <li>KURSLEKTIONEN:......LEKTIONEN</li>
-                    <li>KURSGELD: <?= $sql_fm_kurskosten; ?> CHF</li>
-               </ul>
-
-            </div>
-        </div>
+<div id="section2" class="container-test">
+<div class="form-pos">
+<form>
+<div class="font-color">
+  <div class="form-row">
+  
+    <div class="form-group col-md-6">
+      <label class="first-card-text" >Kurs</label>
+      <input type="email" class="form-control labelshape">
     </div>
+    <div class="form-group col-md-6">
+      <label class="first-card-text">Name Kind*</label>
+      <input type="password" class="form-control labelshape">
+    </div>
+  </div>
+  <div class="form-group ">
+    <label class="first-card-text">Vorname Kind*</label>
+    <input type="text" class="form-control labelshape">
+  </div>
+  <div class="form-group">
+    <label class="first-card-text">Geburtsdatum Kind*</label>
+    <input type="text" class="form-control labelshape">
+  </div>
+
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label class="first-card-text">Gesundheitsstatus</label>
+      <input type="text" class="form-control labelshape">
+    </div>
+
+
+
+    <div class="form-group col-md-6">
+      <label >Plz</label>
+      <input type="text" class="form-control labelshape">
+    </div>
+  </div>
+
+  <div class="form-group">
+  <div class="dropdown-firstcard">
+    <Select class="form-control labelshape" id="search_alt" name="search_alt" type="text" value="<?= $cookie_kursalter; ?>">
+        <option disabled selected value style="color:white;"></option>
+        <option  >test</option>
+        <option >test2</option>
+        <option >test3</option>
+        <option >test4</option>
+    </select>
+  </div>
+ 
+</form>
+
+</div>
+</div>
+</div>
 </div>
 
-
-        <div class="col-4">
-            <a href="#"  class="btn  btn_aquababy_zum_kursanmelden" >Zum Kursort</a>
         </div>
-    
 
-    </div>
+<!--Ende Buchungs form-->
+
+  
 
 
 

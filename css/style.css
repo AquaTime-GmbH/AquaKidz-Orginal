@@ -1,3 +1,8 @@
+
+html{
+  scroll-behavior: smooth !important;
+}
+
 /*Standart werte*/
 :root{
     --maincolor:#416cb2;
@@ -882,6 +887,23 @@ ul{
 
 .row{margin-left: 0 !important; margin-right: 0 !important;}
 
+
+
+  /*<------------------------------------------------------------------------>*/
+  /*<--------------------------------KUSSEITE EINZELN------------------------>*/
+  /*<------------------------------------------------------------------------>*/
+  
+/*---------------Buttons Kursorte--------------*/
+
+.blue-box-kurs{
+  width: 100%;
+  height: 624px;
+  background-color: var(--maincolor);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 /*---------------Buttons Kursorte--------------*/
 
 .btn_kursort_aqua{
@@ -920,7 +942,6 @@ ul{
   height: 58px;
   background-color: var(--maincolor);
   margin-bottom: -1px;
-
   width: 150px;
   padding: 5px;
   border-radius:35px 0px 35px 0px; 
@@ -961,7 +982,7 @@ ul{
 .btn_aquababy_zum_kursanmelden{
   font-size: 22px;
   font-family: 'Fjalla One', sans-serif;
-  width: 400px;
+  width: 100%;
   height: 58px;
   background-color: rgb(255, 255, 255);
   color: var(--maincolor);
@@ -970,7 +991,6 @@ ul{
   position: absolute;
   bottom: 0;
   padding-top: 11px;
-  margin-bottom: 170px;
 }
 
 .big-box-text{
@@ -1210,3 +1230,14 @@ margin-bottom: 153px;
 }
 
 
+
+
+
+
+.container-test{
+max-width: 1336px !important;
+height: 100% !important;
+  
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
