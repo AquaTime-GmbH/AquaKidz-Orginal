@@ -1241,3 +1241,8 @@ height: 100% !important;
   margin-left: auto !important;
   margin-right: auto !important;
 }
+
+.jetzt-buchen-pos{
+  position: absolute;
+  float: right;
+}

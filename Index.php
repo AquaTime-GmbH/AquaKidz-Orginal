@@ -533,9 +533,7 @@ include $url_helper .'include/navbar.php';
 
 
 
-
-
-
+<a href="mailto:info@aquatime.ch?subject=Mehr%20informationen%20über%20Aquatime">Email button</a>
 
 <!----------------------------------------four slide cards------------------------->
 

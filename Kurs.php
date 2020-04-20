@@ -142,12 +142,12 @@ include $url_helper .'include/navbar.php';
             
      
     
-
-        </div>
-        
-<section calss="selection-pos-kurs" id="section1">
-	<a href="#section2">Jetzt Buchen!</a>
+<section calss="jetzt-buchen-pos" id="section1">
+	<a href="#section2" >Jetzt Buchen!</a>
 </section>
+        </div>
+
+
 
         </div>
     </div>
@@ -177,21 +177,61 @@ $ueber_den_Kurs= "ÜBER DEN KURS" ;
 
 <div class="big-box-map">
     <div class="container">
-        <div id="map" class="map"></div>
-            <script type="text/javascript">
-            var map = new ol.Map({
-                target: 'map',
-                layers: [
-                new ol.layer.Tile({
-                    source: new ol.source.OSM()
-                })
-                ],
-                view: new ol.View({
-                center: ol.proj.fromLonLat([37.41, 8.82]),
-                zoom: 4
-                })
-            });
-    </script>
+     <script>
+
+
+
+
+
+  var geocoder;
+  var bounds = new google.maps.LatLngBounds();
+  var map;
+  var query = "<?php echo $endCercompleto; ?>";
+  var query2 = "<?php echo $endFescompleto; ?>";
+  function initialize() {
+    geocoder = new google.maps.Geocoder();
+    var mapOptions = {
+      zoom:8,
+      center: new google.maps.LatLng(0, 0),
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    }
+    map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
+        codeAddress();
+  }
+  function codeAddress() {
+    var address = query;
+    geocoder.geocode( { 'address': address}, function(results, status) {
+      if (status == google.maps.GeocoderStatus.OK) {
+        bounds.extend(results[0].geometry.location);
+        var marker = new google.maps.Marker({
+            map: map,
+            position: results[0].geometry.location,
+        });
+        map.fitBounds(bounds);
+      } else {
+        alert('Geocode was not successful for the following reason: ' + status);
+      }
+    });
+
+    
+
+    var address2 = query2;
+    geocoder.geocode( { 'address': address2}, function(results, status) {
+      if (status == google.maps.GeocoderStatus.OK) {
+        bounds.extend(results[0].geometry.location);
+        var marker2 = new google.maps.Marker({
+            map: map,
+            position: results[0].geometry.location,
+        });
+        map.fitBounds(bounds);
+      } else {
+        alert('Geocode was not successful for the following reason: ' + status);
+      }
+    });
+}
+</script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAvf8MRWi1ignKqBJnfCcvwTKwUdehvMzU&callback=initMap"
+    async defer></script>
 
     </div>
 </div>
