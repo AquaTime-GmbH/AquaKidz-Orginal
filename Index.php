@@ -533,8 +533,7 @@ include $url_helper .'include/navbar.php';
 
 
 
-<a href="mailto:info@aquatime.ch?subject=Mehr%20informationen%20über%20Aquatime">Email button</a>
-<a href="tel:+41788833878">ruf button</a>
+
 <!----------------------------------------four slide cards------------------------->
 
     <div class="row">
@@ -730,10 +729,10 @@ function showDivs(n) {
             
               </div> 
             </div>
-           
-                <a href="#"  class="btn  btn_email" >Email</a>
+
+                <a href="mailto:info@aquatime.ch?subject=Mehr%20informationen%20über%20Aquatime"  class="btn  btn_email" >Email</a>
             
-                <a href="#"  class="btn  btn_auf" >Anrufen</a>
+                <a href="tel:+41774235838"  class="btn  btn_auf" >Anrufen</a>
                 </div> 
             </div>
         </div>
