@@ -168,10 +168,28 @@ $ueber_den_Kurs= "ÜBER DEN KURS" ;
 
 <div class="container" >
     <div class="big-box-text">
+    <div class="row">
+    <div class="col-12">
+    <div class="col-6">
+    
         <p class="title_of_text"><?= $ueber_den_Kurs ?></p>
+        <p class="">Frühförderung im Wasser, Schutz- und Lernerfahrung für Ihr Kind</p>
+        <p class="">Das erste Mal im Wasser ist eine ganz besondere Erfahrung. Gemeinsam mit Ihnen erlernt Ihr Kind früh Sicherheit im Schwimmbecken zu erhalten. Sie fördern die körperliche und geistige Entwicklung in den ersten Lebensjahren nachhaltig und unterstützen einen gesunden Umgang mit dem Wasser. In überschaubaren Gruppen vermitteln unsere Trainer wichtige Grundlagen die ein Kind für die erste Wassergewöhnung braucht. Mit verschiedenen Übungen und Geduld, stärken sie in einer Gruppe von gleichgesinnten Eltern die Fähigkeiten Ihres Kleinen, sein Immunsystem und Ihre Bindung mit Ihm</p>
+    
+        </div>
+       <div class="col-6">
+        <h2>WIR LERNEN:</h2>
+            <ul>
+            <td>moin</td>
+            <td>moin</td>
+            </ul>
+
+           </div>
+        </div>
     </div>
 </div>
-
+</div>
+   
 
 
 

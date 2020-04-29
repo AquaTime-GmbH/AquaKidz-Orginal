@@ -286,32 +286,34 @@ include $url_helper .'include/navbar.php';
     <div class="slideshow-container">
 
     <div class="h3_ueberschrift">       
-        <h4>Was unsere Kunden sagen</h4>
+        <h4 stlye="font-size: 36px;">Was unsere Kunden sagen</h4>
     </div>
 <div class="text-slider-container">
  <div class="slides ">
-        <div class="text ">CaptionOnehgdfhgfdhgfdhgfdhfgdhfdghfdghfgdhfgdhgfdhfgdhgfdhfgdhfgdhgfdhfgdhgfdhgfdhfgdhfgdhgfdhghghdfhfgdhfgdhfgdhfgdhfgdhfgdhfgdgfdhgfhdfghgfdhfgdhgfdhfgdhgfdhfgdhfgdhgffd</div>
+        <div style="margin-bottom:100px;" class="text">CaptionOnehgdfhgfdhgfdhgfdhfgdhfdghfdghfgdhfgdhgfdhfgdhgfdhfgdhfgdhgfdhfgdhgfdhgfdhfgdhfgdhgfdhghghdfhfgdhfgdhfgdhfgdhfgdhfgdhfgdgfdhgfhdfghgfdhfgdhgfdhfgdhgfdhfgdhfgdhgffd</div>
     </div>
 
 </div>
+
+ <!-- texte müssen aus der datenbank kommen mitarbeiter bereich text mit variablen ersetzen-->
    
 
     <div class="slides ">
-        <div class="text">Caption Two</div>
+        <div style="margin-bottom:100px;" class="text">Caption Two</div>
     </div>
     <div class="slides ">
-        <div class="text">Caption Three</div>
+        <div style="margin-bottom:100px;" class="text">Caption Three</div>
     </div>
 
     <div class="slides ">
-        <div class="text">Caption four</div>
+        <div style="margin-bottom:100px;"  class="text">Caption four</div>
     </div>
 
     <div class="slides ">
-        <div class="text">Caption five</div>
+        <div style="margin-bottom:100px;" class="text">Caption five</div>
     </div>
 
-    <div style="text-align:center ">
+    <div style="text-align:center;" class="dot-container">
         <span class="dot" onclick="currentSlide(1)"></span> 
         <span class="dot" onclick="currentSlide(2)"></span> 
         <span class="dot" onclick="currentSlide(3)"></span>
@@ -398,7 +400,7 @@ include $url_helper .'include/navbar.php';
 
 <!----------------------------------------fist slide cards------------------------->
 <div class="row">
-<div class="arrow-left" style="margin-top:auto; margin-bottom:auto;" onclick="plusDivs(-1)"></div>
+
     
 
     
@@ -437,9 +439,9 @@ include $url_helper .'include/navbar.php';
     </div>
 
 
-
-
-
+   <!-- Left and right controls -->
+<div class="arrow-left" style="margin-top:auto; margin-bottom:auto;" onclick="plusDivs(-1)"></div>
+ <div class="arrow-right" style="margin-top:auto; margin-bottom:auto;" onclick="plusDivs(1)"></div>
 
 <!----------------------------------------second 2 slide cards------------------------->
 
@@ -611,25 +613,25 @@ include $url_helper .'include/navbar.php';
                 </div>
 
                 </div>
-                 
+   
+
         </div>
 
-   <div class="arrow-right" style="margin-top:auto; margin-bottom:auto;" onclick="plusDivs(1)"></div>
-       
-      
+     
     </div>
-
-
-
-
-
-    <div style="text-align:center">
+    <div style="text-align:center;">
         <span class="dot-slider" onclick="currentSlide(1)"></span> 
         <span class="dot-slider" onclick="currentSlide(2)"></span> 
         <span class="dot-slider" onclick="currentSlide(3)"></span>
         <span class="dot-slider" onclick="currentSlide(4)"></span>
         <span class="dot-slider" onclick="currentSlide(5)"></span>
     </div>
+      
+
+
+
+
+  
 
 </div>
 
