@@ -74,9 +74,12 @@ while($row = mysqli_fetch_array($result_mitarbeiter))
     <meta name="description" content="">
     <meta name="autor" content="">
     <meta name="keywords" content="">
+
     <!-- Bootstrap,w3schools,fotawsome CSS -->
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="<?php echo $url_helper;?>css/style.css">
+ 
     <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Lato&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.2.1/build/ol.js"></script>
 </head>
@@ -89,7 +92,9 @@ include $url_helper .'include/navbar.php';
 <!--------------ende der einbindung------------------>
 
 <div class="blue-box-kurs">
-    <div class="container">
+    <div class="container"> <col-kurs-size>
+      <div class="row">
+       
         <div class="col-5">
         
             <div class="card first-card-kurs">
@@ -134,24 +139,26 @@ include $url_helper .'include/navbar.php';
             </div>
         </div>
         <a href="#"  class="btn  btn_aquababy_zum_kursanmelden" >Zum Kursort</a>
-    </div>
-
+   </div>
 
 <!---button zum kurs ort-->
-        
-            
-     
-    
-<section calss="jetzt-buchen-pos" id="section1">
-	<a href="#section2" >Jetzt Buchen!</a>
+      
+          
+                    </div>
+
+
+<div class="col-5">
+                    
+
+  <section class="jetzt-buchen-pos" id="section1">
+	<a class="jetzt-buchen-style" href="#section2" >Jetzt Buchen!</a>
 </section>
-        </div>
-
-
-
+</div>
+                      
+          </div>
         </div>
     </div>
- </div>
+ </col-kurs-size>
 
    
     
@@ -168,23 +175,68 @@ $ueber_den_Kurs= "ÜBER DEN KURS" ;
 
 <div class="container" >
     <div class="big-box-text">
-    <div class="row">
-    <div class="col-12">
-    <div class="col-6">
+      <div class="row"style="margin-top:187px;">
+
+
+        <div class="col-6">
     
-        <p class="title_of_text"><?= $ueber_den_Kurs ?></p>
-        <p class="">Frühförderung im Wasser, Schutz- und Lernerfahrung für Ihr Kind</p>
-        <p class="">Das erste Mal im Wasser ist eine ganz besondere Erfahrung. Gemeinsam mit Ihnen erlernt Ihr Kind früh Sicherheit im Schwimmbecken zu erhalten. Sie fördern die körperliche und geistige Entwicklung in den ersten Lebensjahren nachhaltig und unterstützen einen gesunden Umgang mit dem Wasser. In überschaubaren Gruppen vermitteln unsere Trainer wichtige Grundlagen die ein Kind für die erste Wassergewöhnung braucht. Mit verschiedenen Übungen und Geduld, stärken sie in einer Gruppe von gleichgesinnten Eltern die Fähigkeiten Ihres Kleinen, sein Immunsystem und Ihre Bindung mit Ihm</p>
-    
+          <p class="title_of_text"><?= $ueber_den_Kurs ?></p>
+          <p class="über-den-kurs-undertitle">Frühförderung im Wasser, Schutz- und Lernerfahrung für Ihr Kind</p>
+          <p class="text-über-kurs">Das erste Mal im Wasser ist eine ganz besondere Erfahrung. Gemeinsam mit Ihnen erlernt Ihr Kind früh Sicherheit im Schwimmbecken zu erhalten. Sie fördern die körperliche und geistige Entwicklung in den ersten Lebensjahren nachhaltig und unterstützen einen gesunden Umgang mit dem Wasser. In überschaubaren Gruppen vermitteln unsere Trainer wichtige Grundlagen die ein Kind für die erste Wassergewöhnung braucht. Mit verschiedenen Übungen und Geduld, stärken sie in einer Gruppe von gleichgesinnten Eltern die Fähigkeiten Ihres Kleinen, sein Immunsystem und Ihre Bindung mit Ihm</p>
+      
         </div>
-       <div class="col-6">
-        <h2>WIR LERNEN:</h2>
-            <ul>
-            <td>moin</td>
-            <td>moin</td>
-            </ul>
+
+
+
+        <div class="col-6">
+          <p class="title_of_text">WIR LERNEN:</p>
+            <ul class="table-wirlernen">
+                    <li>
+                        <a>- Sicherheit im Wasser</a>
+                    </li>
+                    <li>
+                        <a>- Erste Erfahrungen in Atmungskontrolle und tauchen</a>
+                    </li>
+                    <li>
+                        <a>- Schwimmübungen mit Wechselbeinschlag in Bauchlage</a>
+                    </li>
+                    <li>
+                        <a>- Streck-, Atem- und Greifreflexe zu verbessern</a>
+                    </li>
+                     <li>
+                        <a>- Das selbständige rausklettern aus dem Becken</a>
+                    </li>
+                     <li>
+                        <a>- Massage und Yoga-Übungen zur Beruhigung.</a>
+                    </li>
+                </ul>
+
+
+
+                <p class="title_of_text">WICHTIGSTE INFOS:</p>
+                  <ul class="table-wirlernen">
+                  
+                    <li>
+                        <a>- Altersstufe: ca. 10 Wochen bis 24 Monate.</a>
+                    </li>
+                    <li>
+                        <a>- Anzahl Schüler: 4-6</a>
+                    </li>
+                    <li>
+                        <a>- Kurse: 8 x 30 Minuten</a>
+                    </li>
+                    <li>
+                        <a>- Quereinstieg: möglich</a>
+                    </li>
+                    
+                </ul>
 
            </div>
+
+                
+
+
+
         </div>
     </div>
 </div>
@@ -304,61 +356,164 @@ $ueber_den_Kurs= "ÜBER DEN KURS" ;
 
 <div id="section2" class="container-test">
 <div class="form-pos">
-<form>
+
+
+
+<form action="">
+
+
 <div class="font-color">
-  <div class="form-row">
   
-    <div class="form-group col-md-6">
+<!----------------Angaben zum Kursteilnehmer------------->
+  <p class="form-title-buchen">Angaben zum Kursteilnehmer</p>
+
+  
+    <div class="form-group">
       <label class="first-card-text" >Kurs</label>
       <input type="email" class="form-control labelshape">
     </div>
-    <div class="form-group col-md-6">
+
+
+
+    <div class="form-row">
+    <div class="form-group col-md-3">
       <label class="first-card-text">Name Kind*</label>
-      <input type="password" class="form-control labelshape">
+      <input type="text" class="form-control labelshape" required>
     </div>
-  </div>
-  <div class="form-group ">
+  
+
+  <div class="form-group col-md-3">
     <label class="first-card-text">Vorname Kind*</label>
-    <input type="text" class="form-control labelshape">
+    <input type="text" class="form-control labelshape" required>
   </div>
-  <div class="form-group">
-    <label class="first-card-text">Geburtsdatum Kind*</label>
-    <input type="text" class="form-control labelshape">
+  
+  <div class="form-group col-md-3">
+    <label class="first-card-text" >Geburtsdatum Kind*</label>
+    <input type="text" placeholder="tt.mm.jjjj"class="form-control labelshape" required>
   </div>
 
-  <div class="form-row">
-    <div class="form-group col-md-6">
+
+  
+    <div class="form-group col-md-3">
       <label class="first-card-text">Gesundheitsstatus</label>
       <input type="text" class="form-control labelshape">
     </div>
+</div>
+
+
+<!----------------Angaben Kunden ------------->
+
+<p class="form-title2-buchen">Angaben Kunde</p>
+
+
+<!--------------------begrenzen auf 4 zahlen------------------>
+
+<!--------------------Html escapen------------------>
+<div class="form-row">
+  <div class="form-group col-md-2">
+      <label class="first-card-text">Anrede*</label>
+    <div class="dropdown-firstcard">
+      <Select class="form-control labelshape" required>
+          <option disabled selected value style="color:white;"></option>
+          <option >Herr</option>
+          <option >Frau</option>
+          <option >Familie</option>
+      </select>
+    </div>
+    </div>
+  
+    <div class="form-group col-md-3">
+      <label class="first-card-text" >Ihr Name*</label>
+      <input type="text" class="form-control labelshape" required>
+    </div>
+
+    <div class="form-group col-md-3">
+      <label class="first-card-text" >Vorname*</label>
+      <input type="text" class="form-control labelshape" required>
+    </div>
+</div>
+
+<div class="form-row">
+    <div class="form-group col-md-3">
+      <label class="first-card-text" >Strasse*</label>
+      <input type="text" class="form-control labelshape" required>
+    </div>
+
+    <div class="form-group col-md-3">
+      <label class="first-card-text" >Nr.*</label>
+      <input type="text" class="form-control labelshape" required>
+    </div>
 
 
 
-    <div class="form-group col-md-6">
-      <label >Plz</label>
-      <input type="text" class="form-control labelshape">
+    <div class="form-group col-md-2">
+      <label class="first-card-text" >Plz*<i class="far fa-question-circle"></i></label>
+      <input type="text" name="postleitzahl" pattern="^[0-9]{4}$" class="form-control labelshape" required>
+    </div>
+
+<?php
+if($_POST['postleitzahl'] > 4 ){
+  echo "Sie dürfen maximal nur 4 zahlen angeben";
+}
+?>
+
+
+
+
+
+    <div class="form-group col-md-2">
+      <label class="first-card-text" >Ort*</label>
+      <input type="text" class="form-control labelshape" required>
+    </div>
+</div>
+
+<div class="form-row">
+    <div class="form-group col-md-4">
+      <label class="first-card-text" >Ihre E-Mail-Adresse*</label>
+      <input type="email" class="form-control labelshape" required>
+    </div>
+
+    <div class="form-group col-md-4">
+      <label class="first-card-text" >Telefon</label>
+      <input type="email" class="form-control labelshape">
+    </div>
+
+    <div class="form-group col-md-4">
+      <label class="first-card-text" >Natel</label>
+      <input type="email" class="form-control labelshape">
+    </div>
+</div>
+<div class="form-row">
+    <div class="form-group col-md-4">
+      <label class="first-card-text" >Gutscheincode</label>
+      <input type="email" class="form-control labelshape">
+    </div>
+
+     <div class="form-group col-md-2">
+      <label class="first-card-text">Zahlugsart</label>
+    <div class="dropdown-firstcard">
+      <Select class="form-control labelshape" required>
+          <option disabled selected value style="color:white;"></option>
+          <option selected>Rechnung</option>
+      </select>
+    </div>
+    </div><input type="submit" href="" class="btn buchen-buttom" name="buchen_button" value="Jetzt Buchen!">
+  </div>
+
+ 
+
+</form>
+
+
+
+
+      </div>
     </div>
   </div>
 
-  <div class="form-group">
-  <div class="dropdown-firstcard">
-    <Select class="form-control labelshape" id="search_alt" name="search_alt" type="text" value="<?= $cookie_kursalter; ?>">
-        <option disabled selected value style="color:white;"></option>
-        <option  >test</option>
-        <option >test2</option>
-        <option >test3</option>
-        <option >test4</option>
-    </select>
-  </div>
- 
-</form>
 
 </div>
-</div>
-</div>
-</div>
-
-        </div>
+    </div>
 
 <!--Ende Buchungs form-->
 

@@ -770,6 +770,8 @@ ok .row {
   max-width: 34.333% !important;
 }
 
+col-kurs-size .col-5 {height: 624px !important;}
+
 /*<------------------------------------------------------------------------>*/
 /*<--------------------------------AQUABABY-------------------------------->*/
 /*<------------------------------------------------------------------------>*/
@@ -981,6 +983,11 @@ ok .row {
   padding-top: 11px;
 }
 
+.btn_aquababy_zum_kursanmelden:hover{
+  color: var(--maincolor-hover);
+}
+
+
 .big-box-text {
   width: 100%;
   height: 500px;
@@ -1011,12 +1018,15 @@ ok .row {
   width: 414px;
   margin-bottom: 30%;
   border-radius: 35px;
-  top: 100px;
+  top: 30px;
   bottom: 30px;
 }
 .form-pos {
-  margin-top: 153px;
+  margin-top: 50px;
   margin-bottom: 153px;
+  position: absolute;
+  width: 100%;
+
 }
 
 .buchen_button {
@@ -1030,6 +1040,7 @@ ok .row {
   font-size: 32px;
   background-color: var(--maincolor);
   color: white;
+  
 }
 .buchen_button:hover {
   color: white;
@@ -1210,13 +1221,86 @@ ok .row {
 .container-test {
   max-width: 1336px !important;
   height: 100% !important;
-
-  margin-left: auto !important;
   margin-right: auto !important;
+  margin-left: auto !important;
 }
 
 .jetzt-buchen-pos {
   position: absolute;
-  float: right;
+  bottom: 0;
+  margin-bottom: 30px;
+  right: 0;
+  
+}
+.jetzt-buchen-pos a:hover{
+  text-decoration: none;
+  color: var(--maincolor-hover);
+
 }
 
+.jetzt-buchen-style{
+  color: var(--maincolor);
+  background-color: rgb(255, 255, 255);
+  border-radius: 35px 35px 35px 35px;
+  height: 58px;
+  padding: 5px;
+  font-family: "Fjalla One", sans-serif;
+}
+
+.über-den-kurs-undertitle{
+  color: var(--secondcolor);
+  font-family: "Fjalla One", sans-serif;
+  font-size: 22px;
+}
+
+.text-über-kurs{
+  color: var(--maincolor);
+  font-family: "Fjalla One", sans-serif;
+  font-size: 21px;
+}
+
+.table-wirlernen{
+  list-style: none;
+  color: var(--secondcolor);
+  font-size: 21px;
+}
+
+.form-title-buchen{
+  color: white;
+  font-size: 22px;
+  text-align: center;
+  text-shadow: 2px 2px 4px #000000; 
+  margin-bottom: 0 !important;
+  
+}
+.form-title2-buchen{
+  color: white;
+  font-size: 22px;
+  text-align: center;
+  text-shadow: 2px 2px 4px #000000; 
+  margin-bottom: 0 !important;
+  margin-top: 50px;
+}
+
+.buchen-buttom{
+  height: 50px;
+  position: absolute;
+  margin: -1px;
+  border-radius: 35px 35px 35px 35px;
+  font-size: 32px;
+  background-color: white;
+  color: var(--maincolor);
+  margin-top: 100px !important;
+  margin-left: 50% !important;
+  margin-right: 50% !important;
+}
+
+.buchen-buttom:hover {
+  color: var(--maincolor-hover);
+}
+
+.footer-picture-sizing{
+  width: 214px;
+  height: 103px;
+  margin: 30px;
+}

@@ -130,7 +130,21 @@
 
     </div>
     <div class="col-md-6 footer-white">
+        <div class="row">
+            <div style="margin-right:150px;" class="col-md-2">
+                  <img class="footer-picture-sizing" src="<?php echo $url_helper;?>images/footerpic.png" alt="Bild ladet nicht!">
+                  <img  class="footer-picture-sizing" src="<?php echo $url_helper;?>images/footerpic2.png" alt="Bild ladet nicht!">
+            </div>
+            <div style="margin-right:150px;" class="col-md-2">
+               <img  class="footer-picture-sizing"src="<?php echo $url_helper;?>images/footerpic3.png" alt="Bild ladet nicht!">
+               <img class="footer-picture-sizing" src="<?php echo $url_helper;?>images/footerpic4.png" alt="Bild ladet nicht!">
 
+            </div>
+             <div s class="col-md-2">
+               <img class="footer-picture-sizing" src="<?php echo $url_helper;?>images/footerpic5.png" alt="Bild ladet nicht!">
+               <img class="footer-picture-sizing" src="<?php echo $url_helper;?>images/footerpic6.png" alt="Bild ladet nicht!">
+            </div>
+        </div>
     </div>
 </div>
 
