@@ -418,8 +418,8 @@ select {
 
 .dot {
   cursor: pointer;
-  height: 32px;
-  width: 32px;
+  height: 22px;
+  width: 22px;
   margin: 0 2px;
   background-color: var(--maincolor);
   border-radius: 50%;
@@ -1284,7 +1284,7 @@ col-kurs-size .col-5 {height: 624px !important;}
 
 .buchen-buttom{
   height: 50px;
-  position: absolute;
+  
   margin: -1px;
   border-radius: 35px 35px 35px 35px;
   font-size: 32px;
@@ -1303,4 +1303,17 @@ col-kurs-size .col-5 {height: 624px !important;}
   width: 214px;
   height: 103px;
   margin: 30px;
+}
+
+.form-container-check{
+  margin: 0;
+}
+
+.kreis-slider{
+  height: 250px;
+  width: 250px;
+  border-radius: 50%;
+  background-color: red;
+  float: right;
+  margin-top: 25px;
 }

@@ -107,6 +107,7 @@
             </p>  
         </div>
 
+        
         <div class="col-sm-2">
         <p class="footer-links">
                 <a class="footer-text" href="<?php echo $url_helper;?>Ueber-uns">ÜBER UNS

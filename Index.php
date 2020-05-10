@@ -285,9 +285,25 @@ include $url_helper .'include/navbar.php';
 
     <div class="slideshow-container">
 
-    <div class="h3_ueberschrift">       
+   <!-- <div class="h3_ueberschrift">      
         <h4 stlye="font-size: 36px;">Was unsere Kunden sagen</h4>
-    </div>
+    </div>-->
+
+
+<div class="row">
+<div class="col-md-6">
+<div class="kreis-slider">
+
+
+</div>
+
+
+</div>
+
+
+
+<div class="col-md-6" style="margin-top:auto !important; margin-bottom:auto !important;">
+
 <div class="text-slider-container">
  <div class="slides ">
         <div style="margin-bottom:100px;" class="text">CaptionOnehgdfhgfdhgfdhgfdhfgdhfdghfdghfgdhfgdhgfdhfgdhgfdhfgdhfgdhgfdhfgdhgfdhgfdhfgdhfgdhgfdhghghdfhfgdhfgdhfgdhfgdhfgdhfgdhfgdgfdhgfhdfghgfdhfgdhgfdhfgdhgfdhfgdhfgdhgffd</div>
@@ -298,20 +314,20 @@ include $url_helper .'include/navbar.php';
  <!-- texte müssen aus der datenbank kommen mitarbeiter bereich text mit variablen ersetzen-->
    
 
-    <div class="slides ">
-        <div style="margin-bottom:100px;" class="text">Caption Two</div>
-    </div>
-    <div class="slides ">
-        <div style="margin-bottom:100px;" class="text">Caption Three</div>
-    </div>
+        <div class="slides ">
+            <div style="margin-bottom:100px;" class="text">Caption Two</div>
+        </div>
+        <div class="slides ">
+            <div style="margin-bottom:100px;" class="text">Caption Three</div>
+        </div>
 
-    <div class="slides ">
-        <div style="margin-bottom:100px;"  class="text">Caption four</div>
-    </div>
+        <div class="slides ">
+            <div style="margin-bottom:100px;"  class="text">Caption four</div>
+        </div>
 
-    <div class="slides ">
-        <div style="margin-bottom:100px;" class="text">Caption five</div>
-    </div>
+        <div class="slides ">
+            <div style="margin-bottom:100px;" class="text">Caption five</div>
+        </div>
 
     <div style="text-align:center;" class="dot-container">
         <span class="dot" onclick="currentSlide(1)"></span> 
@@ -321,6 +337,13 @@ include $url_helper .'include/navbar.php';
         <span class="dot" onclick="currentSlide(5)"></span>
     </div>
    
+    </div>
+</div>
+
+
+
+
+
     <!--javascript für die Slideshow-->
      <script>
      var slideIndex = 1;

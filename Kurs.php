@@ -1,5 +1,6 @@
 <!-- organisation der url -->
  <?php 
+ session_start();
 $url_helper= "";
 /* einbingung der database connection*/
 include  $url_helper .'include/database.php';
@@ -359,9 +360,7 @@ $ueber_den_Kurs= "ÜBER DEN KURS" ;
 
 
 
-<form action="">
-
-
+<form action="danke_buchen" method="post">
 <div class="font-color">
   
 <!----------------Angaben zum Kursteilnehmer------------->
@@ -370,26 +369,38 @@ $ueber_den_Kurs= "ÜBER DEN KURS" ;
   
     <div class="form-group">
       <label class="first-card-text" >Kurs</label>
-      <input type="email" class="form-control labelshape">
+      <input name="kurs_k"  type="text" class="form-control labelshape" value="<?= $kurs_text; ?>">
     </div>
 
+<?php
+
+$kurs_text = $_POST['kurs_k'];
+$_SESSION['kurs_text'] = $kurs_text; 
+
+if (!isset($_SESSION['kurs_text'])){
+
+}else{
+    
+}
+?>
 
 
     <div class="form-row">
+  
     <div class="form-group col-md-3">
       <label class="first-card-text">Name Kind*</label>
-      <input type="text" class="form-control labelshape" required>
+      <input type="text" class="form-control labelshape" >
     </div>
   
 
   <div class="form-group col-md-3">
     <label class="first-card-text">Vorname Kind*</label>
-    <input type="text" class="form-control labelshape" required>
+    <input type="text" class="form-control labelshape" >
   </div>
   
   <div class="form-group col-md-3">
     <label class="first-card-text" >Geburtsdatum Kind*</label>
-    <input type="text" placeholder="tt.mm.jjjj"class="form-control labelshape" required>
+    <input type="text" placeholder="tt.mm.jjjj"class="form-control labelshape" >
   </div>
 
 
@@ -410,10 +421,11 @@ $ueber_den_Kurs= "ÜBER DEN KURS" ;
 
 <!--------------------Html escapen------------------>
 <div class="form-row">
+
   <div class="form-group col-md-2">
       <label class="first-card-text">Anrede*</label>
     <div class="dropdown-firstcard">
-      <Select class="form-control labelshape" required>
+      <Select class="form-control labelshape" >
           <option disabled selected value style="color:white;"></option>
           <option >Herr</option>
           <option >Frau</option>
@@ -424,53 +436,45 @@ $ueber_den_Kurs= "ÜBER DEN KURS" ;
   
     <div class="form-group col-md-3">
       <label class="first-card-text" >Ihr Name*</label>
-      <input type="text" class="form-control labelshape" required>
+      <input type="text" class="form-control labelshape" >
     </div>
 
     <div class="form-group col-md-3">
       <label class="first-card-text" >Vorname*</label>
-      <input type="text" class="form-control labelshape" required>
+      <input type="text" class="form-control labelshape" >
     </div>
 </div>
 
 <div class="form-row">
     <div class="form-group col-md-3">
       <label class="first-card-text" >Strasse*</label>
-      <input type="text" class="form-control labelshape" required>
+      <input type="text" class="form-control labelshape" >
     </div>
 
     <div class="form-group col-md-3">
       <label class="first-card-text" >Nr.*</label>
-      <input type="text" class="form-control labelshape" required>
+      <input type="text" class="form-control labelshape" >
     </div>
 
 
 
     <div class="form-group col-md-2">
       <label class="first-card-text" >Plz*<i class="far fa-question-circle"></i></label>
-      <input type="text" name="postleitzahl" pattern="^[0-9]{4}$" class="form-control labelshape" required>
+      <input type="text" name="postleitzahl" pattern="^[0-9]{4}$" class="form-control labelshape" >
     </div>
-
-<?php
-if($_POST['postleitzahl'] > 4 ){
-  echo "Sie dürfen maximal nur 4 zahlen angeben";
-}
-?>
-
-
 
 
 
     <div class="form-group col-md-2">
       <label class="first-card-text" >Ort*</label>
-      <input type="text" class="form-control labelshape" required>
+      <input type="text" class="form-control labelshape" >
     </div>
 </div>
 
 <div class="form-row">
     <div class="form-group col-md-4">
       <label class="first-card-text" >Ihre E-Mail-Adresse*</label>
-      <input type="email" class="form-control labelshape" required>
+      <input type="email" class="form-control labelshape" >
     </div>
 
     <div class="form-group col-md-4">
@@ -497,8 +501,21 @@ if($_POST['postleitzahl'] > 4 ){
           <option selected>Rechnung</option>
       </select>
     </div>
-    </div><input type="submit" href="" class="btn buchen-buttom" name="buchen_button" value="Jetzt Buchen!">
+    </div>
+    <div class="row">
+
+      <div class="form-container-check">
+        <input class="" type="checkbox" ><a class="" href="">AGB</a>
+      </div>
+      
+    
+
+
+      <input type="submit" href="" class="btn buchen-buttom" name="buchen_button" value="Jetzt Buchen!">
+
+    </div>
   </div>
+    
 
  
 
@@ -517,7 +534,7 @@ if($_POST['postleitzahl'] > 4 ){
 
 <!--Ende Buchungs form-->
 
-  
+
 
 
 
