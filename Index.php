@@ -53,11 +53,7 @@ include $url_helper .'include/navbar.php';
 
 <?php 
 
- if( isset($_COOKIE['kursstart'])) {
-    $cookie_kursstart = $_COOKIE["kursstart"]; 
-    } else {
-        $cookie_kursstart = "";
-  }
+
   if( isset($_COOKIE['kursort'])) {
     $cookie_kursort = $_COOKIE["kursort"]; 
     } else {
@@ -86,15 +82,12 @@ include $url_helper .'include/navbar.php';
                 <h1 class="card-title card-title-style" style="font-size:32px">SCHWIMMEN LERNEN, SCHWIMMEN LIEBEN</h1>
                     <p class="card-text first-card-text" >Sichere und altersgerechte Kurse für Babys und Kinder. Denn schwimmen lernen soll Spass machen.</p>
 
-                    <label class="col-4 col-form-label first-card-text">Ort</label>
+                    <label class="col-4 col-form-label first-card-text">Plz</label>
                     <div class="col-12">
-                        <input class="form-control labelshape" id="search_ort" name="search_ort" type="text" value="<?= $cookie_kursort; ?>">
+                        <input pattern="^[0-9]{4}$" class="form-control labelshape" id="search_ort" name="search_ort" type="text" value="<?= $cookie_kursort; ?>">
                     </div>
 
-                    <label  class="col-6 col-form-label first-card-text">Kurs Start</label>
-                    <div class="col-12">
-                        <input class="form-control labelshape"  id="search_start" name="search_start" type="date" value="<?= $cookie_kursstart;  ?>">
-                    </div>
+                    
 
                     <label class="col-8 col-form-label first-card-text">Wie alt ist ihr Kind ?</label>
                     
@@ -283,52 +276,77 @@ include $url_helper .'include/navbar.php';
 ?>
 <!-- Das ist die Slideshow -->
 
-    <div class="slideshow-container">
+    <div class="slideshow-container" style="overflow-y:hidden;">
+
+
 
    <!-- <div class="h3_ueberschrift">      
         <h4 stlye="font-size: 36px;">Was unsere Kunden sagen</h4>
     </div>-->
 
 
-<div class="row">
-<div class="col-md-6">
-<div class="kreis-slider">
+<div class="row" style="height: 458px !important;">
+<div class="col-md-6 position-slider-cols">
+
+<?php
+//schleife
+
+//array
+$bild_frau = "img/Frau.jpg";
+$bild_mann = "img/Mann.jpg";
+$kunde_bild = "img/kunde_bild.png"
+
+//if anfrage
+
+?>
+
+<img class="kreis-slider" src="<?php echo $url_helper;?><?= $bild_frau ?>" alt="Bild konnte nicht geladen werden!">
+
+
 
 
 </div>
 
 
-</div>
 
-
-
-<div class="col-md-6" style="margin-top:auto !important; margin-bottom:auto !important;">
+<div class="col-md-6 position-slider-cols-text">
 
 <div class="text-slider-container">
+    
  <div class="slides ">
-        <div style="margin-bottom:100px;" class="text">CaptionOnehgdfhgfdhgfdhgfdhfgdhfdghfdghfgdhfgdhgfdhfgdhgfdhfgdhfgdhgfdhfgdhgfdhgfdhfgdhfgdhgfdhghghdfhfgdhfgdhfgdhfgdhfgdhfgdhfgdgfdhgfhdfghgfdhfgdhgfdhfgdhgfdhfgdhfgdhgffd</div>
+     <p class="position_slider_name">Leonie W.</p>
+        <div style="margin-bottom:100px; margin-top:30px;" class="text">Ich finde es super, dass die Gruppen nicht so gross sind. So hat die Kursleiterin für alle Zeit und  kann entsprechend helfen. Wir gehen sehr gerne in Kurs bei Ihnen, weiter so, vielen Dank!</div>
     </div>
 
-</div>
-
- <!-- texte müssen aus der datenbank kommen mitarbeiter bereich text mit variablen ersetzen-->
    
 
         <div class="slides ">
-            <div style="margin-bottom:100px;" class="text">Caption Two</div>
-        </div>
+            <p class="position_slider_name">Louna L.</p>
+            <div style="margin-bottom:100px; margin-top:30px;" class="text ">Wir fanden die Kursleitung super und sie war sehr engagiert, motiviert und voll da.
+                                                            Uns hat der Kurs sehr gut gefallen und wir werden später weitere Kurse besuchen. Ich fand insbesondere auch die Gruppengrösse sehr perfekt. Herzlichen Dank für alles!</div>
+</div>
+
+
         <div class="slides ">
-            <div style="margin-bottom:100px;" class="text">Caption Three</div>
+            <p class="position_slider_name">Annina D.</p>
+            <div style="margin-bottom:100px; margin-top:30px;" class="text ">Ich habe mit meiner Tochter bereits zwei Kurse bei Aquakidz besucht. Die Lektionen werden sehr abwechslungsreich gestaltet und es gibt auch schöne wiederkehrende 
+            Rituale, die den Kindern Sicherheit geben. Die Kursleitung ist sehr kompetent und reagiert stets angemessen auf die individuellen Bedürfnisse der Babys. </div>
         </div>
 
         <div class="slides ">
-            <div style="margin-bottom:100px;"  class="text">Caption four</div>
+                        <p class="position_slider_name">Nina, Dave mit Gian B.</p>
+            <div style="margin-bottom:100px; margin-top:30px;"  class="text">Jeden Samstagmorgen haben wir uns aufs Babyschwimmen bei Jana Brinkmann gefreut. Sie ist total herzlich und kann gut auf's Baby und die Begleitperson eingehen. Uns gefällt die Art, wie sie den Kindern die Angst vom Wasser nimmt und sie spielerisch begleitet. Wir freuen uns bereits auf den Folgekurs! 
+</div>
         </div>
 
         <div class="slides ">
-            <div style="margin-bottom:100px;" class="text">Caption five</div>
+                        <p class="position_slider_name">Samuel S.</p>
+            <div style="margin-bottom:100px; margin-top:30px;" class="text">Super Diagramm/Lernkurve, die nach jedem Schwimmkurs angepasst wird
+Samuel geht sehr gerne zum Schwimmkurs und erzählt viel davon :-) alles richtig gemacht. 
+Er freut sich schon sehr auf den Folgekurs in Lachen.</div>
         </div>
 
+</div>
     <div style="text-align:center;" class="dot-container">
         <span class="dot" onclick="currentSlide(1)"></span> 
         <span class="dot" onclick="currentSlide(2)"></span> 
@@ -336,9 +354,10 @@ include $url_helper .'include/navbar.php';
         <span class="dot" onclick="currentSlide(4)"></span>
         <span class="dot" onclick="currentSlide(5)"></span>
     </div>
-   
+
     </div>
 </div>
+
 
 
 
@@ -363,6 +382,7 @@ include $url_helper .'include/navbar.php';
      var i;
      var slides = document.getElementsByClassName("slides");
      var dots = document.getElementsByClassName("dot");
+     
      if (n==undefined){
          n = ++slideIndex
          }
@@ -384,6 +404,10 @@ include $url_helper .'include/navbar.php';
          timer = setTimeout(showSlides, 20000);
      }
      </script>
+
+
+
+
 
 
     </div>
@@ -422,12 +446,19 @@ include $url_helper .'include/navbar.php';
 
 
 <!----------------------------------------fist slide cards------------------------->
-<div class="row">
 
-    
+ <div class="row">
 
-    
-        <div class="card slider-card-sizing mySlides ">
+
+   <div class="card-md-2" style="margin-top:auto; margin-bottom:auto;">
+        <div class="arrow-left" style="margin-top:auto; margin-bottom:auto;" onclick="plusDivs(-1)"></div>
+    </div>
+ 
+
+
+ 
+
+        <div class="card slider-card-sizing mySlides">
             <img class="imgcard-slider imgshape-slider  img-border-slider1" src="images/Block3.png" alt="Bild ladet nicht!">
                 <div class="card-body">
 
@@ -442,33 +473,15 @@ include $url_helper .'include/navbar.php';
         </div>
 
 
+  
+   
+     
 
-        <div class="card slider-card-sizing mySlides">
-            <img class="imgcard-slider  imgshape-slider img-border-slider2" src="images/Block3.png" alt="Bild ladet nicht!">
-                <div class="card-body">
-
-
-                    <h2 class="card-title slider-title-card2">first slide</h2>
-                    <p class="card-text font-color" style="height:149px; width:366px;">Kinder lernen wenn sie richtig gefördert werden. Unsere Kurse sind auf die Fähigkeiten und das alter unserer Schüler zugeschnitten. Wir setzen auf erfahrene Lehrpersonen die die Zeit im Wasser zu einem wunderbaren Erlebnis machen.</p>   
-
-                <div style="float:right;">
-                    <a href="#"  class="btn  slider-card-button2">Mehr Erfahren</a>
-                </div>
-
-                </div>
-                 
-        </div>
-
-    </div>
-
-
-   <!-- Left and right controls -->
-<div class="arrow-left" style="margin-top:auto; margin-bottom:auto;" onclick="plusDivs(-1)"></div>
- <div class="arrow-right" style="margin-top:auto; margin-bottom:auto;" onclick="plusDivs(1)"></div>
+   
 
 <!----------------------------------------second 2 slide cards------------------------->
 
-    <div class="row">
+   
 
     
     
@@ -488,25 +501,7 @@ include $url_helper .'include/navbar.php';
 
 
 
-        <div class="card slider-card-sizing mySlides">
-            <img class="imgcard-slider  imgshape-slider img-border-slider2" src="images/Block3.png" alt="Bild ladet nicht!">
-                <div class="card-body">
-
-
-                    <h2 class="card-title slider-title-card2">second slide</h2>
-                    <p class="card-text font-color" style="height:149px; width:366px;">Kinder lernen wenn sie richtig gefördert werden. Unsere Kurse sind auf die Fähigkeiten und das alter unserer Schüler zugeschnitten. Wir setzen auf erfahrene Lehrpersonen die die Zeit im Wasser zu einem wunderbaren Erlebnis machen.</p>   
-
-                <div style="float:right;">
-                    <a href="#"  class="btn  slider-card-button2">Mehr Erfahren</a>
-                </div>
-
-                </div>
-                 
-        </div>
-
-      
-    </div>
-
+       
 
 
 
@@ -514,8 +509,7 @@ include $url_helper .'include/navbar.php';
 
 <!----------------------------------------third slide cards------------------------->
 
-    <div class="row">
-
+    
     
     
 
@@ -536,32 +530,13 @@ include $url_helper .'include/navbar.php';
 
 
 
-        <div class="card slider-card-sizing mySlides">
-            <img class="imgcard-slider  imgshape-slider img-border-slider2" src="images/Block3.png" alt="Bild ladet nicht!">
-                <div class="card-body">
-
-
-                    <h2 class="card-title slider-title-card2">third slide</h2>
-                    <p class="card-text font-color" style="height:149px; width:366px;">Kinder lernen wenn sie richtig gefördert werden. Unsere Kurse sind auf die Fähigkeiten und das alter unserer Schüler zugeschnitten. Wir setzen auf erfahrene Lehrpersonen die die Zeit im Wasser zu einem wunderbaren Erlebnis machen.</p>   
-
-                <div style="float:right;">
-                    <a href="#"  class="btn  slider-card-button2">Mehr Erfahren</a>
-                </div>
-
-                </div>
-                 
-        </div>
-
-
-      
-    </div>
 
 
 
 
 <!----------------------------------------four slide cards------------------------->
 
-    <div class="row">
+    
   
     
         <div class="card slider-card-sizing mySlides">
@@ -574,38 +549,19 @@ include $url_helper .'include/navbar.php';
 
                 </div>
                  <div style="float:right;">
-                    <a href="#"  class="btn  slider-card-button1">four slide</a>
+                    <a href="#"  class="btn  slider-card-button1">Mehr Erfahren</a>
                 </div>
         </div>
 
-        <div class="card slider-card-sizing mySlides">
-            <img class="imgcard-slider  imgshape-slider img-border-slider2" src="images/Block3.png" alt="Bild ladet nicht!">
-                <div class="card-body">
 
-
-                    <h2 class="card-title slider-title-card2">four slide</h2>
-                    <p class="card-text font-color" style="height:149px; width:366px;">Kinder lernen wenn sie richtig gefördert werden. Unsere Kurse sind auf die Fähigkeiten und das alter unserer Schüler zugeschnitten. Wir setzen auf erfahrene Lehrpersonen die die Zeit im Wasser zu einem wunderbaren Erlebnis machen.</p>   
-
-                <div style="float:right;">
-                    <a href="#"  class="btn  slider-card-button2">Mehr Erfahren</a>
-                </div>
-
-                </div>
-                 
-        </div>
-
-
-      
-    </div>
 
 
 
 
 <!----------------------------------------five slide cards------------------------->
 
-    <div class="row">
-
-    
+   
+      
 
         <div class="card slider-card-sizing mySlides ">
             <img class="imgcard-slider imgshape-slider  img-border-slider1" src="images/Block3.png" alt="Bild ladet nicht!">
@@ -621,43 +577,30 @@ include $url_helper .'include/navbar.php';
                 </div>
         </div>
 
-
-
-        <div class="card slider-card-sizing mySlides ">
-            <img class="imgcard-slider  imgshape-slider img-border-slider2" src="images/Block3.png" alt="Bild ladet nicht!">
-                <div class="card-body">
-
-
-                    <h2 class="card-title slider-title-card2">five slide</h2>
-                    <p class="card-text font-color" style="height:149px; width:366px;">Kinder lernen wenn sie richtig gefördert werden. Unsere Kurse sind auf die Fähigkeiten und das alter unserer Schüler zugeschnitten. Wir setzen auf erfahrene Lehrpersonen die die Zeit im Wasser zu einem wunderbaren Erlebnis machen.</p>   
-
-                <div style="float:right;">
-                    <a href="#"  class="btn  slider-card-button2">Mehr Erfahren</a>
-                </div>
-
-                </div>
-   
+ <div class="col-md-2" style="margin-top:auto; margin-bottom:auto;">
+    <div class="arrow-right" style="margin-top:auto; margin-bottom:auto;" onclick="plusDivs(1)">
+</div>
 
         </div>
 
-     
-    </div>
-    <div style="text-align:center;">
+
+
+
+
+  
+      
+
+ 
+</div>  
+  <div style="text-align:center;">
         <span class="dot-slider" onclick="currentSlide(1)"></span> 
         <span class="dot-slider" onclick="currentSlide(2)"></span> 
         <span class="dot-slider" onclick="currentSlide(3)"></span>
         <span class="dot-slider" onclick="currentSlide(4)"></span>
         <span class="dot-slider" onclick="currentSlide(5)"></span>
     </div>
-      
 
-
-
-
-  
-
-</div>
-
+</div> 
 
 <!--slider javascript-->
 <script>
@@ -724,48 +667,16 @@ function showDivs(n) {
     </div>    
     </div>   
 
-    <h2 class="text-spiezial">BRAUCHEN SIE MEHR INFORMATIONEN?</h2>
-    <div class="row">
-    <div class="col-sm-6">
-    <div class="card card-1-sizing">
-        <div class="row no-gutters">
-            <div class="col-md-8">
-            <div class="card-body">
-                <h5 class="card-title" style="color:rgb(8, 51, 194);">WISSEN FÜR ELTERN</h5>
-                <p class="card-text font-color">Wir haben die wichtigsten Informationen für Eltern von Babys und jungen Kindern zusammengestellt, damit sie Wissen worauf es ankommt.</p>
-              </div> 
-            </div>
-                <a href="#"  class="btn  mehr-erfahren">Mehr Erfahren</a>
-              
-            </div> 
-            
-        </div>
-    </div>
 
-    <div class="col-sm-6">
-    <div class="card card-2-sizing">
-        <div class="row no-gutters">
-            <div class="col-md-8">
-            <div class="card-body">
-                <h5 class="card-title" style="color:rgb(8, 51, 194);">RUFEN SIE UNS AN</h5>
-                <p class="card-text under-font"><small>AquaTime GmbH</small></p>
-                <p class="card-text font-color">Bahnhofstrasse 32, 6403 Küssnacht am Rig</p>
-                <p class="card-text font-color">Mobil 077 423 58 38; Festnetz 041 852 05 53</p>
-            
-              </div> 
-            </div>
 
-                <a href="mailto:info@aquatime.ch?subject=Mehr%20informationen%20über%20Aquatime"  class="btn  btn_email" >Email</a>
-            
-                <a href="tel:+41774235838"  class="btn  btn_auf" >Anrufen</a>
-                </div> 
-            </div>
-        </div>
-    </div>
 
-    
-</div>
-</div>
+<!--two cards wird eingebunden-->
+<?php
+include 'include/two_cards.php';
+?>
+
+
+
 
 <!--footer wird eingebunden-->
 <?php

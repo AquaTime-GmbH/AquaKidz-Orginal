@@ -9,7 +9,7 @@ include  $url_helper .'include/database.php';
 
 $viewsearch_aquababy_ort_cookie = $_COOKIE["kursort"];
 
-$viewsearch_aquababy_kursstart_cookie = $_COOKIE["kursstart"];
+
 ?>
 
 <!DOCTYPE html>
@@ -65,16 +65,12 @@ include $url_helper .'include/navbar.php';
         <div class="col-4" style="margin-left:30px;">
 
         
-        <label  class="col-6 col-form-label text-card-aqua"><span>Ort</span></label>
+        <label  class="col-6 col-form-label text-card-aqua"><span>plz</span></label>
 
             <input class="form-control labelshape"  id="search_aquababy_ort" name="search_aquababy_ort" type="text" placeholder="überall" value="<?= $viewsearch_aquababy_ort_cookie; ?>">
         </div>
 
-        <div class="col-4">
-        <label  class="col-8 col-form-label text-card-aqua">Kurs Start</label>
-
-            <input class="form-control labelshape"  id="search_start" name="search_aquababy_kursstart" type="date" placeholder="DD.MM.YY" value="<?= $viewsearch_aquababy_kursstart_cookie; ?>">
-        </div>
+      
       
        
 <input href="#" type="submit" class="btn  btn_suchen_aqua" name="search_button" value="Suchen">
@@ -101,7 +97,7 @@ if(isset($_POST['search_button'])){
 
     setcookie("kursort","$viewsearch_aquababy_ort",time()+(3600*168));
 
-    setcookie("kursstart","$viewsearch_aquababy_kursstart",time()+(3600*168));
+   
 
 
 //if(){
@@ -117,8 +113,8 @@ if(isset($_POST['search_button'])){
 // setcookie('search_aquababy_kursstart', '', time() - 3600);
 // }
 
-if ($viewsearch_aquababy_ort == ""){
-    $viewsearch_aquababy_ort = "x";
+if ($viewsearch_aquababy_postleitzahl == ""){
+    $viewsearch_aquababy_postleitzahl = "x";
 }
 
 if ($viewsearch_aquababy_kursstart == ""){
@@ -130,10 +126,10 @@ if ($viewsearch_aquababy_kursstart == ""){
 }
 
    
-if($viewsearch_aquababy_ort == "x"){
+if($viewsearch_aquababy_postleitzahl == "x"){
     $result = mysqli_query($con_mysqli,"SELECT * FROM kurse  order by fm_von_datum_html ASC");
 } else{
-    $result = mysqli_query($con_mysqli,"SELECT * FROM kurse WHERE fm_bad_ort LIKE '%$viewsearch_aquababy_ort%' order by fm_von_datum_html ASC");
+    $result = mysqli_query($con_mysqli,"SELECT * FROM kurse WHERE fm_bad_ort LIKE '%$viewsearch_aquababy_postleitzahl%' order by fm_von_datum_html ASC");
 }
 
 
@@ -146,6 +142,7 @@ while($row = mysqli_fetch_array($result))
     $sql_fm_bad_name_druck = $row['fm_bad_name_druck'];
     $sql_fm_bad_strasse = $row['fm_bad_strasse'];
     $sql_fm_bad_ort = $row['fm_bad_ort'];
+    $sql_fm_bad_postleitzahl = $row['fm_bad_postleitzahl'];
     $sql_fm_offene_plaetze = $row['fm_offene_plaetze'];
     $sql_fm_von_datum_html = new DateTime($row['fm_von_datum_html']);
     $sql_fm_bis_datum_html = new DateTime($row['fm_bis_datum_html']);
@@ -182,6 +179,9 @@ while($row = mysqli_fetch_array($result))
            $countergebnisse = ++$countergebnisse;
            
 ?>
+<?php 
+echo $sql_fm_bad_postleitzahl;
+?>
 
 <div class="col-md-12">
 <div class="card-aqua-sizing">
@@ -193,7 +193,7 @@ while($row = mysqli_fetch_array($result))
     </div>
         <div class="col-md-4">
             <div class="card-body">
-                    <h5 class="card-title card-title-style"><?=  $sql_fm_von_datum_html->format('d.m.Y'). " - " . $sql_fm_bis_datum_html->format('d.m.Y')  .  " - " .$sql_fm_bad_ort;  ?></h5>
+                    <h5 class="card-title card-title-style"><?=  $sql_fm_von_datum_html->format('d.m.Y'). " - " . $sql_fm_bis_datum_html->format('d.m.Y')  .  " - " .$sql_fm_bad_postleitzahl;  ?></h5>
                     <p class="card-text under-font"><small>CA. 10 Wochen - 24 Monate</small></p>
                 </div>  
             </div>  
@@ -286,7 +286,7 @@ while($row = mysqli_fetch_array($result))
 ?>
 <?php
 if($countergebnisse != '0'){ ?>
-<p style="font-size: 12px margin-bottom: auto; position: absolute; top: 1009px; color:white; margin-left:10px;" id="counter"> <?= " " . " von " . $countergebnisse . " Ergebnissen"; ?></p>
+<p style="font-size: 12px margin-bottom: auto; position: absolute; top: 1085px !important; color:white; margin-left:10px;" id="counter"> <?= " " . " von " . $countergebnisse . " Ergebnissen"; ?></p>
 <?php }
 else{
     ?>
@@ -356,7 +356,6 @@ else{
         </div>
     </div>
 </div>
-
 
 
 <!--footer wird eingebunden-->

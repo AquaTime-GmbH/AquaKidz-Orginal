@@ -3,7 +3,7 @@
              
             if(isset($_POST['search_button'])){
                 $viewsearch_ort = $_POST['search_ort']; 
-                $viewsearch_start = $_POST['search_start']; 
+                
                 $viewsearch_alt = $_POST['search_alt']; 
 
 
@@ -12,7 +12,7 @@
                     //session start mit den übergebenen werten 
 
                     //$_SESSION['username'] = $name;
-                    setcookie("kursstart","$viewsearch_start",time()+(3600*168));
+                   
                     setcookie("kursalter","$viewsearch_alt",time()+(3600*168));
                     setcookie("kursort","$viewsearch_ort",time()+(3600*168));
                 
@@ -43,7 +43,6 @@
 
 
                 else{
-                    setcookie("kursstart","$viewsearch_start",time()+(3600*168)); 
                     setcookie("kursort","$viewsearch_ort",time()+(3600*168)); 
 
                    echo ' <script> window.location="Kursorte";</script>';

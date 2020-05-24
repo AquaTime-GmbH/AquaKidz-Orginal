@@ -6,7 +6,39 @@ $url_helper= "";
 include  $url_helper .'include/database.php';
 
 
+
+
+
+
+
+
+
+
+
+  if( isset($_COOKIE['kursort'])) {
+    $cookie_kursort = $_COOKIE["kursort"]; 
+    } else {
+        $cookie_kursort = "";
+  }
+  if( isset($_COOKIE['kursalter'])) {
+    $cookie_kursalter = $_COOKIE["kursalter"]; 
+    } else {
+        $cookie_kursalter = "";
+  }
+
+
+
+
+
+
+
+
+
 $Getid = $_GET['id'];
+
+
+
+
 
 
 
@@ -360,7 +392,7 @@ $ueber_den_Kurs= "ÜBER DEN KURS" ;
 
 
 
-<form action="danke_buchen" method="post">
+<form action="" method="post">
 <div class="font-color">
   
 <!----------------Angaben zum Kursteilnehmer------------->
@@ -372,42 +404,33 @@ $ueber_den_Kurs= "ÜBER DEN KURS" ;
       <input name="kurs_k"  type="text" class="form-control labelshape" value="<?= $kurs_text; ?>">
     </div>
 
-<?php
 
-$kurs_text = $_POST['kurs_k'];
-$_SESSION['kurs_text'] = $kurs_text; 
 
-if (!isset($_SESSION['kurs_text'])){
-
-}else{
-    
-}
-?>
 
 
     <div class="form-row">
   
     <div class="form-group col-md-3">
       <label class="first-card-text">Name Kind*</label>
-      <input type="text" class="form-control labelshape" >
+      <input type="text" class="form-control labelshape" name="name_k" value="<?= $name_kind; ?>" required>
     </div>
   
 
   <div class="form-group col-md-3">
     <label class="first-card-text">Vorname Kind*</label>
-    <input type="text" class="form-control labelshape" >
+    <input type="text" class="form-control labelshape" name="vorname_k" value="<?= $vorname_kind?>" required>
   </div>
   
   <div class="form-group col-md-3">
     <label class="first-card-text" >Geburtsdatum Kind*</label>
-    <input type="text" placeholder="tt.mm.jjjj"class="form-control labelshape" >
+    <input type="text"  placeholder="tt.mm.jjjj" class="form-control labelshape" name="geburtstag_k" value="<?= $geburtstag_kind ?>" required>
   </div>
 
 
   
     <div class="form-group col-md-3">
       <label class="first-card-text">Gesundheitsstatus</label>
-      <input type="text" class="form-control labelshape">
+      <input type="text" class="form-control labelshape" >
     </div>
 </div>
 
@@ -505,7 +528,7 @@ if (!isset($_SESSION['kurs_text'])){
     <div class="row">
 
       <div class="form-container-check">
-        <input class="" type="checkbox" ><a class="" href="">AGB</a>
+        <input class="" type="checkbox" ><a class="" href="Agb.php">AGB</a>
       </div>
       
     
@@ -517,7 +540,41 @@ if (!isset($_SESSION['kurs_text'])){
   </div>
     
 
- 
+ <?php
+
+
+$kurs_text = $_POST['kurs_k'];
+$_SESSION['kurs_text'] = $kurs_text; 
+
+$name_kind = $_POST['name_k'];
+$_SESSION['name_kind'] = $name_kind; 
+
+$vorname_kind = $_POST['vorname_k'];
+$_SESSION['vorname_kind'] = $vorname_kind; 
+
+if(isset($_POST['danke_buchen'])){
+  $kurs_text = $_POST['kurs_k'];
+  $name_kind = $_POST['name_k'];
+  $vorname_kind = $_POST['vorname_k'];
+  $geburtstag_kind = $_POST['geburtstag_k'];
+
+  //$all_form = $kurs_text . $name_kid;
+}
+if ($kurs_text){
+  echo ' <script> window.location="danke_buchen";</script>';
+}
+elseif ($name_kind){
+  echo ' <script> window.location="danke_buchen";</script>';
+}
+
+elseif ($vorname_kind){
+  echo ' <script> window.location="danke_buchen";</script>';
+}
+
+elseif ($geburtstag_kind){
+  echo ' <script> window.location="danke_buchen";</script>';
+}
+?>
 
 </form>
 
@@ -530,10 +587,13 @@ if (!isset($_SESSION['kurs_text'])){
 
 
 </div>
-    </div>
-
+ </div>
 <!--Ende Buchungs form-->
 
+<!--two cards wird eingebunden-->
+<?php
+include 'include/two_cards.php';
+?>
 
 
 

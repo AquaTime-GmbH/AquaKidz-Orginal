@@ -29,25 +29,19 @@ include $url_helper .'include/navbar.php';
 <!--------------ende der einbindung------------------>
 
 
-<h1>:::</h1>
-<h1>:::</h1>
-<h1>:::</h1>
-<h1>:::</h1>
-<h1>:::</h1>
-<h1>:::</h1>
-<h1>:::</h1>
-<h1>:::</h1>
-
   
 <?php
 
   $kurs_text = $_SESSION['kurs_text'];
-
+  $name_kind = $_SESSION['name_kind'];
+  $vorname_kind = $_SESSION['vorname_kind'];
+  $geburtstag_kind = $_SESSION['geburtstag_kind'];
   
    ?>
    <?= $kurs_text ?>
-   
-
+   <?= $name_kind ?>
+   <?= $vorname_kind ?>
+   <?= $geburtstag_kind ?>
 
 
 
