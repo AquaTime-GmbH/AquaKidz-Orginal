@@ -110,18 +110,25 @@
         
         <div class="col-sm-2">
         <p class="footer-links">
-                <a class="footer-text" href="<?php echo $url_helper;?>Ueber-uns">ÜBER UNS
+                <a class="footer-text" href="<?php echo $url_helper;?>Ueber_uns">ÜBER UNS
                 </a>
                 <a class="footer-text" href="<?php echo $url_helper;?>">Von Eltern für Kinder</a>
 
                 <a class="footer-text" href="<?php echo $url_helper;?>">Motivation</a>
 
-                <a class="footer-text" href="<?php echo $url_helper;?>">Unsere Qualitätsstandards</a>
+                <a class="footer-text" href="<?php echo $url_helper;?>qualli_standarts">Unsere Qualitätsstandards</a>
                 
                 <a class="footer-text" href="<?php echo $url_helper;?>">Unser Team</a>
 
                 <a class="footer-text" href="<?php echo $url_helper;?>News">News</a>
+
                 
+                
+                <a class="footer-text" href="<?php echo $url_helper;?>Haftausschluss">Haftausschluss</a>
+
+                <a class="footer-text" href="<?php echo $url_helper;?>Agb">AGB</a>
+
+                <a class="footer-text" href="<?php echo $url_helper;?>impressum">impressum</a>
             </p>  
         </div>
     </div>

@@ -1,6 +1,6 @@
  <!-- organisation der url -->
  <?php 
-$url_helper= "../";
+$url_helper= "";
 /* einbingung der database connection*/
 include  $url_helper .'include/database.php';
 ?>
@@ -36,7 +36,7 @@ include $url_helper .'include/navbar.php';
 
 
 
-    <h2 class="überschrit-agb">1. Allgemeines & Geltungsbereich</h2>
+    <h2 class="überschrit-agb" style="margin-top:100px;">1. Allgemeines & Geltungsbereich</h2>
 
         <p class="text-agb" >
         1. Bestellung von Produkten – sei es online oder über Bestellformular – an sowie jede Art von Verträgen mit der AquaTime GmbH erfolgt auf der Grundlage der nachfolgenden Allgemeinen Geschäftsbedingungen (AGB). Mit dem Absenden der Online-Bestellung oder Unterzeichnung des Bestellformulars akzeptiert der Benutzer die vorliegenden AGB.
@@ -209,61 +209,7 @@ include $url_helper .'include/navbar.php';
 
 
 
-        <h2 class="überschrit-agb-ethik">Ethik Code</h2>
-
-            <h3 class="undertitle-agb">Grundsatz 1</h3>
-
-                <p class="text-agb">
-                Wir sind bemüht, unsere Tätigkeiten (Verkauf, Unterricht, …) gegenüber uns selbst und unseren Kunden nach grundlegenden ethischen Prinzipien zu gestalten.
-                </p>
-
-
-
-            <h3 class="undertitle-agb">Grundsatz 2</h3>
-
-                <p class="text-agb">
-                    Unser Ziel ist es durch ein handhabbares, relevantes Qualitätsmanagement die Güte unserer Leistungen (Angebote) zu erhalten und zu steigern.
-                </p>
-
-
-            <h3 class="undertitle-agb">Übereinstimmung von Versprechen und erbrachter Dienstleistung</h3>
-
-                <p class="text-agb">
-                    Wir halten, was wir versprechen (Werbung, Beratung, Produkte …)
-                </p>
-
-            <h3 class="undertitle-agb">Schutz der Intimität von Kunden und Mitarbeitern</h3>
-
-                <p class="text-agb">
-                    Wir schützen die Intimität unserer Kunden und Mitarbeiter.
-                </p>
-
-             <h3 class="undertitle-agb">Beitrag zur nachhaltigen Förderung der Gesundheit</h3>
-
-                <p class="text-agb">
-                    Wir verstehen unsere Angebote als einen Beitrag zur Förderung der Gesundheitserhaltung des Individuums und der Gesellschaft mit ihren sozialen Strukturen.
-                </p>
-
-            <h3 class="undertitle-agb">Sensibilisierung zur Reflexion des Lebensstils</h3>
-
-                <p class="text-agb">
-                    Unsere Angebote sensibilisieren zur Überprüfung und Reflexion des eigenen Lebensstils.
-                </p>
-
-
-            <h3 class="undertitle-agb">Anerkennung der eigenen Grenzen und jener der Kunden</h3>
-
-                <p class="text-agb">
-                    Wir anerkennen die Grenzen und Möglichkeiten unserer Kunden, Mitarbeiter und unser selbst auch bzgl. unserer Kompetenzen.
-                </p>
-
-
-            <h3 class="undertitle-agb">Wissenschaftliche Grundlage des Denkens und Handelns</h3>
-
-                <p class="text-agb">
-                    Wir stützen unser Denken und Handeln auf eine wissenschaftliche Grundlage (Natur- und Geisteswissenschaften).
-
-                </p>
+        
 
 
 </div>

@@ -286,60 +286,56 @@ include $url_helper .'include/navbar.php';
 
 
 <div class="row" style="height: 458px !important;">
-<div class="col-md-6 position-slider-cols">
-
-<?php
-//schleife
-
-//array
-$bild_frau = "img/Frau.jpg";
-$bild_mann = "img/Mann.jpg";
-$kunde_bild = "img/kunde_bild.png"
-
-//if anfrage
-
-?>
-
-<img class="kreis-slider" src="<?php echo $url_helper;?><?= $bild_frau ?>" alt="Bild konnte nicht geladen werden!">
 
 
 
-
-</div>
-
-
-
-<div class="col-md-6 position-slider-cols-text">
+ <!--col-12 muss geändert werden  -->
+<div class="col-12 position-slider-cols-text">
 
 <div class="text-slider-container">
-    
+
+
+
+
+
+
+
  <div class="slides ">
+     <img class="kreis-slider" src="<?php echo $url_helper;?>img/Frau.jpg" alt="Bild konnte nicht geladen werden!">
      <p class="position_slider_name">Leonie W.</p>
         <div style="margin-bottom:100px; margin-top:30px;" class="text">Ich finde es super, dass die Gruppen nicht so gross sind. So hat die Kursleiterin für alle Zeit und  kann entsprechend helfen. Wir gehen sehr gerne in Kurs bei Ihnen, weiter so, vielen Dank!</div>
+        
     </div>
 
-   
+  
 
+
+ 
         <div class="slides ">
+             <img class="kreis-slider" src="<?php echo $url_helper;?>img/Frau.jpg" alt="Bild konnte nicht geladen werden!">
             <p class="position_slider_name">Louna L.</p>
+           
             <div style="margin-bottom:100px; margin-top:30px;" class="text ">Wir fanden die Kursleitung super und sie war sehr engagiert, motiviert und voll da.
                                                             Uns hat der Kurs sehr gut gefallen und wir werden später weitere Kurse besuchen. Ich fand insbesondere auch die Gruppengrösse sehr perfekt. Herzlichen Dank für alles!</div>
 </div>
 
 
         <div class="slides ">
+            <img class="kreis-slider" src="<?php echo $url_helper;?>img/Frau.jpg" alt="Bild konnte nicht geladen werden!">
             <p class="position_slider_name">Annina D.</p>
             <div style="margin-bottom:100px; margin-top:30px;" class="text ">Ich habe mit meiner Tochter bereits zwei Kurse bei Aquakidz besucht. Die Lektionen werden sehr abwechslungsreich gestaltet und es gibt auch schöne wiederkehrende 
             Rituale, die den Kindern Sicherheit geben. Die Kursleitung ist sehr kompetent und reagiert stets angemessen auf die individuellen Bedürfnisse der Babys. </div>
         </div>
 
         <div class="slides ">
+            <img class="kreis-slider" src="<?php echo $url_helper;?>img/kunde_bild.png" alt="Bild konnte nicht geladen werden!">
                         <p class="position_slider_name">Nina, Dave mit Gian B.</p>
             <div style="margin-bottom:100px; margin-top:30px;"  class="text">Jeden Samstagmorgen haben wir uns aufs Babyschwimmen bei Jana Brinkmann gefreut. Sie ist total herzlich und kann gut auf's Baby und die Begleitperson eingehen. Uns gefällt die Art, wie sie den Kindern die Angst vom Wasser nimmt und sie spielerisch begleitet. Wir freuen uns bereits auf den Folgekurs! 
 </div>
         </div>
 
         <div class="slides ">
+            <img class="kreis-slider" src="<?php echo $url_helper;?>img/Mann.jpg" alt="Bild konnte nicht geladen werden!">
                         <p class="position_slider_name">Samuel S.</p>
             <div style="margin-bottom:100px; margin-top:30px;" class="text">Super Diagramm/Lernkurve, die nach jedem Schwimmkurs angepasst wird
 Samuel geht sehr gerne zum Schwimmkurs und erzählt viel davon :-) alles richtig gemacht. 
@@ -644,19 +640,24 @@ function showDivs(n) {
                 <div class="font-color">
                 <h1 class="card-title text-card5"> Den Fortschritt Ihres Kindes immer im Blick</h1>
                     <p class="card-text" style="font-size:22px; height:188px; width:530px;" >AquaKidz bietet allen Eltern eine Möglichkeit Rückmeldungen zum Erfolg der Kinder im Kurs zu erhalten, auch wenn sie nicht vor Ort sind. Unsere Trainer notieren und bewerten für sie die Schritte die Ihr Kind im Kurs macht. Sie erhalten frühzeitig Rückmeldung zu möglichen Problemen und Potenzial.</p>
-                    <ul class="bullet-testing font-color font-sizing-card5">
-                    <li>
-                        <a>Vorteil A</a>
-                    </li>
-                    <li>
-                        <a>Vorteil B</a>
-                    </li>
-                    <li>
-                        <a>Vorteil C</a>
-                    </li>
-                    <li>
-                        <a>Vorteil D</a>
-                    </li>
+                    <ul class="bullet-testing font-color font-sizing-card5 " style="padding-left:38px !important;">
+                    <a-size>
+                        <li>
+                            <a>graphische Übersicht jeder Basiskompetenz</a>
+                        </li>
+                        <li>
+                            <a>Übersicht Kurstermine (Kursstart und Ende)</a>
+                        </li>
+                        <li>
+                            <a>Einfache Ersatzterminbuchung</a>
+                        </li>
+                        <li>
+                            <a>Krankenkassenbestätigung zur Rückerstattung</a>
+                        </li>
+                        <li>
+                            <a>direkter Kontakt zum Kursleiter</a>
+                        </li>
+                    </a-size>
                 </ul>
                     </div>
                 

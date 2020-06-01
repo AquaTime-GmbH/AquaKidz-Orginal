@@ -280,58 +280,101 @@ $ueber_den_Kurs= "ÜBER DEN KURS" ;
 
 <div class="big-box-map">
     <div class="container">
-     <script>
+  <h1>Calculate the Distance Between two Addresses demo</h1>
+</div>
 
+<div class="col-md-6">
+<form id="distance_form">
+<div class="form-group"><label>Origin: </label> <input class="form-control" id="from_places" placeholder="Enter a location" /> <input id="origin" name="origin" required="" type="hidden" /></div>
 
+<div class="form-group"><label>Destination: </label> <input class="form-control" id="to_places" placeholder="Enter a location" /> <input id="destination" name="destination" required="" type="hidden" /></div>
+<input class="btn btn-primary" type="submit" value="Calculate" /></form>
 
+<div id="result">
+<ul class="list-group">
+	<li class="list-group-item d-flex justify-content-between align-items-center">Distance In Mile :</li>
+	<li class="list-group-item d-flex justify-content-between align-items-center">Distance is Kilo:</li>
+	<li class="list-group-item d-flex justify-content-between align-items-center">IN TEXT:</li>
+	<li class="list-group-item d-flex justify-content-between align-items-center">IN MINUTES:</li>
+	<li class="list-group-item d-flex justify-content-between align-items-center">FROM:</li>
+	<li class="list-group-item d-flex justify-content-between align-items-center">TO:</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<script>
+    $(function() {
+        // add input listeners
+        google.maps.event.addDomListener(window, 'load', function () {
+            var from_places = new google.maps.places.Autocomplete(document.getElementById('from_places'));
+            var to_places = new google.maps.places.Autocomplete(document.getElementById('to_places'));
 
+            google.maps.event.addListener(from_places, 'place_changed', function () {
+                var from_place = from_places.getPlace();
+                var from_address = from_place.formatted_address;
+                $('#origin').val(from_address);
+            });
 
-  var geocoder;
-  var bounds = new google.maps.LatLngBounds();
-  var map;
-  var query = "<?php echo $endCercompleto; ?>";
-  var query2 = "<?php echo $endFescompleto; ?>";
-  function initialize() {
-    geocoder = new google.maps.Geocoder();
-    var mapOptions = {
-      zoom:8,
-      center: new google.maps.LatLng(0, 0),
-      mapTypeId: google.maps.MapTypeId.ROADMAP
-    }
-    map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
-        codeAddress();
-  }
-  function codeAddress() {
-    var address = query;
-    geocoder.geocode( { 'address': address}, function(results, status) {
-      if (status == google.maps.GeocoderStatus.OK) {
-        bounds.extend(results[0].geometry.location);
-        var marker = new google.maps.Marker({
-            map: map,
-            position: results[0].geometry.location,
+            google.maps.event.addListener(to_places, 'place_changed', function () {
+                var to_place = to_places.getPlace();
+                var to_address = to_place.formatted_address;
+                $('#destination').val();
+            });
+
         });
-        map.fitBounds(bounds);
-      } else {
-        alert('Geocode was not successful for the following reason: ' + status);
-      }
+        // hier rechnet er die distanz aus
+        function calculateDistance() {
+            var origin = $('#origin').val();
+            var destination = $('#destination').val();
+            var service = new google.maps.DistanceMatrixService();
+            service.getDistanceMatrix(
+                {
+                    origins: [origin],
+                    destinations: [destination],
+                    travelMode: google.maps.TravelMode.DRIVING,
+                    unitSystem: google.maps.UnitSystem.IMPERIAL, // miles and feet.
+                    // unitSystem: google.maps.UnitSystem.metric, // kilometers and meters.
+                    avoidHighways: false,
+                    avoidTolls: false
+                }, callback);
+        }
+        // ausgabe von distanz
+        function callback(response, status) {
+            if (status != google.maps.DistanceMatrixStatus.OK) {
+                $('#result').html(err);
+            } else {
+                var origin = response.originAddresses[0];
+                var destination = response.destinationAddresses[0];
+                if (response.rows[0].elements[0].status === "ZERO_RESULTS") {
+                    $('#result').html("Better get on a plane. There are no roads between "  + origin + " and " + destination);
+                } else {
+                  //die rechnung in kilometer
+                    var distance = response.rows[0].elements[0].distance;
+                    var duration = response.rows[0].elements[0].duration;
+                    console.log(response.rows[0].elements[0].distance);
+                    var distance_in_kilo = distance.value / 1000; // hier wird der wert in Kilometer ausgegeben
+                   
+                    var duration_text = duration.text;
+                    var duration_value = duration.value;
+                   
+                    $('#in_kilo').text(distance_in_kilo.toFixed(2));
+                    $('#duration_text').text(duration_text);
+                    $('#duration_value').text(duration_value);
+                    $('#from').text(origin);
+                    $('#to').text(destination);
+                }
+            }
+        }
+        // print results on submit the form
+        $('#distance_form').submit(function(e){
+            e.preventDefault();
+            calculateDistance();
+        });
+
     });
 
-    
-
-    var address2 = query2;
-    geocoder.geocode( { 'address': address2}, function(results, status) {
-      if (status == google.maps.GeocoderStatus.OK) {
-        bounds.extend(results[0].geometry.location);
-        var marker2 = new google.maps.Marker({
-            map: map,
-            position: results[0].geometry.location,
-        });
-        map.fitBounds(bounds);
-      } else {
-        alert('Geocode was not successful for the following reason: ' + status);
-      }
-    });
-}
+</script>
 </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAvf8MRWi1ignKqBJnfCcvwTKwUdehvMzU&callback=initMap"
     async defer></script>

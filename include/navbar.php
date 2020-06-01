@@ -36,7 +36,7 @@
       
       
         <li class="nav-item ">
-          <a class="nav-link <?= $aktivueberuns;  ?>" href="<?php echo $url_helper;?>Ueber-uns"  style="background-color:white; color:#416cb2; font-family: 'Fjalla One', sans-serif;">ÜBER UNS</a>
+          <a class="nav-link <?= $aktivueberuns;  ?>" href="<?php echo $url_helper;?>Ueber_uns"  style="background-color:white; color:#416cb2; font-family: 'Fjalla One', sans-serif;">ÜBER UNS</a>
         </li>
      
       
