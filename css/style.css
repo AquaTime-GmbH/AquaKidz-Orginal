@@ -1312,13 +1312,14 @@ col-kurs-size .col-5 {height: 624px !important;}
 }
 
 .footer-picture-sizing{
-  width: 214px;
   height: 103px;
   margin: 30px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
 
 .form-container-check{
@@ -1498,4 +1499,62 @@ padding-top: 50px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 10px;
+}
+
+.text-über-4{
+  color: var(--secondcolor);
+  font-size: 23px;
+  font-family: "Fjalla One", sans-serif;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+}
+
+.vier-kreise-über-uns{
+ height: 300px;
+  width: 300px;
+  border-radius: 50%;
+  background-color: red;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.überschrift-vier{
+  color: var(--maincolor);
+  margin-top: 50px;
+  margin-bottom: 90px;
+  font-size: 28px;
+}
+
+.über-uns-box2 {
+  width: 100%;
+  height: 600px;
+  background-color: var(--maincolor);
+  margin-top: 60px;
+}
+
+.überschirft-team-über{
+  text-align: center;
+  color: white;
+  margin-bottom: 60px;
+  font-size: 28px;
+  padding-top: 20px;
+}
+
+.vier-kreise-über-uns-slider{
+ height: 300px;
+  width: 300px;
+  border-radius: 50%;
+  background-color: white;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.posi-style-icon-über{
+  font-size: 80px;
+  bottom: 0;
+  right: 0;
+  position: absolute;
 }

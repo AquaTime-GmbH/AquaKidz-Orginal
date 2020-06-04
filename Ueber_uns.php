@@ -104,9 +104,10 @@ include $url_helper .'include/navbar.php';
             
                 <img src="<?php echo $url_helper;?>images/little-boy-learning-to-swim-in-a-swimming-pool-P93KRDN.jpg" class="card-img card-4-img-über-uns" alt="Bild Konnte nicht Geladen werden!">
            
-            <div class="col-md-8">
+            <div class="col-md-12">
                 <div class="card-body">
                     
+                    <p class="text-über-4">Sicherheit und Geborgenheit für Kinder und Eltern in überschaubaren Gruppen mit kompetenten qualifizierten Kursleitern.</p>
              
                 
             </div>
@@ -123,9 +124,14 @@ include $url_helper .'include/navbar.php';
                 
                     <img src="<?php echo $url_helper;?>images/little-girl-diving-in-swimming-pool-P5NRPSW.jpg" class="card-img card-4-img-über-uns" alt="Bild Konnte nicht Geladen werden!">
               
-                <div class="col-md-8">
+                <div class="col-md-12">
                     <div class="card-body">
                         
+
+ <p class="text-über-4">Offene Kommunikation zwischen Eltern, Kind und Kursleiter. Wir wollen ohne Zwang und Druck Kinder fördern und Eltern den Fortschritt Ihres Sprösslings nach jedem Kurs vermitteln.</p>
+             
+
+
                     </div> 
                     
                 </div>
@@ -142,9 +148,9 @@ include $url_helper .'include/navbar.php';
            
                 <img src="<?php echo $url_helper;?>images/friendly-children-with-swimming-goggles-PG3CW49.jpg" class="card-img card-4-img-über-uns" alt="Bild Konnte nicht Geladen werden!">
            
-            <div class="col-md-8">
+            <div class="col-md-12">
                 <div class="card-body">
-                
+                 <p class="text-über-4">Erprobtes Wissen einsetzen für Kurse die aufeinander aufbauen und die Kompetenzen des Kindes im Wasser nach Alter und Fähigkeit individuell steigern.</p>
                   
                
             </div> 
@@ -159,10 +165,11 @@ include $url_helper .'include/navbar.php';
        
             <img src="<?php echo $url_helper;?>images/instructor-teaches-children-how-to-swim-PH82RUA.jpg" class="card-img card-4-img-über-uns" alt="Bild Konnte nicht Geladen werden!">
            
-            <div class="col-md-8">
+            <div class="col-md-12">
             <div class="card-body">
                 
-              
+               <p class="text-über-4">Spass muss sein. Wasseraktivitäten fördern Sensorik, Motorik, Reflexe, das Immunsystem und können die Konzentrationsfähigkeit steigern. Wichtiger als das ist aber, dass die kleinen Freude am Wassersport entwickeln und
+langfristig selbständig den Weg ins Becken suchen.</p>
          
                 
               </div> 
@@ -179,23 +186,124 @@ include $url_helper .'include/navbar.php';
 
 </div>
 
+</div>
 
 
 
+<div class="container">
 
+<h2 class="überschrift-vier">UNSERE PARTNER FÜR MEHR SICHERHEIT</h2>
 
+<div class="row">
+    <div class="col-md-3">
 
+        <div class="vier-kreise-über-uns"></div>
 
+    </div>
 
+    <div class="col-md-3">
 
+        <div class="vier-kreise-über-uns"></div>
 
+    </div>
 
+    <div class="col-md-3">
 
+        <div class="vier-kreise-über-uns"></div>
 
+    </div>
+
+    <div class="col-md-3">
+
+     <div class="vier-kreise-über-uns"></div>
+
+    </div>
 
 
 </div>
 
+
+</div>
+
+<div class="über-uns-box2">
+
+    <div class="container">
+
+        <p class="überschirft-team-über">UNSER TEAM</p>
+
+    <div class="row">
+        <div class="col-md-3">
+
+            <div class="vier-kreise-über-uns-slider"><i class="fas fa-plus-circle posi-style-icon-über"></i></div>
+
+        </div>
+
+        <div class="col-md-3">
+
+            <div class="vier-kreise-über-uns-slider"><i class="fas fa-plus-circle posi-style-icon-über"></i></div>
+
+        </div>
+
+        <div class="col-md-3">
+
+            <div class="vier-kreise-über-uns-slider"><i class="fas fa-plus-circle posi-style-icon-über"></i></div>
+
+        </div>
+
+        <div class="col-md-3">
+
+        <div class="vier-kreise-über-uns-slider"><i class="fas fa-plus-circle posi-style-icon-über"></i></div>
+
+        </div>
+
+        </div>
+
+    </div>
+</div>
+
+
+
+<!--javascript für die Slideshow-->
+     <script>
+     var slideIndex = 1;
+     var timer = null;
+     showSlides(slideIndex);
+     function plusSlides(n) {
+         clearTimeout(timer);
+         showSlides(slideIndex += n);
+     }
+
+     function currentSlide(n) {
+         clearTimeout(timer);
+         showSlides(slideIndex = n);
+     }
+
+     function showSlides(n) {
+     var i;
+     var slides = document.getElementsByClassName("slides");
+     var dots = document.getElementsByClassName("dot");
+     
+     if (n==undefined){
+         n = ++slideIndex
+         }
+     if (n > slides.length) {
+         slideIndex = 1
+         }
+     if (n < 1) {
+         slideIndex = slides.length
+         }
+     for (i = 0; i < slides.length; i++) {
+         slides[i].style.display = "none";
+     }
+     for (i = 0; i < dots.length; i++) {
+         dots[i].className = dots[i].className.replace(" active", "");
+     }
+         slides[slideIndex-1].style.display = "block";
+         dots[slideIndex-1].className += " active";
+         /* timer auf 20 sekunden gesetzt */
+         timer = setTimeout(showSlides, 20000);
+     }
+     </script>
 
 
 

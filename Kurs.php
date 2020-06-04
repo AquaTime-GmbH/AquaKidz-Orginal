@@ -373,6 +373,7 @@ $ueber_den_Kurs= "ÜBER DEN KURS" ;
         });
 
     });
+    
 
 </script>
 </script>

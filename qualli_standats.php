@@ -1,6 +1,6 @@
  <!-- organisation der url -->
  <?php 
-$url_helper= "../";
+$url_helper= "";
 /* einbingung der database connection*/
 include  $url_helper .'include/database.php';
 ?>
