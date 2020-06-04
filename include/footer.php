@@ -81,41 +81,101 @@
     
     
 
-    <div class="row">
-            <div class="col-sm-4"></div>
-        <div class="col-sm-2"style="width:246px; height:279px;">
-
-
-<p class="footer-links" >
    
-     <a class="footer-text" href="<?php echo $url_helper;?>">KURSE</a>
-
-               
-                   <a class="footer-text" href="<?php echo $url_helper?>Kursarten/AquaBaby">AquaBaby</a>
-                    <small>ca. 10 Wochen - 24 Monate</small>
-
-                    <a class="footer-text" href="<?php echo $url_helper;?>Kursarten/AquaKidz-Mini">AquaKidz Mini</a>
-                    <small>ca. 2 bis 3 Jahre</small>
-
-                    <a class="footer-text" href="<?php echo $url_helper;?>Kursarten/AquaKidz-Maxi">AquaKidz Maxi</a>
-                    <small>ca. 3,5 bis 7,5 Jahre</small>
-
-                    <a class="footer-text" href="<?php echo $url_helper;?>Kursarten/AquaKidz-Mixed">AquaKidz Mixed</a>
-                    <small>Ab ca. 7 Jahre</small>
             
+      
+
+
+
+   <p class="footer-links">
+
+
+    <table>       
+
+
+              <thead>
+
+                <tr>
+                    <th><a class="footer-text" href="<?php echo $url_helper;?>">KURSE</a></th>
+                    <th><a class="footer-text" href="<?php echo $url_helper;?>Ueber_uns">ÜBER UNS</a></th>
+                </tr>
                 
+              </thead>
+
+
+
+        <tbody>
+            <tr>
                 
+                <td><a class="footer-text" href="<?php echo $url_helper?>Kursarten/AquaBaby">AquaBaby</a></td>
+                <td><a class="footer-text" href="<?php echo $url_helper;?>Kursarten/AquaKidz-Mini">AquaKidz Mini</a></td>
+                    
+                <td><a class="footer-text" href="<?php echo $url_helper;?>Kursarten/AquaKidz-Maxi">AquaKidz Maxi</a></td>
+                <td><a class="footer-text" href="<?php echo $url_helper;?>Kursarten/AquaKidz-Mixed">AquaKidz Mixed</a></td>
+                            
+
+            </tr>
+
+            <tr>
+    
+                <td><a class="footer-text" href="<?php echo $url_helper;?>">Von Eltern für Kinder</a></td>
+
+                <td><a class="footer-text" href="<?php echo $url_helper;?>">Motivation</a></td>
+
+                <td><a class="footer-text" href="<?php echo $url_helper;?>qualli_standarts">Unsere Qualitätsstandards</a></td>
+                
+                <td><a class="footer-text" href="<?php echo $url_helper;?>">Unser Team</a></td>
+
+                <td><a class="footer-text" href="<?php echo $url_helper;?>AquaNews">News</a></td>
+
+                <td><a class="footer-text" href="<?php echo $url_helper;?>Aquasium">Aquasium</a></td>
+                
+                <td><a class="footer-text" href="<?php echo $url_helper;?>Haftausschluss">Haftausschluss</a></td>
+
+                <td><a class="footer-text" href="<?php echo $url_helper;?>Agb">AGB</a></td>
+
+                <td><a class="footer-text" href="<?php echo $url_helper;?>impressum">impressum</a></td>
+
+
+            </tr>
+
+
+
+          
+
+
+
+
+
+
+        </tbody>
+
 
                 
                 
-
-                
-                
-                
-                
+    </table> 
 </p>  
 
-        </div>
+       
+
+        
+    
+
+     
+
+               
+                   
+                    
+
+                    
+
+                        
+                
+                
+                
+
+
+       
 
 
 
@@ -123,30 +183,8 @@
             
 
         
-        <div class="col-sm-2">
-        <p class="footer-links">
-                <a class="footer-text" href="<?php echo $url_helper;?>Ueber_uns">ÜBER UNS
-                </a>
-                <a class="footer-text" href="<?php echo $url_helper;?>">Von Eltern für Kinder</a>
-
-                <a class="footer-text" href="<?php echo $url_helper;?>">Motivation</a>
-
-                <a class="footer-text" href="<?php echo $url_helper;?>qualli_standarts">Unsere Qualitätsstandards</a>
-                
-                <a class="footer-text" href="<?php echo $url_helper;?>">Unser Team</a>
-
-                <a class="footer-text" href="<?php echo $url_helper;?>AquaNews">News</a>
-
-                <a class="footer-text" href="<?php echo $url_helper;?>Aquasium">Aquasium</a>
-                
-                <a class="footer-text" href="<?php echo $url_helper;?>Haftausschluss">Haftausschluss</a>
-
-                <a class="footer-text" href="<?php echo $url_helper;?>Agb">AGB</a>
-
-                <a class="footer-text" href="<?php echo $url_helper;?>impressum">impressum</a>
-            </p>  
-        </div>
-    </div>
+       
+       
 
 
 
