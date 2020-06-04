@@ -83,29 +83,44 @@
 
     <div class="row">
             <div class="col-sm-4"></div>
-        <div class="col-sm-2"style="width:246px; height:279;">
+        <div class="col-sm-2"style="width:246px; height:279px;">
 
-            <p class="footer-links" >
-                <a class="footer-text" href="<?php echo $url_helper;?>">KURSE
-                </a>
-                <a class="footer-text" href="<?php echo $url_helper?>Kursarten/AquaBaby">AquaBaby
-                <small>ca. 10 Wochen - 24 Monate</small>
-                </a>
 
-                <a class="footer-text" href="<?php echo $url_helper;?>Kursarten/AquaKidz-Mini">AquaKidz Mini
-                <small>ca. 2 bis 3 Jahre</small>
-                </a>
+<p class="footer-links" >
+   
+     <a class="footer-text" href="<?php echo $url_helper;?>">KURSE</a>
 
-                <a class="footer-text" href="<?php echo $url_helper;?>Kursarten/AquaKidz-Maxi">AquaKidz Maxi
+               
+                   <a class="footer-text" href="<?php echo $url_helper?>Kursarten/AquaBaby">AquaBaby</a>
+                    <small>ca. 10 Wochen - 24 Monate</small>
+
+                    <a class="footer-text" href="<?php echo $url_helper;?>Kursarten/AquaKidz-Mini">AquaKidz Mini</a>
+                    <small>ca. 2 bis 3 Jahre</small>
+
+                    <a class="footer-text" href="<?php echo $url_helper;?>Kursarten/AquaKidz-Maxi">AquaKidz Maxi</a>
                     <small>ca. 3,5 bis 7,5 Jahre</small>
-                </a>
-                
-                <a class="footer-text" href="<?php echo $url_helper;?>Kursarten/AquaKidz-Mixed">AquaKidz Mixed
-                    <small>Ab ca. 7 Jahre</small>
-                </a>
 
-            </p>  
+                    <a class="footer-text" href="<?php echo $url_helper;?>Kursarten/AquaKidz-Mixed">AquaKidz Mixed</a>
+                    <small>Ab ca. 7 Jahre</small>
+            
+                
+                
+
+                
+                
+
+                
+                
+                
+                
+</p>  
+
         </div>
+
+
+
+
+            
 
         
         <div class="col-sm-2">
@@ -120,9 +135,9 @@
                 
                 <a class="footer-text" href="<?php echo $url_helper;?>">Unser Team</a>
 
-                <a class="footer-text" href="<?php echo $url_helper;?>News">News</a>
+                <a class="footer-text" href="<?php echo $url_helper;?>AquaNews">News</a>
 
-                
+                <a class="footer-text" href="<?php echo $url_helper;?>Aquasium">Aquasium</a>
                 
                 <a class="footer-text" href="<?php echo $url_helper;?>Haftausschluss">Haftausschluss</a>
 

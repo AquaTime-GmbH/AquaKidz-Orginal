@@ -1,6 +1,3 @@
-
-
-
 /*Standart werte*/
 :root {
   --maincolor: #416cb2;
@@ -38,7 +35,7 @@ ul {
 
 @media screen and (min-width: 1025px) and (max-width: 1920px) {
   .aqua-navbar {
-    height: 80px;
+    height: 88px;
     background-color: var(--maincolor);
     border-bottom: 4px solid white;
     padding: 0 16% 0 17%;
@@ -174,7 +171,7 @@ ul {
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
-  height: 85px;
+  height: 87px;
   width: 99px;
   background-color: white;
 }
@@ -451,7 +448,7 @@ select {
   color: var(--secondcolor);
 }
 
-/*------------------------------- slider index site ---------------------------*/
+/*------------------------------- five card-slider index site ---------------------------*/
 
 .slider-title-card1 {
   height: 56px;
@@ -465,6 +462,27 @@ select {
   width: 360px;
   font-size: 22px;
   color: var(--colorpink);
+}
+
+.slider-title-card3 {
+  height: 56px;
+  width: 360px;
+  font-size: 22px;
+  color: var(--colorred);
+}
+
+.slider-title-card4 {
+  height: 56px;
+  width: 360px;
+  font-size: 22px;
+  color: var(--colorgreen);
+}
+
+.slider-title-card5 {
+  height: 56px;
+  width: 360px;
+  font-size: 22px;
+  color: var(--color);
 }
 
 .slider-card-sizing {
@@ -511,6 +529,54 @@ select {
   right: 0;
 }
 
+.slider-card-button3 {
+  background-color: var(--colorred);
+  border-radius: 35px 0px 35px 0px;
+  width: 187px;
+  height: 58px;
+  float: right !important;
+  margin: -1px;
+  color: white;
+  font-size: 22px;
+  font-family: "Fjalla One", sans-serif;
+  padding-top: 11px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.slider-card-button4 {
+  background-color: var(--colorgreen);
+  border-radius: 35px 0px 35px 0px;
+  width: 187px;
+  height: 58px;
+  float: right !important;
+  margin: -1px;
+  color: white;
+  font-size: 22px;
+  font-family: "Fjalla One", sans-serif;
+  padding-top: 11px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.slider-card-button5 {
+  background-color: var(--color);
+  border-radius: 35px 0px 35px 0px;
+  width: 187px;
+  height: 58px;
+  float: right !important;
+  margin: -1px;
+  color: white;
+  font-size: 22px;
+  font-family: "Fjalla One", sans-serif;
+  padding-top: 11px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
 .slider-card-button1:hover {
   background-color: var(--coloryellow-hover);
   color: white;
@@ -518,6 +584,21 @@ select {
 
 .slider-card-button2:hover {
   background-color: var(--colorpink-hover);
+  color: white;
+}
+
+.slider-card-button3:hover {
+  background-color: var(--colorred-hover);
+  color: white;
+}
+
+.slider-card-button4:hover {
+  background-color: var(--colorgreen-hover);
+  color: white;
+}
+
+.slider-card-button5:hover {
+  background-color: var(--color-hover);
   color: white;
 }
 
@@ -539,7 +620,15 @@ select {
 .img-border-slider2 {
   border-bottom: 8px solid var(--colorpink);
 }
-
+.img-border-slider3 {
+  border-bottom: 8px solid var(--colorred);
+}
+.img-border-slider4 {
+  border-bottom: 8px solid var(--colorgreen);
+}
+.img-border-slider5 {
+  border-bottom: 8px solid var(--color);
+}
 .arrow-left {
  
   border-style: solid;
@@ -1557,4 +1646,21 @@ padding-top: 50px;
   bottom: 0;
   right: 0;
   position: absolute;
+}
+
+
+/*------------------------------------------------- Aquasium -----------------------------------------*/
+
+
+.überschrit-Aquasium{
+  color: var(--maincolor);
+  padding: 20px;
+  font-size: 33px;
+}
+
+.unterschrift-aquasium{
+  color: var(--secondcolor);
+  text-align: center;
+  font-size: 28px;
+  
 }

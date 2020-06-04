@@ -458,22 +458,16 @@ Er freut sich schon sehr auf den Folgekurs in Lachen.</div>
             <img class="imgcard-slider imgshape-slider  img-border-slider1" src="images/Block3.png" alt="Bild ladet nicht!">
                 <div class="card-body">
 
-                    <h2 class="card-title slider-title-card1">first slide</h2>
-                    <p class="card-text font-color" style="height:149px; width:366px;">Kinder lernen wenn sie richtig gefördert werden. Unsere Kurse sind auf die Fähigkeiten und das alter unserer Schüler zugeschnitten. Wir setzen auf erfahrene Lehrpersonen die die Zeit im Wasser zu einem wunderbaren Erlebnis machen.</p>     
+                    <h2 class="card-title slider-title-card1">AquaBaby</h2>
+                    <p class="card-text font-color" style="height:149px; width:366px;">Krankheitsinfekte werden weniger (Training Immunsystem) Schlafverhalten wird regelmässiger und ruhiger Kurs als Ritual etablieren, der Mutter-Kind-Bindung intensiviert Sicherheit und Ruhe am Kursort (exklusiv reserviert)</p>     
 
 
                 </div>
                  <div style="float:right;">
-                    <a href="#"  class="btn  slider-card-button1">Mehr Erfahren</a>
+                    <a href="<?php echo $url_helper;?>Kursarten/AquaBaby"  class="btn  slider-card-button1">Mehr Erfahren</a>
                 </div>
         </div>
 
-
-  
-   
-     
-
-   
 
 <!----------------------------------------second 2 slide cards------------------------->
 
@@ -482,16 +476,16 @@ Er freut sich schon sehr auf den Folgekurs in Lachen.</div>
     
     
         <div class="card slider-card-sizing mySlides">
-            <img class="imgcard-slider imgshape-slider  img-border-slider1" src="images/Block3.png" alt="Bild ladet nicht!">
+            <img class="imgcard-slider imgshape-slider  img-border-slider2" src="images/Block3.png" alt="Bild ladet nicht!">
                 <div class="card-body">
 
-                    <h2 class="card-title slider-title-card1">second slide</h2>
-                    <p class="card-text font-color" style="height:149px; width:366px;">Kinder lernen wenn sie richtig gefördert werden. Unsere Kurse sind auf die Fähigkeiten und das alter unserer Schüler zugeschnitten. Wir setzen auf erfahrene Lehrpersonen die die Zeit im Wasser zu einem wunderbaren Erlebnis machen.</p>     
+                    <h2 class="card-title slider-title-card2">AquaKidz Mini</h2>
+                    <p class="card-text font-color" style="height:149px; width:366px;">Kinder lernen in diesem Alter sehr schnell und sehr einfach Gemeinsame Zeit gibt dem Kind den notwendigen sicheren Raum zur Entwicklung Kinder erlangen Selbstsicherheit und Selbstvertrauen</p>     
 
 
                 </div>
                  <div style="float:right;">
-                    <a href="#"  class="btn  slider-card-button1">Mehr Erfahren</a>
+                    <a href="<?php echo $url_helper;?>Kursarten/AquaKidz-Mini"  class="btn  slider-card-button2">Mehr Erfahren</a>
                 </div>
         </div>
 
@@ -511,16 +505,16 @@ Er freut sich schon sehr auf den Folgekurs in Lachen.</div>
 
     
         <div class="card slider-card-sizing mySlides">
-            <img class="imgcard-slider imgshape-slider  img-border-slider1" src="images/Block3.png" alt="Bild ladet nicht!">
+            <img class="imgcard-slider imgshape-slider  img-border-slider3" src="images/Block3.png" alt="Bild ladet nicht!">
                 <div class="card-body">
 
-                    <h2 class="card-title slider-title-card1">third slide</h2>
-                    <p class="card-text font-color" style="height:149px; width:366px;">Kinder lernen wenn sie richtig gefördert werden. Unsere Kurse sind auf die Fähigkeiten und das alter unserer Schüler zugeschnitten. Wir setzen auf erfahrene Lehrpersonen die die Zeit im Wasser zu einem wunderbaren Erlebnis machen.</p>     
+                    <h2 class="card-title slider-title-card3">AquaKidz Maxi</h2>
+                    <p class="card-text font-color" style="height:149px; width:366px;">Angst vor Wasser in Respekt umwandeln Kinder nehmen erstmalig ohne Elternteil am Kurs teil Motivation und Freude des Kindes sind wichtig und entscheiden über eine Fortsetzung im nächsten level (erstmalig so, vorher entscheiden immer die Eltern)</p>     
 
 
                 </div>
                  <div style="float:right;">
-                    <a href="#"  class="btn  slider-card-button1">Mehr Erfahren</a>
+                    <a href="<?php echo $url_helper;?>Kursarten/AquaKidz-Maxi"  class="btn  slider-card-button3">Mehr Erfahren</a>
                 </div>
         </div>
 
@@ -532,23 +526,21 @@ Er freut sich schon sehr auf den Folgekurs in Lachen.</div>
 
 <!----------------------------------------four slide cards------------------------->
 
-    
   
     
         <div class="card slider-card-sizing mySlides">
-            <img class="imgcard-slider imgshape-slider  img-border-slider1" src="images/Block3.png" alt="Bild ladet nicht!">
+            <img class="imgcard-slider imgshape-slider  img-border-slider4" src="images/Block3.png" alt="Bild ladet nicht!">
                 <div class="card-body">
 
-                    <h2 class="card-title slider-title-card1">four slide</h2>
-                    <p class="card-text font-color" style="height:149px; width:366px;">Kinder lernen wenn sie richtig gefördert werden. Unsere Kurse sind auf die Fähigkeiten und das alter unserer Schüler zugeschnitten. Wir setzen auf erfahrene Lehrpersonen die die Zeit im Wasser zu einem wunderbaren Erlebnis machen.</p>     
+                    <h2 class="card-title slider-title-card4">AquaMixed</h2>
+                    <p class="card-text font-color" style="height:149px; width:366px;">kein Wettkampfdruck für Kids, die gern im Wasser sind und schwimmen als Freizeitsport betreiben wollen</p>     
 
 
                 </div>
                  <div style="float:right;">
-                    <a href="#"  class="btn  slider-card-button1">Mehr Erfahren</a>
+                    <a href="<?php echo $url_helper;?>Kursarten/AquaKidz-Mixed"  class="btn  slider-card-button4">Mehr Erfahren</a>
                 </div>
         </div>
-
 
 
 
@@ -569,7 +561,7 @@ Er freut sich schon sehr auf den Folgekurs in Lachen.</div>
 
                 </div>
                  <div style="float:right;">
-                    <a href="#"  class="btn  slider-card-button1">Mehr Erfahren</a>
+                    <a href="<?php echo $url_helper;?>Kursarten/"  class="btn  slider-card-button1">Mehr Erfahren</a>
                 </div>
         </div>
 
