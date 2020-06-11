@@ -276,13 +276,11 @@ include $url_helper .'include/navbar.php';
 ?>
 <!-- Das ist die Slideshow -->
 
+
     <div class="slideshow-container" style="overflow-y:hidden;">
+<div class="container">
 
 
-
-   <!-- <div class="h3_ueberschrift">      
-        <h4 stlye="font-size: 36px;">Was unsere Kunden sagen</h4>
-    </div>-->
 
 
 <div class="row" style="height: 458px !important;">
@@ -290,7 +288,10 @@ include $url_helper .'include/navbar.php';
 
 
  <!--col-12 muss geändert werden  -->
-<div class="col-12 position-slider-cols-text">
+<div class="position-slider-cols-text">
+
+
+
 
 <div class="text-slider-container">
 
@@ -299,13 +300,21 @@ include $url_helper .'include/navbar.php';
 
 
 
-
+<div class="row">
  <div class="slides ">
-     <img class="kreis-slider" src="<?php echo $url_helper;?>img/Frau.jpg" alt="Bild konnte nicht geladen werden!">
-     <p class="position_slider_name">Leonie W.</p>
+     <div class="col-md-3">
+             <img class="kreis-slider" src="<?php echo $url_helper;?>img/Frau.jpg" alt="Bild konnte nicht geladen werden!">
+     </div>
+    <div class="col-md-3">
+        <p class="position_slider_name">Leonie W.</p>
+    </div>
+     
         <div style="margin-bottom:100px; margin-top:30px;" class="text">Ich finde es super, dass die Gruppen nicht so gross sind. So hat die Kursleiterin für alle Zeit und  kann entsprechend helfen. Wir gehen sehr gerne in Kurs bei Ihnen, weiter so, vielen Dank!</div>
         
     </div>
+
+</div>
+
 
   
 
@@ -351,7 +360,7 @@ Er freut sich schon sehr auf den Folgekurs in Lachen.</div>
         <span class="dot" onclick="currentSlide(5)"></span>
     </div>
 
-    </div>
+    </div></div>
 </div>
 
 
