@@ -1,106 +1,213 @@
-<footer>
 
+<!--<footer class="footer-pos">
 <div class="row">
-<div class="footer-blau col-md-6">
-        
-
-
-    <div class="container">
-    
-    
-
- 
+    <div class="footer-blau col-6">
    
-   <div class="row">
-  
-        <div class="col-md-4"></div>
-
-
-
-        <div class="col-md-4">
-
-            <a class="footer-text" href="<?php echo $url_helper;?>">KURSE</a>
-
-                <ul class="ul-footer-links">
-                    <li style="margin-top:10px;"><a class="footer-text" href="<?php echo $url_helper?>Kursarten/AquaBaby">AquaBaby</a><p class="small-footer-style"><small>ca. 10 Wochen - 24 Monate</small></p></li>
-                    <li><a class="footer-text" href="<?php echo $url_helper;?>Kursarten/AquaKidz-Mini">AquaKidz Mini</a><p class="small-footer-style"><small>ca. 2 bis 3 Jahre</small></p></li>
-                    <li><a class="footer-text" href="<?php echo $url_helper;?>Kursarten/AquaKidz-Maxi">AquaKidz Maxi</a><p class="small-footer-style"><small>ca. 3,5 bis 7,5 Jahre</small></p></li>
-                    <li><a class="footer-text" href="<?php echo $url_helper;?>Kursarten/AquaKidz-Mixed">AquaKidz Mixed</a><p class="small-footer-style"><small>Ab ca. 7 Jahre</small></p></li>
-                </ul>
-                    
-        </div>
-
-
-
-        <div class="col-md-4">
     
-            <a class="footer-text" href="<?php echo $url_helper;?>Ueber_uns">ÜBER UNS</a>
 
-                <ul class="ul-footer-links">
-                    <li class="footer-right-abstand" style="margin-top:10px;"><a class="footer-text" href="<?php echo $url_helper;?>" >Von Eltern für Kinder</a></li>
-                    <li class="footer-right-abstand"><a class="footer-text" href="<?php echo $url_helper;?>">Motivation</a></li>
-                    <li class="footer-right-abstand"><a class="footer-text" href="<?php echo $url_helper;?>qualli_standarts">Unsere Qualitätsstandards</a></li>
-                    <li class="footer-right-abstand"><a class="footer-text" href="<?php echo $url_helper;?>">Unser Team</a></li>
-                    <li class="footer-right-abstand"><a class="footer-text" href="<?php echo $url_helper;?>AquaNews">News</a></li>
-                    <li class="footer-right-abstand"><a class="footer-text" href="<?php echo $url_helper;?>Aquasium">AquaVision</a></li>
-                    <li class="footer-right-abstand"><a class="footer-text" href="<?php echo $url_helper;?>Haftausschluss">Haftausschluss</a></li>
-                    <li class="footer-right-abstand"><a class="footer-text" href="<?php echo $url_helper;?>Agb">AGB</a></li>
-                    <li class="footer-right-abstand"><a class="footer-text" href="<?php echo $url_helper;?>impressum">impressum</a></li>
-                </ul>
 
+
+    <div class="row">
+            <div class="col-sm-4"></div>
+        <div class="col-sm-2"style="width:246px; height:279;">
+
+            <p class="footer-links" >
+                <a class="footer-text" href="<?php echo $url_helper;?>">KURSE
+                </a>
+                <a class="footer-text" href="<?php echo $url_helper?>Kursarten/AquaBaby">AquaBaby
+                <small>ca. 10 Wochen - 24 Monate</small>
+                </a>
+
+                <a class="footer-text" href="<?php echo $url_helper;?>Kursarten/AquaKidz-Mini">AquaKidz Mini
+                <small>ca. 2 bis 3 Jahre</small>
+                </a>
+
+                <a class="footer-text" href="<?php echo $url_helper;?>Kursarten/AquaKidz-Maxi">AquaKidz Maxi
+                    <small>ca. 3,5 bis 7,5 Jahre</small>
+                </a>
+                
+                <a class="footer-text" href="<?php echo $url_helper;?>Kursarten/AquaKidz-Mixed">AquaKidz Mixed
+                    <small>Ab ca. 7 Jahre</small>
+                </a>
+
+            </p>  
         </div>
 
-    </div>    
+        <div class="col-sm-2">
+        <p class="footer-links">
+                <a class="footer-text" href="<?php echo $url_helper;?>Ueber-uns">ÜBER UNS
+                </a>
+                <a class="footer-text" href="<?php echo $url_helper;?>">Von Eltern für Kinder</a>
+
+                <a class="footer-text" href="<?php echo $url_helper;?>">Motivation</a>
+
+                <a class="footer-text" href="<?php echo $url_helper;?>">Unsere Qualitätsstandards</a>
+                
+                <a class="footer-text" href="<?php echo $url_helper;?>">Unser Team</a>
+
+                <a class="footer-text" href="<?php echo $url_helper;?>">Unser Team</a>
+                
+            </p>  
+        </div>
+    </div>
+</div>
+
+
+    <div class="footer-blau col-6">
+
+
+
+
+
+
+
+
+    </div>  
+</div> 
+    <div class="copyright-box">
+        <div class="copyright-text">
+            <?= "&copy AquaTime GmbH " . "2015 - " . date('Y');?>
+        </div>
     </div>
 
+</footer>-->
 
-</div>
 
+
+<footer>
+<div class="row">
+    <div class="footer-blau col-md-6">
+
+    
+    
+
+   
+            
+      
+
+
+
+   <p class="footer-links">
+
+
+    <table>       
+
+
+              <thead>
+
+                <tr>
+                    <th><a class="footer-text" href="<?php echo $url_helper;?>">KURSE</a></th>
+                    <th><a class="footer-text" href="<?php echo $url_helper;?>Ueber_uns">ÜBER UNS</a></th>
+                </tr>
+                
+              </thead>
+
+
+
+        <tbody>
+            <tr>
+                
+                <td><a class="footer-text" href="<?php echo $url_helper?>Kursarten/AquaBaby">AquaBaby</a></td>
+                <td><a class="footer-text" href="<?php echo $url_helper;?>Kursarten/AquaKidz-Mini">AquaKidz Mini</a></td>
+                    
+                <td><a class="footer-text" href="<?php echo $url_helper;?>Kursarten/AquaKidz-Maxi">AquaKidz Maxi</a></td>
+                <td><a class="footer-text" href="<?php echo $url_helper;?>Kursarten/AquaKidz-Mixed">AquaKidz Mixed</a></td>
+                            
+
+            </tr>
+
+            <tr>
+    
+                <td><a class="footer-text" href="<?php echo $url_helper;?>">Von Eltern für Kinder</a></td>
+
+                <td><a class="footer-text" href="<?php echo $url_helper;?>">Motivation</a></td>
+
+                <td><a class="footer-text" href="<?php echo $url_helper;?>qualli_standarts">Unsere Qualitätsstandards</a></td>
+                
+                <td><a class="footer-text" href="<?php echo $url_helper;?>">Unser Team</a></td>
+
+                <td><a class="footer-text" href="<?php echo $url_helper;?>AquaNews">News</a></td>
+
+                <td><a class="footer-text" href="<?php echo $url_helper;?>Aquasium">Aquasium</a></td>
+                
+                <td><a class="footer-text" href="<?php echo $url_helper;?>Haftausschluss">Haftausschluss</a></td>
+
+                <td><a class="footer-text" href="<?php echo $url_helper;?>Agb">AGB</a></td>
+
+                <td><a class="footer-text" href="<?php echo $url_helper;?>impressum">impressum</a></td>
+
+
+            </tr>
+
+
+
+          
+
+
+
+
+
+
+        </tbody>
+
+
+                
+                
+    </table> 
+</p>  
+
+       
+
+        
+    
+
+     
+
+               
+                   
+                    
+
+                    
+
+                        
+                
+                
+                
+
+
+       
+
+
+
+
+            
+
+        
+       
+       
+
+
+
+
+    </div>
     <div class="col-md-6 footer-white">
         <div class="row">
-
-
-        <div style="margin-right:150px;" class="col-md-2">
-
-            <ul class="ul-footer-links">
-                <li>
-                    <div class="raster-aussen-footer">
-                        <img class="footer-picture-sizing" src="<?php echo $url_helper;?>images/footerpic.png" alt="Bild ladet nicht!">
-                    </div>
-                   
-                
-                </li>
-                <li><img  class="footer-picture-sizing" src="<?php echo $url_helper;?>images/footerpic2.png" alt="Bild ladet nicht!"></li>
-            </ul>
-
-        </div>   
-
-        <div style="margin-right:150px;" class="col-md-2">
-
-             <ul class="ul-footer-links">
-                <li><img  class="footer-picture-sizing"src="<?php echo $url_helper;?>images/footerpic3.png" alt="Bild ladet nicht!"></li>
-                <li><img class="footer-picture-sizing" src="<?php echo $url_helper;?>images/footerpic4.png" alt="Bild ladet nicht!"></li>
-             </ul>     
-             
-        </div>
-
-
-             <div class="col-md-2">
-
-                 <ul class="ul-footer-links">
-                    <li><img class="footer-picture-sizing" src="<?php echo $url_helper;?>images/footerpic5.png" alt="Bild ladet nicht!"></li>
-                    <li><img class="footer-picture-sizing" src="<?php echo $url_helper;?>images/footerpic6.png" alt="Bild ladet nicht!"></li>
-                 </ul>
-               
-               
+            <div style="margin-right:150px;" class="col-md-2">
+                  <img class="footer-picture-sizing" src="<?php echo $url_helper;?>images/footerpic.png" alt="Bild ladet nicht!">
+                  <img  class="footer-picture-sizing" src="<?php echo $url_helper;?>images/footerpic2.png" alt="Bild ladet nicht!">
             </div>
+            <div style="margin-right:150px;" class="col-md-2">
+               <img  class="footer-picture-sizing"src="<?php echo $url_helper;?>images/footerpic3.png" alt="Bild ladet nicht!">
+               <img class="footer-picture-sizing" src="<?php echo $url_helper;?>images/footerpic4.png" alt="Bild ladet nicht!">
 
-
+            </div>
+             <div s class="col-md-2">
+               <img class="footer-picture-sizing" src="<?php echo $url_helper;?>images/footerpic5.png" alt="Bild ladet nicht!">
+               <img class="footer-picture-sizing" src="<?php echo $url_helper;?>images/footerpic6.png" alt="Bild ladet nicht!">
+            </div>
         </div>
-    </div> 
+    </div>
 </div>
-
-
 
 
     <div class="copyright-box">
@@ -108,12 +215,6 @@
             <?= "&copy AquaTime GmbH " . "2014 - " . date('Y');?>
         </div>
     </div>
-
-
-
-
- 
-
 
 </footer>
 
