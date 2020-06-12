@@ -177,6 +177,7 @@ ul {
 }
 
 /*card ganz oben startseite*/
+
 .first-card {
   background-color: rgba(255, 255, 255, 0.9);
   border-radius: 35px;
@@ -188,15 +189,18 @@ ul {
   top: 30px;
   bottom: 30px;
 }
+
 .first-card-text {
   font-size: 21px;
   line-height: 25px;
 }
+
 .labelshape {
   border-radius: 0px 35px 0px 35px;
   border-color: rgb(0, 123, 255);
   border-width: 2px;
 }
+
 .search-buttom {
   height: 73px;
   position: absolute;
@@ -210,6 +214,7 @@ ul {
   color: white;
   width: 100%;
 }
+
 .search-buttom:hover {
   color: white;
   background-color: var(--maincolor-hover) !important;
@@ -235,6 +240,7 @@ select {
   font-size: 36px;
   font-family: "Fjalla One", sans-serif;
 }
+
 .h3_ueberschrift {
   margin-top: 10px;
   text-align: center;
@@ -249,21 +255,25 @@ select {
   font-size: 22px;
   color: var(--colorgreen);
 }
+
 .title-card2 {
   height: 56px;
   width: 360px;
   font-size: 22px;
   color: var(--colorred);
 }
+
 .title-card3 {
   height: 56px;
   width: 360px;
   font-size: 22px;
   color: var(--colorpink);
 }
+
 .imgshape {
   border-radius: 30px 30px 0px 0px;
 }
+
 .img-border1 {
   border-bottom: 8px solid var(--colorgreen);
 }
@@ -680,7 +690,8 @@ select {
   position: absolute;
   bottom: 0;
   right: 0;
-  margin-bottom: 50px;
+  margin-bottom: 100px;
+  margin-right: 500px;
 }
 
 /*.arrow-left:hover, .arrow-right:hover{ color: var(--maincolor-hover);}*/
@@ -1442,6 +1453,7 @@ col-kurs-size .col-5 {height: 624px !important;}
   overflow: hidden;
   position: absolute;
   left: 0;
+  top: 29px;
 }
 
 .position-slider-cols-text{
@@ -1449,7 +1461,6 @@ col-kurs-size .col-5 {height: 624px !important;}
   margin-bottom:auto !important;
   width: 100% !important;
   position: absolute;
-  right: 0;
   height: 458px !important;
 }
 

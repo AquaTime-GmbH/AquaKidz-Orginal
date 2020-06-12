@@ -301,18 +301,18 @@ include $url_helper .'include/navbar.php';
 
 
 <div class="row">
+
+
+
  <div class="slides ">
-     <div class="col-md-3">
-             <img class="kreis-slider" src="<?php echo $url_helper;?>img/Frau.jpg" alt="Bild konnte nicht geladen werden!">
-     </div>
-    <div class="col-md-3">
-        <p class="position_slider_name">Leonie W.</p>
-    </div>
      
+             <img class="kreis-slider" src="<?php echo $url_helper;?>img/Frau.jpg" alt="Bild konnte nicht geladen werden!">
+        <p class="position_slider_name">Leonie W.</p>
+
         <div style="margin-bottom:100px; margin-top:30px;" class="text">Ich finde es super, dass die Gruppen nicht so gross sind. So hat die Kursleiterin für alle Zeit und  kann entsprechend helfen. Wir gehen sehr gerne in Kurs bei Ihnen, weiter so, vielen Dank!</div>
         
-    </div>
-
+    
+</div>
 </div>
 
 
@@ -321,7 +321,8 @@ include $url_helper .'include/navbar.php';
 
  
         <div class="slides ">
-             <img class="kreis-slider" src="<?php echo $url_helper;?>img/Frau.jpg" alt="Bild konnte nicht geladen werden!">
+                 <img class="kreis-slider" src="<?php echo $url_helper;?>img/Frau.jpg" alt="Bild konnte nicht geladen werden!">
+        
             <p class="position_slider_name">Louna L.</p>
            
             <div style="margin-bottom:100px; margin-top:30px;" class="text ">Wir fanden die Kursleitung super und sie war sehr engagiert, motiviert und voll da.
@@ -345,14 +346,16 @@ include $url_helper .'include/navbar.php';
 
         <div class="slides ">
             <img class="kreis-slider" src="<?php echo $url_helper;?>img/Mann.jpg" alt="Bild konnte nicht geladen werden!">
-                        <p class="position_slider_name">Samuel S.</p>
+                        
             <div style="margin-bottom:100px; margin-top:30px;" class="text">Super Diagramm/Lernkurve, die nach jedem Schwimmkurs angepasst wird
 Samuel geht sehr gerne zum Schwimmkurs und erzählt viel davon :-) alles richtig gemacht. 
-Er freut sich schon sehr auf den Folgekurs in Lachen.</div>
+Er freut sich schon sehr auf den Folgekurs in Lachen.
+<p class="position_slider_name">Samuel S.</p></div>
         </div>
 
 </div>
-    <div style="text-align:center;" class="dot-container">
+
+    <div style="right: 0;" class="dot-container">
         <span class="dot" onclick="currentSlide(1)"></span> 
         <span class="dot" onclick="currentSlide(2)"></span> 
         <span class="dot" onclick="currentSlide(3)"></span>
@@ -360,7 +363,8 @@ Er freut sich schon sehr auf den Folgekurs in Lachen.</div>
         <span class="dot" onclick="currentSlide(5)"></span>
     </div>
 
-    </div></div>
+        </div>
+    </div>
 </div>
 
 
