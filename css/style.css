@@ -6,9 +6,7 @@
   --colorpink: #d95c9d;
   --colorred: #e0533d;
   --coloryellow: #ebd73f;
-
   --fontsizeh1: 32px;
-
   --maincolor-hover: #33558d;
   --secondcolor-hover: #5a7aa5;
   --colorgreen-hover: #719225;
@@ -20,19 +18,21 @@
 h1 {
   font-family: "Fjalla One", sans-serif;
 }
+
 p {
   font-family: "Lato", sans-serif;
 }
+
 .title_of_text {
   font-size: 32px;
   color: var(--maincolor);
 }
+
 ul {
   padding-inline-start: 0px;
 }
 
 /*------------------ Desktop version -------------------*/
-
 @media screen and (min-width: 1025px) and (max-width: 1920px) {
   .aqua-navbar {
     height: 88px;
@@ -45,26 +45,29 @@ ul {
     left: 0;
     z-index: 1030;
   }
+
   .container {
     max-width: 1336px !important;
     margin-left: auto !important;
     margin-right: auto !important;
   }
+
   index-row .row {
     margin-top: 38px !important;
   }
 }
 
 /*----------------- tablet version -----------------------*/
-
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .aqua-navbar {
     background-color: var(--maincolor);
     border-bottom: 4px solid white;
   }
+
   .logo {
     margin-left: 73px;
   }
+
   .container {
     max-width: 874px !important;
     margin-left: auto !important;
@@ -86,11 +89,9 @@ ul {
   }
 }
 
-@media (max-width: 375px) and (max-height: 667px) {
+@media (max-width: 375px) and (max-height: 667px) {}
 
-}
 /* ------navbar -----*/
-
 .navbar-pos {
   position: absolute;
   bottom: 0;
@@ -101,18 +102,19 @@ ul {
   float: right;
   margin-top: -37.5px;
 }
+
 .aktiv {
   color: white !important;
   background-color: var(--maincolor) !important;
   border: 4px solid white;
   border-bottom: 4px;
 }
+
 .aktivok {
   border-bottom: 4px solid white;
 }
 
 /*Bild angepasst */
-
 .hintergrundbild {
   background-image: url("../images/Banner2.png");
   background-position: center;
@@ -127,19 +129,17 @@ ul {
 .border_under {
   width: 100%;
   height: 10px;
-  background: linear-gradient(
-    90deg,
-    var(--colorred),
-    var(--colorgreen),
-    var(--secondcolor),
-    var(--maincolor),
-    var(--colorpink)
-  );
+  background: linear-gradient(90deg,
+      var(--colorred),
+      var(--colorgreen),
+      var(--secondcolor),
+      var(--maincolor),
+      var(--colorpink));
   position: absolute;
   bottom: 0;
 }
-/*alle bilder im card(flexbox) gleiche grösse machen */
 
+/*alle bilder im card(flexbox) gleiche grösse machen */
 .imgcard {
   width: 414px;
   height: 254px;
@@ -148,24 +148,28 @@ ul {
 .imgshape {
   border-radius: 30px 30px 0px 0px;
 }
+
 .card-img-top {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
 }
+
 /*alle text in den cards */
 .card-title-style {
   color: var(--maincolor);
 }
+
 .font-color {
   color: var(--secondcolor) !important;
 }
+
 .under-font {
   color: rgb(66, 155, 245);
 }
-/*Card decks verschoben */
 
+/*Card decks verschoben */
 .logo {
   background-position: center;
   background-repeat: no-repeat;
@@ -188,15 +192,18 @@ ul {
   top: 30px;
   bottom: 30px;
 }
+
 .first-card-text {
   font-size: 21px;
   line-height: 25px;
 }
+
 .labelshape {
   border-radius: 0px 35px 0px 35px;
   border-color: rgb(0, 123, 255);
   border-width: 2px;
 }
+
 .search-buttom {
   height: 73px;
   position: absolute;
@@ -210,12 +217,13 @@ ul {
   color: white;
   width: 100%;
 }
+
 .search-buttom:hover {
   color: white;
   background-color: var(--maincolor-hover) !important;
 }
-/* ------ Dropdown -----*/
 
+/* ------ Dropdown -----*/
 select {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -226,7 +234,6 @@ select {
 }
 
 /* Caption text */
-
 .text {
   color: white;
   text-align: center;
@@ -235,10 +242,10 @@ select {
   font-size: 36px;
   font-family: "Fjalla One", sans-serif;
 }
+
 .h3_ueberschrift {
   margin-top: 10px;
   text-align: center;
-
   color: white;
 }
 
@@ -249,36 +256,44 @@ select {
   font-size: 22px;
   color: var(--colorgreen);
 }
+
 .title-card2 {
   height: 56px;
   width: 360px;
   font-size: 22px;
   color: var(--colorred);
 }
+
 .title-card3 {
   height: 56px;
   width: 360px;
   font-size: 22px;
   color: var(--colorpink);
 }
+
 .imgshape {
   border-radius: 30px 30px 0px 0px;
 }
+
 .img-border1 {
   border-bottom: 8px solid var(--colorgreen);
 }
+
 .img-border2 {
   border-bottom: 8px solid var(--colorred);
 }
+
 .img-border3 {
   border-bottom: 8px solid var(--colorpink);
 }
+
 .card-sizing {
   box-shadow: 0px 6px 3px rgba(0, 0, 0, 0.2);
   width: 415px;
   border-radius: 35px;
   height: 553px;
 }
+
 .abstand {
   margin-top: 100px;
 }
@@ -309,6 +324,7 @@ select {
   font-family: "Fjalla One", sans-serif;
   padding-top: 11px;
 }
+
 .btn_card3 {
   background-color: var(--colorpink);
   width: 187px;
@@ -321,21 +337,23 @@ select {
   font-family: "Fjalla One", sans-serif;
   padding-top: 11px;
 }
+
 .btn_card1:hover {
   background-color: var(--colorgreen-hover) !important;
   color: white;
 }
+
 .btn_card2:hover {
   background-color: var(--colorred-hover) !important;
   color: white;
 }
+
 .btn_card3:hover {
   background-color: var(--colorpink-hover) !important;
   color: white;
 }
 
 /* text über 4 cards */
-
 .kurse-text {
   height: 53px;
   color: var(--maincolor);
@@ -357,7 +375,6 @@ select {
 }
 
 /* ------The 4 Cards -----*/
-
 .card-4-sizing {
   box-shadow: 0px 6px 3px rgba(0, 0, 0, 0.2);
   width: 639px;
@@ -379,6 +396,7 @@ select {
   font-family: "Fjalla One", sans-serif;
   padding-top: 11px;
 }
+
 .bnts_card4:hover {
   background-color: var(--maincolor-hover) !important;
   color: white;
@@ -389,32 +407,34 @@ select {
   height: 199px;
   width: 199px;
 }
+
 .col-md-3 {
   width: 100%;
   float: left;
   margin: 0;
 }
-/* Slideshow container */
 
+/* Slideshow container */
 .slideshow-container {
   width: 100%;
   height: 458px;
   background: linear-gradient(90deg, var(--secondcolor), var(--maincolor));
 }
+
 .text-slider-container {
   width: 1008px;
   margin-left: auto;
   margin-right: auto;
 }
 
-.dot-container{
+.dot-container {
   position: absolute;
   width: 1008px;
   position: absolute;
   bottom: 0;
 }
-/* The dots/bullets/indicators */
 
+/* The dots/bullets/indicators */
 .dot {
   cursor: pointer;
   height: 22px;
@@ -433,10 +453,12 @@ select {
 .dot:hover {
   background-color: white;
 }
+
 .active,
 .collapsible:hover {
   background-color: white !important;
 }
+
 /* ------text akutelle spezialangebote -----*/
 .text-spiezial {
   color: var(--maincolor);
@@ -444,13 +466,13 @@ select {
   margin-top: 75px;
   font-size: 36px;
 }
+
 .text-sp {
   text-align: center;
   color: var(--secondcolor);
 }
 
 /*------------------------------- five card-slider index site ---------------------------*/
-
 .slider-title-card1 {
   height: 56px;
   width: 360px;
@@ -612,26 +634,32 @@ select {
   width: 520px;
   height: 266px;
 }
+
 .imgshape-slider {
   border-radius: 35px 35px 0px 0px;
 }
+
 .img-border-slider1 {
   border-bottom: 8px solid var(--coloryellow);
 }
+
 .img-border-slider2 {
   border-bottom: 8px solid var(--colorpink);
 }
+
 .img-border-slider3 {
   border-bottom: 8px solid var(--colorred);
 }
+
 .img-border-slider4 {
   border-bottom: 8px solid var(--colorgreen);
 }
+
 .img-border-slider5 {
   border-bottom: 8px solid var(--color);
 }
-.arrow-left {
 
+.arrow-left {
   border-style: solid;
   border-width: 29px 68px 29px 0;
   border-color: transparent var(--maincolor) transparent transparent;
@@ -640,7 +668,6 @@ select {
 }
 
 .arrow-right {
-
   border-style: solid;
   border-width: 29px 0 29px 68px;
   border-color: transparent transparent transparent var(--maincolor);
@@ -649,8 +676,8 @@ select {
 }
 
 .dot-container {
-    margin-left: auto;
-    margin-right: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .dot-slider {
@@ -672,7 +699,7 @@ select {
   background-color: var(--maincolor);
 }
 
-.position_slider_name{
+.position_slider_name {
   float: right;
   color: white;
   font-size: 36px;
@@ -694,6 +721,7 @@ select {
   margin-bottom: 144px;
   border-radius: 35px;
 }
+
 .btn-card5 {
   background-color: var(--colorred);
   border-radius: 35px 0px 35px 0px;
@@ -710,10 +738,12 @@ select {
   bottom: 0;
   right: 0;
 }
+
 .btn-card5:hover {
   background-color: var(--colorred-hover) !important;
   color: white;
 }
+
 .hintergrundbild-card5 {
   background-image: url(../images/Banner.PNG);
   background-position: center;
@@ -725,17 +755,24 @@ select {
   padding: 10px;
   position: absolute;
 }
+
 .text-card5 {
   color: var(--colorred);
   font-size: 36px;
   height: 110px;
   width: 530px;
 }
+
 .font-sizing-card5 {
   font-size: 22px;
   font-family: "Lato", sans-serif;
 }
-a-size a {font-size: 22px !important; font-family: "Lato", sans-serif !important;}
+
+a-size a {
+  font-size: 22px !important;
+  font-family: "Lato", sans-serif !important;
+}
+
 /* 2 cards  */
 .card-1-sizing {
   border-top: 40px solid #ebd73f;
@@ -745,6 +782,7 @@ a-size a {font-size: 22px !important; font-family: "Lato", sans-serif !important
   box-shadow: 0px 6px 3px rgba(0, 0, 0, 0.2);
   float: right;
 }
+
 .card-2-sizing {
   border-top: 40px solid var(--colorgreen);
   width: 637px;
@@ -752,6 +790,7 @@ a-size a {font-size: 22px !important; font-family: "Lato", sans-serif !important
   height: 254px;
   box-shadow: 0px 6px 3px rgba(0, 0, 0, 0.2);
 }
+
 .btn_email {
   font-size: 22px;
   font-family: "Fjalla One", sans-serif;
@@ -768,6 +807,7 @@ a-size a {font-size: 22px !important; font-family: "Lato", sans-serif !important
   color: white;
   padding-top: 11px;
 }
+
 .btn_auf {
   font-size: 22px;
   font-family: "Fjalla One", sans-serif;
@@ -782,10 +822,12 @@ a-size a {font-size: 22px !important; font-family: "Lato", sans-serif !important
   bottom: 0;
   color: white;
 }
+
 .btn_email:hover {
   background-color: var(--colorgreen-hover) !important;
   color: white;
 }
+
 .btn_auf:hover {
   background-color: var(--colorgreen-hover) !important;
   color: white;
@@ -808,31 +850,34 @@ a-size a {font-size: 22px !important; font-family: "Lato", sans-serif !important
   bottom: 0;
   right: 0;
 }
+
 .mehr-erfahren:hover {
   background-color: var(--coloryellow-hover) !important;
   color: white;
 }
-/* ------footer -----*/
 
-.ul-footer-links{
+/* ------footer -----*/
+.ul-footer-links {
   list-style-type: none;
 }
 
-.small-footer-style{
+.small-footer-style {
   color: white;
   opacity: 0.7;
 }
 
-.footer-table{
+.footer-table {
   width: 100%;
   position: absolute;
   right: 0;
 }
+
 .footer-pos {
   position: fixed;
   left: 0;
   bottom: 0;
 }
+
 .footer-blau {
   overflow: hidden;
   border-radius: 0px 20px 0px 0px;
@@ -840,6 +885,7 @@ a-size a {font-size: 22px !important; font-family: "Lato", sans-serif !important
   margin-top: 100px;
   height: 300px;
 }
+
 .footer-white {
   margin-top: 100px;
   height: 300px;
@@ -847,7 +893,6 @@ a-size a {font-size: 22px !important; font-family: "Lato", sans-serif !important
 
 .footer-text {
   color: white;
-
 }
 
 .copyright-text {
@@ -859,11 +904,12 @@ a-size a {font-size: 22px !important; font-family: "Lato", sans-serif !important
   background-color: var(--maincolor-hover) !important;
   width: 100% !important;
   height: 44px !important;
-
 }
-.footer-right-abstand{
+
+.footer-right-abstand {
   margin-bottom: 5px;
 }
+
 .bullet-testing li:before {
   content: "\2022";
   color: red;
@@ -888,12 +934,13 @@ ok .row {
   max-width: 34.333% !important;
 }
 
-col-kurs-size .col-5 {height: 624px !important;}
+col-kurs-size .col-5 {
+  height: 624px !important;
+}
 
 /*<------------------------------------------------------------------------>*/
 /*<--------------------------------AQUABABY-------------------------------->*/
 /*<------------------------------------------------------------------------>*/
-
 .Card-find-aqua {
   border-radius: 35px;
   height: 1050px;
@@ -919,7 +966,6 @@ col-kurs-size .col-5 {height: 624px !important;}
   border: 3px solid var(--maincolor);
   border-radius: 35px 0px 35px 0px;
   box-shadow: 0px 6px 3px rgba(0, 0, 0, 0.2);
-
   height: 201px;
 }
 
@@ -931,6 +977,7 @@ col-kurs-size .col-5 {height: 624px !important;}
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 .col-2 {
   padding-left: 0;
 }
@@ -1005,9 +1052,7 @@ col-kurs-size .col-5 {height: 624px !important;}
 /*<------------------------------------------------------------------------>*/
 /*<--------------------------------KUSSEITE EINZELN------------------------>*/
 /*<------------------------------------------------------------------------>*/
-
-/*---------------Buttons Kursorte--------------*/
-
+/*-------------------------------------------------Buttons Kursorte--------------*/
 .blue-box-kurs {
   width: 100%;
   height: 624px;
@@ -1017,8 +1062,7 @@ col-kurs-size .col-5 {height: 624px !important;}
   background-size: cover;
 }
 
-/*---------------Buttons Kursorte--------------*/
-
+/*-------------------------------------------------Buttons Kursorte--------------*/
 .btn_kursort_aqua {
   font-size: 22px;
   font-family: "Fjalla One", sans-serif;
@@ -1042,8 +1086,7 @@ col-kurs-size .col-5 {height: 624px !important;}
   color: white;
 }
 
-/*---------------Buttons Kurs--------------*/
-
+/*-------------------------------------------------Buttons Kurs--------------*/
 .btn_kurs_aqua {
   font-size: 22px;
   font-family: "Fjalla One", sans-serif;
@@ -1065,8 +1108,8 @@ col-kurs-size .col-5 {height: 624px !important;}
   background-color: var(--maincolor-hover) !important;
   color: white;
 }
-/*---------------Buttons noch--------------*/
 
+/*-------------------------------------------------Buttons noch--------------*/
 .btn_kursort_aqua_noch {
   font-size: 22px;
   font-family: "Fjalla One", sans-serif;
@@ -1101,15 +1144,15 @@ col-kurs-size .col-5 {height: 624px !important;}
   padding-top: 11px;
 }
 
-.btn_aquababy_zum_kursanmelden:hover{
+.btn_aquababy_zum_kursanmelden:hover {
   color: var(--maincolor-hover);
 }
-
 
 .big-box-text {
   width: 100%;
   height: 500px;
 }
+
 .map {
   height: 350px;
   width: 450px;
@@ -1139,12 +1182,12 @@ col-kurs-size .col-5 {height: 624px !important;}
   top: 30px;
   bottom: 30px;
 }
+
 .form-pos {
   margin-top: 50px;
   margin-bottom: 153px;
   position: absolute;
   width: 100%;
-
 }
 
 .buchen_button {
@@ -1158,14 +1201,14 @@ col-kurs-size .col-5 {height: 624px !important;}
   font-size: 32px;
   background-color: var(--maincolor);
   color: white;
-
 }
+
 .buchen_button:hover {
   color: white;
   background-color: var(--maincolor-hover) !important;
 }
-/*--------------Cookie popup-----------------------*/
 
+/*-------------------------------------------------Cookie popup-----------------------------------*/
 #cookie_popup {
   text-align: center;
   background: #fff;
@@ -1185,6 +1228,7 @@ col-kurs-size .col-5 {height: 624px !important;}
 #cookie_popup.hidden {
   display: none;
 }
+
 .btn_ok_cookie {
   font-size: 15px;
   font-family: "Fjalla One", sans-serif;
@@ -1225,17 +1269,26 @@ col-kurs-size .col-5 {height: 624px !important;}
 }
 
 .modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  padding-top: 100px;
+  /* Location of the box */
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0, 0, 0); /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
 }
 
 /* Modal Content */
@@ -1245,7 +1298,6 @@ col-kurs-size .col-5 {height: 624px !important;}
   position: absolute;
   top: 20%;
   left: 30%;
-
   background-color: white;
   border-radius: 36px 36px 36px 36px;
   box-shadow: 0px 6px 3px rgba(0, 0, 0, 0.2);
@@ -1348,15 +1400,14 @@ col-kurs-size .col-5 {height: 624px !important;}
   bottom: 0;
   margin-bottom: 30px;
   right: 0;
-
 }
-.jetzt-buchen-pos a:hover{
+
+.jetzt-buchen-pos a:hover {
   text-decoration: none;
   color: var(--maincolor-hover);
-
 }
 
-.jetzt-buchen-style{
+.jetzt-buchen-style {
   color: var(--maincolor);
   background-color: rgb(255, 255, 255);
   border-radius: 35px 35px 35px 35px;
@@ -1365,33 +1416,33 @@ col-kurs-size .col-5 {height: 624px !important;}
   font-family: "Fjalla One", sans-serif;
 }
 
-.über-den-kurs-undertitle{
+.über-den-kurs-undertitle {
   color: var(--secondcolor);
   font-family: "Fjalla One", sans-serif;
   font-size: 22px;
 }
 
-.text-über-kurs{
+.text-über-kurs {
   color: var(--maincolor);
   font-family: "Fjalla One", sans-serif;
   font-size: 21px;
 }
 
-.table-wirlernen{
+.table-wirlernen {
   list-style: none;
   color: var(--secondcolor);
   font-size: 21px;
 }
 
-.form-title-buchen{
+.form-title-buchen {
   color: white;
   font-size: 22px;
   text-align: center;
   text-shadow: 2px 2px 4px #000000;
   margin-bottom: 0 !important;
-
 }
-.form-title2-buchen{
+
+.form-title2-buchen {
   color: white;
   font-size: 22px;
   text-align: center;
@@ -1400,9 +1451,8 @@ col-kurs-size .col-5 {height: 624px !important;}
   margin-top: 50px;
 }
 
-.buchen-buttom{
+.buchen-buttom {
   height: 50px;
-
   margin: -1px;
   border-radius: 35px 35px 35px 35px;
   font-size: 32px;
@@ -1417,7 +1467,7 @@ col-kurs-size .col-5 {height: 624px !important;}
   color: var(--maincolor-hover);
 }
 
-.footer-picture-sizing{
+.footer-picture-sizing {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1426,11 +1476,11 @@ col-kurs-size .col-5 {height: 624px !important;}
   margin-right: auto !important;
 }
 
-.form-container-check{
+.form-container-check {
   margin: 0;
 }
 
-.kreis-slider{
+.kreis-slider {
   height: 400px;
   width: 400px;
   border-radius: 50%;
@@ -1444,71 +1494,72 @@ col-kurs-size .col-5 {height: 624px !important;}
   left: 0;
 }
 
-.position-slider-cols-text{
-  margin-top:auto !important;
-  margin-bottom:auto !important;
+.position-slider-cols-text {
+  margin-top: auto !important;
+  margin-bottom: auto !important;
   width: 100% !important;
   position: absolute;
   right: 0;
   height: 458px !important;
 }
 
-.position-slider-cols{
-  margin-top:auto !important;
-  margin-bottom:auto !important;
+.position-slider-cols {
+  margin-top: auto !important;
+  margin-bottom: auto !important;
 }
 
 /*-------------------------------------------------AGB -----------------------------------------*/
-
-
-.überschrit-agb{
+.überschrit-agb {
   color: var(--maincolor);
   padding-bottom: 2px;
   font-size: 22px;
 }
-.text-agb{
-  color:var(--secondcolor);
-  padding-top:5px;
-  max-width:1200px;
+
+.text-agb {
+  color: var(--secondcolor);
+  padding-top: 5px;
+  max-width: 1200px;
   font-size: 17px;
   margin-bottom: 40px;
 }
-.überschrit-agb-ethik{
+
+.überschrit-agb-ethik {
   color: var(--maincolor);
   padding-top: 30px;
   font-size: 33px;
 }
-.undertitle-agb{
+
+.undertitle-agb {
   color: var(--maincolor-hover);
   padding: 15px;
   font-size: 27px;
 }
 
-
 /*-------------------------------------------------impressum -----------------------------------------*/
-
-.icon-costumizing-imp{
+.icon-costumizing-imp {
   font-size: 50px;
   color: var(--maincolor);
-  margin-right:10px;
+  margin-right: 10px;
   margin-top: auto;
   margin-bottom: auto;
 }
 
-.text-imp{
-  color:var(--secondcolor);
-  padding-top:5px;
-  max-width:1200px;
+.text-imp {
+  color: var(--secondcolor);
+  padding-top: 5px;
+  max-width: 1200px;
   font-size: 17px;
   margin-top: auto;
   margin-bottom: auto;
 }
-.überschrit-imp{
+
+.überschrit-imp {
   color: var(--maincolor);
   padding: 20px;
   font-size: 33px;
 }
-.card-for-imp{
+
+.card-for-imp {
   padding: 30px;
   width: auto;
   border-radius: 35px;
@@ -1521,11 +1572,8 @@ col-kurs-size .col-5 {height: 624px !important;}
   margin-right: auto;
 }
 
-
-
 /*-------------------------------------------------über uns -----------------------------------------*/
-
-.überuns-card{
+.überuns-card {
   background-color: rgba(255, 255, 255, 0.9);
   border-radius: 35px;
   height: 480px;
@@ -1537,36 +1585,36 @@ col-kurs-size .col-5 {height: 624px !important;}
   top: 30px;
 }
 
- .überuns-card-text {
+.überuns-card-text {
   font-size: 32px;
   line-height: 35px;
   color: var(--secondcolor);
   margin-top: 50px;
 }
 
-.jana-gesch{
+.jana-gesch {
   color: var(--secondcolor-hover);
   float: right;
   font-size: 18px;
 }
 
-.hintergrundbild_ueberuns{
+.hintergrundbild_ueberuns {
   background-color: var(--maincolor);
   width: 100%;
   height: 624px;
   position: absolute;
-    background-position: center;
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
 }
 
-.text-über-eltern{
+.text-über-eltern {
   color: var(--secondcolor);
 }
 
-.kreis-über-uns{
- height: 400px;
+.kreis-über-uns {
+  height: 400px;
   width: 400px;
   border-radius: 50%;
   background-color: red;
@@ -1580,15 +1628,14 @@ col-kurs-size .col-5 {height: 624px !important;}
   margin-top: 30px;
 }
 
-.motivation-über-title{
-color: white;
-text-align: center;
-margin-bottom: 70px;
-font-size: 30px;
-font-family: "Fjalla One", sans-serif;
-padding-top: 50px;
+.motivation-über-title {
+  color: white;
+  text-align: center;
+  margin-bottom: 70px;
+  font-size: 30px;
+  font-family: "Fjalla One", sans-serif;
+  padding-top: 50px;
 }
-
 
 .card-4-sizing-über-uns {
   box-shadow: 0px 6px 3px rgba(0, 0, 0, 0.2);
@@ -1598,7 +1645,7 @@ padding-top: 50px;
 }
 
 .card-4-img-über-uns {
-  border-radius:50%;
+  border-radius: 50%;
   height: 100px;
   width: 100px;
   margin-left: auto;
@@ -1606,7 +1653,7 @@ padding-top: 50px;
   margin-top: 10px;
 }
 
-.text-über-4{
+.text-über-4 {
   color: var(--secondcolor);
   font-size: 23px;
   font-family: "Fjalla One", sans-serif;
@@ -1616,17 +1663,16 @@ padding-top: 50px;
   margin-top: 15px;
 }
 
-.vier-kreise-über-uns{
- height: 300px;
+.vier-kreise-über-uns {
+  height: 300px;
   width: 300px;
   border-radius: 50%;
   background-color: red;
-
   margin-left: auto;
   margin-right: auto;
 }
 
-.überschrift-vier{
+.überschrift-vier {
   color: var(--maincolor);
   margin-top: 50px;
   margin-bottom: 90px;
@@ -1640,7 +1686,7 @@ padding-top: 50px;
   margin-top: 60px;
 }
 
-.überschirft-team-über{
+.überschirft-team-über {
   text-align: center;
   color: white;
   margin-bottom: 60px;
@@ -1648,8 +1694,8 @@ padding-top: 50px;
   padding-top: 20px;
 }
 
-.vier-kreise-über-uns-slider{
- height: 300px;
+.vier-kreise-über-uns-slider {
+  height: 300px;
   width: 300px;
   border-radius: 50%;
   background-color: white;
@@ -1657,26 +1703,22 @@ padding-top: 50px;
   margin-right: auto;
 }
 
-.posi-style-icon-über{
+.posi-style-icon-über {
   font-size: 80px;
   bottom: 0;
   right: 0;
   position: absolute;
 }
 
-
 /*------------------------------------------------- Aquasium -----------------------------------------*/
-
-
-.überschrit-Aquasium{
+.überschrit-Aquasium {
   color: var(--maincolor);
   padding: 20px;
   font-size: 33px;
 }
 
-.unterschrift-aquasium{
+.unterschrift-aquasium {
   color: var(--secondcolor);
   text-align: center;
   font-size: 28px;
-
 }
