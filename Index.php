@@ -14,7 +14,7 @@ include  $url_helper .'include/database.php';
 <!DOCTYPE html>
 <head>
     <title>AquaKidz</title>
-    
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
@@ -30,7 +30,7 @@ include  $url_helper .'include/database.php';
 <!-- Required meta tags -->    <!--einbindung der cookie.js datei-->
     <script type="text/javascript" src="cookie.js"></script>
 
- 
+
 
 </head>
 <body>
@@ -51,21 +51,22 @@ include $url_helper .'include/navbar.php';
 ?>
 <!--------------ende der einbindung------------------>
 
-<?php 
+<?php
 
 
   if( isset($_COOKIE['kursort'])) {
-    $cookie_kursort = $_COOKIE["kursort"]; 
+    $cookie_kursort = $_COOKIE["kursort"];
     } else {
         $cookie_kursort = "";
   }
   if( isset($_COOKIE['kursalter'])) {
-    $cookie_kursalter = $_COOKIE["kursalter"]; 
+    $cookie_kursalter = $_COOKIE["kursalter"];
     } else {
         $cookie_kursalter = "";
   }
 
 ?>
+
 
 
 <div class="hintergrundbild">
@@ -87,10 +88,10 @@ include $url_helper .'include/navbar.php';
                         <input pattern="^[0-9]{4}$" class="form-control labelshape" id="search_ort" name="search_ort" type="text" value="<?= $cookie_kursort; ?>">
                     </div>
 
-                    
+
 
                     <label class="col-8 col-form-label first-card-text">Wie alt ist ihr Kind ?</label>
-                    
+
                     <div class="col-12">
                         <div class="dropdown-firstcard">
                             <?php
@@ -140,9 +141,9 @@ include $url_helper .'include/navbar.php';
                                 <option value="7">AB CA. 7 JAHRE</option>
                             </select><?php
 
-                      
+
                             }
-                          
+
                             ?>
                     </div>
                 </div>
@@ -151,7 +152,7 @@ include $url_helper .'include/navbar.php';
             </div>
         </div>
     </div>
-    
+
 
 </form>
 
@@ -161,7 +162,7 @@ include $url_helper .'include/navbar.php';
   <!-- <div id="cookie_popup">
         <div class="hinweis">
         <p>Wir verwenden Cookies. Durch die weitere Nutzung der Webseite stimmen Sie der Verwendung von Cookies zu.</p>
-        </div> 
+        </div>
 
         <span class="more">
         <a href="datenschutz.php">Details</a>
@@ -170,7 +171,7 @@ include $url_helper .'include/navbar.php';
 
     <!-- beim klicken von dem button bleibt manauf der seite und der pop up fenster verschwindet -->
         <!--<button   class="btn btn_ok_cookie" type="submit" name="ok_cookie_button">Akzeptieren</button>   -->
-        
+
     <!-- beim klicken von diesem button kommt eine altert warnung die sagt ob man wirklich die cookies ablehnen will und wird dann auf die seite von session weiter geleitet -->
         <!--<button  onclick='myfunction()' class="btn btn_alert_cookie" type="submit" name="alert_cookie">Verweigern</button> -->
 
@@ -178,7 +179,7 @@ include $url_helper .'include/navbar.php';
 
 
 <?php
-   
+
   //if (isset($_POST['alert_cookie'])){
     //echo "<script language=\"JavaScript\">
     //function myfunction(){
@@ -191,18 +192,18 @@ include $url_helper .'include/navbar.php';
  // }
       //  </script>";
 ?>
-  
-    
+
+
     <!--<button type="submit" class="close" data-dismiss="alert">&times;</button>
 </div> -->
 
 <?php
-    
+
 //}else{
 
-//}    
+//}
 //if (isset($_POST['go_to_session'])){
-    
+
     //echo " <script language=\"JavaScript\"> window.location=\"index_session\";</script>";
 //}
 ?>
@@ -211,12 +212,12 @@ include $url_helper .'include/navbar.php';
      <!-- Das sind alle 3 Cards(flexboxen) in der mitte der Webseite -->
         <div class="row" >
         <div class="col-md-4">
-           
+
                 <div class="card card-sizing">
                     <img class="imgcard imgshape card-img-top img-border1" src="images/Block1.png"  alt="Bild ladet nicht!">
                 <div class="card-body">
                     <h2 class="card-title title-card1">SICHER SCHWIMMEN LERNEN MUSS SPASS MACHEN</h2>
-                    <p class="card-text font-color" style="height:149px; width:366px;">Kinder lernen wenn sie richtig gefördert werden. Unsere Kurse sind auf die Fähigkeiten und das alter unserer Schüler zugeschnitten. Wir setzen auf erfahrene Lehrpersonen die die Zeit im Wasser zu einem wunderbaren Erlebnis machen.</p>     
+                    <p class="card-text font-color" style="height:149px; width:366px;">Kinder lernen wenn sie richtig gefördert werden. Unsere Kurse sind auf die Fähigkeiten und das alter unserer Schüler zugeschnitten. Wir setzen auf erfahrene Lehrpersonen die die Zeit im Wasser zu einem wunderbaren Erlebnis machen.</p>
 
                 </div>
                 <div style="float:right;">
@@ -224,13 +225,13 @@ include $url_helper .'include/navbar.php';
                 </div>
             </div>
         </div>
-    
+
     <div class="col-md-4">
         <div class="card card-sizing">
             <img class="imgcard imgshape card-img-top img-border2" src="images/Block2.png"   alt="Bild ladet nicht!">
         <div class="card-body">
                 <h2 class="card-title title-card2">UNSER PRINZIP FÜR ERFOLG</h2>
-                
+
                 <ul class="bullet-testing font-color">
                     <li>
                         <a>Schwimmen lernen ohne Druck und Zwang</a>
@@ -308,22 +309,22 @@ include $url_helper .'include/navbar.php';
     <div class="col-md-3">
         <p class="position_slider_name">Leonie W.</p>
     </div>
-     
+
         <div style="margin-bottom:100px; margin-top:30px;" class="text">Ich finde es super, dass die Gruppen nicht so gross sind. So hat die Kursleiterin für alle Zeit und  kann entsprechend helfen. Wir gehen sehr gerne in Kurs bei Ihnen, weiter so, vielen Dank!</div>
-        
+
     </div>
 
 </div>
 
 
-  
 
 
- 
+
+
         <div class="slides ">
              <img class="kreis-slider" src="<?php echo $url_helper;?>img/Frau.jpg" alt="Bild konnte nicht geladen werden!">
             <p class="position_slider_name">Louna L.</p>
-           
+
             <div style="margin-bottom:100px; margin-top:30px;" class="text ">Wir fanden die Kursleitung super und sie war sehr engagiert, motiviert und voll da.
                                                             Uns hat der Kurs sehr gut gefallen und wir werden später weitere Kurse besuchen. Ich fand insbesondere auch die Gruppengrösse sehr perfekt. Herzlichen Dank für alles!</div>
 </div>
@@ -332,14 +333,14 @@ include $url_helper .'include/navbar.php';
         <div class="slides ">
             <img class="kreis-slider" src="<?php echo $url_helper;?>img/Frau.jpg" alt="Bild konnte nicht geladen werden!">
             <p class="position_slider_name">Annina D.</p>
-            <div style="margin-bottom:100px; margin-top:30px;" class="text ">Ich habe mit meiner Tochter bereits zwei Kurse bei Aquakidz besucht. Die Lektionen werden sehr abwechslungsreich gestaltet und es gibt auch schöne wiederkehrende 
+            <div style="margin-bottom:100px; margin-top:30px;" class="text ">Ich habe mit meiner Tochter bereits zwei Kurse bei Aquakidz besucht. Die Lektionen werden sehr abwechslungsreich gestaltet und es gibt auch schöne wiederkehrende
             Rituale, die den Kindern Sicherheit geben. Die Kursleitung ist sehr kompetent und reagiert stets angemessen auf die individuellen Bedürfnisse der Babys. </div>
         </div>
 
         <div class="slides ">
             <img class="kreis-slider" src="<?php echo $url_helper;?>img/kunde_bild.png" alt="Bild konnte nicht geladen werden!">
                         <p class="position_slider_name">Nina, Dave mit Gian B.</p>
-            <div style="margin-bottom:100px; margin-top:30px;"  class="text">Jeden Samstagmorgen haben wir uns aufs Babyschwimmen bei Jana Brinkmann gefreut. Sie ist total herzlich und kann gut auf's Baby und die Begleitperson eingehen. Uns gefällt die Art, wie sie den Kindern die Angst vom Wasser nimmt und sie spielerisch begleitet. Wir freuen uns bereits auf den Folgekurs! 
+            <div style="margin-bottom:100px; margin-top:30px;"  class="text">Jeden Samstagmorgen haben wir uns aufs Babyschwimmen bei Jana Brinkmann gefreut. Sie ist total herzlich und kann gut auf's Baby und die Begleitperson eingehen. Uns gefällt die Art, wie sie den Kindern die Angst vom Wasser nimmt und sie spielerisch begleitet. Wir freuen uns bereits auf den Folgekurs!
 </div>
         </div>
 
@@ -347,14 +348,14 @@ include $url_helper .'include/navbar.php';
             <img class="kreis-slider" src="<?php echo $url_helper;?>img/Mann.jpg" alt="Bild konnte nicht geladen werden!">
                         <p class="position_slider_name">Samuel S.</p>
             <div style="margin-bottom:100px; margin-top:30px;" class="text">Super Diagramm/Lernkurve, die nach jedem Schwimmkurs angepasst wird
-Samuel geht sehr gerne zum Schwimmkurs und erzählt viel davon :-) alles richtig gemacht. 
+Samuel geht sehr gerne zum Schwimmkurs und erzählt viel davon :-) alles richtig gemacht.
 Er freut sich schon sehr auf den Folgekurs in Lachen.</div>
         </div>
 
 </div>
     <div style="text-align:center;" class="dot-container">
-        <span class="dot" onclick="currentSlide(1)"></span> 
-        <span class="dot" onclick="currentSlide(2)"></span> 
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
         <span class="dot" onclick="currentSlide(3)"></span>
         <span class="dot" onclick="currentSlide(4)"></span>
         <span class="dot" onclick="currentSlide(5)"></span>
@@ -387,7 +388,7 @@ Er freut sich schon sehr auf den Folgekurs in Lachen.</div>
      var i;
      var slides = document.getElementsByClassName("slides");
      var dots = document.getElementsByClassName("dot");
-     
+
      if (n==undefined){
          n = ++slideIndex
          }
@@ -458,17 +459,17 @@ Er freut sich schon sehr auf den Folgekurs in Lachen.</div>
    <div class="card-md-2" style="margin-top:auto; margin-bottom:auto;">
         <div class="arrow-left" style="margin-top:auto; margin-bottom:auto;" onclick="plusDivs(-1)"></div>
     </div>
- 
 
 
- 
+
+
 
         <div class="card slider-card-sizing mySlides">
             <img class="imgcard-slider imgshape-slider  img-border-slider1" src="images/Block3.png" alt="Bild ladet nicht!">
                 <div class="card-body">
 
                     <h2 class="card-title slider-title-card1">AquaBaby</h2>
-                    <p class="card-text font-color" style="height:149px; width:366px;">Krankheitsinfekte werden weniger (Training Immunsystem) Schlafverhalten wird regelmässiger und ruhiger Kurs als Ritual etablieren, der Mutter-Kind-Bindung intensiviert Sicherheit und Ruhe am Kursort (exklusiv reserviert)</p>     
+                    <p class="card-text font-color" style="height:149px; width:366px;">Krankheitsinfekte werden weniger (Training Immunsystem) Schlafverhalten wird regelmässiger und ruhiger Kurs als Ritual etablieren, der Mutter-Kind-Bindung intensiviert Sicherheit und Ruhe am Kursort (exklusiv reserviert)</p>
 
 
                 </div>
@@ -480,16 +481,16 @@ Er freut sich schon sehr auf den Folgekurs in Lachen.</div>
 
 <!----------------------------------------second 2 slide cards------------------------->
 
-   
 
-    
-    
+
+
+
         <div class="card slider-card-sizing mySlides">
             <img class="imgcard-slider imgshape-slider  img-border-slider2" src="images/Block3.png" alt="Bild ladet nicht!">
                 <div class="card-body">
 
                     <h2 class="card-title slider-title-card2">AquaKidz Mini</h2>
-                    <p class="card-text font-color" style="height:149px; width:366px;">Kinder lernen in diesem Alter sehr schnell und sehr einfach Gemeinsame Zeit gibt dem Kind den notwendigen sicheren Raum zur Entwicklung Kinder erlangen Selbstsicherheit und Selbstvertrauen</p>     
+                    <p class="card-text font-color" style="height:149px; width:366px;">Kinder lernen in diesem Alter sehr schnell und sehr einfach Gemeinsame Zeit gibt dem Kind den notwendigen sicheren Raum zur Entwicklung Kinder erlangen Selbstsicherheit und Selbstvertrauen</p>
 
 
                 </div>
@@ -500,7 +501,7 @@ Er freut sich schon sehr auf den Folgekurs in Lachen.</div>
 
 
 
-       
+
 
 
 
@@ -508,17 +509,17 @@ Er freut sich schon sehr auf den Folgekurs in Lachen.</div>
 
 <!----------------------------------------third slide cards------------------------->
 
-    
-    
-    
 
-    
+
+
+
+
         <div class="card slider-card-sizing mySlides">
             <img class="imgcard-slider imgshape-slider  img-border-slider3" src="images/Block3.png" alt="Bild ladet nicht!">
                 <div class="card-body">
 
                     <h2 class="card-title slider-title-card3">AquaKidz Maxi</h2>
-                    <p class="card-text font-color" style="height:149px; width:366px;">Angst vor Wasser in Respekt umwandeln Kinder nehmen erstmalig ohne Elternteil am Kurs teil Motivation und Freude des Kindes sind wichtig und entscheiden über eine Fortsetzung im nächsten level (erstmalig so, vorher entscheiden immer die Eltern)</p>     
+                    <p class="card-text font-color" style="height:149px; width:366px;">Angst vor Wasser in Respekt umwandeln Kinder nehmen erstmalig ohne Elternteil am Kurs teil Motivation und Freude des Kindes sind wichtig und entscheiden über eine Fortsetzung im nächsten level (erstmalig so, vorher entscheiden immer die Eltern)</p>
 
 
                 </div>
@@ -535,14 +536,14 @@ Er freut sich schon sehr auf den Folgekurs in Lachen.</div>
 
 <!----------------------------------------four slide cards------------------------->
 
-  
-    
+
+
         <div class="card slider-card-sizing mySlides">
             <img class="imgcard-slider imgshape-slider  img-border-slider4" src="images/Block3.png" alt="Bild ladet nicht!">
                 <div class="card-body">
 
                     <h2 class="card-title slider-title-card4">AquaMixed</h2>
-                    <p class="card-text font-color" style="height:149px; width:366px;">kein Wettkampfdruck für Kids, die gern im Wasser sind und schwimmen als Freizeitsport betreiben wollen</p>     
+                    <p class="card-text font-color" style="height:149px; width:366px;">kein Wettkampfdruck für Kids, die gern im Wasser sind und schwimmen als Freizeitsport betreiben wollen</p>
 
 
                 </div>
@@ -557,15 +558,15 @@ Er freut sich schon sehr auf den Folgekurs in Lachen.</div>
 
 <!----------------------------------------five slide cards------------------------->
 
-   
-      
+
+
 
         <div class="card slider-card-sizing mySlides ">
             <img class="imgcard-slider imgshape-slider  img-border-slider1" src="images/Block3.png" alt="Bild ladet nicht!">
                 <div class="card-body">
 
                     <h2 class="card-title slider-title-card1">five slide</h2>
-                    <p class="card-text font-color" style="height:149px; width:366px;">Kinder lernen wenn sie richtig gefördert werden. Unsere Kurse sind auf die Fähigkeiten und das alter unserer Schüler zugeschnitten. Wir setzen auf erfahrene Lehrpersonen die die Zeit im Wasser zu einem wunderbaren Erlebnis machen.</p>     
+                    <p class="card-text font-color" style="height:149px; width:366px;">Kinder lernen wenn sie richtig gefördert werden. Unsere Kurse sind auf die Fähigkeiten und das alter unserer Schüler zugeschnitten. Wir setzen auf erfahrene Lehrpersonen die die Zeit im Wasser zu einem wunderbaren Erlebnis machen.</p>
 
 
                 </div>
@@ -584,20 +585,20 @@ Er freut sich schon sehr auf den Folgekurs in Lachen.</div>
 
 
 
-  
-      
 
- 
-</div>  
+
+
+
+</div>
   <div style="text-align:center;">
-        <span class="dot-slider" onclick="currentSlide(1)"></span> 
-        <span class="dot-slider" onclick="currentSlide(2)"></span> 
+        <span class="dot-slider" onclick="currentSlide(1)"></span>
+        <span class="dot-slider" onclick="currentSlide(2)"></span>
         <span class="dot-slider" onclick="currentSlide(3)"></span>
         <span class="dot-slider" onclick="currentSlide(4)"></span>
         <span class="dot-slider" onclick="currentSlide(5)"></span>
     </div>
 
-</div> 
+</div>
 
 <!--slider javascript-->
 <script>
@@ -619,12 +620,12 @@ function showDivs(n) {
   if (n > x.length) {slideIndex = 1}
   if (n < 1) {slideIndex = x.length}
   for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";  
+    x[i].style.display = "none";
   }
   for (i = 0; i < dots.length; i++) {
     dots[i].className = dots[i].className.replace(" w3-white", "");
   }
-  x[slideIndex-1].style.display = "block";  
+  x[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " w3-white";
 }
 </script>
@@ -661,13 +662,13 @@ function showDivs(n) {
                     </a-size>
                 </ul>
                     </div>
-                
-            </div> 
+
+            </div>
              <a href="#"  class="btn btn-card5 ">Mehr Erfahren</a>
-              
+
         </div>
-    </div>    
-    </div>   
+    </div>
+    </div>
 
 
 

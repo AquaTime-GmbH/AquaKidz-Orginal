@@ -208,6 +208,7 @@ ul {
   font-size: 32px;
   background-color: var(--maincolor);
   color: white;
+  width: 100%;
 }
 .search-buttom:hover {
   color: white;
@@ -237,7 +238,7 @@ select {
 .h3_ueberschrift {
   margin-top: 10px;
   text-align: center;
-  
+
   color: white;
 }
 
@@ -630,7 +631,7 @@ select {
   border-bottom: 8px solid var(--color);
 }
 .arrow-left {
- 
+
   border-style: solid;
   border-width: 29px 68px 29px 0;
   border-color: transparent var(--maincolor) transparent transparent;
@@ -639,7 +640,7 @@ select {
 }
 
 .arrow-right {
- 
+
   border-style: solid;
   border-width: 29px 0 29px 68px;
   border-color: transparent transparent transparent var(--maincolor);
@@ -846,7 +847,7 @@ a-size a {font-size: 22px !important; font-family: "Lato", sans-serif !important
 
 .footer-text {
   color: white;
-  
+
 }
 
 .copyright-text {
@@ -858,7 +859,7 @@ a-size a {font-size: 22px !important; font-family: "Lato", sans-serif !important
   background-color: var(--maincolor-hover) !important;
   width: 100% !important;
   height: 44px !important;
-  
+
 }
 .footer-right-abstand{
   margin-bottom: 5px;
@@ -1157,7 +1158,7 @@ col-kurs-size .col-5 {height: 624px !important;}
   font-size: 32px;
   background-color: var(--maincolor);
   color: white;
-  
+
 }
 .buchen_button:hover {
   color: white;
@@ -1347,7 +1348,7 @@ col-kurs-size .col-5 {height: 624px !important;}
   bottom: 0;
   margin-bottom: 30px;
   right: 0;
-  
+
 }
 .jetzt-buchen-pos a:hover{
   text-decoration: none;
@@ -1386,22 +1387,22 @@ col-kurs-size .col-5 {height: 624px !important;}
   color: white;
   font-size: 22px;
   text-align: center;
-  text-shadow: 2px 2px 4px #000000; 
+  text-shadow: 2px 2px 4px #000000;
   margin-bottom: 0 !important;
-  
+
 }
 .form-title2-buchen{
   color: white;
   font-size: 22px;
   text-align: center;
-  text-shadow: 2px 2px 4px #000000; 
+  text-shadow: 2px 2px 4px #000000;
   margin-bottom: 0 !important;
   margin-top: 50px;
 }
 
 .buchen-buttom{
   height: 50px;
-  
+
   margin: -1px;
   border-radius: 35px 35px 35px 35px;
   font-size: 32px;
@@ -1444,7 +1445,7 @@ col-kurs-size .col-5 {height: 624px !important;}
 }
 
 .position-slider-cols-text{
-  margin-top:auto !important; 
+  margin-top:auto !important;
   margin-bottom:auto !important;
   width: 100% !important;
   position: absolute;
@@ -1453,7 +1454,7 @@ col-kurs-size .col-5 {height: 624px !important;}
 }
 
 .position-slider-cols{
-  margin-top:auto !important; 
+  margin-top:auto !important;
   margin-bottom:auto !important;
 }
 
@@ -1462,14 +1463,15 @@ col-kurs-size .col-5 {height: 624px !important;}
 
 .überschrit-agb{
   color: var(--maincolor);
-  padding: 20px;
-  font-size: 33px;
+  padding-bottom: 2px;
+  font-size: 22px;
 }
 .text-agb{
   color:var(--secondcolor);
-  padding-top:5px; 
+  padding-top:5px;
   max-width:1200px;
   font-size: 17px;
+  margin-bottom: 40px;
 }
 .überschrit-agb-ethik{
   color: var(--maincolor);
@@ -1495,7 +1497,7 @@ col-kurs-size .col-5 {height: 624px !important;}
 
 .text-imp{
   color:var(--secondcolor);
-  padding-top:5px; 
+  padding-top:5px;
   max-width:1200px;
   font-size: 17px;
   margin-top: auto;
@@ -1523,7 +1525,7 @@ col-kurs-size .col-5 {height: 624px !important;}
 
 /*-------------------------------------------------über uns -----------------------------------------*/
 
-.überuns-card{ 
+.überuns-card{
   background-color: rgba(255, 255, 255, 0.9);
   border-radius: 35px;
   height: 480px;
@@ -1676,5 +1678,5 @@ padding-top: 50px;
   color: var(--secondcolor);
   text-align: center;
   font-size: 28px;
-  
+
 }

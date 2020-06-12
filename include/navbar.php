@@ -1,7 +1,7 @@
 
 
 <div class="aqua-navbar">
-        <nav class="navbar sticky-top navbar-expand-md navbar-dark" style="height:88px; background-color:c">
+        <nav class="navbar sticky-top navbar-expand-md navbar-dark" style="height:88px;">
     
    <!--Der (Burger) wenn die seite kleiner wird-->
       <button class="navbar-toggler" data-toggle="collapse" data-target="#collapse_target">

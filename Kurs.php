@@ -434,7 +434,13 @@ $ueber_den_Kurs= "ÜBER DEN KURS" ;
 <div id="section2" class="container-test">
 <div class="form-pos">
 
+<fdsdsfa>
 
+<div class="col-2" style="max-width: 40% !important;">
+<h1>gdhd</h1>
+</div>
+
+</fdsdsfa>
 
 <form action="" method="post">
 <div class="font-color">
@@ -447,8 +453,6 @@ $ueber_den_Kurs= "ÜBER DEN KURS" ;
       <label class="first-card-text" >Kurs</label>
       <input name="kurs_k"  type="text" class="form-control labelshape" value="<?= $kurs_text; ?>">
     </div>
-
-
 
 
 
