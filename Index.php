@@ -459,15 +459,17 @@ Er freut sich schon sehr auf den Folgekurs in Lachen.
  <div class="row">
 
 
-   <div class="card-md-2" style="margin-top:auto; margin-bottom:auto;">
+   <div class="card-sm" style="margin-top:auto; margin-bottom:auto;">
         <div class="arrow-left" style="margin-top:auto; margin-bottom:auto;" onclick="plusDivs(-1)"></div>
     </div>
  
-
+   <div class="col-sm" style="margin-top:auto; margin-bottom:auto;">
+    <div class="arrow-right" style="margin-top:auto; margin-bottom:auto;" onclick="plusDivs(1)">
+</div>
 
  
-
-        <div class="card slider-card-sizing mySlides">
+<div class="col-md-8">
+    <div class="card slider-card-sizing mySlides">
             <img class="imgcard-slider imgshape-slider  img-border-slider1" src="images/Block3.png" alt="Bild ladet nicht!">
                 <div class="card-body">
 
@@ -480,6 +482,8 @@ Er freut sich schon sehr auf den Folgekurs in Lachen.
                     <a href="<?php echo $url_helper;?>Kursarten/AquaBaby"  class="btn  slider-card-button1">Mehr Erfahren</a>
                 </div>
         </div>
+</div>
+        
 
 
 <!----------------------------------------second 2 slide cards------------------------->
@@ -576,11 +580,10 @@ Er freut sich schon sehr auf den Folgekurs in Lachen.
                  <div style="float:right;">
                     <a href="<?php echo $url_helper;?>Kursarten/"  class="btn  slider-card-button1">Mehr Erfahren</a>
                 </div>
+        
         </div>
-
- <div class="col-md-2" style="margin-top:auto; margin-bottom:auto;">
-    <div class="arrow-right" style="margin-top:auto; margin-bottom:auto;" onclick="plusDivs(1)">
-</div>
+     
+ 
 
         </div>
 

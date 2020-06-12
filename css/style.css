@@ -1442,8 +1442,8 @@ col-kurs-size .col-5 {height: 624px !important;}
 }
 
 .kreis-slider{
-  height: 400px;
-  width: 400px;
+  height: 300px;
+  width: 300px;
   border-radius: 50%;
   margin-left: auto;
   margin-right: auto;
@@ -1453,7 +1453,7 @@ col-kurs-size .col-5 {height: 624px !important;}
   overflow: hidden;
   position: absolute;
   left: 0;
-  top: 29px;
+  top: 79px;
 }
 
 .position-slider-cols-text{
