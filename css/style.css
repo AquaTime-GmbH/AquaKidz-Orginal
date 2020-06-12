@@ -208,6 +208,7 @@ ul {
   font-size: 32px;
   background-color: var(--maincolor);
   color: white;
+  width: 100%;
 }
 .search-buttom:hover {
   color: white;
