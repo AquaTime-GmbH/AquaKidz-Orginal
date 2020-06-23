@@ -473,17 +473,17 @@ Er freut sich schon sehr auf den Folgekurs in Lachen.
             <img class="imgcard-slider imgshape-slider  img-border-slider1" src="images/Block3.png" alt="Bild ladet nicht!">
                 <div class="card-body">
 
-                    <h2 class="card-title slider-title-card1">AquaBaby</h2>
-                    <p class="card-text font-color" style="height:149px; width:366px;">Krankheitsinfekte werden weniger (Training Immunsystem) Schlafverhalten wird regelmässiger und ruhiger Kurs als Ritual etablieren, der Mutter-Kind-Bindung intensiviert Sicherheit und Ruhe am Kursort (exklusiv reserviert)</p>     
+                    <h2 class="card-title slider-title-card1">AquaKidz Private</h2>
+                    <p class="card-text font-color text-slider-cutting">Braucht Ihr Kind mehr Förderung? Passen unsere Kurse nicht in Ihren Zeitplan? Wünschen sie mehr Betreuung oder haben sie individuelle Zielsetzungen? Wir haben ein flexibles Angebot erschaffen um genau diese Bedürfnisse zu beantworten. In Privatkursen oder Halbprivatkursen können wir intensiv an den persönlichen Zielen arbeiten. Sie können mit uns Kursinhalt, Zeit und Ort besprechen, wir arbeiten mit Ihnen den passenden Trainingsplan aus.</p>     
 
 
                 </div>
                  <div style="float:right;">
-                    <a href="<?php echo $url_helper;?>Kursarten/AquaBaby"  class="btn  slider-card-button1">Mehr Erfahren</a>
+                    <a href="<?php echo $url_helper;?>Kursarten/........"  class="btn  slider-card-button1">Mehr Erfahren</a>
                 </div>
         </div>
 </div>
-        
+
 
 
 <!----------------------------------------second 2 slide cards------------------------->
@@ -496,13 +496,13 @@ Er freut sich schon sehr auf den Folgekurs in Lachen.
             <img class="imgcard-slider imgshape-slider  img-border-slider2" src="images/Block3.png" alt="Bild ladet nicht!">
                 <div class="card-body">
 
-                    <h2 class="card-title slider-title-card2">AquaKidz Mini</h2>
-                    <p class="card-text font-color" style="height:149px; width:366px;">Kinder lernen in diesem Alter sehr schnell und sehr einfach Gemeinsame Zeit gibt dem Kind den notwendigen sicheren Raum zur Entwicklung Kinder erlangen Selbstsicherheit und Selbstvertrauen</p>     
+                    <h2 class="card-title slider-title-card2">AquaKidz Mermaid</h2>
+                    <p class="card-text font-color text-slider-cutting" >Das Mythische Geschöpf der Meerjungfrau fasziniert viele Kinder. Mithilfe der Monoflosse können Kinder die bereits Sicherheit im Wasser haben eine ganz besondere Erfahrung machen. Mithilfe der Monoflosse können Kinder ab 6 Jahren abtauchen und sich wie ein Teil des Meervolkes fühlen. Monoflossen sind auch bei Erfahrenen Tauchern beliebt, wir bieten einen sicheren Einstieg in den Umgang mit diesem Equipment.</p>     
 
 
                 </div>
                  <div style="float:right;">
-                    <a href="<?php echo $url_helper;?>Kursarten/AquaKidz-Mini"  class="btn  slider-card-button2">Mehr Erfahren</a>
+                    <a href="<?php echo $url_helper;?>Kursarten/......."  class="btn  slider-card-button2">Mehr Erfahren</a>
                 </div>
         </div>
 
@@ -525,13 +525,13 @@ Er freut sich schon sehr auf den Folgekurs in Lachen.
             <img class="imgcard-slider imgshape-slider  img-border-slider3" src="images/Block3.png" alt="Bild ladet nicht!">
                 <div class="card-body">
 
-                    <h2 class="card-title slider-title-card3">AquaKidz Maxi</h2>
-                    <p class="card-text font-color" style="height:149px; width:366px;">Angst vor Wasser in Respekt umwandeln Kinder nehmen erstmalig ohne Elternteil am Kurs teil Motivation und Freude des Kindes sind wichtig und entscheiden über eine Fortsetzung im nächsten level (erstmalig so, vorher entscheiden immer die Eltern)</p>     
+                    <h2 class="card-title slider-title-card3">AquaKidz Vacation</h2>
+                    <p class="card-text font-color text-slider-cutting">In den Intensiv-Ferienkursen der AquaKidz Schwimmschule erfahren die Kids vor allem den Spass am Nass. Egal ob Anfänger oder Fortgeschrittene, die Kids lernen die Freude und den sicheren Umgang mit der Bewegung im Wasser. In niveaugerechten kleinen Kursgruppen bis max. 8 Kids werden wir gemeinsam step by step mit altersgerechten Spielen das Schwimmen erlernen.</p>     
 
 
                 </div>
                  <div style="float:right;">
-                    <a href="<?php echo $url_helper;?>Kursarten/AquaKidz-Maxi"  class="btn  slider-card-button3">Mehr Erfahren</a>
+                    <a href="<?php echo $url_helper;?>Kursarten/....."  class="btn  slider-card-button3">Mehr Erfahren</a>
                 </div>
         </div>
 
@@ -549,13 +549,13 @@ Er freut sich schon sehr auf den Folgekurs in Lachen.
             <img class="imgcard-slider imgshape-slider  img-border-slider4" src="images/Block3.png" alt="Bild ladet nicht!">
                 <div class="card-body">
 
-                    <h2 class="card-title slider-title-card4">AquaMixed</h2>
-                    <p class="card-text font-color" style="height:149px; width:366px;">kein Wettkampfdruck für Kids, die gern im Wasser sind und schwimmen als Freizeitsport betreiben wollen</p>     
+                    <h2 class="card-title slider-title-card4">AquaKidz Birthday</h2>
+                    <p class="card-text font-color text-slider-cutting">Machen sie den nächsten Geburtstag an dem Ort wo sich Kinder wohl fühlen. Wir helfen mit unserer Erfahrung, das es ein fantasievolles Erlebnis wird. Ob als fürchterliche Piratenmannschaft ein Schiff entern, mit der Meerjungfrau nach den schönsten Perlen tauchen oder bei den Olympischen Spielen in Langnau Medaillen abräumen, wir finden das passende erlebnis für den großen Tag.</p>     
 
 
                 </div>
                  <div style="float:right;">
-                    <a href="<?php echo $url_helper;?>Kursarten/AquaKidz-Mixed"  class="btn  slider-card-button4">Mehr Erfahren</a>
+                    <a href="<?php echo $url_helper;?>Kursarten/......"  class="btn  slider-card-button4">Mehr Erfahren</a>
                 </div>
         </div>
 
@@ -573,7 +573,7 @@ Er freut sich schon sehr auf den Folgekurs in Lachen.
                 <div class="card-body">
 
                     <h2 class="card-title slider-title-card1">five slide</h2>
-                    <p class="card-text font-color" style="height:149px; width:366px;">Kinder lernen wenn sie richtig gefördert werden. Unsere Kurse sind auf die Fähigkeiten und das alter unserer Schüler zugeschnitten. Wir setzen auf erfahrene Lehrpersonen die die Zeit im Wasser zu einem wunderbaren Erlebnis machen.</p>     
+                    <p class="card-text font-color text-slider-cutting" >Kinder lernen wenn sie richtig gefördert werden. Unsere Kurse sind auf die Fähigkeiten und das alter unserer Schüler zugeschnitten. Wir setzen auf erfahrene Lehrpersonen die die Zeit im Wasser zu einem wunderbaren Erlebnis machen.</p>     
 
 
                 </div>

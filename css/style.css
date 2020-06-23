@@ -412,9 +412,10 @@ select {
   background: linear-gradient(90deg, var(--secondcolor), var(--maincolor));
 }
 .text-slider-container {
-  width: 1008px;
+  width: 1060px;
   margin-left: auto;
   margin-right: auto;
+  padding-right: 120px;
 }
 
 .dot-container{
@@ -441,7 +442,7 @@ select {
 
 .active,
 .dot:hover {
-  background-color: white;
+  background-color: white !important;
 }
 .active,
 .collapsible:hover {
@@ -460,37 +461,37 @@ select {
 }
 
 /*------------------------------- five card-slider index site ---------------------------*/
-
+.text-slider-cutting{
+  text-overflow:ellipsis; 
+  height:149px; 
+  width:366px; 
+  overflow:hidden;
+}
 .slider-title-card1 {
-  height: 56px;
   width: 360px;
   font-size: 22px;
   color: var(--coloryellow);
 }
 
 .slider-title-card2 {
-  height: 56px;
   width: 360px;
   font-size: 22px;
   color: var(--colorpink);
 }
 
 .slider-title-card3 {
-  height: 56px;
   width: 360px;
   font-size: 22px;
   color: var(--colorred);
 }
 
 .slider-title-card4 {
-  height: 56px;
   width: 360px;
   font-size: 22px;
   color: var(--colorgreen);
 }
 
 .slider-title-card5 {
-  height: 56px;
   width: 360px;
   font-size: 22px;
   color: var(--color);
@@ -514,7 +515,7 @@ select {
   width: 187px;
   height: 58px;
   float: right !important;
-  margin: -1px;
+  margin: -2px;
   color: white;
   font-size: 22px;
   font-family: "Fjalla One", sans-serif;
@@ -691,7 +692,7 @@ select {
   bottom: 0;
   right: 0;
   margin-bottom: 100px;
-  margin-right: 500px;
+  margin-right: 503px;
 }
 
 /*.arrow-left:hover, .arrow-right:hover{ color: var(--maincolor-hover);}*/
@@ -864,6 +865,15 @@ a-size a {font-size: 22px !important; font-family: "Lato", sans-serif !important
 .copyright-text {
   color: white;
   text-align: center;
+}
+.zentrierung-bilder-footer{
+  text-align: center;
+}
+
+.raster-aussen-footer{
+  height: 150px;
+  width: 260px;
+
 }
 
 .copyright-box {
@@ -1257,7 +1267,7 @@ col-kurs-size .col-5 {height: 624px !important;}
   top: 20%;
   left: 30%;
 
-  background-color: white;
+  background-color: var(--maincolor);
   border-radius: 36px 36px 36px 36px;
   box-shadow: 0px 6px 3px rgba(0, 0, 0, 0.2);
   padding: auto;
@@ -1282,6 +1292,23 @@ col-kurs-size .col-5 {height: 624px !important;}
   cursor: pointer;
 }
 
+.close-ueber {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  position: relative;
+  padding-top: 15px;
+}
+
+.close-ueber:hover,
+.close-ueber:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 .btn_details {
   font-size: 15px;
   font-family: "Fjalla One", sans-serif;
@@ -1301,16 +1328,11 @@ col-kurs-size .col-5 {height: 624px !important;}
   color: white;
   background-color: var(--coloryellow-hover);
 }
-
-.pos {
-  display: flex;
-  position: absolute;
-  margin-left: 50%;
-  margin-right: 50%;
+.liste-detail-footer{
+  list-style: none;
 }
-
-.collapsible {
-  background-color: var(--maincolor);
+.collapsible-detail-footer{
+    background-color: var(--maincolor);
   color: white;
   cursor: pointer;
   padding: 18px;
@@ -1320,10 +1342,18 @@ col-kurs-size .col-5 {height: 624px !important;}
   outline: none;
   font-size: 15px;
 }
+.pos {
+  display: flex;
+  position: absolute;
+  margin-left: 50%;
+  margin-right: 50%;
+}
+
+
 
 .active,
-.collapsible:hover {
-  background-color: var(--maincolor-hover);
+.collapsible-detail-footer:hover {
+  background-color: var(--maincolor-hover) !important;
 }
 
 .content {
@@ -1474,14 +1504,16 @@ col-kurs-size .col-5 {height: 624px !important;}
 
 .überschrit-agb{
   color: var(--maincolor);
-  padding: 20px;
-  font-size: 33px;
+  font-size: 22px;
+  padding-bottom: 2px;
+
 }
 .text-agb{
   color:var(--secondcolor);
   padding-top:5px; 
   max-width:1200px;
   font-size: 17px;
+  margin-bottom: 40px;
 }
 .überschrit-agb-ethik{
   color: var(--maincolor);

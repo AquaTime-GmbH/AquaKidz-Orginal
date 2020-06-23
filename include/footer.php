@@ -7,8 +7,6 @@
 
     <div class="container">
     
-    
-
  
    
    <div class="row">
@@ -56,42 +54,67 @@
 
 </div>
 
-    <div class="col-md-6 footer-white">
+    <div class="col-sm-6 footer-white">
         <div class="row">
 
 
-        <div style="margin-right:150px;" class="col-md-2">
+        <div style="" class="col-sm zentrierung-bilder-footer">
 
             <ul class="ul-footer-links">
+
                 <li>
                     <div class="raster-aussen-footer">
-                        <img class="footer-picture-sizing" src="<?php echo $url_helper;?>images/footerpic.png" alt="Bild ladet nicht!">
+                        <img style="width:130px;" class="footer-picture-sizing" src="<?php echo $url_helper;?>images/footerpic.png" alt="Bild ladet nicht!">
                     </div>
-                   
-                
                 </li>
-                <li><img  class="footer-picture-sizing" src="<?php echo $url_helper;?>images/footerpic2.png" alt="Bild ladet nicht!"></li>
+
+                <li>
+                    <div class="raster-aussen-footer">
+                        <img  class="footer-picture-sizing" src="<?php echo $url_helper;?>images/footerpic2.png" alt="Bild ladet nicht!">
+                    </div>
+                </li>
+
             </ul>
 
         </div>   
 
-        <div style="margin-right:150px;" class="col-md-2">
+        <div style="" class="col-sm zentrierung-bilder-footer">
 
              <ul class="ul-footer-links">
-                <li><img  class="footer-picture-sizing"src="<?php echo $url_helper;?>images/footerpic3.png" alt="Bild ladet nicht!"></li>
-                <li><img class="footer-picture-sizing" src="<?php echo $url_helper;?>images/footerpic4.png" alt="Bild ladet nicht!"></li>
+
+                <li>
+                    <div class="raster-aussen-footer">
+                        <img style="width:220px !important;" class="footer-picture-sizing" src="<?php echo $url_helper;?>images/footerpic3.png" alt="Bild ladet nicht!">
+                    </div>
+                </li>
+
+                <li>
+                    <div class="raster-aussen-footer">
+                        <img style="width:200px !important;" class="footer-picture-sizing" src="<?php echo $url_helper;?>images/footerpic4.png" alt="Bild ladet nicht!">
+                    </div>
+                </li>
+
              </ul>     
              
-        </div>
+                     </div>  
 
 
-             <div class="col-md-2">
+
+             <div style="" class="col-sm zentrierung-bilder-footer">
 
                  <ul class="ul-footer-links">
-                    <li><img class="footer-picture-sizing" src="<?php echo $url_helper;?>images/footerpic5.png" alt="Bild ladet nicht!"></li>
-                    <li><img class="footer-picture-sizing" src="<?php echo $url_helper;?>images/footerpic6.png" alt="Bild ladet nicht!"></li>
+                    <li>
+                        <div class="raster-aussen-footer">
+                            <img style="width:240px !important;" class="footer-picture-sizing" src="<?php echo $url_helper;?>images/footerpic5.png" alt="Bild ladet nicht!">
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="raster-aussen-footer">
+                            <img style="width:200px !important;" class="footer-picture-sizing" src="<?php echo $url_helper;?>images/footerpic6.png" alt="Bild ladet nicht!">
+                        </div>
+                    </li>
                  </ul>
-               
                
             </div>
 
@@ -146,7 +169,7 @@
     <span class="close">&times;</span>
 </div>
         
-    <button type="button" class="collapsible">Geltungsbereich</button>
+    <button type="button" class="collapsible-detail-footer">Geltungsbereich</button>
     <div class="content">
         <p>
             Diese Datenschutzerklärung soll die Nutzer dieser Website gemäß europäschischer Datenschutzgrundverordnung (DSGVO) über die Art, den Umfang und den Zweck der Erhebung und Verwendung
@@ -156,10 +179,10 @@
         </p>
     </div>
 
-    <button type="button" class="collapsible">Zugriffsdaten</button>
+    <button type="button" class="collapsible-detail-footer">Zugriffsdaten</button>
     <div class="content">
         <p>Der Websitebetreiber bzw. Seitenprovider erhebt Daten über Zugriffe auf die Seite und speichert diese als „Server-Logfiles“ ab. Folgende Daten werden so protokolliert:
-            <ul>
+            <ul class="liste-detail-footer">
                 <li>Besuchte Website</li> 
                 <li>Uhrzeit zum Zeitpunkt des Zugriffes</li> 
                 <li>Menge der gesendeten Daten in Byte</li> 
@@ -171,7 +194,7 @@
         </p>
     </div>
 
-    <button type="button" class="collapsible">Cookies</button>
+    <button type="button" class="collapsible-detail-footer">Cookies</button>
     <div class="content">
         <p>
             Diese Website verwendet Cookies. Dabei handelt es sich um kleine Textdateien, welche auf Ihrem Endgerät gespeichert werden. Diese richten keinerlei Schaden an. 
@@ -181,7 +204,7 @@
         </p>
     </div>
 
-    <button type="button" class="collapsible">Umgang mit personenbezogenen Daten</button>
+    <button type="button" class="collapsible-detail-footer">Umgang mit personenbezogenen Daten</button>
     <div class="content">
 
         <p>
@@ -192,7 +215,7 @@
         </p>
     </div>
 
-    <button type="button" class="collapsible">Google Analytics</button>
+    <button type="button" class="collapsible-detail-footer">Google Analytics</button>
     <div class="content">
         <p>
             Diese Website nutzt den Dienst „Google Analytics“, welcher von der Google Inc. (1600 Amphitheatre Parkway Mountain View, CA 94043, USA) angeboten wird, 
@@ -208,7 +231,7 @@
         </p>
     </div>
 
-    <button type="button" class="collapsible">Newsletter-Abonnement</button>
+    <button type="button" class="collapsible-detail-footer">Newsletter-Abonnement</button>
     <div class="content">
         <p>
             Der Websitebetreiber bietet Ihnen einen Newsletter an, in welchem er Sie über aktuelle Geschehnisse und Angebote informiert. Möchten Sie den Newsletter abonnieren, 
@@ -217,7 +240,7 @@
         </p>
     </div>
 
-    <button type="button" class="collapsible">Rechte des Nutzers: Auskunft, Berichtigung und Löschung</button>
+    <button type="button" class="collapsible-detail-footer">Rechte des Nutzers: Auskunft, Berichtigung und Löschung</button>
     <div class="content">
         <p>
             Sie als Nutzer erhalten auf Antrag Ihrerseits kostenlose Auskunft darüber, welche personenbezogenen Daten über Sie gespeichert wurden. Sofern Ihr Wunsch nicht mit einer gesetzlichen Pflicht zur Aufbewahrung von 
@@ -318,7 +341,7 @@ window.onclick = function(event) {
 
 
 <script>
-var coll = document.getElementsByClassName("collapsible");
+var coll = document.getElementsByClassName("collapsible-detail-footer");
 var i;
 
 for (i = 0; i < coll.length; i++) {
