@@ -24,7 +24,7 @@ include  $url_helper .'include/database.php';
     <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Lato&display=swap" rel="stylesheet">
 
     <!-- Fontawesome -->
-    <link href="vendor/fontawesome-free-5.11.2-web/css/all.min.css" rel="stylesheet" type="text/css">
+   <link href="font/css/all.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style-news.css">
 
     <!-- Style für die News Blöcke -->
@@ -62,7 +62,7 @@ include $url_helper .'include/navbar.php';
 
 <hr style="padding-top: 100px">
 
-
+<h1>test</h1>
 <!-- Hauptinhalt des News-System -->
 <div class="container">
     <div class="row">

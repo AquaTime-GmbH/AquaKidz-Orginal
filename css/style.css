@@ -37,11 +37,15 @@ ul {
 /*------------------ Desktop version -------------------*/
 
 @media screen and (min-width: 1025px) and (max-width: 1920px) {
+  .aqua-hidden{
+    height: 88px;
+    width: 100%;
+  }
   .aqua-navbar {
     height: 88px;
     background-color: var(--maincolor);
     border-bottom: 4px solid white;
-    padding: 0 16% 0 17%;
+    
     position: fixed;
     top: 0;
     right: 0;
@@ -55,9 +59,9 @@ ul {
     margin-right: auto !important;
   }
 
-  index-row .row {
-    margin-top: 38px !important;
-  }
+  
+    
+  
 }
 
 /*----------------- tablet version -----------------------*/
@@ -123,7 +127,7 @@ ul {
 
 .hintergrundbild {
   background-image: url("../images/Banner2.png");
-  background-position: center;
+  background-position: 50% 35%;
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
@@ -192,14 +196,9 @@ ul {
 
 .first-card {
   background-color: rgba(255, 255, 255, 0.9);
-  border-radius: 35px;
   height: 480px;
   width: 414px;
-  margin-top: 15%;
-  margin-bottom: 30%;
   border-radius: 35px;
-  top: 30px;
-  bottom: 30px;
 }
 
 .first-card-text {
@@ -701,8 +700,8 @@ height: 440px;
 
 .dot-slider {
   cursor: pointer;
-  height: 32px;
-  width: 32px;
+  height: 11px;
+  width: 11px;
   margin: 0 2px;
   background-color: white;
   border-radius: 50%;
@@ -1361,7 +1360,6 @@ col-kurs-size .col-5 {
   font-weight: bold;
   margin-left: auto;
   margin-right: auto;
-  position: absolute;
   padding-top: 15px;
 }
 

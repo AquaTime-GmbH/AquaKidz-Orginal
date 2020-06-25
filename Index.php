@@ -75,18 +75,23 @@ include $url_helper .'include/navbar.php';
         </div>
     </div>
     <div class="container">
-        <div class="col-sm-5" style="height:624px;">
+        <div class="col-md-5">
 
-            <form action="search_function" method="post">
+            
                 <div class="card first-card">
                     <div class="card-body">
-                        <div class="font-color">
+                     
+
+
+
                             <h1 class="card-title card-title-style" style="font-size:32px">SCHWIMMEN LERNEN, SCHWIMMEN
                                 LIEBEN</h1>
-                            <p class="card-text first-card-text">Sichere und altersgerechte Kurse für Babys und Kinder.
+                            <p class="card-text first-card-text font-color">Sichere und altersgerechte Kurse für Babys und Kinder.
                                 Denn schwimmen lernen soll Spass machen.</p>
 
-                            <label class="col-4 col-form-label first-card-text">Plz</label>
+                            <label class="col-4 col-form-label first-card-text font-color">Plz</label>
+
+                        <form action="search_function" method="post">
                             <div class="col-12">
                                 <input pattern="^[0-9]{4}$" class="form-control labelshape" id="search_ort"
                                     name="search_ort" type="text" value="<?= $cookie_kursort; ?>">
@@ -94,7 +99,10 @@ include $url_helper .'include/navbar.php';
 
 
 
-                            <label class="col-8 col-form-label first-card-text">Wie alt ist ihr Kind ?</label>
+                            <label class="col-8 col-form-label first-card-text font-color">Wie alt ist ihr Kind ?</label>
+
+
+
 
                             <div class="col-12">
                                 <div class="dropdown-firstcard">
@@ -156,69 +164,23 @@ include $url_helper .'include/navbar.php';
                             ?>
                                 </div>
                             </div>
-                        </div>
-                        <input type="submit" href="" class="btn search-buttom" name="search_button" value="Suchen">
-                    </div>
+
+                               
+                           
+                        <input type="submit" class="btn search-buttom" name="search_button" value="Suchen">
+                    </div> 
                 </div>
+             </form>
         </div>
+       
 
 
-        </form>
-
-        <form action="cookie_set" method="post">
 
 
-            <!-- <div id="cookie_popup">
-        <div class="hinweis">
-        <p>Wir verwenden Cookies. Durch die weitere Nutzung der Webseite stimmen Sie der Verwendung von Cookies zu.</p>
-        </div> 
-
-        <span class="more">
-        <a href="datenschutz.php">Details</a>
-        </span> -->
+        <!-- Das sind alle 3 Cards(flexboxen) in der mitte der Webseite -->
+        <section style="margin-top: 200px !important;">
 
 
-            <!-- beim klicken von dem button bleibt manauf der seite und der pop up fenster verschwindet -->
-            <!--<button   class="btn btn_ok_cookie" type="submit" name="ok_cookie_button">Akzeptieren</button>   -->
-
-            <!-- beim klicken von diesem button kommt eine altert warnung die sagt ob man wirklich die cookies ablehnen will und wird dann auf die seite von session weiter geleitet -->
-            <!--<button  onclick='myfunction()' class="btn btn_alert_cookie" type="submit" name="alert_cookie">Verweigern</button> -->
-
-            <!--</div>-->
-
-
-            <?php
-   
-  //if (isset($_POST['alert_cookie'])){
-    //echo "<script language=\"JavaScript\">
-    //function myfunction(){
-        //var alert = confirm(\"Wenn Sie die Cookies ablehnen, kann dies Auswirkungen auf die Suchfunktion haben.\");
-    //}
-  //if(alert){
-    //window.location=\"index_session\";
-  //}else{
-
- // }
-      //  </script>";
-?>
-
-
-            <!--<button type="submit" class="close" data-dismiss="alert">&times;</button>
-</div> -->
-
-            <?php
-    
-//}else{
-
-//}    
-//if (isset($_POST['go_to_session'])){
-    
-    //echo " <script language=\"JavaScript\"> window.location=\"index_session\";</script>";
-//}
-?>
-        </form>
-        <index-row>
-            <!-- Das sind alle 3 Cards(flexboxen) in der mitte der Webseite -->
             <div class="row">
                 <div class="col-md-4">
 
@@ -246,7 +208,8 @@ include $url_helper .'include/navbar.php';
                         <div class="card-body">
                             <h2 class="card-title title-card2">UNSER PRINZIP FÜR ERFOLG</h2>
 
-                            <ul class="bullet-testing font-color">
+                            <ul style="list-style:none; padding-inline-start:15px !important;"
+                                class="bullet-testing font-color">
                                 <li>
                                     <a>Schwimmen lernen ohne Druck und Zwang</a>
                                 </li>
@@ -279,7 +242,7 @@ include $url_helper .'include/navbar.php';
                     </div>
                 </div>
             </div>
-        </index-row>
+        </section>
         <!-- text über den 4 cards -->
 
         <h2 class="kurse-text">KURSE FÜR JEDES ALTER</h2>
@@ -650,7 +613,7 @@ include $url_helper .'include/navbar.php';
                 showDivs(slideIndex += n);
             }
 
-            function currentSlide(n){
+            function currentSlide(n) {
                 showDivs(slideIndex = n);
             }
 

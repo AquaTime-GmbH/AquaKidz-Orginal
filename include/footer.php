@@ -48,13 +48,13 @@
 
                         <ul class="ul-footer-links">
                             <li class="footer-right-abstand" style="margin-top:10px;"><a class="footer-text"
-                                    href="<?php echo $url_helper;?>">Von Eltern für Kinder</a></li>
+                                    href="<?php echo $url_helper;?>Ueber_uns#sectionvonefk">Von Eltern für Kinder</a></li>
                             <li class="footer-right-abstand"><a class="footer-text"
-                                    href="<?php echo $url_helper;?>">Motivation</a></li>
+                                    href="<?php echo $url_helper;?>Ueber_uns#sectionmotivation">Motivation</a></li>
                             <li class="footer-right-abstand"><a class="footer-text"
-                                    href="<?php echo $url_helper;?>qualli_standarts">Unsere Qualitätsstandards</a></li>
+                                    href="<?php echo $url_helper;?>Ueber_uns#sectionqualli">Unsere Qualitätsstandards</a></li>
                             <li class="footer-right-abstand"><a class="footer-text"
-                                    href="<?php echo $url_helper;?>">Unser Team</a></li>
+                                    href="<?php echo $url_helper;?>Ueber_uns#sectionteam">Unser Team</a></li>
                             <li class="footer-right-abstand"><a class="footer-text"
                                     href="<?php echo $url_helper;?>AquaNews">News</a></li>
                             <li class="footer-right-abstand"><a class="footer-text"
@@ -189,12 +189,13 @@
     <div id="myModal" class="modal">
 
         <!-- Modal content -->
-        <div class="modal-content">
+        <div class="modal-content"><!-- Das Kreuz zum schliessen -->
+                <span class="close">&times;</span>
+                
             <div class="border-boxd">
 
 
-                <!-- Das Kreuz zum schliessen -->
-                <span class="close">&times;</span>
+                
             </div>
 
             <button type="button" class="collapsible-detail-footer">Geltungsbereich</button>

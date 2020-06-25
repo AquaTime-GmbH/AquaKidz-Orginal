@@ -13,6 +13,18 @@ $db_password = "tpVjHF1R";
 //DATENBANK
 $db_database = "usr_web156_22";
 
+//////////////////////
+//NEWS
+/////////////////////
+// AquaTime - NEWS
+$con_news_aquatime_anzeigen = new mysqli($db_host, $db_user, $db_password, $db_database);
+
+/// News Einzel Anzeigen /// //Benutzt
+$con_news_voll_aquatime_anzeigen = new mysqli($db_host, $db_user, $db_password, $db_database);
+/// News Einzel Anzeigen + 1 Ansicht /// //Benutzt
+$con_news_ansichten_aquatime_anzeigen = new mysqli($db_host, $db_user, $db_password, $db_database);
+/// News Empfehlung + 1  /// //Benutzt
+$con_news_Empfehlung_aquatime_emp1 = new mysqli($db_host, $db_user, $db_password, $db_database);
 
 ///////////
 //VERSION 1

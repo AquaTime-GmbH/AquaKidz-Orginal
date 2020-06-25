@@ -60,7 +60,7 @@ include $url_helper .'include/navbar.php';
 
          <div class="row">
              <div class="col-md-6" style="margin-top:auto !important; margin-bottom:auto !important;">
-                 <h2 style="color:var(--maincolor);">VON ELTERN FÜR KINDER</h2>
+                 <h2 style="color:var(--maincolor);" id="sectionvonefk">VON ELTERN FÜR KINDER</h2>
                  <p class="text-über-eltern">Sicher schwimmen lernen war wichtig für uns als Eltern. Doch das Angebot
                      das es gab wurde entweder meinen Kindern oder meinen Anforderungen nicht gerecht. Da es nichts gab,
                      das der Qualität, Sicherheit und Flexibilität die man braucht im heutigen Lebensalltag entsprach,
@@ -93,7 +93,7 @@ include $url_helper .'include/navbar.php';
 
      <div class="über-uns-box">
          <div class="container">
-             <p class="motivation-über-title">UNSERE MOTIVATION</p>
+             <p id="sectionmotivation" class="motivation-über-title">UNSERE MOTIVATION</p>
 
 
 
@@ -214,7 +214,7 @@ include $url_helper .'include/navbar.php';
 
      <div class="container">
 
-         <h2 class="überschrift-vier">UNSERE PARTNER FÜR MEHR SICHERHEIT</h2>
+         <h2 class="überschrift-vier" id="sectionqualli">UNSERE PARTNER FÜR MEHR SICHERHEIT</h2>
 
          <div class="row">
              <div class="col-md-3">
@@ -309,11 +309,11 @@ while($row = mysqli_fetch_array($result))
 
 
 
-     <div class="über-uns-box2">
+     <div  class="über-uns-box2">
 
          <div class="container">
 
-             <p class="überschirft-team-über">UNSER TEAM</p>
+             <p id="sectionteam" class="überschirft-team-über">UNSER TEAM</p>
 
              <div class="row">
                  <div class="col-md-3">
