@@ -28,8 +28,7 @@ include  $url_helper .'include/database.php';
     <link href="fonts/css/all.min.css" rel="stylesheet" type="text/css">
 
     <!-- Required meta tags -->
-    <!--einbindung der cookie.js datei-->
-    <script type="text/javascript" src="cookie.js"></script>
+
 
 
 
@@ -75,104 +74,109 @@ include $url_helper .'include/navbar.php';
         </div>
     </div>
     <div class="container">
+
+
+
+
+        
+
         <div class="col-md-5">
-
-            
-                <div class="card first-card">
-                    <div class="card-body">
-                     
-
-
-
-                            <h1 class="card-title card-title-style" style="font-size:32px">SCHWIMMEN LERNEN, SCHWIMMEN
-                                LIEBEN</h1>
-                            <p class="card-text first-card-text font-color">Sichere und altersgerechte Kurse für Babys und Kinder.
-                                Denn schwimmen lernen soll Spass machen.</p>
-
-                            <label class="col-4 col-form-label first-card-text font-color">Plz</label>
-
-                        <form action="search_function" method="post">
-                            <div class="col-12">
-                                <input pattern="^[0-9]{4}$" class="form-control labelshape" id="search_ort"
-                                    name="search_ort" type="text" value="<?= $cookie_kursort; ?>">
-                            </div>
-
-
-
-                            <label class="col-8 col-form-label first-card-text font-color">Wie alt ist ihr Kind ?</label>
+            <div class="card first-card">
+                <div class="card-body">
 
 
 
 
-                            <div class="col-12">
-                                <div class="dropdown-firstcard">
-                                    <?php
+                    <h1 class="card-title card-title-style" style="font-size:32px">SCHWIMMEN LERNEN, SCHWIMMEN
+                        LIEBEN</h1>
+                    <p class="card-text first-card-text font-color">Sichere und altersgerechte Kurse für Babys und
+                        Kinder.
+                        Denn schwimmen lernen soll Spass machen.</p>
+
+                    <label class="col-4 col-form-label first-card-text font-color">Plz</label>
+
+                    <form action="search_function" method="post">
+                        <div class="col-12">
+                            <input pattern="^[0-9]{4}$" class="form-control labelshape" id="search_ort"
+                                name="search_ort" type="text" value="<?= $cookie_kursort; ?>">
+                        </div>
+
+
+
+                        <label class="col-8 col-form-label first-card-text font-color">Wie alt ist ihr Kind ?</label>
+
+
+
+
+                        <div class="col-12">
+                            <div class="dropdown-firstcard">
+                                <?php
                             if($cookie_kursalter == "1"){
                                 ?>
-                                    <Select class="form-control labelshape" id="search_alt" name="search_alt"
-                                        type="text" value="<?= $cookie_kursalter; ?>">
-                                        <option disabled selected value style="color:white;"></option>
-                                        <option value="1" selected>CA. 10 WOCHEN - 24 MONATE</option>
-                                        <option value="2">CA. 2 BIS 3 JAHRE</option>
-                                        <option value="4">CA. 3,5 BIS 7,5 JAHRE</option>
-                                        <option value="7">AB CA. 7 JAHRE</option>
-                                    </select><?php
+                                <Select class="form-control labelshape" id="search_alt" name="search_alt" type="text"
+                                    value="<?= $cookie_kursalter; ?>">
+                                    <option disabled selected value style="color:white;"></option>
+                                    <option value="1" selected>CA. 10 WOCHEN - 24 MONATE</option>
+                                    <option value="2">CA. 2 BIS 3 JAHRE</option>
+                                    <option value="4">CA. 3,5 BIS 7,5 JAHRE</option>
+                                    <option value="7">AB CA. 7 JAHRE</option>
+                                </select><?php
                             } elseif($cookie_kursalter == "2"){
                                 ?>
-                                    <Select class="form-control labelshape" id="search_alt" name="search_alt"
-                                        type="text" value="<?= $cookie_kursalter; ?>">
-                                        <option disabled selected value style="color:white;"></option>
-                                        <option value="1">CA. 10 WOCHEN - 24 MONATE</option>
-                                        <option value="2" selected>CA. 2 BIS 3 JAHRE</option>
-                                        <option value="4">CA. 3,5 BIS 7,5 JAHRE</option>
-                                        <option value="7">AB CA. 7 JAHRE</option>
-                                    </select><?php
+                                <Select class="form-control labelshape" id="search_alt" name="search_alt" type="text"
+                                    value="<?= $cookie_kursalter; ?>">
+                                    <option disabled selected value style="color:white;"></option>
+                                    <option value="1">CA. 10 WOCHEN - 24 MONATE</option>
+                                    <option value="2" selected>CA. 2 BIS 3 JAHRE</option>
+                                    <option value="4">CA. 3,5 BIS 7,5 JAHRE</option>
+                                    <option value="7">AB CA. 7 JAHRE</option>
+                                </select><?php
                             } elseif($cookie_kursalter == "4"){
                                 ?>
-                                    <Select class="form-control labelshape" id="search_alt" name="search_alt"
-                                        type="text" value="<?= $cookie_kursalter; ?>">
-                                        <option disabled selected value style="color:white;"></option>
-                                        <option value="1">CA. 10 WOCHEN - 24 MONATE</option>
-                                        <option value="2">CA. 2 BIS 3 JAHRE</option>
-                                        <option value="4" selected>CA. 3,5 BIS 7,5 JAHRE</option>
-                                        <option value="7">AB CA. 7 JAHRE</option>
-                                    </select><?php
+                                <Select class="form-control labelshape" id="search_alt" name="search_alt" type="text"
+                                    value="<?= $cookie_kursalter; ?>">
+                                    <option disabled selected value style="color:white;"></option>
+                                    <option value="1">CA. 10 WOCHEN - 24 MONATE</option>
+                                    <option value="2">CA. 2 BIS 3 JAHRE</option>
+                                    <option value="4" selected>CA. 3,5 BIS 7,5 JAHRE</option>
+                                    <option value="7">AB CA. 7 JAHRE</option>
+                                </select><?php
                             } elseif($cookie_kursalter == "7"){
                                 ?>
-                                    <Select class="form-control labelshape" id="search_alt" name="search_alt"
-                                        type="text" value="<?= $cookie_kursalter; ?>">
-                                        <option disabled selected value style="color:white;"></option>
-                                        <option value="1">CA. 10 WOCHEN - 24 MONATE</option>
-                                        <option value="2">CA. 2 BIS 3 JAHRE</option>
-                                        <option value="4">CA. 3,5 BIS 7,5 JAHRE</option>
-                                        <option value="7" selected>AB CA. 7 JAHRE</option>
-                                    </select><?php
+                                <Select class="form-control labelshape" id="search_alt" name="search_alt" type="text"
+                                    value="<?= $cookie_kursalter; ?>">
+                                    <option disabled selected value style="color:white;"></option>
+                                    <option value="1">CA. 10 WOCHEN - 24 MONATE</option>
+                                    <option value="2">CA. 2 BIS 3 JAHRE</option>
+                                    <option value="4">CA. 3,5 BIS 7,5 JAHRE</option>
+                                    <option value="7" selected>AB CA. 7 JAHRE</option>
+                                </select><?php
                             } else{
                                 ?>
-                                    <Select class="form-control labelshape" id="search_alt" name="search_alt"
-                                        type="text" value="">
-                                        <option disabled selected value style="color:white;"></option>
-                                        <option value="1">CA. 10 WOCHEN - 24 MONATE</option>
-                                        <option value="2">CA. 2 BIS 3 JAHRE</option>
-                                        <option value="4">CA. 3,5 BIS 7,5 JAHRE</option>
-                                        <option value="7">AB CA. 7 JAHRE</option>
-                                    </select><?php
+                                <Select class="form-control labelshape" id="search_alt" name="search_alt" type="text"
+                                    value="">
+                                    <option disabled selected value style="color:white;"></option>
+                                    <option value="1">CA. 10 WOCHEN - 24 MONATE</option>
+                                    <option value="2">CA. 2 BIS 3 JAHRE</option>
+                                    <option value="4">CA. 3,5 BIS 7,5 JAHRE</option>
+                                    <option value="7">AB CA. 7 JAHRE</option>
+                                </select><?php
 
                       
                             }
                           
                             ?>
-                                </div>
                             </div>
+                        </div>
 
-                               
-                           
+
+
                         <input type="submit" class="btn search-buttom" name="search_button" value="Suchen">
-                    </div> 
                 </div>
-             </form>
+            </div>
+            </form>
         </div>
-       
+
 
 
 
@@ -182,7 +186,9 @@ include $url_helper .'include/navbar.php';
 
 
             <div class="row">
-                <div class="col-md-4">
+            
+            
+                <div class="col-xl-4 col-lg-6 col-md-12 col-sm-12">
 
                     <div class="card card-sizing">
                         <img class="imgcard imgshape card-img-top img-border1" src="images/Block1.png"
@@ -201,7 +207,7 @@ include $url_helper .'include/navbar.php';
                     </div>
                 </div>
 
-                <div class="col-md-4">
+                <div class="col-xl-4 col-lg-6 col-md-12 col-sm-12">
                     <div class="card card-sizing">
                         <img class="imgcard imgshape card-img-top img-border2" src="images/Block2.png"
                             alt="Bild ladet nicht!">
@@ -227,7 +233,7 @@ include $url_helper .'include/navbar.php';
                     </div>
                 </div>
 
-                <div class="col-md-4">
+                <div class="col-xl-4 col-lg-6 col-md-12 col-sm-12">
                     <div class="card card-sizing">
                         <img class="imgcard imgshape card-img-top img-border3" src="images/Block3.png"
                             alt="Bild ladet nicht!">
@@ -241,7 +247,8 @@ include $url_helper .'include/navbar.php';
                         </div>
                     </div>
                 </div>
-            </div>
+                </div>
+            
         </section>
         <!-- text über den 4 cards -->
 
@@ -340,11 +347,11 @@ include $url_helper .'include/navbar.php';
 
 
                 <div class="dot-container-slider">
-                    <span class="dot" onclick="currentSlide(1)"></span>
-                    <span class="dot" onclick="currentSlide(2)"></span>
-                    <span class="dot" onclick="currentSlide(3)"></span>
-                    <span class="dot" onclick="currentSlide(4)"></span>
-                    <span class="dot" onclick="currentSlide(5)"></span>
+                    <span class="dot" onclick="slidenow(1)"></span>
+                    <span class="dot" onclick="slidenow(2)"></span>
+                    <span class="dot" onclick="slidenow(3)"></span>
+                    <span class="dot" onclick="slidenow(4)"></span>
+                    <span class="dot" onclick="slidenow(5)"></span>
                 </div>
 
 
@@ -361,7 +368,7 @@ include $url_helper .'include/navbar.php';
                         showSlides(slideIndex += n);
                     }
 
-                    function currentSlide(n) {
+                    function slidenow(n) {
                         clearTimeout(timer);
                         showSlides(slideIndex = n);
                     }
@@ -369,7 +376,7 @@ include $url_helper .'include/navbar.php';
                     function showSlides(n) {
                         var i;
                         var slides = document.getElementsByClassName("slides");
-                        var dots = document.getElementsByClassName("dot");
+                        var dotsslider = document.getElementsByClassName("dot");
 
                         if (n == undefined) {
                             n = ++slideIndex
@@ -383,11 +390,11 @@ include $url_helper .'include/navbar.php';
                         for (i = 0; i < slides.length; i++) {
                             slides[i].style.display = "none";
                         }
-                        for (i = 0; i < dots.length; i++) {
-                            dots[i].className = dots[i].className.replace(" active", "");
+                        for (i = 0; i < dotsslider.length; i++) {
+                            dotsslider[i].className = dotsslider[i].className.replace(" active", "");
                         }
                         slides[slideIndex - 1].style.display = "block";
-                        dots[slideIndex - 1].className += " active";
+                        dotsslider[slideIndex - 1].className += " active";
                         /* timer auf 20 sekunden gesetzt */
                         timer = setTimeout(showSlides, 20000);
                     }
@@ -642,9 +649,9 @@ include $url_helper .'include/navbar.php';
         <div class="hintergrundbild-card5"></div>
         <div class="container">
             <div class="row">
-                <div class="col-sm-7"></div>
-                <div class="col-sm-5">
-
+                
+                <div class="col-md-5 offset-md-7">
+             
                     <div class="card card5-size">
                         <div class="card-body">
                             <div class="font-color">

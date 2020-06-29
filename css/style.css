@@ -1,4 +1,6 @@
+@import "bootstrap";
 /*Standart werte*/
+
 :root {
   --maincolor: #416cb2;
   --secondcolor: #749cd2;
@@ -15,6 +17,7 @@
   --colorpink-hover: #963e6b;
   --colorred-hover: #aa3e2d;
   --coloryellow-hover: rgb(206, 179, 49);
+  
 }
 
 h1 {
@@ -67,26 +70,17 @@ ul {
 /*----------------- tablet version -----------------------*/
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
-  .aqua-navbar {
-    background-color: var(--maincolor);
-    border-bottom: 4px solid white;
-  }
 
-  .logo {
-    margin-left: 73px;
-  }
 
-  .container {
-    max-width: 874px !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-  }
 
-  .first-card {
+
+  
+
+  /*.first-card {
     width: 414px !important;
     height: 507px !important;
     margin-top: 0 !important;
-  }
+  }*/
 
   .search-buttom {
     margin-top: 30px !important;
@@ -95,12 +89,49 @@ ul {
   index-row .row {
     margin-top: 102px !important;
   }
+
+
+
 }
 
-@media (max-width: 375px) and (max-height: 667px) {}
+/*----------------- Tablet Protrait -----------------------*/
+@media (min-width: 1024px) and (max-height: 768px) {
+
+
+
+
+}
+
+/*-----------------  Smartphone -----------------------*/
+@media (max-width: 667px) and (max-height: 375px) {
+
+
+
+
+}
 
 /* ------navbar -----*/
 
+.drop-down-icon{
+  position: absolute;
+}
+
+  .aqua-hidden {
+    height: 88px;
+    width: 100%;
+  }
+
+  .aqua-navbar {
+    height: 88px;
+    background-color: var(--maincolor);
+    border-bottom: 4px solid white;
+
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+  }
 .navbar-pos {
   position: absolute;
   bottom: 0;
@@ -197,7 +228,7 @@ ul {
 .first-card {
   background-color: rgba(255, 255, 255, 0.9);
   height: 480px;
-  width: 414px;
+  width: 414px !important;
   border-radius: 35px;
 }
 
@@ -215,9 +246,8 @@ ul {
 .search-buttom {
   height: 73px;
   position: absolute;
-  right: 0;
+  right: 1px;
   bottom: 0;
-  left: 0;
   margin: -1px;
   border-radius: 0px 0px 35px 35px;
   font-size: 32px;
@@ -431,9 +461,9 @@ select {
 /* Slideshow container */
 
 .slideshow-container {
-  width: 100%;
-height: 440px;
-  background: linear-gradient(90deg, var(--secondcolor), var(--maincolor));
+    width: 100%;
+    height: 440px;
+    background: linear-gradient(90deg, var(--secondcolor), var(--maincolor));
 }
 
 .text-slider-container {
@@ -977,6 +1007,19 @@ col-kurs-size .col-5 {
 /*<------------------------------------------------------------------------>*/
 /*<--------------------------------AQUABABY-------------------------------->*/
 /*<------------------------------------------------------------------------>*/
+.first-card-aqua{
+    background-color: rgba(255, 255, 255, 0.9);
+    height: 480px;
+    width: 414px !important;
+    border-radius: 35px;
+}
+
+.aquababy-box-überschrift{
+  background-color:var(--maincolor);
+  border-top: 20px solid var(--maincolor);
+  border-radius:35px 35px 0 0;
+  padding-bottom:10px;
+}
 
 .Card-find-aqua {
   border-radius: 35px;
@@ -985,6 +1028,8 @@ col-kurs-size .col-5 {
   background-color: white;
   margin-bottom: 100px;
   box-shadow: 0px 6px 3px rgba(0, 0, 0, 0.2);
+  margin-top: 200px;
+  overflow: hidden;
 }
 
 .block-card-aqua {
@@ -993,11 +1038,39 @@ col-kurs-size .col-5 {
   background-color: var(--maincolor);
 }
 
+.position-style-error-aqua{
+  font-size: 18px;
+  color:white;
+  margin-left:10px;
+  padding-top: 41px;
+}
+
+.counter-style-aqua{
+  font-size: 18px;
+  position: absolute;
+  color:white !important;
+  margin-top: 50px;
+  margin-left: 41px;
+}
+
 .text-card-aqua {
   font-size: 21px;
   line-height: 25px;
 }
-
+.aquababy-blauebox{
+    width: 100%;
+    height: 440px;
+    background: linear-gradient(90deg, var(--secondcolor), var(--maincolor));
+}
+.blauebox-ueberschrif{
+  text-align: center;
+  color: white;
+  font-size: 32px;
+}
+.blauebox-unterschrift{
+  color: white;
+  font-size: 18px;
+}
 .card-aqua-sizing {
   margin-top: 20px;
   border: 3px solid var(--maincolor);
@@ -1068,13 +1141,10 @@ col-kurs-size .col-5 {
   width: 100%;
   height: 58px;
   background-color: var(--maincolor);
-  margin-right: 220px;
   padding: 5px;
   border-radius: 0px 0px 35px 35px;
   bottom: 0;
   color: white;
-  text-align: center;
-  margin-top: 45px;
 }
 
 .btn_mehr_laden:hover {
@@ -1132,7 +1202,7 @@ col-kurs-size .col-5 {
 .btn_kurs_aqua {
   font-size: 22px;
   font-family: "Fjalla One", sans-serif;
-  width: 187px;
+
   height: 58px;
   background-color: var(--maincolor);
   margin-bottom: -1px;
@@ -1285,8 +1355,6 @@ col-kurs-size .col-5 {
   margin-left: auto;
   padding: 5px;
   border-radius: 35px;
-  bottom: 0;
-  right: 0;
   color: white;
 }
 
@@ -1304,8 +1372,7 @@ col-kurs-size .col-5 {
   margin-left: auto;
   padding: 5px;
   border-radius: 35px;
-  bottom: 0;
-  right: 0;
+
   color: white;
   overflow: hidden;
 }
@@ -1395,11 +1462,9 @@ col-kurs-size .col-5 {
   background-color: var(--coloryellow);
   padding: 5px;
   border-radius: 35px;
-  bottom: 0;
-  right: 0;
   color: white;
   overflow: hidden;
-  float: revert;
+  margin-right: 30px;
 }
 
 .btn_details:hover {
@@ -1423,12 +1488,6 @@ col-kurs-size .col-5 {
   font-size: 15px;
 }
 
-.pos {
-  display: flex;
-  position: absolute;
-  margin-left: 50%;
-  margin-right: 50%;
-}
 
 
 
@@ -1452,10 +1511,7 @@ col-kurs-size .col-5 {
 }
 
 .text-pos-popup {
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
+text-align: center;
 }
 
 .container-test {

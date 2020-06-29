@@ -42,7 +42,7 @@
 
             <li class="nav-item ">
               <a class="nav-link <?= $aktivueberuns;  ?>" href="<?php echo $url_helper;?>Ueber_uns"
-                style="background-color:white; color:#416cb2; font-family: 'Fjalla One', sans-serif;">ÜBER UNS</a>
+                style="background-color:white; color:#416cb2; font-family: 'Fjalla One', sans-serif;">ÜBER UNS</i></a>
             </li>
 
 
@@ -54,7 +54,7 @@
           </ul>
         </div>
       </div>
-      <div class="login-pos">
+      <div class="login-pos nav-item">
         <a class="btn" href="<?php echo $url_helper;?>Index" target="_blank"
           style="color:white; font-family: 'Fjalla One', sans-serif;">LOGIN</a>
       </div>
