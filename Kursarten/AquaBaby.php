@@ -319,7 +319,7 @@ else{
      </div>
 
 
- <?php
+     <?php
     $result = mysqli_query($con_mysqli,"SELECT internetseite_ FROM marken where marken_name=''  ");
  
  ?>
@@ -340,10 +340,10 @@ else{
                      </ul>
                  </div>
 
-                <div class="col-sm-6">
-                 <h1 class="blauebox-ueberschrif">WICHTIGSTE INFOS:</h1>
+                 <div class="col-sm-6">
+                     <h1 class="blauebox-ueberschrif">WICHTIGSTE INFOS:</h1>
 
-                 
+
                      <ul class="blauebox-unterschrift">
                          <li>
                          </li>

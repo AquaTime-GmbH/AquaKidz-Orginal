@@ -73,8 +73,29 @@ ul {
 
 
 
+.text-index-size {
+  width: 700px !important;
+  color: white !important;
+  text-align: center !important;
+  overflow: hidden !important;
+  font-size: 28px !important;
+  font-family: "Fjalla One",
+  sans-serif !important;
+  float: right !important;
+}
 
-  
+.kreis-slider {
+  height: 200px !important;
+  width: 200px !important;
+  border-radius: 50% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  overflow: hidden !important;
+  left: 0 !important;
+}
 
   /*.first-card {
     width: 414px !important;
@@ -82,13 +103,9 @@ ul {
     margin-top: 0 !important;
   }*/
 
-  .search-buttom {
-    margin-top: 30px !important;
-  }
 
-  index-row .row {
-    margin-top: 102px !important;
-  }
+
+
 
 
 
@@ -112,9 +129,6 @@ ul {
 
 /* ------navbar -----*/
 
-.drop-down-icon{
-  position: absolute;
-}
 
   .aqua-hidden {
     height: 88px;
@@ -137,10 +151,15 @@ ul {
   bottom: 0;
   right: 0;
 }
+.navbar-toggler{
+  position: absolute !important;
+  right: 0 !important;
+}
 
 .login-pos {
-  float: right;
+  position: absolute;
   margin-top: -37.5px;
+  right: 0;
 }
 
 .aktiv {
@@ -230,6 +249,7 @@ ul {
   height: 480px;
   width: 414px !important;
   border-radius: 35px;
+  margin-top: 68px;
 }
 
 .first-card-text {
@@ -274,7 +294,7 @@ select {
 
 /* Caption text */
 
-.text {
+.text-index-size {
   color: white;
   text-align: center;
   overflow: hidden;
@@ -770,9 +790,7 @@ select {
   border-radius: 35px;
   height: 652px;
   width: 635px;
-  margin-top: 144px;
-  margin-bottom: 144px;
-  border-radius: 35px;
+
 }
 
 .btn-card5 {
@@ -829,16 +847,13 @@ select {
 /* 2 cards  */
 .card-1-sizing {
   border-top: 40px solid #ebd73f;
-  width: 637px;
   border-radius: 35px;
   height: 254px;
   box-shadow: 0px 6px 3px rgba(0, 0, 0, 0.2);
-  float: right;
 }
 
 .card-2-sizing {
   border-top: 40px solid var(--colorgreen);
-  width: 637px;
   border-radius: 35px;
   height: 254px;
   box-shadow: 0px 6px 3px rgba(0, 0, 0, 0.2);
@@ -859,6 +874,7 @@ select {
   right: 0;
   color: white;
   padding-top: 11px;
+  margin-bottom: -1px;
 }
 
 .btn_auf {
@@ -1412,7 +1428,6 @@ col-kurs-size .col-5 {
   position: absolute;
   top: 20%;
   left: 30%;
-
   background-color: var(--maincolor);
   border-radius: 36px 36px 36px 36px;
   box-shadow: 0px 6px 3px rgba(0, 0, 0, 0.2);
@@ -1422,11 +1437,10 @@ col-kurs-size .col-5 {
 /* The Close Button */
 .close {
   color: #aaaaaa;
-  float: right;
   font-size: 28px;
   font-weight: bold;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 50%;
+  margin-right: 50%;
   padding-top: 15px;
 }
 
@@ -1464,7 +1478,7 @@ col-kurs-size .col-5 {
   border-radius: 35px;
   color: white;
   overflow: hidden;
-  margin-right: 30px;
+  margin-right: 4px;
 }
 
 .btn_details:hover {
@@ -1479,7 +1493,6 @@ col-kurs-size .col-5 {
 .collapsible-detail-footer {
   background-color: var(--maincolor);
   color: white;
-  cursor: pointer;
   padding: 18px;
   width: 100%;
   border: none;
@@ -1489,7 +1502,10 @@ col-kurs-size .col-5 {
 }
 
 
+.ueber-uns-buttons{
+  text-align: center !important;
 
+}
 
 .active,
 .collapsible-detail-footer:hover {
@@ -1499,7 +1515,6 @@ col-kurs-size .col-5 {
 .content {
   padding: 0 18px;
   display: none;
-  overflow: hidden;
   background-color: #f1f1f1;
 }
 
@@ -1742,6 +1757,10 @@ text-align: center;
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
+}
+.hintergrundbild_ueberuns_hidden{
+    width: 100%;
+    height: 624px;
 }
 
 .text-über-eltern {

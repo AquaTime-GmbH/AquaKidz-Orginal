@@ -280,29 +280,27 @@ $ueber_den_Kurs= "ÜBER DEN KURS" ;
 
 <div class="big-box-map">
     <div class="container">
-  <h1>Calculate the Distance Between two Addresses demo</h1>
+  <h1></h1>
 </div>
 
 <div class="col-md-6">
 <form id="distance_form">
-<div class="form-group"><label>Origin: </label> <input class="form-control" id="from_places" placeholder="Enter a location" /> <input id="origin" name="origin" required="" type="hidden" /></div>
+<div class="form-group"><label>ihre postleitzahl: </label> <input class="form-control" id="from_places" placeholder="<?= $eigplz ?>" /> <input id="origin" name="origin" required="" type="hidden" /></div>
 
-<div class="form-group"><label>Destination: </label> <input class="form-control" id="to_places" placeholder="Enter a location" /> <input id="destination" name="destination" required="" type="hidden" /></div>
+<div class="form-group"><label>postleitzahl vom bad: </label> <input class="form-control" id="to_places" placeholder="<?= $suchendeplz?>" /> <input id="destination" name="destination" required="" type="hidden" /></div>
 <input class="btn btn-primary" type="submit" value="Calculate" /></form>
 
 <div id="result">
 <ul class="list-group">
-	<li class="list-group-item d-flex justify-content-between align-items-center">Distance In Mile :</li>
-	<li class="list-group-item d-flex justify-content-between align-items-center">Distance is Kilo:</li>
-	<li class="list-group-item d-flex justify-content-between align-items-center">IN TEXT:</li>
-	<li class="list-group-item d-flex justify-content-between align-items-center">IN MINUTES:</li>
-	<li class="list-group-item d-flex justify-content-between align-items-center">FROM:</li>
-	<li class="list-group-item d-flex justify-content-between align-items-center">TO:</li>
+	<li class="list-group-item d-flex justify-content-between align-items-center">Distanz in Kilometer:</li>
+	<li class="list-group-item d-flex justify-content-between align-items-center">Von:</li>
+	<li class="list-group-item d-flex justify-content-between align-items-center">Bis:</li>
 </ul>
 </div>
 </div>
 </div>
 </div>
+
 <script>
     $(function() {
         // add input listeners

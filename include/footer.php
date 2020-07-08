@@ -180,11 +180,11 @@
         <div class="container">
             <div class="row" style="justify-content:center;">
             
-                <button class="btn btn_details" id="myBtn">Details</button>
+                
 
-
+            <button class="btn btn_details" id="myBtn">Details</button>
                 <form method="post">
-
+                
                     <!-- beim klicken von dem button bleibt manauf der seite und der pop up fenster verschwindet -->
                     <button
                         onClick="var d = new Date(); d = new Date(d.getTime() +1000*60*60*24*730); document.cookie = 'Akzeptiert=1; expires='+ d.toGMTString() + ';'; document.getElementById('cookie_popup').style.display = 'none';"
@@ -211,11 +211,11 @@
     <!-- Modal content -->
     <div class="modal-content">
         <!-- Das Kreuz zum schliessen -->
-        <span class="close">&times;</span>
+        
 
         <div class="border-boxd">
 
-
+<span class="close">&times;</span>
 
         </div>
 

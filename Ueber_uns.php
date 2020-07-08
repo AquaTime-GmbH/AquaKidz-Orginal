@@ -56,7 +56,7 @@ include $url_helper .'include/navbar.php';
 
                  <p class="jana-gesch">Jana Mantz - Geschäftsführerin </p>
              </div>
-         </div>
+         </div >
 
 
 
@@ -65,9 +65,9 @@ include $url_helper .'include/navbar.php';
 
 
 
-         <div class="row">
+         <div class="row" id="sectionvonefk">
              <div class="col-md-6" style="margin-top:auto !important; margin-bottom:auto !important;">
-                 <h2 style="color:var(--maincolor);" id="sectionvonefk">VON ELTERN FÜR KINDER</h2>
+                 <h2 style="color:var(--maincolor);" >VON ELTERN FÜR KINDER</h2>
                  <p class="text-über-eltern">Sicher schwimmen lernen war wichtig für uns als Eltern. Doch das Angebot
                      das es gab wurde entweder meinen Kindern oder meinen Anforderungen nicht gerecht. Da es nichts gab,
                      das der Qualität, Sicherheit und Flexibilität die man braucht im heutigen Lebensalltag entsprach,
@@ -96,11 +96,12 @@ include $url_helper .'include/navbar.php';
 
 
          <!--end of container-->
-     </div>
+     </div >
 
-     <div class="über-uns-box">
+
+     <div class="über-uns-box" id="sectionmotivation">
          <div class="container">
-             <p id="sectionmotivation" class="motivation-über-title">UNSERE MOTIVATION</p>
+             <p  class="motivation-über-title">UNSERE MOTIVATION</p>
 
 
 
@@ -116,7 +117,7 @@ include $url_helper .'include/navbar.php';
 
 
              <div class="row">
-                 <div class="col-sm-6">
+                 <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12">
                      <div class="card card-4-sizing-über-uns">
 
 
@@ -138,7 +139,7 @@ include $url_helper .'include/navbar.php';
 
 
 
-                 <div class="col-sm-6">
+                 <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12">
                      <div class="card card-4-sizing-über-uns">
 
 
@@ -165,7 +166,7 @@ include $url_helper .'include/navbar.php';
              </div>
 
              <div class="row" style="margin-top:30px; margin-bottom:30px;">
-                 <div class="col-sm-6">
+                 <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12">
                      <div class="card card-4-sizing-über-uns">
 
 
@@ -186,7 +187,7 @@ include $url_helper .'include/navbar.php';
                  </div>
 
 
-                 <div class="col-sm-6">
+                 <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12">
                      <div class="card card-4-sizing-über-uns">
 
                          <img src="<?php echo $url_helper;?>images/instructor-teaches-children-how-to-swim-PH82RUA.jpg"
@@ -260,7 +261,7 @@ include $url_helper .'include/navbar.php';
 
 
 
-    $result = mysqli_query($con_mysqli,"SELECT * FROM mitarbeiter");
+    $result = mysqli_query($con_mysqli,"SELECT * FROM kurse");
 
    
 
@@ -313,47 +314,49 @@ while($row = mysqli_fetch_array($result))
 
 
 
-
-
-
-     <div  class="über-uns-box2">
+     <div class="über-uns-box2">
 
          <div class="container">
 
              <p id="sectionteam" class="überschirft-team-über">UNSER TEAM</p>
 
-             <div class="row">
+             <div class="row slides">
                  <div class="col-md-3">
 
                      <div class="vier-kreise-über-uns-slider"><i
-                                 class="fas fa-plus-circle posi-style-icon-über myBtn"></i></div>
+                             class="fas fa-plus-circle posi-style-icon-über myBtn"></i></div>
+
+                 </div>
+                 <div class="col-md-3">
+
+                     <div class="vier-kreise-über-uns-slider"><i
+                             class="fas fa-plus-circle posi-style-icon-über myBtn"></i></div>
 
                  </div>
 
                  <div class="col-md-3">
 
                      <div class="vier-kreise-über-uns-slider"><i
-                                 class="fas fa-plus-circle posi-style-icon-über myBtn"></i></div>
+                             class="fas fa-plus-circle posi-style-icon-über myBtn"></i></div>
 
                  </div>
-
                  <div class="col-md-3">
 
                      <div class="vier-kreise-über-uns-slider"><i
-                                 class="fas fa-plus-circle posi-style-icon-über myBtn"></i></div>
+                             class="fas fa-plus-circle posi-style-icon-über myBtn"></i></div>
 
                  </div>
-
-                 <div class="col-md-3">
-
-                     <div class="vier-kreise-über-uns-slider"><i
-                                 class="fas fa-plus-circle posi-style-icon-über myBtn"></i></div>
-
-                 </div>
-
+  <div class="ueber-uns-buttons">
+            <span class="dot-slider" onclick="currentSlide(1)"></span>
+            <span class="dot-slider" onclick="currentSlide(2)"></span>
+            <span class="dot-slider" onclick="currentSlide(3)"></span>
+            <span class="dot-slider" onclick="currentSlide(4)"></span>
+        </div>
              </div>
 
          </div>
+
+       
      </div>
 
      <!-- The Modal -->
@@ -371,25 +374,25 @@ while($row = mysqli_fetch_array($result))
 
 
      </div>
+            
 
 
 
      <!--javascript für die Slideshow-->
      <script>
-         
          // Get the <span> element that closes the modal
          var span = document.getElementsByClassName("close-ueber")[0];
          // Get the button that opens the modal
-        var btns = document.getElementsByClassName("myBtn");
+         var btns = document.getElementsByClassName("myBtn");
 
 
 
-        // When the user clicks the button, open the modal 
-        for (var i = 0; i < btns.length; i++) {
-        btns[i].onclick = function() {
-            modal.style.display = "block";
-        }
-        }
+         // When the user clicks the button, open the modal 
+         for (var i = 0; i < btns.length; i++) {
+             btns[i].onclick = function () {
+                 modal.style.display = "block";
+             }
+         }
 
          span.onclick = function () {
              modal.style.display = "none";
@@ -430,8 +433,8 @@ while($row = mysqli_fetch_array($result))
              }
              slides[slideIndex - 1].style.display = "block";
              dots[slideIndex - 1].className += " active";
-             /* timer auf 20 sekunden gesetzt */
-             timer = setTimeout(showSlides, 20000);
+
+
          }
      </script>
 
@@ -440,8 +443,8 @@ while($row = mysqli_fetch_array($result))
      <!--two cards wird eingebunden-->
 
      <?php
-include 'include/two_cards.php';
-?>
+    include 'include/two_cards.php';
+    ?>
 
 
 
@@ -461,6 +464,6 @@ include 'include/two_cards.php';
 
      <!--footer wird eingebunden-->
      <?php
-include 'include/footer.php';
-?>
+    include 'include/footer.php';
+    ?>
      <!--------------ende der einbindung------------------>

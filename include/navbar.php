@@ -6,12 +6,9 @@
   <div class="container">
     <nav class="navbar navbar-expand-md navbar-dark" style="height:88px;">
 
-      <!--Der (Burger) wenn die seite kleiner wird-->
-      <button class="navbar-toggler" data-toggle="collapse" data-target="#collapse_target">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+    
 
-      <div class="collapse navbar-collapse" id="collapse_target">
+      
         <div class="col-2">
           <div class="logo">
             <a href="<?php echo $url_helper;?>index">
@@ -21,9 +18,13 @@
             </a>
           </div>
         </div>
-
-        <div class="col-3"></div>
-        <div class="col-7 navbar-pos">
+          <!--Der (Burger) wenn die seite kleiner wird-->
+      <button class="navbar-toggler" data-toggle="collapse" data-target="#collapse_target">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    <div class="collapse navbar-collapse" id="collapse_target">
+       
+        <div class="navbar-pos">
 
 
           <ul class="navbar-nav " style="float:right;">
@@ -52,14 +53,14 @@
             </li>
 
           </ul>
+
+          <div class="login-pos">
+            <a class="btn" href="<?php echo $url_helper;?>Index" target="_blank"
+              style="color:white; font-family: 'Fjalla One', sans-serif;">LOGIN</a>
+          </div>
         </div>
-      </div>
-      <div class="login-pos nav-item">
-        <a class="btn" href="<?php echo $url_helper;?>Index" target="_blank"
-          style="color:white; font-family: 'Fjalla One', sans-serif;">LOGIN</a>
-      </div>
 
-
+      </div>
     </nav>
   </div>
 </div>

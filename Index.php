@@ -182,7 +182,7 @@ include $url_helper .'include/navbar.php';
 
 
         <!-- Das sind alle 3 Cards(flexboxen) in der mitte der Webseite -->
-        <section style="margin-top: 200px !important;">
+        <section style="margin-top: 150px !important;">
 
 
             <div class="row">
@@ -283,7 +283,7 @@ include $url_helper .'include/navbar.php';
                         alt="Bild konnte nicht geladen werden!">
 
 
-                    <div class="text">Ich finde es super, dass die Gruppen nicht so gross sind. So hat die
+                    <div class="text-index-size">Ich finde es super, dass die Gruppen nicht so gross sind. So hat die
                         Kursleiterin für alle Zeit und kann entsprechend helfen. Wir gehen sehr gerne in Kurs
                         bei Ihnen, weiter so, vielen Dank!
                         <p class="position-slider-name">Leonie W.</p>
@@ -301,7 +301,7 @@ include $url_helper .'include/navbar.php';
 
 
 
-                    <div class="text ">Wir fanden die Kursleitung super und sie war sehr engagiert, motiviert und
+                    <div class="text-index-size ">Wir fanden die Kursleitung super und sie war sehr engagiert, motiviert und
                         voll da.
                         Uns hat der Kurs sehr gut gefallen und wir werden später weitere Kurse besuchen. Ich fand
                         insbesondere auch die Gruppengrösse sehr perfekt. Herzlichen Dank für alles!
@@ -314,7 +314,7 @@ include $url_helper .'include/navbar.php';
                     <img class="kreis-slider" src="<?php echo $url_helper;?>img/Frau.jpg"
                         alt="Bild konnte nicht geladen werden!">
 
-                    <div class="text ">Ich habe mit meiner Tochter bereits zwei Kurse bei Aquakidz besucht. Die
+                    <div class="text-index-size ">Ich habe mit meiner Tochter bereits zwei Kurse bei Aquakidz besucht. Die
                         Lektionen werden sehr abwechslungsreich gestaltet und es gibt auch schöne wiederkehrende
                         Rituale, die den Kindern Sicherheit geben. Die Kursleitung ist sehr kompetent und reagiert
                         stets angemessen auf die individuellen Bedürfnisse der Babys.
@@ -326,7 +326,7 @@ include $url_helper .'include/navbar.php';
                     <img class="kreis-slider" src="<?php echo $url_helper;?>img/kunde_bild.png"
                         alt="Bild konnte nicht geladen werden!">
 
-                    <div class="text">Jeden Samstagmorgen haben wir uns aufs Babyschwimmen bei Jana Brinkmann
+                    <div class="text-index-size">Jeden Samstagmorgen haben wir uns aufs Babyschwimmen bei Jana Brinkmann
                         gefreut. Sie ist total herzlich und kann gut auf's Baby und die Begleitperson eingehen. Uns
                         gefällt die Art, wie sie den Kindern die Angst vom Wasser nimmt und sie spielerisch
                         begleitet. Wir freuen uns bereits auf den Folgekurs!
@@ -338,7 +338,7 @@ include $url_helper .'include/navbar.php';
                     <img class="kreis-slider" src="<?php echo $url_helper;?>img/Mann.jpg"
                         alt="Bild konnte nicht geladen werden!">
 
-                    <div class="text">Super Diagramm/Lernkurve, die nach jedem Schwimmkurs angepasst wird
+                    <div class="text-index-size">Super Diagramm/Lernkurve, die nach jedem Schwimmkurs angepasst wird
                         Samuel geht sehr gerne zum Schwimmkurs und erzählt viel davon :-) alles richtig gemacht.
                         Er freut sich schon sehr auf den Folgekurs in Lachen.
                         <p class="position-slider-name">Samuel S.</p>
@@ -639,7 +639,7 @@ include $url_helper .'include/navbar.php';
                 }
                 for (i = 0; i < dots.length; i++) {
                     dots[i].className = dots[i].className.replace(" active", "");
-                }
+                 }
                 mySlides[slideIndex - 1].style.display = "block";
                 dots[slideIndex - 1].className += " active";
             }
@@ -648,10 +648,7 @@ include $url_helper .'include/navbar.php';
         <!--card 5 -->
         <div class="hintergrundbild-card5"></div>
         <div class="container">
-            <div class="row">
-                
-                <div class="col-md-5 offset-md-7">
-             
+              
                     <div class="card card5-size">
                         <div class="card-body">
                             <div class="font-color">
@@ -686,8 +683,8 @@ include $url_helper .'include/navbar.php';
                         </div>
                         <a href="#" class="btn btn-card5 ">Mehr Erfahren</a>
 
-                    </div>
-                </div>
+              
+                
             </div>
         </div>
 
