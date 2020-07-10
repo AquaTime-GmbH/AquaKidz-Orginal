@@ -1,5 +1,6 @@
-<h2 class="text-spiezial">BRAUCHEN SIE MEHR INFORMATIONEN?</h2>
 <div class="container">
+<h2 class="text-spiezial">BRAUCHEN SIE MEHR INFORMATIONEN?</h2>
+
     <div class="row">
         <div class="col-sm-12 col-xl-6 col-md-12">
             <div class="card card-1-sizing">

@@ -1,5 +1,5 @@
 <!-- organisation der url -->
- <?php 
+<?php 
  session_start();
 $url_helper= "";
 /* einbingung der database connection*/
@@ -99,44 +99,48 @@ while($row = mysqli_fetch_array($result_mitarbeiter))
 ?>
 
 <!DOCTYPE html>
+
 <head>
-<title>AquaKidz</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="autor" content="">
-    <meta name="keywords" content="">
+  <title>AquaKidz</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="autor" content="">
+  <meta name="keywords" content="">
 
-    <!-- Bootstrap,w3schools,fotawsome CSS -->
+  <!-- Bootstrap,w3schools,fotawsome CSS -->
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="<?php echo $url_helper;?>css/style.css">
- 
-    <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Lato&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.2.1/build/ol.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="<?php echo $url_helper;?>css/style.css">
+
+  <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Lato&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.2.1/build/ol.js"></script>
 </head>
+
 <body>
 
-<!--navbar wird eingebunden-->
-<?php
+  <!--navbar wird eingebunden-->
+  <?php
 include $url_helper .'include/navbar.php';
 ?>
-<!--------------ende der einbindung------------------>
+  <!--------------ende der einbindung------------------>
 
-<div class="blue-box-kurs">
-    <div class="container"> <col-kurs-size>
-      <div class="row">
-       
-        <div class="col-5">
-        
+  <div class="blue-box-kurs">
+    <div class="container">
+      <col-kurs-size>
+        <div class="row">
+
+          <div class="col-5">
+
             <div class="card first-card-kurs">
-                <div class="card-body">
+              <div class="card-body">
                 <div class="font-color">
-                    <h1 class="card-title card-title-style" style="font-size:32px"> AQUABABY</h1>
-                     <?= $sql_fm_bad_ort; ?>
-                     
-            <?php
+                  <h1 class="card-title card-title-style" style="font-size:32px"> AQUABABY</h1>
+                  <?= $sql_fm_bad_ort; ?>
+
+                  <?php
                
                 $result = mysqli_query($con_mysqli,"SELECT * FROM termine where kurs_fm_id=$sql_kurs_fm_id order by date ASC");
 
@@ -150,16 +154,16 @@ include $url_helper .'include/navbar.php';
                             $sql_termin_endzeit = $row['endzeit'];
                             $sql_termin_created_at = new DateTime($row['created_at']);
                             $sql_termin_updated_at = new DateTime($row['updated_at']);
-                ?> 
+                ?>
 
-                    <?php } ?>
-       
-
+                  <?php } ?>
 
 
-                <ul style="list-style-type:none;">
+
+
+                  <ul style="list-style-type:none;">
                     <li></li>
-                 
+
                     <?php if($sql_fm_vorname == "") { 
                     $keinkursleiter = "Leider kein Kursleiter angegeben";
                     ?>
@@ -167,38 +171,38 @@ include $url_helper .'include/navbar.php';
                     <?php } ?>
                     <li>KURSLEKTIONEN:......LEKTIONEN</li>
                     <li>KURSGELD: <?= $sql_fm_kurskosten; ?> CHF</li>
-               </ul>
+                  </ul>
 
+                </div>
+              </div>
+              <a href="#" class="btn  btn_aquababy_zum_kursanmelden">Zum Kursort</a>
             </div>
-        </div>
-        <a href="#"  class="btn  btn_aquababy_zum_kursanmelden" >Zum Kursort</a>
-   </div>
 
-<!---button zum kurs ort-->
-      
-          
-                    </div>
+            <!---button zum kurs ort-->
 
 
-<div class="col-5">
-                    
-
-  <section class="jetzt-buchen-pos" id="section1">
-	<a class="jetzt-buchen-style" href="#section2" >Jetzt Buchen!</a>
-</section>
-</div>
-                      
           </div>
+
+
+          <div class="col-5">
+
+
+            <section class="jetzt-buchen-pos" id="section1">
+              <a class="jetzt-buchen-style" href="#section2">Jetzt Buchen!</a>
+            </section>
+          </div>
+
         </div>
     </div>
- </col-kurs-size>
+  </div>
+  </col-kurs-size>
 
-   
-    
-     
 
-<!--test in variabeln gespeichert-->
-<?php 
+
+
+
+  <!--test in variabeln gespeichert-->
+  <?php 
 
 
 $ueber_den_Kurs= "ÜBER DEN KURS" ;
@@ -206,387 +210,323 @@ $ueber_den_Kurs= "ÜBER DEN KURS" ;
 ?>
 
 
-<div class="container" >
+  <div class="container">
     <div class="big-box-text">
-      <div class="row"style="margin-top:187px;">
+      <div class="row" style="margin-top:187px;">
 
 
         <div class="col-6">
-    
+
           <p class="title_of_text"><?= $ueber_den_Kurs ?></p>
           <p class="über-den-kurs-undertitle">Frühförderung im Wasser, Schutz- und Lernerfahrung für Ihr Kind</p>
-          <p class="text-über-kurs">Das erste Mal im Wasser ist eine ganz besondere Erfahrung. Gemeinsam mit Ihnen erlernt Ihr Kind früh Sicherheit im Schwimmbecken zu erhalten. Sie fördern die körperliche und geistige Entwicklung in den ersten Lebensjahren nachhaltig und unterstützen einen gesunden Umgang mit dem Wasser. In überschaubaren Gruppen vermitteln unsere Trainer wichtige Grundlagen die ein Kind für die erste Wassergewöhnung braucht. Mit verschiedenen Übungen und Geduld, stärken sie in einer Gruppe von gleichgesinnten Eltern die Fähigkeiten Ihres Kleinen, sein Immunsystem und Ihre Bindung mit Ihm</p>
-      
+          <p class="text-über-kurs">Das erste Mal im Wasser ist eine ganz besondere Erfahrung. Gemeinsam mit Ihnen
+            erlernt Ihr Kind früh Sicherheit im Schwimmbecken zu erhalten. Sie fördern die körperliche und geistige
+            Entwicklung in den ersten Lebensjahren nachhaltig und unterstützen einen gesunden Umgang mit dem Wasser. In
+            überschaubaren Gruppen vermitteln unsere Trainer wichtige Grundlagen die ein Kind für die erste
+            Wassergewöhnung braucht. Mit verschiedenen Übungen und Geduld, stärken sie in einer Gruppe von
+            gleichgesinnten Eltern die Fähigkeiten Ihres Kleinen, sein Immunsystem und Ihre Bindung mit Ihm</p>
+
         </div>
 
 
 
         <div class="col-6">
           <p class="title_of_text">WIR LERNEN:</p>
-            <ul class="table-wirlernen">
-                    <li>
-                        <a>- Sicherheit im Wasser</a>
-                    </li>
-                    <li>
-                        <a>- Erste Erfahrungen in Atmungskontrolle und tauchen</a>
-                    </li>
-                    <li>
-                        <a>- Schwimmübungen mit Wechselbeinschlag in Bauchlage</a>
-                    </li>
-                    <li>
-                        <a>- Streck-, Atem- und Greifreflexe zu verbessern</a>
-                    </li>
-                     <li>
-                        <a>- Das selbständige rausklettern aus dem Becken</a>
-                    </li>
-                     <li>
-                        <a>- Massage und Yoga-Übungen zur Beruhigung.</a>
-                    </li>
-                </ul>
+          <ul class="table-wirlernen">
+            <li>
+              <a>- Sicherheit im Wasser</a>
+            </li>
+            <li>
+              <a>- Erste Erfahrungen in Atmungskontrolle und tauchen</a>
+            </li>
+            <li>
+              <a>- Schwimmübungen mit Wechselbeinschlag in Bauchlage</a>
+            </li>
+            <li>
+              <a>- Streck-, Atem- und Greifreflexe zu verbessern</a>
+            </li>
+            <li>
+              <a>- Das selbständige rausklettern aus dem Becken</a>
+            </li>
+            <li>
+              <a>- Massage und Yoga-Übungen zur Beruhigung.</a>
+            </li>
+          </ul>
 
 
 
-                <p class="title_of_text">WICHTIGSTE INFOS:</p>
-                  <ul class="table-wirlernen">
-                  
-                    <li>
-                        <a>- Altersstufe: ca. 10 Wochen bis 24 Monate.</a>
-                    </li>
-                    <li>
-                        <a>- Anzahl Schüler: 4-6</a>
-                    </li>
-                    <li>
-                        <a>- Kurse: 8 x 30 Minuten</a>
-                    </li>
-                    <li>
-                        <a>- Quereinstieg: möglich</a>
-                    </li>
-                    
-                </ul>
+          <p class="title_of_text">WICHTIGSTE INFOS:</p>
+          <ul class="table-wirlernen">
 
-           </div>
+            <li>
+              <a>- Altersstufe: ca. 10 Wochen bis 24 Monate.</a>
+            </li>
+            <li>
+              <a>- Anzahl Schüler: 4-6</a>
+            </li>
+            <li>
+              <a>- Kurse: 8 x 30 Minuten</a>
+            </li>
+            <li>
+              <a>- Quereinstieg: möglich</a>
+            </li>
 
-                
-
-
+          </ul>
 
         </div>
+
+
+
+
+
+      </div>
     </div>
-</div>
-</div>
-   
+  </div>
+  </div>
 
 
 
-<div class="big-box-map">
+
+  <div class="big-box-map">
     <div class="container">
-  <h1></h1>
-</div>
-
-<div class="col-md-6">
-<form id="distance_form">
-<div class="form-group"><label>ihre postleitzahl: </label> <input class="form-control" id="from_places" placeholder="<?= $eigplz ?>" /> <input id="origin" name="origin" required="" type="hidden" /></div>
-
-<div class="form-group"><label>postleitzahl vom bad: </label> <input class="form-control" id="to_places" placeholder="<?= $suchendeplz?>" /> <input id="destination" name="destination" required="" type="hidden" /></div>
-<input class="btn btn-primary" type="submit" value="Calculate" /></form>
-
-<div id="result">
-<ul class="list-group">
-	<li class="list-group-item d-flex justify-content-between align-items-center">Distanz in Kilometer:</li>
-	<li class="list-group-item d-flex justify-content-between align-items-center">Von:</li>
-	<li class="list-group-item d-flex justify-content-between align-items-center">Bis:</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-
-<script>
-    $(function() {
-        // add input listeners
-        google.maps.event.addDomListener(window, 'load', function () {
-            var from_places = new google.maps.places.Autocomplete(document.getElementById('from_places'));
-            var to_places = new google.maps.places.Autocomplete(document.getElementById('to_places'));
-
-            google.maps.event.addListener(from_places, 'place_changed', function () {
-                var from_place = from_places.getPlace();
-                var from_address = from_place.formatted_address;
-                $('#origin').val(from_address);
-            });
-
-            google.maps.event.addListener(to_places, 'place_changed', function () {
-                var to_place = to_places.getPlace();
-                var to_address = to_place.formatted_address;
-                $('#destination').val();
-            });
-
-        });
-        // hier rechnet er die distanz aus
-        function calculateDistance() {
-            var origin = $('#origin').val();
-            var destination = $('#destination').val();
-            var service = new google.maps.DistanceMatrixService();
-            service.getDistanceMatrix(
-                {
-                    origins: [origin],
-                    destinations: [destination],
-                    travelMode: google.maps.TravelMode.DRIVING,
-                    unitSystem: google.maps.UnitSystem.IMPERIAL, // miles and feet.
-                    // unitSystem: google.maps.UnitSystem.metric, // kilometers and meters.
-                    avoidHighways: false,
-                    avoidTolls: false
-                }, callback);
-        }
-        // ausgabe von distanz
-        function callback(response, status) {
-            if (status != google.maps.DistanceMatrixStatus.OK) {
-                $('#result').html(err);
-            } else {
-                var origin = response.originAddresses[0];
-                var destination = response.destinationAddresses[0];
-                if (response.rows[0].elements[0].status === "ZERO_RESULTS") {
-                    $('#result').html("Better get on a plane. There are no roads between "  + origin + " and " + destination);
-                } else {
-                  //die rechnung in kilometer
-                    var distance = response.rows[0].elements[0].distance;
-                    var duration = response.rows[0].elements[0].duration;
-                    console.log(response.rows[0].elements[0].distance);
-                    var distance_in_kilo = distance.value / 1000; // hier wird der wert in Kilometer ausgegeben
-                   
-                    var duration_text = duration.text;
-                    var duration_value = duration.value;
-                   
-                    $('#in_kilo').text(distance_in_kilo.toFixed(2));
-                    $('#duration_text').text(duration_text);
-                    $('#duration_value').text(duration_value);
-                    $('#from').text(origin);
-                    $('#to').text(destination);
-                }
-            }
-        }
-        // print results on submit the form
-        $('#distance_form').submit(function(e){
-            e.preventDefault();
-            calculateDistance();
-        });
-
-    });
-    
-
-</script>
-</script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAvf8MRWi1ignKqBJnfCcvwTKwUdehvMzU&callback=initMap"
-    async defer></script>
-
+      <h1></h1>
     </div>
-</div>
+
+    <div class="col-md-6">
+      <form id="distance_form">
+        <div class="form-group"><label>ihre postleitzahl: </label> <input class="form-control" id="from_places"
+            placeholder="<?= $eigplz ?>" /></div>
+
+        <div class="form-group"><label>postleitzahl vom bad: </label> <input class="form-control" id="to_places"
+            placeholder="<?= $suchendeplz?>" /></div>
+        <!-- er soll rechnen wenn er auf der aquababy seite ist und auf kur drückt form action? und google maps auf andere seite oder session
+
+<input class="btn btn-primary" type="submit" value="rechen" /></form>
+
+-->
+
+        <div id="result">
+          <ul class="list-group">
+            <li class="list-group-item d-flex justify-content-between align-items-center">Distanz in Kilometer:</li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">Von:</li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">Bis:</li>
+          </ul>
+        </div>
+
+
+
+        </script>
+   <iframe
+  width="600"
+  height="450"
+  frameborder="0" style="border:0"
+  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDdldUPsHEZSTkYSReuQT0O31dKcdK5vWo
+    &q=Space+Needle,Seattle+WA" allowfullscreen>
+</iframe>
+  </div>
 
 
 
 
-<div class="container">
+  <div class="container">
 
     <h2 class="text-spiezial">BRAUCHEN SIE MEHR INFORMATIONEN?</h2>
     <div class="row">
-        <div class="col-sm-6">
-            <div class="card card-1-sizing">
-                <div class="row no-gutters">
-                    <div class="col-md-8">
-                    <div class="card-body">
-                        <h5 class="card-title" style="color:rgb(8, 51, 194);">WISSEN FÜR ELTERN</h5>
-                        <p class="card-text font-color">Wir haben die wichtigsten Informationen für Eltern von Babys und jungen Kindern zusammengestellt, damit sie Wissen worauf es ankommt.</p>
-                    </div> 
-                    </div>
-                        <a href="#"  class="btn  mehr-erfahren">Mehr Erfahren</a>
-                    
-                    </div> 
-                </div>
+      <div class="col-sm-6">
+        <div class="card card-1-sizing">
+          <div class="row no-gutters">
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title" style="color:rgb(8, 51, 194);">WISSEN FÜR ELTERN</h5>
+                <p class="card-text font-color">Wir haben die wichtigsten Informationen für Eltern von Babys und jungen
+                  Kindern zusammengestellt, damit sie Wissen worauf es ankommt.</p>
+              </div>
             </div>
+            <a href="#" class="btn  mehr-erfahren">Mehr Erfahren</a>
 
-    <div class="col-sm-6">
-        <div class="card card-2-sizing">
-            <div class="row no-gutters">
-                <div class="col-md-8">
-                <div class="card-body">
-                    <h5 class="card-title" style="color:rgb(8, 51, 194);">RUFEN SIE UNS AN</h5>
-                    <p class="card-text under-font"><small>AquaTime GmbH</small></p>
-                    <p class="card-text font-color">Bahnhofstrasse 32, 6403 Küssnacht am Rig</p>
-                    <p class="card-text font-color">Mobil 077 423 58 38; Festnetz 041 852 05 53</p>
-                
-                </div> 
-                </div>
-            
-                    <a href="#"  class="btn  btn_email" >Email</a>
-                
-                    <a href="#"  class="btn  btn_auf" >Anrufen</a>
-                    </div> 
-                </div>
-            </div>
+          </div>
         </div>
-</div>
-
-<!--Anfang Buchungs form-->
-
- <div class="big-box-more" >
-
-<div id="section2" class="container-test">
-<div class="form-pos">
-
-<fdsdsfa>
-
-<div class="col-2" style="max-width: 40% !important;">
-<h1>gdhd</h1>
-</div>
-
-</fdsdsfa>
-
-<form action="" method="post">
-<div class="font-color">
-  
-<!----------------Angaben zum Kursteilnehmer------------->
-  <p class="form-title-buchen">Angaben zum Kursteilnehmer</p>
-
-  
-    <div class="form-group">
-      <label class="first-card-text" >Kurs</label>
-      <input name="kurs_k"  type="text" class="form-control labelshape" value="<?= $kurs_text; ?>">
-    </div>
-
-
-
-    <div class="form-row">
-  
-    <div class="form-group col-md-3">
-      <label class="first-card-text">Name Kind*</label>
-      <input type="text" class="form-control labelshape" name="name_k" value="<?= $name_kind; ?>" required>
-    </div>
-  
-
-  <div class="form-group col-md-3">
-    <label class="first-card-text">Vorname Kind*</label>
-    <input type="text" class="form-control labelshape" name="vorname_k" value="<?= $vorname_kind?>" required>
-  </div>
-  
-  <div class="form-group col-md-3">
-    <label class="first-card-text" >Geburtsdatum Kind*</label>
-    <input type="text"  placeholder="tt.mm.jjjj" class="form-control labelshape" name="geburtstag_k" value="<?= $geburtstag_kind ?>" required>
-  </div>
-
-
-  
-    <div class="form-group col-md-3">
-      <label class="first-card-text">Gesundheitsstatus</label>
-      <input type="text" class="form-control labelshape" >
-    </div>
-</div>
-
-
-<!----------------Angaben Kunden ------------->
-
-<p class="form-title2-buchen">Angaben Kunde</p>
-
-
-<!--------------------begrenzen auf 4 zahlen------------------>
-
-<!--------------------Html escapen------------------>
-<div class="form-row">
-
-  <div class="form-group col-md-2">
-      <label class="first-card-text">Anrede*</label>
-    <div class="dropdown-firstcard">
-      <Select class="form-control labelshape" >
-          <option disabled selected value style="color:white;"></option>
-          <option >Herr</option>
-          <option >Frau</option>
-          <option >Familie</option>
-      </select>
-    </div>
-    </div>
-  
-    <div class="form-group col-md-3">
-      <label class="first-card-text" >Ihr Name*</label>
-      <input type="text" class="form-control labelshape" >
-    </div>
-
-    <div class="form-group col-md-3">
-      <label class="first-card-text" >Vorname*</label>
-      <input type="text" class="form-control labelshape" >
-    </div>
-</div>
-
-<div class="form-row">
-    <div class="form-group col-md-3">
-      <label class="first-card-text" >Strasse*</label>
-      <input type="text" class="form-control labelshape" >
-    </div>
-
-    <div class="form-group col-md-3">
-      <label class="first-card-text" >Nr.*</label>
-      <input type="text" class="form-control labelshape" >
-    </div>
-
-
-
-    <div class="form-group col-md-2">
-      <label class="first-card-text" >Plz*<i class="far fa-question-circle"></i></label>
-      <input type="text" name="postleitzahl" pattern="^[0-9]{4}$" class="form-control labelshape" >
-    </div>
-
-
-
-    <div class="form-group col-md-2">
-      <label class="first-card-text" >Ort*</label>
-      <input type="text" class="form-control labelshape" >
-    </div>
-</div>
-
-<div class="form-row">
-    <div class="form-group col-md-4">
-      <label class="first-card-text" >Ihre E-Mail-Adresse*</label>
-      <input type="email" class="form-control labelshape" >
-    </div>
-
-    <div class="form-group col-md-4">
-      <label class="first-card-text" >Telefon</label>
-      <input type="email" class="form-control labelshape">
-    </div>
-
-    <div class="form-group col-md-4">
-      <label class="first-card-text" >Natel</label>
-      <input type="email" class="form-control labelshape">
-    </div>
-</div>
-<div class="form-row">
-    <div class="form-group col-md-4">
-      <label class="first-card-text" >Gutscheincode</label>
-      <input type="email" class="form-control labelshape">
-    </div>
-
-     <div class="form-group col-md-2">
-      <label class="first-card-text">Zahlugsart</label>
-    <div class="dropdown-firstcard">
-      <Select class="form-control labelshape" required>
-          <option disabled selected value style="color:white;"></option>
-          <option selected>Rechnung</option>
-      </select>
-    </div>
-    </div>
-    <div class="row">
-
-      <div class="form-container-check">
-        <input class="" type="checkbox" ><a class="" href="Agb.php">AGB</a>
       </div>
-      
-    
 
+      <div class="col-sm-6">
+        <div class="card card-2-sizing">
+          <div class="row no-gutters">
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title" style="color:rgb(8, 51, 194);">RUFEN SIE UNS AN</h5>
+                <p class="card-text under-font"><small>AquaTime GmbH</small></p>
+                <p class="card-text font-color">Bahnhofstrasse 32, 6403 Küssnacht am Rig</p>
+                <p class="card-text font-color">Mobil 077 423 58 38; Festnetz 041 852 05 53</p>
 
-      <input type="submit" href="" class="btn buchen-buttom" name="buchen_button" value="Jetzt Buchen!">
+              </div>
+            </div>
 
+            <a href="#" class="btn  btn_email">Email</a>
+
+            <a href="#" class="btn  btn_auf">Anrufen</a>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-    
 
- <?php
+  <!--Anfang Buchungs form-->
+
+  <div class="big-box-more">
+
+    <div id="section2" class="container-test">
+      <div class="form-pos">
+
+
+        <form action="" method="post">
+          <div class="font-color">
+
+            <!----------------Angaben zum Kursteilnehmer------------->
+            <p class="form-title-buchen">Angaben zum Kursteilnehmer</p>
+
+
+            <div class="form-group">
+              <label class="first-card-text">Kurs</label>
+              <input name="kurs_k" type="text" class="form-control labelshape" value="<?= $kurs_text; ?>">
+            </div>
+
+
+
+            <div class="form-row">
+
+              <div class="form-group col-md-3">
+                <label class="first-card-text">Name Kind*</label>
+                <input type="text" class="form-control labelshape" name="name_k" value="<?= $name_kind; ?>" required>
+              </div>
+
+
+              <div class="form-group col-md-3">
+                <label class="first-card-text">Vorname Kind*</label>
+                <input type="text" class="form-control labelshape" name="vorname_k" value="<?= $vorname_kind?>"
+                  required>
+              </div>
+
+              <div class="form-group col-md-3">
+                <label class="first-card-text">Geburtsdatum Kind*</label>
+                <input type="text" placeholder="tt.mm.jjjj" class="form-control labelshape" name="geburtstag_k"
+                  value="<?= $geburtstag_kind ?>" required>
+              </div>
+
+
+
+              <div class="form-group col-md-3">
+                <label class="first-card-text">Gesundheitsstatus</label>
+                <input type="text" class="form-control labelshape">
+              </div>
+            </div>
+
+
+            <!----------------Angaben Kunden ------------->
+
+            <p class="form-title2-buchen">Angaben Kunde</p>
+
+
+            <!--------------------begrenzen auf 4 zahlen------------------>
+
+            <!--------------------Html escapen------------------>
+            <div class="form-row">
+
+              <div class="form-group col-md-2">
+                <label class="first-card-text">Anrede*</label>
+                <div class="dropdown-firstcard">
+                  <Select class="form-control labelshape">
+                    <option disabled selected value style="color:white;"></option>
+                    <option>Herr</option>
+                    <option>Frau</option>
+                    <option>Familie</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group col-md-3">
+                <label class="first-card-text">Ihr Name*</label>
+                <input type="text" class="form-control labelshape">
+              </div>
+
+              <div class="form-group col-md-3">
+                <label class="first-card-text">Vorname*</label>
+                <input type="text" class="form-control labelshape">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group col-md-3">
+                <label class="first-card-text">Strasse*</label>
+                <input type="text" class="form-control labelshape">
+              </div>
+
+              <div class="form-group col-md-3">
+                <label class="first-card-text">Nr.*</label>
+                <input type="text" class="form-control labelshape">
+              </div>
+
+
+
+              <div class="form-group col-md-2">
+                <label class="first-card-text">Plz*<i class="far fa-question-circle"></i></label>
+                <input type="text" name="postleitzahl" pattern="^[0-9]{4}$" class="form-control labelshape">
+              </div>
+
+
+
+              <div class="form-group col-md-2">
+                <label class="first-card-text">Ort*</label>
+                <input type="text" class="form-control labelshape">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group col-md-4">
+                <label class="first-card-text">Ihre E-Mail-Adresse*</label>
+                <input type="email" class="form-control labelshape">
+              </div>
+
+              <div class="form-group col-md-4">
+                <label class="first-card-text">Telefon</label>
+                <input type="email" class="form-control labelshape">
+              </div>
+
+              <div class="form-group col-md-4">
+                <label class="first-card-text">Natel</label>
+                <input type="email" class="form-control labelshape">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-4">
+                <label class="first-card-text">Gutscheincode</label>
+                <input type="email" class="form-control labelshape">
+              </div>
+
+              <div class="form-group col-md-2">
+                <label class="first-card-text">Zahlugsart</label>
+                <div class="dropdown-firstcard">
+                  <Select class="form-control labelshape" required>
+                    <option disabled selected value style="color:white;"></option>
+                    <option selected>Rechnung</option>
+                  </select>
+                </div>
+              </div>
+              <div class="row">
+
+                <div class="form-container-check">
+                  <input class="" type="checkbox"><a class="" href="Agb.php">AGB</a>
+                </div>
+
+
+
+
+                <input type="submit" href="" class="btn buchen-buttom" name="buchen_button" value="Jetzt Buchen!">
+
+              </div>
+            </div>
+
+
+            <?php
 
 
 $kurs_text = $_POST['kurs_k'];
@@ -622,7 +562,7 @@ elseif ($geburtstag_kind){
 }
 ?>
 
-</form>
+        </form>
 
 
 
@@ -632,20 +572,20 @@ elseif ($geburtstag_kind){
   </div>
 
 
-</div>
- </div>
-<!--Ende Buchungs form-->
+  </div>
+  </div>
+  <!--Ende Buchungs form-->
 
-<!--two cards wird eingebunden-->
-<?php
+  <!--two cards wird eingebunden-->
+  <?php
 include 'include/two_cards.php';
 ?>
 
 
 
 
-<!--footer wird eingebunden-->
-<?php
+  <!--footer wird eingebunden-->
+  <?php
 include $url_helper . 'include/footer.php';
 ?>
-<!--------------ende der einbindung------------------>
+  <!--------------ende der einbindung------------------>

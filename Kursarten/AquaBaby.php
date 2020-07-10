@@ -193,8 +193,9 @@ while($row = mysqli_fetch_array($result))
                      <div class="col-md-4">
                          <div class="card-body">
                              <h5 class="card-title card-title-style">
-                                 <?=  $sql_fm_von_datum_html->format('d.m.Y'). " - " . $sql_fm_bis_datum_html->format('d.m.Y')  .  " - " .$sql_fm_bad_postleitzahl;  ?>
+                                 <?=  $sql_fm_von_datum_html->format('d.m.Y'). " - " . $sql_fm_bis_datum_html->format('d.m.Y')  .  " - " .$sql_fm_bad_postleitzahl ;  ?>
                              </h5>
+
                              <p class="card-text under-font"><small>CA. 10 Wochen - 24 Monate</small></p>
                          </div>
                      </div>
@@ -357,51 +358,10 @@ else{
          </div>
      </div>
 
-
-     <div class="container">
-         <h2 class="text-spiezial">BRAUCHEN SIE MEHR INFORMATIONEN?</h2>
-         <div class="row">
-             <div class="col-md-6">
-                 <div class="card card-1-sizing">
-                     <div class="row no-gutters">
-                         <div class="col-md-8">
-                             <div class="card-body">
-                                 <h5 class="card-title" style="color:rgb(8, 51, 194);">WISSEN FÜR ELTERN</h5>
-                                 <p class="card-text font-color">Wir haben die wichtigsten Informationen für Eltern von
-                                     Babys und jungen Kindern zusammengestellt, damit sie Wissen worauf es ankommt.</p>
-                             </div>
-
-                         </div>
-
-                         <a href="#" class="btn  bnts_card4 mehr-erfahren">Mehr Erfahren</a>
-
-                     </div>
-                 </div>
-             </div>
-
-
-             <div class="col-md-6">
-                 <div class="card card-2-sizing">
-                     <div class="row no-gutters">
-                         <div class="col-md-8">
-                             <div class="card-body">
-                                 <h5 class="card-title" style="color:rgb(8, 51, 194);">RUFEN SIE UNS AN</h5>
-                                 <p class="card-text under-font"><small>AquaTime GmbH</small></p>
-                                 <p class="card-text font-color">Bahnhofstrasse 32, 6403 Küssnacht am Rig</p>
-                                 <p class="card-text font-color">Mobil 077 423 58 38; Festnetz 041 852 05 53</p>
-
-                             </div>
-                         </div>
-
-                         <a href="#" class="btn  btn_email">Email</a>
-
-                         <a href="#" class="btn  btn_auf">Anrufen</a>
-
-                     </div>
-                 </div>
-             </div>
-         </div>
-     </div>
+  <!--two cards wird eingebunden-->
+  <?php
+include $url_helper .'include/two_cards.php';
+?>
      </div>
      </div>
 
