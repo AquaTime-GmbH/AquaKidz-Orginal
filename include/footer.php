@@ -1,18 +1,15 @@
 <footer>
-    <div class="footer-blau" >
- 
+    <div class="footer-blau">
+
         <div class="row">
-            <div class="container"> 
+            <div class="container">
 
 
 
-           
 
 
 
                 <div class="row">
-
-                   
 
 
 
@@ -74,84 +71,83 @@
 
                 </div>
             </div>
-
-
-        </div>
-
-        <div class="footer-white">
-            <div class="row">
-
-
-                <div style="" class="col-sm zentrierung-bilder-footer">
-
-                    <ul class="ul-footer-links">
-
-                        <li>
-                            <div class="raster-aussen-footer">
-                                <img style="width:130px;" class="footer-picture-sizing"
-                                    src="<?php echo $url_helper;?>images/footerpic.png" alt="Bild ladet nicht!">
-                            </div>
-                        </li>
-
-                        <li>
-                            <div class="raster-aussen-footer">
-                                <img class="footer-picture-sizing" src="<?php echo $url_helper;?>images/footerpic2.png"
-                                    alt="Bild ladet nicht!">
-                            </div>
-                        </li>
-
-                    </ul>
-
-                </div>
-
-                <div style="" class="col-sm zentrierung-bilder-footer">
-
-                    <ul class="ul-footer-links">
-
-                        <li>
-                            <div class="raster-aussen-footer">
-                                <img style="width:220px !important;" class="footer-picture-sizing"
-                                    src="<?php echo $url_helper;?>images/footerpic3.png" alt="Bild ladet nicht!">
-                            </div>
-                        </li>
-
-                        <li>
-                            <div class="raster-aussen-footer">
-                                <img style="width:200px !important;" class="footer-picture-sizing"
-                                    src="<?php echo $url_helper;?>images/footerpic4.png" alt="Bild ladet nicht!">
-                            </div>
-                        </li>
-
-                    </ul>
-
-                </div>
-
-
-
-                <div style="" class="col-sm zentrierung-bilder-footer">
-
-                    <ul class="ul-footer-links">
-                        <li>
-                            <div class="raster-aussen-footer">
-                                <img style="width:240px !important;" class="footer-picture-sizing"
-                                    src="<?php echo $url_helper;?>images/footerpic5.png" alt="Bild ladet nicht!">
-                            </div>
-                        </li>
-
-                        <li>
-                            <div class="raster-aussen-footer">
-                                <img style="width:200px !important;" class="footer-picture-sizing"
-                                    src="<?php echo $url_helper;?>images/footerpic6.png" alt="Bild ladet nicht!">
-                            </div>
-                        </li>
-                    </ul>
-
-                </div>
-
-
-            </div>
         </div>
     </div>
+
+    <div class="footer-white">
+        <div class="row">
+
+
+            <div style="" class="col-sm zentrierung-bilder-footer">
+
+                <ul class="ul-footer-links">
+
+                    <li>
+                        <div class="raster-aussen-footer">
+                            <img style="width:130px;" class="footer-picture-sizing"
+                                src="<?php echo $url_helper;?>images/footerpic.png" alt="Bild ladet nicht!">
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="raster-aussen-footer">
+                            <img class="footer-picture-sizing" src="<?php echo $url_helper;?>images/footerpic2.png"
+                                alt="Bild ladet nicht!">
+                        </div>
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <div style="" class="col-sm zentrierung-bilder-footer">
+
+                <ul class="ul-footer-links">
+
+                    <li>
+                        <div class="raster-aussen-footer">
+                            <img style="width:220px !important;" class="footer-picture-sizing"
+                                src="<?php echo $url_helper;?>images/footerpic3.png" alt="Bild ladet nicht!">
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="raster-aussen-footer">
+                            <img style="width:200px !important;" class="footer-picture-sizing"
+                                src="<?php echo $url_helper;?>images/footerpic4.png" alt="Bild ladet nicht!">
+                        </div>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+
+            <div style="" class="col-sm zentrierung-bilder-footer">
+
+                <ul class="ul-footer-links">
+                    <li>
+                        <div class="raster-aussen-footer">
+                            <img style="width:240px !important;" class="footer-picture-sizing"
+                                src="<?php echo $url_helper;?>images/footerpic5.png" alt="Bild ladet nicht!">
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="raster-aussen-footer">
+                            <img style="width:200px !important;" class="footer-picture-sizing"
+                                src="<?php echo $url_helper;?>images/footerpic6.png" alt="Bild ladet nicht!">
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+
+
+        </div>
+    </div>
+
 
 
 
@@ -178,29 +174,29 @@
 <div id="cookie_popup">
     <p class="text-pos-popup">Wir verwenden Cookies. Durch die weitere Nutzung der Webseite stimmen Sie der
         Verwendung von Cookies zu.</p>
-        <div class="container">
-            <div class="row" style="justify-content:center;">
-            
-                
+    <div class="container">
+        <div class="row" style="justify-content:center;">
+
+
 
             <button class="btn btn_details" id="myBtn">Details</button>
-                <form method="post">
-                
-                    <!-- beim klicken von dem button bleibt manauf der seite und der pop up fenster verschwindet -->
-                    <button
-                        onClick="var d = new Date(); d = new Date(d.getTime() +1000*60*60*24*730); document.cookie = 'Akzeptiert=1; expires='+ d.toGMTString() + ';'; document.getElementById('cookie_popup').style.display = 'none';"
-                        class="btn btn_ok_cookie" type="submit" name="ok_cookie_button">Akzeptieren</button>
+            <form method="post">
 
-                    <!-- beim klicken von diesem button kommt eine altert warnung die sagt ob man wirklich die cookies ablehnen will und wird dann auf die seite von session weiter geleitet -->
-                    <button class="btn btn_alert_cookie" type="submit" name="session_cookie">Verweigern</button>
+                <!-- beim klicken von dem button bleibt manauf der seite und der pop up fenster verschwindet -->
+                <button
+                    onClick="var d = new Date(); d = new Date(d.getTime() +1000*60*60*24*730); document.cookie = 'Akzeptiert=1; expires='+ d.toGMTString() + ';'; document.getElementById('cookie_popup').style.display = 'none';"
+                    class="btn btn_ok_cookie" type="submit" name="ok_cookie_button">Akzeptieren</button>
 
-            </div>
+                <!-- beim klicken von diesem button kommt eine altert warnung die sagt ob man wirklich die cookies ablehnen will und wird dann auf die seite von session weiter geleitet -->
+                <button class="btn btn_alert_cookie" type="submit" name="session_cookie">Verweigern</button>
 
-            </form>
         </div>
-    </div>
 
-    
+        </form>
+    </div>
+</div>
+
+
 
 
 
@@ -212,11 +208,11 @@
     <!-- Modal content -->
     <div class="modal-content">
         <!-- Das Kreuz zum schliessen -->
-        
+
 
         <div class="border-boxd">
 
-<span class="close">&times;</span>
+            <span class="close">&times;</span>
 
         </div>
 
