@@ -1,21 +1,22 @@
 <footer>
+    <div class="footer-blau" >
+ 
+        <div class="row">
+            <div class="container"> 
 
-    <div class="row">
-        <div class="footer-blau col-md-6">
 
 
-
-            <div class="container">
+           
 
 
 
                 <div class="row">
 
-                    <div class="col-md-4"></div>
+                   
 
 
 
-                    <div class="col-md-4">
+                    <div class="col-md-2">
 
                         <a class="footer-text" href="<?php echo $url_helper;?>">KURSE</a>
 
@@ -42,7 +43,7 @@
 
 
 
-                    <div class="col-md-4">
+                    <div class="col-md-2">
 
                         <a class="footer-text" href="<?php echo $url_helper;?>Ueber_uns">ÜBER UNS</a>
 
@@ -77,7 +78,7 @@
 
         </div>
 
-        <div class="col-sm-6 footer-white">
+        <div class="footer-white">
             <div class="row">
 
 

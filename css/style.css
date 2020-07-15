@@ -39,7 +39,7 @@ ul {
 
 /*------------------ Desktop version -------------------*/
 
-@media screen and (min-width: 1025px) and (max-width: 1920px) {
+@media screen and (max-width: 1920px) and (min-width: 1025px) {
   .aqua-hidden{
     height: 88px;
     width: 100%;
@@ -69,8 +69,13 @@ ul {
 
 /*----------------- tablet version -----------------------*/
 
-@media screen and (min-width: 768px) and (max-width: 1024px) {
+@media screen and (max-width: 1024px) and (min-width: 768px) {
 
+  .card-4-sizing{
+    width: 854px !important;
+    height: 274px !important;
+
+  }
 
 
 .text-index-size {
@@ -104,38 +109,46 @@ ul {
   }*/
 
 .card-2-sizing{
-  margin-top: 30px !important;
+  width: 877px !important;
+
 }
-
-
-
-
+.card-1-sizing{
+  width: 877px !important;
+}
 
 }
 
 /*----------------- Tablet Protrait -----------------------*/
-@media (min-width: 1024px) and (max-height: 768px) {
+@media screen and (max-height: 768px) and (min-width: 1024px){
+
+  /* .container {
+    max-width: 599px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    background-color: red;
+  } */
 
 
-.card-2-sizing {
-  margin-top: 30px !important;
 }
 
+@media screen and (max-height: 375px) and (min-width: 667px) {
+
+  /* .container {
+    max-width: 599px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    background-color: red;
+  } */
+
+
 }
 
-/*-----------------  Smartphone -----------------------*/
-@media (max-width: 667px) and (max-height: 375px) {
-
-
-.card-2-sizing {
-  margin-top: 30px !important;
-}
-
-}
 
 /* ------navbar -----*/
 
-
+.navbar{
+  padding: .0rem 0rem !important;
+}
   .aqua-hidden {
     height: 88px;
     width: 100%;
@@ -856,6 +869,7 @@ select {
   border-radius: 35px;
   height: 254px;
   box-shadow: 0px 6px 3px rgba(0, 0, 0, 0.2);
+  width: 637px;
 }
 
 .card-2-sizing {
@@ -863,6 +877,7 @@ select {
   border-radius: 35px;
   height: 254px;
   box-shadow: 0px 6px 3px rgba(0, 0, 0, 0.2);
+  width: 637px;
 }
 
 .btn_email {
