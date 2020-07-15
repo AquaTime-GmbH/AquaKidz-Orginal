@@ -505,13 +505,8 @@ select {
 /* Slideshow container */
 
 .slideshow-container {
-<<<<<<< HEAD
   width: 100%;
   height: 440px;
-=======
-  width: 2000px;
-  height: 458px;
->>>>>>> parent of 7b89fe9... Revert "Revert ".""
   background: linear-gradient(90deg, var(--secondcolor), var(--maincolor));
 }
 
@@ -957,7 +952,6 @@ select {
 }
 
 /* ------footer -----*/
-<<<<<<< HEAD
 
 .ul-footer-links {
   list-style-type: none;
@@ -974,8 +968,6 @@ select {
   right: 0;
 }
 
-=======
->>>>>>> parent of 7b89fe9... Revert "Revert ".""
 .footer-pos {
   position: fixed;
   left: 0;
@@ -997,17 +989,12 @@ select {
 
 .footer-text {
   color: white;
-<<<<<<< HEAD
 
-=======
-  opacity: 0.7;
->>>>>>> parent of 7b89fe9... Revert "Revert ".""
 }
 
 .copyright-text {
   color: white;
   text-align: center;
-  margin-top: 12px;
 }
 
 .zentrierung-bilder-footer {
@@ -1024,15 +1011,11 @@ select {
   background-color: var(--maincolor-hover) !important;
   width: 100% !important;
   height: 44px !important;
-<<<<<<< HEAD
 
 }
 
 .footer-right-abstand {
   margin-bottom: 5px;
-=======
-  position: absolute;
->>>>>>> parent of 7b89fe9... Revert "Revert ".""
 }
 
 .bullet-testing li:before {
@@ -1659,13 +1642,7 @@ col-kurs-size .col-5 {
   color: var(--maincolor-hover);
 }
 
-<<<<<<< HEAD
 .footer-picture-sizing {
-=======
-.footer-picture-sizing{
-  height: 103px;
-  margin: 30px;
->>>>>>> parent of 7b89fe9... Revert "Revert ".""
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

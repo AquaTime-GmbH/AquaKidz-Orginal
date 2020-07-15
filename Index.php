@@ -266,7 +266,6 @@ include $url_helper .'include/navbar.php';
 ?>
         <!-- Das ist die Slideshow -->
 
-<<<<<<< HEAD
 
         <div class="slideshow-container" style="overflow-y:hidden;">
             <div class="container">
@@ -274,21 +273,10 @@ include $url_helper .'include/navbar.php';
 
 
                 <!--col-12 muss geändert werden  -->
-=======
-    <div class="slideshow-container" style="overflow-y:hidden;">
-
-
-
-   <!-- <div class="h3_ueberschrift">      
-        <h4 stlye="font-size: 36px;">Was unsere Kunden sagen</h4>
-    </div>-->
-
->>>>>>> parent of 7b89fe9... Revert "Revert ".""
 
 
 
 
-<<<<<<< HEAD
                 <div class="slides slider-position-index">
 
                     <img class="kreis-slider" src="<?php echo $url_helper;?>img/Frau.jpg"
@@ -300,10 +288,6 @@ include $url_helper .'include/navbar.php';
                         bei Ihnen, weiter so, vielen Dank!
                         <p class="position-slider-name">Leonie W.</p>
                     </div>
-=======
- <!--col-12 muss geändert werden  -->
-<div class="col-12 position-slider-cols-text">
->>>>>>> parent of 7b89fe9... Revert "Revert ".""
 
 
                 </div>
@@ -315,7 +299,6 @@ include $url_helper .'include/navbar.php';
                     <img class="kreis-slider" src="<?php echo $url_helper;?>img/Frau.jpg"
                         alt="Bild konnte nicht geladen werden!">
 
-<<<<<<< HEAD
 
 
                     <div class="text-index-size ">Wir fanden die Kursleitung super und sie war sehr engagiert, motiviert und
@@ -326,17 +309,6 @@ include $url_helper .'include/navbar.php';
                     </div>
                 </div>
 
-=======
-
- <div class="slides ">
-     <img class="kreis-slider" src="<?php echo $url_helper;?>img/Frau.jpg" alt="Bild konnte nicht geladen werden!">
-     <p class="position_slider_name">Leonie W.</p>
-        <div style="margin-bottom:100px; margin-top:30px;" class="text">Ich finde es super, dass die Gruppen nicht so gross sind. So hat die Kursleiterin für alle Zeit und  kann entsprechend helfen. Wir gehen sehr gerne in Kurs bei Ihnen, weiter so, vielen Dank!</div>
-        
-    </div>
-
-  
->>>>>>> parent of 7b89fe9... Revert "Revert ".""
 
                 <div class="slides slider-position-index">
                     <img class="kreis-slider" src="<?php echo $url_helper;?>img/Frau.jpg"
@@ -374,7 +346,6 @@ include $url_helper .'include/navbar.php';
                 </div>
 
 
-<<<<<<< HEAD
                 <div class="dot-container-slider">
                     <span class="dot" onclick="slidenow(1)"></span>
                     <span class="dot" onclick="slidenow(2)"></span>
@@ -382,10 +353,6 @@ include $url_helper .'include/navbar.php';
                     <span class="dot" onclick="slidenow(4)"></span>
                     <span class="dot" onclick="slidenow(5)"></span>
                 </div>
-=======
-    </div>
-</div>
->>>>>>> parent of 7b89fe9... Revert "Revert ".""
 
 
 
