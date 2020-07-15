@@ -1322,13 +1322,13 @@ col-kurs-size .col-5 {
   background-color: var(--maincolor);
   width: 100%;
   height: 800px;
-  margin-top: 200px;
+  margin-top: 100px;
 }
 
 .big-box-more {
   background-color: var(--maincolor);
   width: 100%;
-  height: 800px;
+  height: 600px;
   margin-top: 75px;
 }
 
@@ -1343,13 +1343,6 @@ col-kurs-size .col-5 {
   bottom: 30px;
 }
 
-.form-pos {
-  margin-top: 50px;
-  margin-bottom: 153px;
-  position: absolute;
-  width: 100%;
-
-}
 
 .buchen_button {
   height: 73px;
@@ -1559,12 +1552,6 @@ col-kurs-size .col-5 {
   text-align: center;
 }
 
-.container-test {
-  max-width: 1336px !important;
-  height: 100% !important;
-  margin-right: auto !important;
-  margin-left: auto !important;
-}
 
 .jetzt-buchen-pos {
   position: absolute;
@@ -1607,6 +1594,10 @@ col-kurs-size .col-5 {
   font-size: 21px;
 }
 
+.form-color-overall{
+  font-family: "Fjalla One",sans-serif;
+  color: white;
+}
 .form-title-buchen {
   color: white;
   font-size: 22px;
@@ -1627,15 +1618,14 @@ col-kurs-size .col-5 {
 
 .buchen-buttom {
   height: 50px;
-
   margin: -1px;
   border-radius: 35px 35px 35px 35px;
   font-size: 32px;
   background-color: white;
   color: var(--maincolor);
-  margin-top: 100px !important;
-  margin-left: 50% !important;
-  margin-right: 50% !important;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 10px;
 }
 
 .buchen-buttom:hover {

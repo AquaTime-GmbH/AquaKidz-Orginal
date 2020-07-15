@@ -190,24 +190,14 @@ include $url_helper .'include/navbar.php';
 
 
 
-
-  <!--test in variabeln gespeichert-->
-  <?php 
-
-
-$ueber_den_Kurs= "ÜBER DEN KURS" ;
-
-?>
-
-
   <div class="container">
     <div class="big-box-text">
-      <div class="row" style="margin-top:187px;">
+      <div class="row" style="margin-top:100px;">
 
 
         <div class="col-6">
 
-          <p class="title_of_text"><?= $ueber_den_Kurs ?></p>
+          <p class="title_of_text">ÜBER DEN KURS</p>
           <p class="über-den-kurs-undertitle">Frühförderung im Wasser, Schutz- und Lernerfahrung für Ihr Kind</p>
           <p class="text-über-kurs">Das erste Mal im Wasser ist eine ganz besondere Erfahrung. Gemeinsam mit Ihnen
             erlernt Ihr Kind früh Sicherheit im Schwimmbecken zu erhalten. Sie fördern die körperliche und geistige
@@ -278,22 +268,19 @@ $ueber_den_Kurs= "ÜBER DEN KURS" ;
 
 
   <div class="big-box-map">
-    <div class="container">
-      <h1></h1>
-    </div>
 
     <div class="col-md-6">
-      <form id="distance_form">
-        <div class="form-group"><label>ihre postleitzahl: </label> <input class="form-control" id="from_places"
-            placeholder="<?= $eigplz ?>" /></div>
+      <form action="" method="">
+        <div class="form-group"><label>ihre postleitzahl: </label>
+          <input class="form-control" id="from_places" placeholder="<?= $eigplz ?>" /></div>
 
-        <div class="form-group"><label>postleitzahl vom bad: </label> <input class="form-control" id="to_places"
-            placeholder="<?= $suchendeplz?>" /></div>
+        <div class="form-group"><label>postleitzahl vom bad: </label>
+          <input class="form-control" id="to_places" placeholder="<?= $suchendeplz?>" /></div>
         <!-- er soll rechnen wenn er auf der aquababy seite ist und auf kur drückt form action? und google maps auf andere seite oder session
 
-<input class="btn btn-primary" type="submit" value="rechen" /></form>
+              <input class="btn btn-primary" type="submit" value="rechen" /></form>
 
--->
+              -->
 
         <div id="result">
           <ul class="list-group">
@@ -302,231 +289,232 @@ $ueber_den_Kurs= "ÜBER DEN KURS" ;
             <li class="list-group-item d-flex justify-content-between align-items-center">Bis:</li>
           </ul>
         </div>
+      </form>
 
 
-
-        </script>
-   <iframe
-  width="600"
-  height="450"
-  frameborder="0" style="border:0"
-  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDdldUPsHEZSTkYSReuQT0O31dKcdK5vWo
+      </script>
+      <iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDdldUPsHEZSTkYSReuQT0O31dKcdK5vWo
     &q=Space+Needle,Seattle+WA" allowfullscreen>
-</iframe>
+      </iframe>
+    </div>
+
   </div>
-
-
 
 
 
   <!--Anfang Buchungs form-->
 
   <div class="big-box-more">
-
-    <div id="section2" class="container-test">
-      <div class="form-pos">
+    <div id="section2" class="container">
 
 
-        <form action="" method="post">
-          <div class="font-color">
-
-            <!----------------Angaben zum Kursteilnehmer------------->
-            <p class="form-title-buchen">Angaben zum Kursteilnehmer</p>
 
 
-            <div class="form-group">
-              <label class="first-card-text">Kurs</label>
-              <input name="kurs_k" type="text" class="form-control labelshape" value="<?= $kurs_text; ?>">
+
+      <form action="" method="post" class="form-color-overall">
+
+        <!--form überschrift-->
+        <p class="form-title-buchen">Angaben zum Kursteilnehmer</p>
+        <!-- form content -->
+
+
+
+        <div class="form-group ">
+          <label class="first-card-text">Kurs</label>
+          <input name="kurs_k" type="text" class="form-control labelshape" value="<?= $kurs_text; ?>">
+        </div>
+
+
+        <div class="form-row">
+
+          <div class="form-group col-xl-3">
+            <label class="first-card-text">Name Kind*</label>
+            <input type="text" class="form-control labelshape" name="name_k" value="<?= $name_kind; ?>" required>
+          </div>
+
+
+          <div class="form-group col-md-3">
+            <label class="first-card-text">Vorname Kind*</label>
+            <input type="text" class="form-control labelshape" name="vorname_k" value="<?= $vorname_kind?>" required>
+          </div>
+
+          <div class="form-group col-md-3">
+            <label class="first-card-text">Geburtsdatum Kind*</label>
+            <input type="text" placeholder="tt.mm.jjjj" class="form-control labelshape" name="geburtstag_k"
+              value="<?= $geburtstag_kind ?>" required>
+          </div>
+
+
+
+          <div class="form-group col-md-3">
+            <label class="first-card-text">Gesundheitsstatus</label>
+            <input type="text" class="form-control labelshape">
+          </div>
+        </div>
+
+
+
+        <!----------------Angaben Kunden ------------->
+
+        <p class="form-title2-buchen">Angaben Kunde</p>
+
+
+        <div class="form-row">
+
+          <!-- form content -->
+
+          <div class="form-group col-md-1">
+            <label class="first-card-text">Anrede*</label>
+            <div class="dropdown-firstcard">
+              <Select class="form-control labelshape">
+                <option disabled selected value style="color:white;"></option>
+                <option>Herr</option>
+                <option>Frau</option>
+                <option>Familie</option>
+              </select>
             </div>
+          </div>
 
 
 
-            <div class="form-row">
+          <div class="form-group col-md-2">
+            <label class="first-card-text">Ihr Name*</label>
+            <input type="text" class="form-control labelshape">
+          </div>
 
-              <div class="form-group col-md-3">
-                <label class="first-card-text">Name Kind*</label>
-                <input type="text" class="form-control labelshape" name="name_k" value="<?= $name_kind; ?>" required>
-              </div>
-
-
-              <div class="form-group col-md-3">
-                <label class="first-card-text">Vorname Kind*</label>
-                <input type="text" class="form-control labelshape" name="vorname_k" value="<?= $vorname_kind?>"
-                  required>
-              </div>
-
-              <div class="form-group col-md-3">
-                <label class="first-card-text">Geburtsdatum Kind*</label>
-                <input type="text" placeholder="tt.mm.jjjj" class="form-control labelshape" name="geburtstag_k"
-                  value="<?= $geburtstag_kind ?>" required>
-              </div>
+          <div class="form-group col-md-2">
+            <label class="first-card-text">Vorname*</label>
+            <input type="text" class="form-control labelshape">
+          </div>
 
 
 
-              <div class="form-group col-md-3">
-                <label class="first-card-text">Gesundheitsstatus</label>
-                <input type="text" class="form-control labelshape">
-              </div>
+          <div class="form-group col-md-3">
+            <label class="first-card-text">Strasse*</label>
+            <input type="text" class="form-control labelshape">
+          </div>
+
+          <div class="form-group col-md-1">
+            <label class="first-card-text">Nr.*</label>
+            <input type="text" class="form-control labelshape">
+          </div>
+
+          <div class="form-group col-md-1">
+            <label class="first-card-text">Plz*<i class="far fa-question-circle"></i></label>
+            <input type="text" name="postleitzahl" pattern="^[0-9]{4}$" class="form-control labelshape">
+          </div>
+
+          <div class="form-group col-md-2">
+            <label class="first-card-text">Ort*</label>
+            <input type="text" class="form-control labelshape">
+          </div>
+
+        </div>
+
+
+        <div class="form-row">
+
+          <div class="form-group col-md-4">
+            <label class="first-card-text">Ihre E-Mail-Adresse*</label>
+            <input type="email" class="form-control labelshape">
+          </div>
+
+          <div class="form-group col-md-4">
+            <label class="first-card-text">Telefon</label>
+            <input type="email" class="form-control labelshape">
+          </div>
+
+          <div class="form-group col-md-4">
+            <label class="first-card-text">Natel</label>
+            <input type="email" class="form-control labelshape">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-4">
+            <label class="first-card-text">Gutscheincode</label>
+            <input type="email" class="form-control labelshape">
+          </div>
+          <div class="form-group col-md-2">
+            <label class="first-card-text">Zahlugsart</label>
+            <div class="dropdown-firstcard">
+              <Select class="form-control labelshape" required>
+                <option disabled selected value style="color:white;"></option>
+                <option selected>Rechnung</option>
+              </select>
             </div>
+          </div>
 
+          <div class="form-container-check" style="margin-bottom:auto; margin-top:auto;">
+            <input class="" type="checkbox"><a class="" href="Agb" style="color:white;">AGB</a>
+          </div>
 
-            <!----------------Angaben Kunden ------------->
-
-            <p class="form-title2-buchen">Angaben Kunde</p>
-
-
-            <!--------------------begrenzen auf 4 zahlen------------------>
-
-            <!--------------------Html escapen------------------>
-            <div class="form-row">
-
-              <div class="form-group col-md-2">
-                <label class="first-card-text">Anrede*</label>
-                <div class="dropdown-firstcard">
-                  <Select class="form-control labelshape">
-                    <option disabled selected value style="color:white;"></option>
-                    <option>Herr</option>
-                    <option>Frau</option>
-                    <option>Familie</option>
-                  </select>
-                </div>
-              </div>
-
-              <div class="form-group col-md-3">
-                <label class="first-card-text">Ihr Name*</label>
-                <input type="text" class="form-control labelshape">
-              </div>
-
-              <div class="form-group col-md-3">
-                <label class="first-card-text">Vorname*</label>
-                <input type="text" class="form-control labelshape">
-              </div>
-            </div>
-
-            <div class="form-row">
-              <div class="form-group col-md-3">
-                <label class="first-card-text">Strasse*</label>
-                <input type="text" class="form-control labelshape">
-              </div>
-
-              <div class="form-group col-md-3">
-                <label class="first-card-text">Nr.*</label>
-                <input type="text" class="form-control labelshape">
-              </div>
-
-
-
-              <div class="form-group col-md-2">
-                <label class="first-card-text">Plz*<i class="far fa-question-circle"></i></label>
-                <input type="text" name="postleitzahl" pattern="^[0-9]{4}$" class="form-control labelshape">
-              </div>
-
-
-
-              <div class="form-group col-md-2">
-                <label class="first-card-text">Ort*</label>
-                <input type="text" class="form-control labelshape">
-              </div>
-            </div>
-
-            <div class="form-row">
-              <div class="form-group col-md-4">
-                <label class="first-card-text">Ihre E-Mail-Adresse*</label>
-                <input type="email" class="form-control labelshape">
-              </div>
-
-              <div class="form-group col-md-4">
-                <label class="first-card-text">Telefon</label>
-                <input type="email" class="form-control labelshape">
-              </div>
-
-              <div class="form-group col-md-4">
-                <label class="first-card-text">Natel</label>
-                <input type="email" class="form-control labelshape">
-              </div>
-            </div>
-            <div class="form-row">
-              <div class="form-group col-md-4">
-                <label class="first-card-text">Gutscheincode</label>
-                <input type="email" class="form-control labelshape">
-              </div>
-
-              <div class="form-group col-md-2">
-                <label class="first-card-text">Zahlugsart</label>
-                <div class="dropdown-firstcard">
-                  <Select class="form-control labelshape" required>
-                    <option disabled selected value style="color:white;"></option>
-                    <option selected>Rechnung</option>
-                  </select>
-                </div>
-              </div>
-              <div class="row">
-
-                <div class="form-container-check">
-                  <input class="" type="checkbox"><a class="" href="Agb.php">AGB</a>
-                </div>
-
-
-
-
-                <input type="submit" href="" class="btn buchen-buttom" name="buchen_button" value="Jetzt Buchen!">
-
-              </div>
-            </div>
-
-
-            <?php
-
-
-$kurs_text = $_POST['kurs_k'];
-$_SESSION['kurs_text'] = $kurs_text; 
-
-$name_kind = $_POST['name_k'];
-$_SESSION['name_kind'] = $name_kind; 
-
-$vorname_kind = $_POST['vorname_k'];
-$_SESSION['vorname_kind'] = $vorname_kind; 
-
-if(isset($_POST['danke_buchen'])){
-  $kurs_text = $_POST['kurs_k'];
-  $name_kind = $_POST['name_k'];
-  $vorname_kind = $_POST['vorname_k'];
-  $geburtstag_kind = $_POST['geburtstag_k'];
-
-  //$all_form = $kurs_text . $name_kid;
-}
-if ($kurs_text){
-  echo ' <script> window.location="danke_buchen";</script>';
-}
-elseif ($name_kind){
-  echo ' <script> window.location="danke_buchen";</script>';
-}
-
-elseif ($vorname_kind){
-  echo ' <script> window.location="danke_buchen";</script>';
-}
-
-elseif ($geburtstag_kind){
-  echo ' <script> window.location="danke_buchen";</script>';
-}
-?>
-
-        </form>
-
-
-      </div>
+          <input type="submit" href="" class="btn buchen-buttom" name="buchen_button" value="Jetzt Buchen!">
+        </div>
     </div>
   </div>
 
 
+  </form>
+
+
+
+
+
   </div>
+  </div>
+  <?php
+
+
+            $kurs_text = htmlspecialchars($_POST['kurs_k']);
+            $_SESSION['kurs_text'] = $kurs_text; 
+
+            $name_kind = $_POST['name_k'];
+            $_SESSION['name_kind'] = $name_kind; 
+
+            $vorname_kind = $_POST['vorname_k'];
+            $_SESSION['vorname_kind'] = $vorname_kind; 
+
+            if(isset($_POST['danke_buchen'])){
+              $kurs_text = $_POST['kurs_k'];
+              $name_kind = $_POST['name_k'];
+              $vorname_kind = $_POST['vorname_k'];
+              $geburtstag_kind = $_POST['geburtstag_k'];
+
+              //$all_form = $kurs_text . $name_kid;
+            }
+            if ($kurs_text){
+              echo ' <script> window.location="danke_buchen";</script>';
+            }
+            elseif ($name_kind){
+              echo ' <script> window.location="danke_buchen";</script>';
+            }
+
+            elseif ($vorname_kind){
+              echo ' <script> window.location="danke_buchen";</script>';
+            }
+
+            elseif ($geburtstag_kind){
+              echo ' <script> window.location="danke_buchen";</script>';
+            }
+            ?>
+
+  </form>
+
+
+  </div>
+
+
 
   <!--Ende Buchungs form-->
 
   <!--two cards wird eingebunden-->
-  <?php
+
+ <?php
 include 'include/two_cards.php';
 ?>
+
+
+ 
 
 
 
