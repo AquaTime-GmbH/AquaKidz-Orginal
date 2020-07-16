@@ -269,7 +269,7 @@ include $url_helper .'include/navbar.php';
 
   <div class="big-box-map">
 
-    <div class="col-md-6">
+    <div class="col-md-2">
       <form action="" method="">
         <div class="form-group"><label>ihre postleitzahl: </label>
           <input class="form-control" id="from_places" placeholder="<?= $eigplz ?>" /></div>
@@ -292,10 +292,10 @@ include $url_helper .'include/navbar.php';
       </form>
 
 
-      </script>
-      <iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDdldUPsHEZSTkYSReuQT0O31dKcdK5vWo
+     
+      <!-- <iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDdldUPsHEZSTkYSReuQT0O31dKcdK5vWo
     &q=Space+Needle,Seattle+WA" allowfullscreen>
-      </iframe>
+      </iframe> -->
     </div>
 
   </div>
@@ -507,11 +507,57 @@ include $url_helper .'include/navbar.php';
 
   <!--Ende Buchungs form-->
 
-  <!--two cards wird eingebunden-->
 
- <?php
-include 'include/two_cards.php';
-?>
+
+<div class="container">
+<h2 class="text-spiezial" style="margin-top:150px !important;">BRAUCHEN SIE MEHR INFORMATIONEN?</h2>
+
+    <div class="row">
+        <div class="col-sm-12 col-xl-6 col-md-12 col-lg-12">
+            <div class="card card-1-sizing">
+                <div class="row no-gutters">
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title" style="color:rgb(8, 51, 194);">WISSEN FÜR ELTERN</h5>
+                            <p class="card-text font-color">Wir haben die wichtigsten Informationen für Eltern von
+                                Babys
+                                und jungen Kindern zusammengestellt, damit sie Wissen worauf es ankommt.</p>
+                        </div>
+                    </div>
+                    <a href="#" class="btn  mehr-erfahren">Mehr Erfahren</a>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="col-sm-12 col-xl-6 col-md-12 col-lg-12">
+            <div class="card card-2-sizing">
+                <div class="row no-gutters">
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title" style="color:rgb(8, 51, 194);">RUFEN SIE UNS AN</h5>
+                            <p class="card-text under-font"><small>AquaTime GmbH</small></p>
+                            <p class="card-text font-color">Bahnhofstrasse 32, 6403 Küssnacht am Rig</p>
+                            <p class="card-text font-color">Mobil 077 423 58 38; Festnetz 041 852 05 53</p>
+
+                        </div>
+                    </div>
+
+                    <a href="mailto:info@aquatime.ch?subject=Mehr%20informationen%20über%20Aquatime"
+                        class="btn  btn_email">Email</a>
+
+                    <a href="tel:+41774235838" class="btn  btn_auf">Anrufen</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+</div>
+</div>
 
 
  
