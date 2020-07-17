@@ -1042,9 +1042,7 @@ ok .row {
   max-width: 34.333% !important;
 }
 
-col-kurs-size .col-5 {
-  height: 624px !important;
-}
+
 
 /*<------------------------------------------------------------------------>*/
 /*<--------------------------------AQUABABY-------------------------------->*/
@@ -1571,8 +1569,7 @@ col-kurs-size .col-5 {
   color: var(--maincolor);
   background-color: rgb(255, 255, 255);
   border-radius: 35px 35px 35px 35px;
-  height: 58px;
-  padding: 5px;
+  padding: 30px;
   font-family: "Fjalla One", sans-serif;
 }
 

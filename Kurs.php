@@ -119,7 +119,7 @@ include $url_helper .'include/navbar.php';
 
   <div class="blue-box-kurs">
     <div class="container">
-      <col-kurs-size>
+
         <div class="row">
 
           <div class="col-5">
@@ -185,7 +185,6 @@ include $url_helper .'include/navbar.php';
         </div>
     </div>
   </div>
-  </col-kurs-size>
 
 
 
@@ -266,11 +265,14 @@ include $url_helper .'include/navbar.php';
 
 
 
-
+<?php
+$eigplz ="hallo";
+?>
   <div class="big-box-map">
 
-    <div class="col-md-2">
+    <div class="col-md-2 col-xl-2 col-sm-2 col-lg-2">
       <form action="" method="">
+       <fieldset disabled>
         <div class="form-group"><label>ihre postleitzahl: </label>
           <input class="form-control" id="from_places" placeholder="<?= $eigplz ?>" /></div>
 
@@ -289,6 +291,7 @@ include $url_helper .'include/navbar.php';
             <li class="list-group-item d-flex justify-content-between align-items-center">Bis:</li>
           </ul>
         </div>
+         </fieldset>
       </form>
 
 
