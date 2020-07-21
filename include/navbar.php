@@ -1,7 +1,9 @@
+<!--Navbar hidden-->
+
 <div class="aqua-hidden"></div>
 
 
-
+<!--Navbar-->
 <div class="aqua-navbar">
   <div class="container">
     <nav class="navbar navbar-expand-md navbar-dark" style="height:88px;">
@@ -18,15 +20,17 @@
             </a>
           </div>
         </div>
-          <!--Der (Burger) wenn die seite kleiner wird-->
+          <!-- Collapse button -->
       <button class="navbar-toggler" data-toggle="collapse" data-target="#collapse_target">
         <span class="navbar-toggler-icon"></span>
       </button>
+
+    <!-- Collapsible content -->
     <div class="collapse navbar-collapse" id="collapse_target">
        
         <div class="navbar-pos">
 
-
+      
           <ul class="navbar-nav " style="float:right;">
             <li class="nav-item ">
               <a class="nav-link <?= $aktivschwimmkurse; ?>" href="<?php echo $url_helper;?>Schwimmkurse"

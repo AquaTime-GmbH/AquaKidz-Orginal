@@ -178,6 +178,9 @@ while($row = mysqli_fetch_array($result))
     if ($sql_fm_von_datum_html->format('d.m.Y') >= $viewsearch_aquababy_kursstart) {     
            $countergebnisse = ++$countergebnisse;
            
+
+
+
 ?>
 
 

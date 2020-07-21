@@ -120,17 +120,17 @@ include $url_helper .'include/navbar.php';
   <div class="blue-box-kurs">
     <div class="container">
 
-        <div class="row">
+      <div class="row">
 
-          <div class="col-5">
+        <div class="col-5">
 
-            <div class="card first-card-kurs">
-              <div class="card-body">
-                <div class="font-color">
-                  <h1 class="card-title card-title-style" style="font-size:32px"> AQUABABY</h1>
-                  <?= $sql_fm_bad_ort; ?>
+          <div class="card first-card-kurs">
+            <div class="card-body">
+              <div class="font-color">
+                <h1 class="card-title card-title-style" style="font-size:32px"> AQUABABY</h1>
+                <?= $sql_fm_bad_ort; ?>
 
-                  <?php
+                <?php
                
                 $result = mysqli_query($con_mysqli,"SELECT * FROM termine where kurs_fm_id=$sql_kurs_fm_id order by date ASC");
 
@@ -146,43 +146,43 @@ include $url_helper .'include/navbar.php';
                             $sql_termin_updated_at = new DateTime($row['updated_at']);
                 ?>
 
-                  <?php } ?>
+                <?php } ?>
 
 
 
 
-                  <ul style="list-style-type:none;">
-                    <li></li>
+                <ul style="list-style-type:none;">
+                  <li></li>
 
-                    <?php if($sql_fm_vorname == "") { 
+                  <?php if($sql_fm_vorname == "") { 
                     $keinkursleiter = "Leider kein Kursleiter angegeben";
                     ?>
-                    <li>KURSLETIUNG: <?=$sql_fm_vorname . " ". $sql_fm_nachname?> <?= $keinkursleiter?></li>
-                    <?php } ?>
-                    <li>KURSLEKTIONEN:......LEKTIONEN</li>
-                    <li>KURSGELD: <?= $sql_fm_kurskosten; ?> CHF</li>
-                  </ul>
+                  <li>KURSLETIUNG: <?=$sql_fm_vorname . " ". $sql_fm_nachname?> <?= $keinkursleiter?></li>
+                  <?php } ?>
+                  <li>KURSLEKTIONEN:......LEKTIONEN</li>
+                  <li>KURSGELD: <?= $sql_fm_kurskosten; ?> CHF</li>
+                </ul>
 
-                </div>
               </div>
-              <a href="#" class="btn  btn_aquababy_zum_kursanmelden">Zum Kursort</a>
             </div>
-
-            <!---button zum kurs ort-->
-
-
+            <a href="#" class="btn  btn_aquababy_zum_kursanmelden">Zum Kursort</a>
           </div>
 
+          <!---button zum kurs ort-->
 
-          <div class="col-5">
-
-
-            <section class="jetzt-buchen-pos" id="section1">
-              <a class="jetzt-buchen-style" href="#section2">Jetzt Buchen!</a>
-            </section>
-          </div>
 
         </div>
+
+
+        <div class="col-5">
+
+
+          <section class="jetzt-buchen-pos" id="section1">
+            <a class="jetzt-buchen-style" href="#section2">Jetzt Buchen!</a>
+          </section>
+        </div>
+
+      </div>
     </div>
   </div>
 
@@ -265,42 +265,50 @@ include $url_helper .'include/navbar.php';
 
 
 
-<?php
-$eigplz ="hallo";
-?>
   <div class="big-box-map">
+    <div class="container">
 
-    <div class="col-md-2 col-xl-2 col-sm-2 col-lg-2">
-      <form action="" method="">
-       <fieldset disabled>
-        <div class="form-group"><label>ihre postleitzahl: </label>
-          <input class="form-control" id="from_places" placeholder="<?= $eigplz ?>" /></div>
 
-        <div class="form-group"><label>postleitzahl vom bad: </label>
-          <input class="form-control" id="to_places" placeholder="<?= $suchendeplz?>" /></div>
-        <!-- er soll rechnen wenn er auf der aquababy seite ist und auf kur drückt form action? und google maps auf andere seite oder session
+      <div class="col-md-2 ">
+
+        <div class="row">
+
+
+          <form action="" method="">
+            <fieldset disabled>
+              <div class="form-group"><label>ihre postleitzahl: </label>
+                <input class="form-control" id="from_places" placeholder="<?= $eigplz ?>" /></div>
+
+              <div class="form-group"><label>postleitzahl vom bad: </label>
+                <input class="form-control" id="to_places" placeholder="<?= $suchendeplz?>" /></div>
+              <!-- er soll rechnen wenn er auf der aquababy seite ist und auf kur drückt form action? und google maps auf andere seite oder session
 
               <input class="btn btn-primary" type="submit" value="rechen" /></form>
 
               -->
 
-        <div id="result">
-          <ul class="list-group">
-            <li class="list-group-item d-flex justify-content-between align-items-center">Distanz in Kilometer:</li>
-            <li class="list-group-item d-flex justify-content-between align-items-center">Von:</li>
-            <li class="list-group-item d-flex justify-content-between align-items-center">Bis:</li>
-          </ul>
+              <div id="result">
+                <ul class="list-group">
+                  <li class="list-group-item d-flex justify-content-between align-items-center">Distanz in Kilometer:
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-center">Von:</li>
+                  <li class="list-group-item d-flex justify-content-between align-items-center">Bis:</li>
+                </ul>
+              </div>
+            </fieldset>
+          </form>
+
+
+
+
+
         </div>
-         </fieldset>
-      </form>
 
-
-     
-      <!-- <iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDdldUPsHEZSTkYSReuQT0O31dKcdK5vWo
+        <iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAvf8MRWi1ignKqBJnfCcvwTKwUdehvMzU
     &q=Space+Needle,Seattle+WA" allowfullscreen>
-      </iframe> -->
+        </iframe>
+      </div>
     </div>
-
   </div>
 
 
@@ -512,58 +520,58 @@ $eigplz ="hallo";
 
 
 
-<div class="container">
-<h2 class="text-spiezial" style="margin-top:150px !important;">BRAUCHEN SIE MEHR INFORMATIONEN?</h2>
+  <div class="container">
+    <h2 class="text-spiezial" style="margin-top:150px !important;">BRAUCHEN SIE MEHR INFORMATIONEN?</h2>
 
     <div class="row">
-        <div class="col-sm-12 col-xl-6 col-md-12 col-lg-12">
-            <div class="card card-1-sizing">
-                <div class="row no-gutters">
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h5 class="card-title" style="color:rgb(8, 51, 194);">WISSEN FÜR ELTERN</h5>
-                            <p class="card-text font-color">Wir haben die wichtigsten Informationen für Eltern von
-                                Babys
-                                und jungen Kindern zusammengestellt, damit sie Wissen worauf es ankommt.</p>
-                        </div>
-                    </div>
-                    <a href="#" class="btn  mehr-erfahren">Mehr Erfahren</a>
-
-                </div>
-
+      <div class="col-sm-12 col-xl-6 col-md-12 col-lg-12">
+        <div class="card card-1-sizing">
+          <div class="row no-gutters">
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title" style="color:rgb(8, 51, 194);">WISSEN FÜR ELTERN</h5>
+                <p class="card-text font-color">Wir haben die wichtigsten Informationen für Eltern von
+                  Babys
+                  und jungen Kindern zusammengestellt, damit sie Wissen worauf es ankommt.</p>
+              </div>
             </div>
+            <a href="#" class="btn  mehr-erfahren">Mehr Erfahren</a>
+
+          </div>
+
         </div>
+      </div>
 
-        <div class="col-sm-12 col-xl-6 col-md-12 col-lg-12">
-            <div class="card card-2-sizing">
-                <div class="row no-gutters">
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h5 class="card-title" style="color:rgb(8, 51, 194);">RUFEN SIE UNS AN</h5>
-                            <p class="card-text under-font"><small>AquaTime GmbH</small></p>
-                            <p class="card-text font-color">Bahnhofstrasse 32, 6403 Küssnacht am Rig</p>
-                            <p class="card-text font-color">Mobil 077 423 58 38; Festnetz 041 852 05 53</p>
+      <div class="col-sm-12 col-xl-6 col-md-12 col-lg-12">
+        <div class="card card-2-sizing">
+          <div class="row no-gutters">
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title" style="color:rgb(8, 51, 194);">RUFEN SIE UNS AN</h5>
+                <p class="card-text under-font"><small>AquaTime GmbH</small></p>
+                <p class="card-text font-color">Bahnhofstrasse 32, 6403 Küssnacht am Rig</p>
+                <p class="card-text font-color">Mobil 077 423 58 38; Festnetz 041 852 05 53</p>
 
-                        </div>
-                    </div>
-
-                    <a href="mailto:info@aquatime.ch?subject=Mehr%20informationen%20über%20Aquatime"
-                        class="btn  btn_email">Email</a>
-
-                    <a href="tel:+41774235838" class="btn  btn_auf">Anrufen</a>
-                </div>
+              </div>
             </div>
+
+            <a href="mailto:info@aquatime.ch?subject=Mehr%20informationen%20über%20Aquatime"
+              class="btn  btn_email">Email</a>
+
+            <a href="tel:+41774235838" class="btn  btn_auf">Anrufen</a>
+          </div>
         </div>
+      </div>
     </div>
 
-</div>
+  </div>
 
 
-</div>
-</div>
+  </div>
+  </div>
 
 
- 
+
 
 
 

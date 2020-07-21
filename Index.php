@@ -102,9 +102,7 @@ include $url_helper .'include/navbar.php';
                         </div>
 
 
-
                         <label class="col-8 col-form-label first-card-text font-color">Wie alt ist ihr Kind ?</label>
-
 
 
 
