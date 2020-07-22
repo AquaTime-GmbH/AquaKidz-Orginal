@@ -1,6 +1,16 @@
-@import "bootstrap";
-/*Standart werte*/
+/*col padding to 0px*/
+.col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto {
 
+
+ padding-right: 0px !important; 
+ padding-left: 0px !important; 
+}
+
+/*Standart werte*/
+body{
+  padding-top:88px !important;
+  margin: 0;
+}
 :root {
   --maincolor: #416cb2;
   --secondcolor: #749cd2;
@@ -40,23 +50,7 @@ ul {
 /*------------------ Desktop version -------------------*/
 
 @media screen and (max-width: 1920px) and (min-width: 1025px) {
-  .aqua-hidden {
-    height: 88px;
-    width: 100%;
-  }
-
-  .aqua-navbar {
-    height: 88px;
-    background-color: var(--maincolor);
-    border-bottom: 4px solid white;
-
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: 1030;
-  }
-
+  
   .container {
     max-width: 1336px !important;
     margin-left: auto !important;
@@ -123,68 +117,69 @@ ul {
 /*----------------- Tablet Protrait -----------------------*/
 @media screen and (max-width: 768px) and (min-width: 1024px) {
 
-  /* .container {
+   .container {
     max-width: 599px !important;
     margin-left: auto !important;
     margin-right: auto !important;
-    background-color: red;
-  } */
+    background-color: blue;
+  } 
 
 
 }
 
+/*----------------- handy Protrait -----------------------*/
 @media screen and (min-width: 375px) and (max-width: 667px) {
 
-  /* .container {
-    max-width: 599px !important;
+   .container {
+    max-width: 355px !important;
     margin-left: auto !important;
     margin-right: auto !important;
-    background-color: red;
-  } */
+    
+  } 
 
 
 }
+/* Default settings */
 
+  .container {
+    max-width: 1336px ;
+    margin-left: auto ;
+    margin-right: auto ;
+  }
 
 /* ------navbar -----*/
 
+.navbar-style-content{
+  background-color: var(--maincolor);
+  width: 100%;
+  height: 100%;
+  color: white;
+}
 .navbar {
   padding: .0rem 0rem !important;
 }
 
-.aqua-hidden {
-  height: 88px;
-  width: 100%;
+.fas{
+  color: white !important;
 }
 
 .aqua-navbar {
   height: 88px;
   background-color: var(--maincolor);
   border-bottom: 4px solid white;
-
   position: fixed;
   top: 0;
-  right: 0;
-  left: 0;
   z-index: 1030;
+  width: 100%;
 }
 
-.navbar-pos {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-}
+
 
 .navbar-toggler {
   position: absolute !important;
   right: 0 !important;
 }
 
-.login-pos {
-  position: absolute;
-  margin-top: -37.5px;
-  right: 0;
-}
 
 .aktiv {
   color: white !important;
