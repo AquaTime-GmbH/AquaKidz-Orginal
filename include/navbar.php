@@ -20,7 +20,7 @@
       <!-- Collapsible content -->
       <div class="collapse navbar-collapse" id="collapse_target">
 
-        <ul class="nav navbar-nav align-items-end ml-auto">
+        <ul class="nav navbar-nav ml-auto height-ajust-nav">
           <li class="nav-item ">
             <a class="nav-link <?= $aktivschwimmkurse; ?>" href="<?php echo $url_helper;?>Schwimmkurse"
               style="border-radius:20px 0px 0px 0px;  background-color: white; color:#416cb2; font-family: 'Fjalla One', sans-serif;">SCHWIMMKURSE</a>

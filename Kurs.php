@@ -264,52 +264,56 @@ include $url_helper .'include/navbar.php';
   </div>
 
 
-
   <div class="big-box-map">
     <div class="container">
 
+      <div class="row styling-form-kurs">
+        <div class="col-6">
+          <h1>IHR TRAINER</h1>
+          <p></p>
 
-      <div class="col-md-2 ">
+        </div>
 
-        <div class="row">
+        <div class="kreis-slider">
+          <img class="kreis-slider" src="<?php echo $url_helper;?>img/Frau.jpg" alt="Bild konnte nicht geladen werden!">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xl-6">
+          <form action="" method="" class="styling-form-kurs">
 
 
-          <form action="" method="">
-            <fieldset disabled>
-              <div class="form-group"><label>ihre postleitzahl: </label>
-                <input class="form-control" id="from_places" placeholder="<?= $eigplz ?>" /></div>
-
-              <div class="form-group"><label>postleitzahl vom bad: </label>
-                <input class="form-control" id="to_places" placeholder="<?= $suchendeplz?>" /></div>
-              <!-- er soll rechnen wenn er auf der aquababy seite ist und auf kur drückt form action? und google maps auf andere seite oder session
+            <!-- er soll rechnen wenn er auf der aquababy seite ist und auf kur drückt form action? und google maps auf andere seite oder session
 
               <input class="btn btn-primary" type="submit" value="rechen" /></form>
 
               -->
 
-              <div id="result">
-                <ul class="list-group">
-                  <li class="list-group-item d-flex justify-content-between align-items-center">Distanz in Kilometer:
-                  </li>
-                  <li class="list-group-item d-flex justify-content-between align-items-center">Von:</li>
-                  <li class="list-group-item d-flex justify-content-between align-items-center">Bis:</li>
-                </ul>
-              </div>
-            </fieldset>
+            <h1 class="">ADRESSE:</h1>
+            <p class=""></p>
+
+            <h1 class="">ANREISE:</h1>
+            <p class=""></p>
+
+
+
           </form>
-
-
-
-
-
         </div>
+        <div class="col-xl-6">
+          <ul class="list-group">
+            <li class="list-group-item ">Distanz in Kilometer:
+            </li>
+          </ul>
 
-        <iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAvf8MRWi1ignKqBJnfCcvwTKwUdehvMzU
+          <iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAvf8MRWi1ignKqBJnfCcvwTKwUdehvMzU
     &q=Space+Needle,Seattle+WA" allowfullscreen>
-        </iframe>
+          </iframe>
+        </div>
       </div>
     </div>
   </div>
+
 
 
 
@@ -377,12 +381,43 @@ include $url_helper .'include/navbar.php';
           <div class="form-group col-md-1">
             <label class="first-card-text">Anrede*</label>
             <div class="dropdown-firstcard">
-              <Select class="form-control labelshape">
+              <Select class="form-control labelshape" name="angaben_kunde">
+                <?php 
+                if($session_angaben_k = "1"){
+                ?>
                 <option disabled selected value style="color:white;"></option>
-                <option>Herr</option>
-                <option>Frau</option>
-                <option>Familie</option>
+                <option value="1">Herr</option>
+                <option value="2">Frau</option>
+                <option value="3">Familie</option>
               </select>
+              <?php 
+              }
+              ?>
+              <Select class="form-control labelshape" name="angaben_kunde">
+                <?php 
+                if($session_angaben_k = "2"){
+                ?>
+                <option disabled selected value style="color:white;"></option>
+                <option value="1">Herr</option>
+                <option value="2">Frau</option>
+                <option value="3">Familie</option>
+              </select>
+              <?php 
+              }
+              ?>
+              <Select class="form-control labelshape" name="angaben_kunde">
+                <?php 
+                if($session_angaben_k = "3"){
+                ?>
+                <option disabled selected value style="color:white;"></option>
+                <option value="1">Herr</option>
+                <option value="2">Frau</option>
+                <option value="3">Familie</option>
+              </select>
+              <?php 
+              }
+              ?>
+
             </div>
           </div>
 
@@ -390,34 +425,35 @@ include $url_helper .'include/navbar.php';
 
           <div class="form-group col-md-2">
             <label class="first-card-text">Ihr Name*</label>
-            <input type="text" class="form-control labelshape">
+            <input type="text" class="form-control labelshape" name="name_kunde">
           </div>
 
           <div class="form-group col-md-2">
             <label class="first-card-text">Vorname*</label>
-            <input type="text" class="form-control labelshape">
+            <input type="text" class="form-control labelshape" name="vorname_kunde">
           </div>
 
 
 
           <div class="form-group col-md-3">
             <label class="first-card-text">Strasse*</label>
-            <input type="text" class="form-control labelshape">
+            <input type="text" class="form-control labelshape" name="strasse_kunde">
           </div>
 
           <div class="form-group col-md-1">
             <label class="first-card-text">Nr.*</label>
-            <input type="text" class="form-control labelshape">
+            <input type="text" class="form-control labelshape" name="nummer_kunde">
           </div>
 
           <div class="form-group col-md-1">
             <label class="first-card-text">Plz*<i class="far fa-question-circle"></i></label>
-            <input type="text" name="postleitzahl" pattern="^[0-9]{4}$" class="form-control labelshape">
+            <input type="text" name="postleitzahl" pattern="^[0-9]{4}$" class="form-control labelshape"
+              name="plz_kunde">
           </div>
 
           <div class="form-group col-md-2">
             <label class="first-card-text">Ort*</label>
-            <input type="text" class="form-control labelshape">
+            <input type="text" class="form-control labelshape" name="ort_kunde">
           </div>
 
         </div>
@@ -427,28 +463,28 @@ include $url_helper .'include/navbar.php';
 
           <div class="form-group col-md-4">
             <label class="first-card-text">Ihre E-Mail-Adresse*</label>
-            <input type="email" class="form-control labelshape">
+            <input type="email" class="form-control labelshape" name="email_kunde">
           </div>
 
           <div class="form-group col-md-4">
             <label class="first-card-text">Telefon</label>
-            <input type="email" class="form-control labelshape">
+            <input type="email" class="form-control labelshape" name="telefon_kunde">
           </div>
 
           <div class="form-group col-md-4">
             <label class="first-card-text">Natel</label>
-            <input type="email" class="form-control labelshape">
+            <input type="email" class="form-control labelshape" name="natel_kunde">
           </div>
         </div>
         <div class="form-row">
           <div class="form-group col-md-4">
             <label class="first-card-text">Gutscheincode</label>
-            <input type="email" class="form-control labelshape">
+            <input type="email" class="form-control labelshape" name="gutschein_kunde">
           </div>
           <div class="form-group col-md-2">
             <label class="first-card-text">Zahlugsart</label>
             <div class="dropdown-firstcard">
-              <Select class="form-control labelshape" required>
+              <Select class="form-control labelshape" name="zahlung_kunde" required>
                 <option disabled selected value style="color:white;"></option>
                 <option selected>Rechnung</option>
               </select>
