@@ -52,211 +52,39 @@ include $url_helper .'include/navbar.php';
 ?>
     <!--------------ende der einbindung------------------>
 
-    <?php 
+<div class="hintergrundbild_schwimmkurse"></div>
 
-
-  if( isset($_COOKIE['kursort'])) {
-    $cookie_kursort = $_COOKIE["kursort"]; 
-    } else {
-        $cookie_kursort = "";
-  }
-  if( isset($_COOKIE['kursalter'])) {
-    $cookie_kursalter = $_COOKIE["kursalter"]; 
-    } else {
-        $cookie_kursalter = "";
-  }
-
-?>
-
-
-    <div class="hintergrundbild">
-        <div class="border_under">
-        </div>
-    </div>
     <div class="container">
 
 
 
 
-        
+
 
         <div class="col-md-5">
-            <div class="card first-card">
+            <div class="card schwimmkurse-card">
                 <div class="card-body">
 
 
 
 
-                    <h1 class="card-title card-title-style" style="font-size:32px">SCHWIMMEN LERNEN, SCHWIMMEN
-                        LIEBEN</h1>
-                    <p class="card-text first-card-text font-color">Sichere und altersgerechte Kurse für Babys und
-                        Kinder.
-                        Denn schwimmen lernen soll Spass machen.</p>
-
-                    <label class="col-4 col-form-label first-card-text font-color">Plz</label>
-
-                    <form action="search_function" method="post">
-                        <div class="col-12">
-                            <input pattern="^[0-9]{4}$" class="form-control labelshape" id="search_ort"
-                                name="search_ort" type="text" value="<?= $cookie_kursort; ?>">
-                        </div>
+                    <h1 class="card-title card-title-style" style="font-size:32px"> KURSE FÜR JEDES ALTER</h1>
+                    <p class="card-text first-card-text font-color">
+                        Wir gestalten Kurse nach den altersgerechten Bedürfnissen Ihres Kindes. Ob sanfte
+                        Wassergewöhnung für Babys, Sicherheit im Wasser oder der mit Grundlagen-Abzeichen
+                        qualifizierte Kurs für Kids, wir schaffen die richtige Umgebung, um das Potenzial/ Fähigkeiten
+                        unserer kleinen und großen AquaKidz bestens zu fördern.</p>
 
 
-                        <label class="col-8 col-form-label first-card-text font-color">Wie alt ist ihr Kind ?</label>
-
-
-
-                        <div class="col-12">
-                            <div class="dropdown-firstcard">
-                                <?php
-                            if($cookie_kursalter == "1"){
-                                ?>
-                                <Select class="form-control labelshape" id="search_alt" name="search_alt" type="text"
-                                    value="<?= $cookie_kursalter; ?>">
-                                    <option disabled selected value style="color:white;"></option>
-                                    <option value="1" selected>CA. 10 WOCHEN - 24 MONATE</option>
-                                    <option value="2">CA. 2 BIS 3 JAHRE</option>
-                                    <option value="4">CA. 3,5 BIS 7,5 JAHRE</option>
-                                    <option value="7">AB CA. 7 JAHRE</option>
-                                </select><?php
-                            } elseif($cookie_kursalter == "2"){
-                                ?>
-                                <Select class="form-control labelshape" id="search_alt" name="search_alt" type="text"
-                                    value="<?= $cookie_kursalter; ?>">
-                                    <option disabled selected value style="color:white;"></option>
-                                    <option value="1">CA. 10 WOCHEN - 24 MONATE</option>
-                                    <option value="2" selected>CA. 2 BIS 3 JAHRE</option>
-                                    <option value="4">CA. 3,5 BIS 7,5 JAHRE</option>
-                                    <option value="7">AB CA. 7 JAHRE</option>
-                                </select><?php
-                            } elseif($cookie_kursalter == "4"){
-                                ?>
-                                <Select class="form-control labelshape" id="search_alt" name="search_alt" type="text"
-                                    value="<?= $cookie_kursalter; ?>">
-                                    <option disabled selected value style="color:white;"></option>
-                                    <option value="1">CA. 10 WOCHEN - 24 MONATE</option>
-                                    <option value="2">CA. 2 BIS 3 JAHRE</option>
-                                    <option value="4" selected>CA. 3,5 BIS 7,5 JAHRE</option>
-                                    <option value="7">AB CA. 7 JAHRE</option>
-                                </select><?php
-                            } elseif($cookie_kursalter == "7"){
-                                ?>
-                                <Select class="form-control labelshape" id="search_alt" name="search_alt" type="text"
-                                    value="<?= $cookie_kursalter; ?>">
-                                    <option disabled selected value style="color:white;"></option>
-                                    <option value="1">CA. 10 WOCHEN - 24 MONATE</option>
-                                    <option value="2">CA. 2 BIS 3 JAHRE</option>
-                                    <option value="4">CA. 3,5 BIS 7,5 JAHRE</option>
-                                    <option value="7" selected>AB CA. 7 JAHRE</option>
-                                </select><?php
-                            } else{
-                                ?>
-                                <Select class="form-control labelshape" id="search_alt" name="search_alt" type="text"
-                                    value="">
-                                    <option disabled selected value style="color:white;"></option>
-                                    <option value="1">CA. 10 WOCHEN - 24 MONATE</option>
-                                    <option value="2">CA. 2 BIS 3 JAHRE</option>
-                                    <option value="4">CA. 3,5 BIS 7,5 JAHRE</option>
-                                    <option value="7">AB CA. 7 JAHRE</option>
-                                </select><?php
-
-                      
-                            }
-                          
-                            ?>
-                            </div>
-                        </div>
-
-
-
-                        <input type="submit" class="btn search-buttom" name="search_button" value="Suchen">
                 </div>
             </div>
-            </form>
         </div>
 
 
 
+       
 
-
-        <!-- Das sind alle 3 Cards(flexboxen) in der mitte der Webseite -->
-        <section style="margin-top: 150px !important;">
-
-
-            <div class="row">
-            
-            
-                <div class="col-xl-4 col-lg-6 col-md-12 col-sm-12">
-
-                    <div class="card card-sizing">
-                        <img class="imgcard imgshape card-img-top img-border1" src="images/Block1.png"
-                            alt="Bild ladet nicht!">
-                        <div class="card-body">
-                            <h2 class="card-title title-card1">SICHER SCHWIMMEN LERNEN MUSS SPASS MACHEN</h2>
-                            <p class="card-text font-color" style="height:149px; width:366px;">Kinder lernen wenn sie
-                                richtig gefördert werden. Unsere Kurse sind auf die Fähigkeiten und das alter unserer
-                                Schüler zugeschnitten. Wir setzen auf erfahrene Lehrpersonen die die Zeit im Wasser zu
-                                einem wunderbaren Erlebnis machen.</p>
-
-                        </div>
-                        <div style="float:right;">
-                            <a href="#" class="btn  btn_card1">Mehr Erfahren</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-xl-4 col-lg-6 col-md-12 col-sm-12">
-                    <div class="card card-sizing">
-                        <img class="imgcard imgshape card-img-top img-border2" src="images/Block2.png"
-                            alt="Bild ladet nicht!">
-                        <div class="card-body">
-                            <h2 class="card-title title-card2">UNSER PRINZIP FÜR ERFOLG</h2>
-
-                            <ul style="list-style:none; padding-inline-start:15px !important;"
-                                class="bullet-testing font-color">
-                                <li>
-                                    <a>Schwimmen lernen ohne Druck und Zwang</a>
-                                </li>
-                                <li>
-                                    <a>Betreuung von Erfahrenen Pädagogen</a>
-                                </li>
-                                <li>
-                                    <a>Konstante Steigerung von Sicherheit und Kompetenz</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div style="float:right;">
-                            <a href="#" class="btn  btn_card2">Mehr Erfahren</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-xl-4 col-lg-6 col-md-12 col-sm-12">
-                    <div class="card card-sizing">
-                        <img class="imgcard imgshape card-img-top img-border3" src="images/Block3.png"
-                            alt="Bild ladet nicht!">
-                        <div class="card-body">
-                            <h2 class="card-title title-card3">ERFAHRUNG ZAHLT SICH AUS</h2>
-                            <p class="card-text font-color">Nach X Jahren und X Kunden wissen wir worauf es ankommt.
-                                Einfacher Zugang zum richtigen Kurs. Sie finden uns an 15 Orten in der Schweiz</p>
-                        </div>
-                        <div style="float:right;">
-                            <a href="#" class="btn  btn_card3">Mehr Erfahren</a>
-                        </div>
-                    </div>
-                </div>
-                </div>
-            
-        </section>
-        <!-- text über den 4 cards -->
-
-        <h2 class="kurse-text">KURSE FÜR JEDES ALTER</h2>
-        <div class="text-kurse">
-            <p>Wir gestalten Kurse nach den altersgerechten Bedürfnissen Ihres Kindes. Ob sanfte Wassergewöhnung für
-                Babys, Sicherheit im Wasser oder der mit Grundlagen-Abzeichen qualifizierte Kurs für Kids, wir schaffen
-                die richtige Umgebung, um das Potenzial/ Fähigkeiten unserer kleinen und großen AquaKidz bestens zu
-                fördern.</p>
-        </div>
+        
         <!-- Das sind alle 4 Cards(flexboxen) in der mitte der Webseite -->
 
         <?php
@@ -299,7 +127,8 @@ include $url_helper .'include/navbar.php';
 
 
 
-                    <div class="text-index-size ">Wir fanden die Kursleitung super und sie war sehr engagiert, motiviert und
+                    <div class="text-index-size ">Wir fanden die Kursleitung super und sie war sehr engagiert, motiviert
+                        und
                         voll da.
                         Uns hat der Kurs sehr gut gefallen und wir werden später weitere Kurse besuchen. Ich fand
                         insbesondere auch die Gruppengrösse sehr perfekt. Herzlichen Dank für alles!
@@ -312,7 +141,8 @@ include $url_helper .'include/navbar.php';
                     <img class="kreis-slider" src="<?php echo $url_helper;?>img/Frau.jpg"
                         alt="Bild konnte nicht geladen werden!">
 
-                    <div class="text-index-size ">Ich habe mit meiner Tochter bereits zwei Kurse bei Aquakidz besucht. Die
+                    <div class="text-index-size ">Ich habe mit meiner Tochter bereits zwei Kurse bei Aquakidz besucht.
+                        Die
                         Lektionen werden sehr abwechslungsreich gestaltet und es gibt auch schöne wiederkehrende
                         Rituale, die den Kindern Sicherheit geben. Die Kursleitung ist sehr kompetent und reagiert
                         stets angemessen auf die individuellen Bedürfnisse der Babys.
@@ -407,7 +237,7 @@ include $url_helper .'include/navbar.php';
 
 
         <div class="container">
-            <h2 class="text-spiezial">AKTUELLE SPEZIALANGEBOTE</h2>
+            <h2 class="text-spiezial" style="margin-top:100px !important;">AKTUELLE SPEZIALANGEBOTE</h2>
             <div class="textcontainer">
                 <p class="text-sp">Für einen Tag Meerjungfrau sein? Eine Geburtstagsparty im Becken machen? Mit unseren
                     Sonderangeboten bieten wir einmalige Erlebnisse mit bewährter AquaKidz Qualität.</p>
@@ -451,9 +281,7 @@ include $url_helper .'include/navbar.php';
             <div class="row">
 
 
-                <div class="col-sm" style="margin-top:auto; margin-bottom:auto;">
-                    <div class="arrow-left" style="margin-top:auto; margin-bottom:auto;" onclick="plusDivs(-1)"></div>
-                </div>
+           
 
 
 
@@ -584,20 +412,6 @@ include $url_helper .'include/navbar.php';
 
 
 
-
-                <div class="col-sm" style="margin-top:auto; margin-bottom:auto;">
-                    <div class="arrow-right" style="margin-top:auto; margin-bottom:auto;" onclick="plusDivs(1)">
-                    </div>
-                </div>
-
-
-
-
-
-
-
-
-
             </div>
             <div style="text-align:center; margin-bottom:100px;">
                 <span class="dot-slider" onclick="currentSlide(1)"></span>
@@ -637,7 +451,7 @@ include $url_helper .'include/navbar.php';
                 }
                 for (i = 0; i < dots.length; i++) {
                     dots[i].className = dots[i].className.replace(" active", "");
-                 }
+                }
                 mySlides[slideIndex - 1].style.display = "block";
                 dots[slideIndex - 1].className += " active";
             }
@@ -646,43 +460,42 @@ include $url_helper .'include/navbar.php';
         <!--card 5 -->
         <div class="hintergrundbild-card5"></div>
         <div class="container">
-              
-                    <div class="card card5-size">
-                        <div class="card-body">
-                            <div class="font-color">
-                                <h1 class="card-title text-card5"> Den Fortschritt Ihres Kindes immer im Blick</h1>
-                                <p class="card-text" style="font-size:22px; height:188px; width:530px;">AquaKidz bietet
-                                    allen Eltern eine Möglichkeit Rückmeldungen zum Erfolg der Kinder im Kurs zu
-                                    erhalten, auch wenn sie nicht vor Ort sind. Unsere Trainer notieren und bewerten
-                                    für sie die Schritte die Ihr Kind im Kurs macht. Sie erhalten frühzeitig
-                                    Rückmeldung zu möglichen Problemen und Potenzial.</p>
-                                <ul class="bullet-testing font-color font-sizing-card5 "
-                                    style="padding-left:38px !important;">
 
-                                    <li class="a-sizing-index">
-                                        <a>graphische Übersicht jeder Basiskompetenz</a>
-                                    </li>
-                                    <li class="a-sizing-index">
-                                        <a>Übersicht Kurstermine (Kursstart und Ende)</a>
-                                    </li>
-                                    <li class="a-sizing-index">
-                                        <a>Einfache Ersatzterminbuchung</a>
-                                    </li>
-                                    <li class="a-sizing-index">
-                                        <a>Krankenkassenbestätigung zur Rückerstattung</a>
-                                    </li>
-                                    <li class="a-sizing-index">
-                                        <a>direkter Kontakt zum Kursleiter</a>
-                                    </li>
+            <div class="card card5-size">
+                <div class="card-body">
+                    <div class="font-color">
+                        <h1 class="card-title text-card5"> Den Fortschritt Ihres Kindes immer im Blick</h1>
+                        <p class="card-text" style="font-size:22px; height:188px; width:530px;">AquaKidz bietet
+                            allen Eltern eine Möglichkeit Rückmeldungen zum Erfolg der Kinder im Kurs zu
+                            erhalten, auch wenn sie nicht vor Ort sind. Unsere Trainer notieren und bewerten
+                            für sie die Schritte die Ihr Kind im Kurs macht. Sie erhalten frühzeitig
+                            Rückmeldung zu möglichen Problemen und Potenzial.</p>
+                        <ul class="bullet-testing font-color font-sizing-card5 " style="padding-left:38px !important;">
 
-                                </ul>
-                            </div>
+                            <li class="a-sizing-index">
+                                <a>graphische Übersicht jeder Basiskompetenz</a>
+                            </li>
+                            <li class="a-sizing-index">
+                                <a>Übersicht Kurstermine (Kursstart und Ende)</a>
+                            </li>
+                            <li class="a-sizing-index">
+                                <a>Einfache Ersatzterminbuchung</a>
+                            </li>
+                            <li class="a-sizing-index">
+                                <a>Krankenkassenbestätigung zur Rückerstattung</a>
+                            </li>
+                            <li class="a-sizing-index">
+                                <a>direkter Kontakt zum Kursleiter</a>
+                            </li>
 
-                        </div>
-                        <a href="#" class="btn btn-card5 ">Mehr Erfahren</a>
+                        </ul>
+                    </div>
 
-              
-                
+                </div>
+                <a href="#" class="btn btn-card5 ">Mehr Erfahren</a>
+
+
+
             </div>
         </div>
 

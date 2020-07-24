@@ -322,30 +322,31 @@ while($row = mysqli_fetch_array($result))
 
              <div class="row slides">
                  <div class="col-md-3">
-
+              
                      <div class="vier-kreise-über-uns-slider"><i
-                             class="fas fa-plus-circle posi-style-icon-über myBtn"></i></div>
+                             class="fas fa-plus-circle posi-style-icon-über myBtn" style="color:black !important;"></i></div>
 
                  </div>
                  <div class="col-md-3">
 
                      <div class="vier-kreise-über-uns-slider"><i
-                             class="fas fa-plus-circle posi-style-icon-über myBtn"></i></div>
+                             class="fas fa-plus-circle posi-style-icon-über myBtn" style="color:black !important;"></i></div>
 
                  </div>
 
                  <div class="col-md-3">
 
                      <div class="vier-kreise-über-uns-slider"><i
-                             class="fas fa-plus-circle posi-style-icon-über myBtn"></i></div>
+                             class="fas fa-plus-circle posi-style-icon-über myBtn" style="color:black !important;"></i></div>
 
                  </div>
                  <div class="col-md-3">
 
                      <div class="vier-kreise-über-uns-slider"><i
-                             class="fas fa-plus-circle posi-style-icon-über myBtn"></i></div>
+                             class="fas fa-plus-circle posi-style-icon-über myBtn" style="color:black !important;"></i></div>
+                            </div>
 
-                 </div>
+                 
   <div class="ueber-uns-buttons">
             <span class="dot-slider" onclick="currentSlide(1)"></span>
             <span class="dot-slider" onclick="currentSlide(2)"></span>

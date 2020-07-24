@@ -13,7 +13,7 @@
                                 und jungen Kindern zusammengestellt, damit sie Wissen worauf es ankommt.</p>
                         </div>
                     </div>
-                    <a href="#" class="btn  mehr-erfahren">Mehr Erfahren</a>
+                    <a href="<?php echo $url_helper;?>Ueber_uns#sectionvonefk" class="btn  mehr-erfahren">Mehr Erfahren</a>
 
                 </div>
 
