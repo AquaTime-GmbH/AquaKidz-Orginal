@@ -61,26 +61,15 @@ include $url_helper .'include/navbar.php';
         <div class="card first-card">
             <div class="card-body">
                 <div class="font-color">
-                <h1 class="card-title card-title-style" style="font-size:32px">98/9</h1>
-                    <p class="card-text" style="font-size:20px" >Sichere und altersgerechte Kurse für Babys und Kinder. Denn schwimmen lernen soll Spass machen.</p>
+                <h1 class="card-title card-title-style" style="font-size:32px">Finde deinen Ort</h1>
+                    <
 
-                    <label class="col-4 col-form-label">Ort</label>
-                    <div class="col-12">
-                        <input class="form-control labelshape"  type="text">
-                    </div>
-
-                    <label  class="col-6 col-form-label">Kurs Start</label>
+                    <label  class="col-6 col-form-label">Plz</label>
                     <div class="col-12">
                         <input class="form-control labelshape"  type="date">
                     </div>
 
-                    <label class="col-8 col-form-label">Wie alt ist ihr Kind ?</label>
-                    <div class="col-12">
-                        <input class="form-control labelshape"  type="number">
-                    </div>
-
                 </div>
-                <a href="#" class="btn search-buttom" style="">SUCHEN</a>
             </div>
         </div>
     </div>

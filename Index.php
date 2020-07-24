@@ -92,10 +92,10 @@ include $url_helper .'include/navbar.php';
                     <p class="card-text first-card-text font-color">Sichere und altersgerechte Kurse für Babys und
                         Kinder.
                         Denn schwimmen lernen soll Spass machen.</p>
-
+<form action="search_function" method="post">
                     <label class="col-4 col-form-label first-card-text font-color">Plz</label>
 
-                    <form action="search_function" method="post">
+                    
                         <div class="col-12">
                             <input pattern="^[0-9]{4}$" class="form-control labelshape" id="search_ort"
                                 name="search_ort" type="text" value="<?= $cookie_kursort; ?>">
