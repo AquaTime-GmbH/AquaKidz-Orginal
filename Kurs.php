@@ -28,10 +28,6 @@ $Getid = $_GET['id'];
 
 
 
-
-
-
-
 $result = mysqli_query($con_mysqli,"SELECT * FROM kurse WHERE kurs_id=$Getid ");
 
 

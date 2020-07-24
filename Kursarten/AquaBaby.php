@@ -79,7 +79,7 @@ include $url_helper .'include/navbar.php';
 
                          <label class="col-6 col-form-label text-card-aqua"><span>plz</span></label>
 
-                         <input class="form-control labelshape" id="search_aquababy_ort" name="search_aquababy_ort"
+                         <input pattern="^[0-9]{4}$" class="form-control labelshape" id="search_aquababy_ort" name="search_aquababy_ort"
                              type="text" placeholder="überall" value="<?= $viewsearch_aquababy_ort_cookie; ?>">
                      </div>
 

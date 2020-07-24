@@ -1337,23 +1337,30 @@ ok .row {
   background-size: cover;
   overflow: hidden;
 }
+/*<------------------------------------------------------------------------>*/
+/*<--------------------------------KURSORT-------- ------------------------>*/
+/*<------------------------------------------------------------------------>*/
 
+.kursort-card {
+  background-color: rgba(255, 255, 255, 0.9);
+  height: 180px;
+  width: 414px !important;
+  border-radius: 35px;
+  margin-top:200px;
+  margin-bottom: 300px;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.input-group-text{
+  background-color: white !important;
+  border-color: rgb(0, 123, 255) !important;
+  border-width: 2px;
+  height: calc(1.5em + .75rem + 2px);
+  border-radius: 0px 35px 0px 35px;
+}
+.styling-checkbox-kursort{
+  color: var(--maincolor) !important;
+  background-color: red !important;
+}
 
 /*<------------------------------------------------------------------------>*/
 /*<--------------------------------KUSSEITE EINZELN------------------------>*/
