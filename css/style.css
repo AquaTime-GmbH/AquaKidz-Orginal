@@ -7,10 +7,11 @@
 } */
 
 /*Standart werte*/
-body{
-  padding-top:88px !important;
+body {
+  padding-top: 88px !important;
   margin: 0;
 }
+
 :root {
   --maincolor: #416cb2;
   --secondcolor: #749cd2;
@@ -50,7 +51,7 @@ ul {
 /*------------------ Desktop version -------------------*/
 
 @media screen and (max-width: 1920px) and (min-width: 1025px) {
-  
+
   .container {
     max-width: 1336px !important;
     margin-left: auto !important;
@@ -58,10 +59,10 @@ ul {
   }
 
 
-.height-ajust-nav {
-  height: 88px !important;
-  align-items: flex-end !important;
-}
+  .height-ajust-nav {
+    height: 88px !important;
+    align-items: flex-end !important;
+  }
 
 }
 
@@ -117,58 +118,130 @@ ul {
   .height-ajust-nav {
     height: 88px !important;
     align-items: flex-end !important;
+
   }
+
 
 }
 
 /*----------------- Tablet Protrait -----------------------*/
 @media screen and (max-width: 768px) and (min-width: 1024px) {
 
-   .container {
+  .container {
     max-width: 599px !important;
     margin-left: auto !important;
     margin-right: auto !important;
     background-color: blue;
-  } 
+  }
 
+.navbar-expand-md{
+  max-width: 768px !important;
+}
+.nav-link-schwimmkurse{
+  background-color: red !important;
+}
+.styling-aqua-collapse {
+  background-color: var(--maincolor) !important;
+  text-align: center !important;
+  border-bottom: 4px solid white !important;
+  border-right: 4px solid white !important;
+  border-left: 4px solid white !important;
+  box-shadow: 0px 6px 3px rgba(0, 0, 0, 0.2) !important;
+}
+.nav-link-kontakt {
+  background-color: var(--maincolor) !important;
+  color: white !important;
+}
 
+.nav-link-über {
+  background-color: var(--maincolor) !important;
+  color: white !important;
+}
+
+.nav-link-schwimmkurse {
+  background-color: var(--maincolor) !important;
+  color: white !important;
+}
+.nav-link-kursort {
+  background-color: var(--maincolor) !important;
+  color: white !important;
+}
+.aktiv {
+  color: var(--maincolor) !important;
+  background-color: white !important;
+  border: none !important;
+  border-bottom: 0px;
+}
 }
 
 /*----------------- handy Protrait -----------------------*/
 @media screen and (min-width: 375px) and (max-width: 667px) {
 
-   .container {
+  .container {
     max-width: 355px !important;
     margin-left: auto !important;
     margin-right: auto !important;
-    
-  } 
 
-
+  }
+.styling-aqua-collapse {
+  background-color: var(--maincolor) !important;
+  text-align: center !important;
+  border-bottom: 4px solid white !important;
+  border-right: 4px solid white !important;
+  border-left: 4px solid white !important;
+  box-shadow: 0px 6px 3px rgba(0, 0, 0, 0.2) !important;
 }
+.nav-link-kontakt{
+  background-color: var(--maincolor) !important;
+color: white !important;
+}
+.nav-link-über{
+  background-color: var(--maincolor) !important;
+color: white !important;
+}
+.nav-link-schwimmkurse{
+  background-color: var(--maincolor) !important;
+color: white !important;
+}
+.nav-link-kursort{
+  background-color: var(--maincolor) !important;
+  color: white !important;
+}
+.aktiv {
+  color: var(--maincolor) !important;
+  background-color: white !important;
+  border: none !important;
+  border-bottom: 0px;
+}
+.nav-link-login:hover{
+  color: white !important;
+}
+}
+
 /* Default settings */
 
-  .container {
-    max-width: 1336px ;
-    margin-left: auto ;
-    margin-right: auto ;
-  }
+.container {
+  max-width: 1336px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 /* ------navbar -----*/
 
 
 
-.navbar-style-content{
+.navbar-style-content {
   background-color: var(--maincolor);
   width: 100%;
   height: 100%;
   color: white;
 }
+
 .navbar {
   padding: .0rem 0rem !important;
 }
 
-.fas{
+.fas {
   color: white !important;
 }
 
@@ -182,7 +255,41 @@ ul {
   width: 100%;
 }
 
+.nav-link-schwimmkurse {
+  border-radius: 20px 0px 0px 0px;
+  background-color: white;
+  color: #416cb2;
+  font-family: 'Fjalla One',
+    sans-serif;
+}
 
+.nav-link-kursort {
+  background-color: white;
+  color: #416cb2;
+  font-family: 'Fjalla One',
+    sans-serif;
+}
+
+.nav-link-über {
+  background-color: white;
+  color: #416cb2;
+  font-family: 'Fjalla One',
+    sans-serif;
+}
+
+.nav-link-kontakt {
+  border-radius: 0px 20px 0px 0px;
+  background-color: white;
+  color: #416cb2;
+  font-family: 'Fjalla One',
+    sans-serif;
+}
+
+.nav-link-login {
+  color: white;
+  font-family: 'Fjalla One',
+    sans-serif;
+}
 
 .navbar-toggler {
   position: absolute !important;
@@ -1209,9 +1316,9 @@ ok .row {
 /*<--------------------------------KUSSEITE EINZELN------------------------>*/
 /*<------------------------------------------------------------------------>*/
 
-.styling-form-kurs{
+.styling-form-kurs {
   color: white;
-  font-family: "Fjalla One",sans-serif;
+  font-family: "Fjalla One", sans-serif;
 }
 
 
@@ -1601,10 +1708,11 @@ ok .row {
   font-size: 21px;
 }
 
-.form-color-overall{
-  font-family: "Fjalla One",sans-serif;
+.form-color-overall {
+  font-family: "Fjalla One", sans-serif;
   color: white;
 }
+
 .form-title-buchen {
   color: white;
   font-size: 22px;

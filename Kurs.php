@@ -383,7 +383,7 @@ include $url_helper .'include/navbar.php';
             <div class="dropdown-firstcard">
               <Select class="form-control labelshape" name="angaben_kunde">
                 <?php 
-                if($session_angaben_k = "1"){
+                if($angaben_k = "1"){
                 ?>
                 <option disabled selected value style="color:white;"></option>
                 <option value="1">Herr</option>
@@ -392,10 +392,11 @@ include $url_helper .'include/navbar.php';
               </select>
               <?php 
               }
+
               ?>
               <Select class="form-control labelshape" name="angaben_kunde">
                 <?php 
-                if($session_angaben_k = "2"){
+                if($angaben_k = "2"){
                 ?>
                 <option disabled selected value style="color:white;"></option>
                 <option value="1">Herr</option>
@@ -404,10 +405,11 @@ include $url_helper .'include/navbar.php';
               </select>
               <?php 
               }
+
               ?>
               <Select class="form-control labelshape" name="angaben_kunde">
                 <?php 
-                if($session_angaben_k = "3"){
+                if($angaben_k = "3"){
                 ?>
                 <option disabled selected value style="color:white;"></option>
                 <option value="1">Herr</option>
@@ -416,6 +418,7 @@ include $url_helper .'include/navbar.php';
               </select>
               <?php 
               }
+              
               ?>
 
             </div>
