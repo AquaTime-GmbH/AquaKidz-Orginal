@@ -170,7 +170,7 @@ include $url_helper .'include/navbar.php';
         </div>
 
 
-        <div class="col-5">
+        <div class="col-5" style="height:624px !important;">
 
 
           <section class="jetzt-buchen-pos" id="section1">

@@ -58,6 +58,8 @@ include $url_helper .'include/navbar.php';
 
      <div class="hintergrundbild"></div>
      <div class="container">
+     <form action="" method="post">
+    
          <div class="col-5">
 
 
@@ -120,7 +122,6 @@ include $url_helper .'include/navbar.php';
                      </div>
 
 
-
                      <div class="col-4"></div>
                  </div>
                  <div class="row">
@@ -140,49 +141,52 @@ include $url_helper .'include/navbar.php';
 
 
                      </div>
-                     <div class="form-group">
-                         <div class="col-2">
+                     
+                  <section style="display:flex; flex-wrap:wrap;">
+                      
+
+                         <div class="col-1 abstand-col-1-kurs">
                              <p>Alle</p>
                              <input class="styling-checkbox-kursort" type="checkbox">
                          </div>
-                     </div>
-                     <div class="form-group">
-                         <div class="col-2">
+                
+                  
+                         <div class="col-1 abstand-col-1-kurs">
                              <p>Mo</p>
                              <input class="styling-checkbox-kursort" type="checkbox">
                          </div>
-                     </div>
-                     <div class="form-group">
-                         <div class="col-2">
+                  
+     
+                         <div class="col-1 abstand-col-1-kurs">
                              <p>Di</p>
                              <input class="styling-checkbox-kursort" type="checkbox">
                          </div>
-                     </div>
-                     <div class="form-group">
-                         <div class="col-2">
+          
+                 
+                         <div class="col-1 abstand-col-1-kurs">
                              <p>Mi</p>
                              <input class="styling-checkbox-kursort" type="checkbox">
                          </div>
-                     </div>
-
-                     <div class="form-group">
-                         <div class="col-2">
+              
+                         <div class="col-1 abstand-col-1-kurs">
                              <p>Do</p>
                              <input class="styling-checkbox-kursort" type="checkbox">
                          </div>
-                     </div>
-                     <div class="form-group">
-                         <div class="col-2">
+                 
+      
+                         <div class="col-1 abstand-col-1-kurs">
                              <p>Fr</p>
                              <input class="styling-checkbox-kursort" type="checkbox">
                          </div>
-                     </div>
-                     <div class="form-group">
-                         <div class="col-2">
+                
+                 
+                         <div class="col-1 abstand-col-1-kurs">
                              <p>Sa</p>
                              <input class="styling-checkbox-kursort" type="checkbox">
                          </div>
-                     </div>
+             
+            </section>
+             </form>
                      <input href="#" type="submit" class="btn  btn_suchen_aqua" name="search_button" value="Suchen">
 
                  </div>
@@ -413,7 +417,9 @@ else{
 
 
 
-         <input type="submit" name="mehr_anzeigen" class="btn btn_mehr_laden" value="Mehr Laden">
+<input type="submit" name="mehr_anzeigen" class="btn btn_mehr_laden" value="Mehr Laden">
+
+         
      </div>
 
 

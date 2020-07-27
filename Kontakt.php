@@ -1,307 +1,329 @@
- <!-- organisation der url -->
+<!-- organisation der url -->
 <?php 
+ session_start();
 $url_helper= "";
 /* einbingung der database connection*/
 include  $url_helper .'include/database.php';
+
+
+
+
+
+  if( isset($_COOKIE['kursort'])) {
+    $cookie_kursort = $_COOKIE["kursort"]; 
+    } else {
+        $cookie_kursort = "";
+  }
+  if( isset($_COOKIE['kursalter'])) {
+    $cookie_kursalter = $_COOKIE["kursalter"]; 
+    } else {
+        $cookie_kursalter = "";
+  }
+
+
+
+
+
+$Getid = $_GET['id'];
+
+
+
+$result = mysqli_query($con_mysqli,"SELECT * FROM kurse WHERE kurs_id=$Getid ");
+
+
+
+while($row = mysqli_fetch_array($result))
+{  
+    $sql_kurs_id = $row['kurs_id'];
+    $sql_fm_kurs_id = $row['fm_kurs_id'];
+    $sql_fm_bad_id = $row['fm_bad_id'];
+    $sql_fm_bad_name_druck = $row['fm_bad_name_druck'];
+    $sql_fm_bad_strasse = $row['fm_bad_strasse'];
+    $sql_fm_bad_ort = $row['fm_bad_ort'];
+    $sql_fm_offene_plaetze = $row['fm_offene_plaetze'];
+    $sql_fm_von_datum_html = new DateTime($row['fm_von_datum_html']);
+    $sql_fm_bis_datum_html = new DateTime($row['fm_bis_datum_html']);
+    $sql_fm_text_kursinfo = $row['fm_text_kursinfo'];
+    $sql_fm_kurskosten = $row['fm_kurskosten'];
+    $sql_fm_kurstrainer_erster_id = $row['fm_kurstrainer_erster_id'];
+    $sql_fm_marken_id = $row['fm_marken_id'];
+    $sql_fm_marke = $row['fm_marke'];
+    $sql_fm_markenfamilie = $row['fm_markenfamilie'];
+    $sql_fm_Niveau_Description_Internet = $row['fm_Niveau_Description_Internet'];
+    $sql_fm_Alter = $row['fm_Alter'];
+    $sql_fm_wochentag = $row['fm_wochentag'];
+    $sql_fm_Startzeit = new DateTime($row['fm_Startzeit']);
+    $sql_fm_Dauer = $row['fm_Dauer'];
+    $sql_fm_taeglich = $row['fm_taeglich'];
+    $sql_fm_Bad_Eintritt = $row['fm_Bad_Eintritt'];
+    $sql_fm_sonst_Kosten = $row['fm_sonst_Kosten'];
+    $sql_diagramm_kz1_text = $row['diagramm_kz1_text'];
+    $sql_diagramm_kz2_text = $row['diagramm_kz2_text'];
+    $sql_diagramm_kz3_text = $row['diagramm_kz3_text'];
+    $sql_diagramm_kz4_text = $row['diagramm_kz4_text'];
+    $sql_diagramm_kz5_text = $row['diagramm_kz5_text'];
+    $sql_diagramm_kz6_text = $row['diagramm_kz6_text'];
+    $sql_diagramm_kz7_text = $row['diagramm_kz7_text'];
+    $sql_diagramm_kz8_text = $row['diagramm_kz8_text'];
+    $sql_fm_status = $row['fm_status'];
+    $sql_counter = $row['counter'];
+    $sql_updated_at = new DateTime($row['updated_at']);
+    $sql_created_at = new DateTime($row['created_at']);
+
+    
+}
+$result_mitarbeiter = mysqli_query($con_mysqli,"SELECT * FROM mitarbeiter  WHERE mitarbeiter_id=$Getid");
+
+
+
+while($row = mysqli_fetch_array($result_mitarbeiter))
+{  
+    $sql_fm_mitarbeiter_fm_id= $row['mitarbeiter_fm_id'];
+    $sql_fm_vorname = $row['vorname'];
+    $sql_fm_nachname= $row['nachname'];
+}
 ?>
 
 <!DOCTYPE html>
+
 <head>
-<title>AquaKidz</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="autor" content="">
-    <meta name="keywords" content="">
-    <!-- Bootstrap,w3schools,fotawsome CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="<?php echo $url_helper;?>css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Lato&display=swap" rel="stylesheet">
+  <title>AquaKidz</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="autor" content="">
+  <meta name="keywords" content="">
+
+  <!-- Bootstrap,w3schools,fotawsome CSS -->
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="<?php echo $url_helper;?>css/style.css">
+
+  <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Lato&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.2.1/build/ol.js"></script>
 </head>
+
 <body>
 
-<!--navbar wird eingebunden-->
-<?php
-$aktivschwimmkurse = '';
-$aktivkursort = '';
-$aktivueberuns = '';
-$aktivkontakt = 'aktiv';
+  <!--navbar wird eingebunden-->
+  <?php
 include $url_helper .'include/navbar.php';
 ?>
-<!--------------ende der einbindung------------------>
+  <!--------------ende der einbindung------------------>
 
+  <div class="blue-box-kurs">
+    <div class="container">
 
+      <div class="row">
 
+        <div class="col-6">
 
-
-
-<div class="hintergrundbild"></div>
-<div class="container">
-    <div class="col-5">
-
-
-        <div class="card first-card">
+          <div class="card first-card-kurs">
             <div class="card-body">
-                <div class="font-color">
-                <h1 class="card-title card-title-style" style="font-size:32px">SCHWIMMEN LERNEN, SCHWIMMEN LIEBEN</h1>
-                    <p class="card-text" style="font-size:20px" >Sichere und altersgerechte Kurse für Babys und Kinder. Denn schwimmen lernen soll Spass machen.</p>
+              <div class="font-color">
+                <h1 class="card-title card-title-style" style="font-size:32px"> Kontaktieren sie uns</h1>
+               
 
-                    <label class="col-4 col-form-label">Ort</label>
-                    <div class="col-12">
-                        <input class="form-control labelshape"  type="text">
-                    </div>
 
-                    <label  class="col-6 col-form-label">Kurs Start</label>
-                    <div class="col-12">
-                        <input class="form-control labelshape"  type="date">
-                    </div>
-
-                    <label class="col-8 col-form-label">Wie alt ist ihr Kind ?</label>
-                    <div class="col-12">
-                        <input class="form-control labelshape"  type="number">
-                    </div>
-
-                </div>
-                <a href="#" class="btn search-buttom" style="">SUCHEN</a>
+              </div>
             </div>
+            
+          </div>
+
+          <!---button zum kurs ort-->
+
         </div>
+
+
+        <div class="col-6" style="height:624px !important;">
+
+
+          <section class="jetzt-buchen-pos" id="section1">
+            <a class="jetzt-buchen-style" href="#section2">Jetzt Kontaktieren!</a>
+          </section>
+        </div>
+
+      </div>
     </div>
-
-
-     <!-- Das sind alle 3 Cards(flexboxen) in der mitte der Webseite -->
-        <div class="row">
-        <div class="col-sm-4">
-           
-                <div class="card card-sizing">
-                    <img class="imgcard imgshape card-img-top" src="images/Block1.png"  alt="Bild ladet nicht!">
-                <div class="card-body">
-                    <h2 class="card-title text-card1">SICHER SCHWIMMEN LERNEN MUSS SPASS MACHEN</h2>
-                    <p class="card-text font-color">Kinder lernen wenn sie richtig gefördert werden. Unsere Kurse sind auf die Fähigkeiten und das alter unserer Schüler zugeschnitten. Wir setzen auf erfahrene Lehrpersonen die die Zeit im Wasser zu einem wunderbaren Erlebnis machen.</p>     
-
-                </div>
-                <div style="float:right;">
-                    <a href="#"  class="btn  btn_card1">Mehr Erfahren</a>
-                </div>
-            </div>
-        </div>
-    
-    <div class="col-sm-4">
-        <div class="card card-sizing">
-            <img class="imgcard imgshape card-img-top" src="images/Block2.png"   alt="Bild ladet nicht!">
-        <div class="card-body">
-                <h2 class="card-title text-card2">UNSER PRINZIP FÜR ERFOLG</h2>
-                
-                <ul class="bullet-testing font-color">
-                    <li>
-                        <a>Schwimmen lernen ohne Druck und Zwang</a>
-                    </li>
-                    <li>
-                        <a>Betreuung von Erfahrenen Pädagogen</a>
-                    </li>
-                    <li>
-                        <a>Konstante Steigerung von Sicherheit und Kompetenz</a>
-                    </li>
-                </ul>
-            </div>
-            <div style="float:right;">
-                <a href="#" class="btn  btn_card2" >Mehr Erfahren</a>
-            </div>
-        </div>
-    </div>
-
-    <div class="col-sm-4">
-        <div class="card card-sizing">
-            <img class="imgcard imgshape card-img-top" src="images/Block3.png" alt="Bild ladet nicht!">
-        <div class="card-body">
-                <h2 class="card-title text-card3">ERFAHRUNG ZAHLT SICH AUS</h2>
-                <p class="card-text font-color">Nach X Jahren und X Kunden wissen wir worauf es ankommt. Einfacher Zugang zum richtigen Kurs. Sie finden uns an 15 Orten in der Schweiz</p>
-                </div>
-                <div style="float:right;">
-                    <a href="#" class="btn  btn_card3">Mehr Erfahren</a>
-                </div>
-            </div>
-        </div>
   </div>
 
 
-    <!-- text über den 4 cards -->
+  <!--Anfang Buchungs form-->
 
-    <h2 class="kurse-text">KURSE FÜR JEDES ALTER</h2>
-    <div class="text-kurse">
-        <p>Wir gestalten Kurse nach den altersgerechten Bedürfnissen Ihres Kindes. Ob sanfte Wassergewöhnung für Babys, Sicherheit im Wasser oder der mit Grundlagen-Abzeichen qualifizierte Kurs für Kids, wir schaffen die richtige Umgebung, um das Potenzial/ Fähigkeiten unserer kleinen und großen AquaKidz bestens zu fördern.</p>
-    </div>
-    <!-- Das sind alle 4 Cards(flexboxen) in der mitte der Webseite -->
-
-    <?php
-    include 'include/Kursbloecke.php';
-?>
-<!-- Das ist die Slideshow -->
-
-    <div class="slideshow-container">
-
-    <div class="h3_ueberschrift">       
-        <h4>Was unsere Kunden sagen</h4>
-    </div>
-
-    <div class="slides ">
-        <div class="text">CaptionOnehgdfhgfdhgfdhgfdhfgdhfdghfdghfgdhfgdhgfdhfgdhgfdhfgdhfgdhgfdhfgdhgfdhgfdhfgdhfgdhgfdhghghdfhfgdhfgdhfgdhfgdhfgdhfgdhfgdgfdhgfhdfghgfdhfgdhgfdhfgdhgfdhfgdhfgdhgffd</div>
-    </div>
-
-    <div class="slides ">
-        <div class="text">Caption Two</div>
-    </div>
-    <div class="slides ">
-        <div class="text">Caption Three</div>
-    </div>
-
-    <div class="slides ">
-        <div class="text">Caption four</div>
-    </div>
-
-    <div class="slides ">
-        <div class="text">Caption five</div>
-    </div>
-
-    <div style="text-align:center ">
-        <span class="dot" onclick="currentSlide(1)"></span> 
-        <span class="dot" onclick="currentSlide(2)"></span> 
-        <span class="dot" onclick="currentSlide(3)"></span>
-        <span class="dot" onclick="currentSlide(4)"></span>
-        <span class="dot" onclick="currentSlide(5)"></span>
-    </div>
-   
-    <!--javascript für die Slideshow-->
-     <script>
-     var slideIndex = 1;
-     var timer = null;
-     showSlides(slideIndex);
-     function plusSlides(n) {
-         clearTimeout(timer);
-         showSlides(slideIndex += n);
-     }
-
-     function currentSlide(n) {
-         clearTimeout(timer);
-         showSlides(slideIndex = n);
-     }
-
-     function showSlides(n) {
-     var i;
-     var slides = document.getElementsByClassName("slides");
-     var dots = document.getElementsByClassName("dot");
-     if (n==undefined){
-         n = ++slideIndex
-         }
-     if (n > slides.length) {
-         slideIndex = 1
-         }
-     if (n < 1) {
-         slideIndex = slides.length
-         }
-     for (i = 0; i < slides.length; i++) {
-         slides[i].style.display = "none";
-     }
-     for (i = 0; i < dots.length; i++) {
-         dots[i].className = dots[i].className.replace(" active", "");
-     }
-         slides[slideIndex-1].style.display = "block";
-         dots[slideIndex-1].className += " active";
-         /* timer auf 20 sekunden gesetzt */
-         timer = setTimeout(showSlides, 20000);
-     }
-     </script>
+  <div class="big-box-more">
+    <div id="section2" class="container">
 
 
-    </div>
 
 
-    <div class="container">
-        <h2 class="text-spiezial">AKTUELLE SPEZIALANGEBOTE</h2>
-    <div class="textcontainer">
-        <p class="text-sp">Für einen Tag Meerjungfrau sein? Eine Geburtstagsparty im Becken machen? Mit unseren Sonderangeboten bieten wir einmalige Erlebnisse mit bewährter AquaKidz Qualität.</p>
-    </div>
+
+      <form action="" method="post" class="form-color-overall">
+
+
+
+        <!----------------Angaben Kunden ------------->
+        <div class="form-row">
+
+          <!-- form content -->
+
+          <div class="form-group col-md-2">
+            <label class="first-card-text">Ihr Name*</label>
+            <input type="text" class="form-control labelshape" name="name_kunde">
+          </div>
+
+          <div class="form-group col-md-2">
+            <label class="first-card-text">Vorname*</label>
+            <input type="text" class="form-control labelshape" name="vorname_kunde">
+          </div>
+     </div>
+<div class="form-row">
+ <div class="form-group col-md-4">
+            <label class="first-card-text">Ihre E-Mail-Adresse*</label>
+            <input type="email" class="form-control labelshape" name="email_kunde">
+          </div>
+          </div>
+          <div class="form-row">
+ <div class="form-group col-md-4">
+            <label class="first-card-text">Natel</label>
+            <input type="email" class="form-control labelshape" name="natel_kunde">
+          </div>
 </div>
-    <!--card 5 -->
-    <div class="hintergrundbild-card5"></div>
-    <div class="container">
-        <div class="row">
-        <div class="col-sm-7"></div>
-    <div class="col-sm-5">
+       
+     <div class="form-row">
+<div class="form-group col-md-4">
+    <label class="first-card-text" >Beschereibung</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+  </div>
 
-        <div class="card card5-size">
-            <div class="card-body">
-                <div class="font-color">
-                <h1 class="card-title text-card5"> Den Fortschritt Ihres Kindes immer im Blick</h1>
-                    <p class="card-text" style="font-size:15px" >AquaKidz bietet allen Eltern eine Möglichkeit Rückmeldungen zum Erfolg der Kinder im Kurs zu erhalten, auch wenn sie nicht vor Ort sind. Unsere Trainer notieren und bewerten für sie die Schritte die Ihr Kind im Kurs macht. Sie erhalten frühzeitig Rückmeldung zu möglichen Problemen und Potenzial.</p>
-                    <ul class="bullet-testing font-color">
-                    <li>
-                        <a>Vorteil A</a>
-                    </li>
-                    <li>
-                        <a>Vorteil B</a>
-                    </li>
-                    <li>
-                        <a>Vorteil C</a>
-                    </li>
-                    <li>
-                        <a>Vorteil D</a>
-                    </li>
-                </ul>
-                    </div>
-                <a href="#"  class="btn btn-card5 ">Mehr Erfahren</a>
-              
-            </div> 
-             
+     </div>   
+
+          <input type="submit" href="" class="btn buchen-buttom" name="buchen_button" value="senden!" style="margin-left:0px !important;">
         </div>
-    </div>    
-    </div>   
 
-    <h2 class="text-spiezial">BRAUCHEN SIE MEHR INFORMATIONEN?</h2>
+
+ 
+
+         
+      
+  
+  </div>
+
+
+  </form>
+
+
+
+
+
+  </div>
+  </div>
+  <?php
+
+
+            $kurs_text = htmlspecialchars($_POST['kurs_k']);
+            $_SESSION['kurs_text'] = $kurs_text; 
+
+            $name_kind = $_POST['name_k'];
+            $_SESSION['name_kind'] = $name_kind; 
+
+            $vorname_kind = $_POST['vorname_k'];
+            $_SESSION['vorname_kind'] = $vorname_kind; 
+
+            if(isset($_POST['danke_buchen'])){
+              $kurs_text = $_POST['kurs_k'];
+              $name_kind = $_POST['name_k'];
+              $vorname_kind = $_POST['vorname_k'];
+              $geburtstag_kind = $_POST['geburtstag_k'];
+
+              //$all_form = $kurs_text . $name_kid;
+            }
+            if ($kurs_text){
+              echo ' <script> window.location="danke_buchen";</script>';
+            }
+            elseif ($name_kind){
+              echo ' <script> window.location="danke_buchen";</script>';
+            }
+
+            elseif ($vorname_kind){
+              echo ' <script> window.location="danke_buchen";</script>';
+            }
+
+            elseif ($geburtstag_kind){
+              echo ' <script> window.location="danke_buchen";</script>';
+            }
+            ?>
+
+  </form>
+
+
+  </div>
+
+
+
+  <!--Ende Buchungs form-->
+
+
+
+  <div class="container">
+    <h2 class="text-spiezial" style="margin-top:150px !important;">BRAUCHEN SIE MEHR INFORMATIONEN?</h2>
+
     <div class="row">
-    <div class="col-sm-6">
-    <div class="card card-1-sizing">
-        <div class="row no-gutters">
+      <div class="col-sm-12 col-xl-6 col-md-12 col-lg-12">
+        <div class="card card-1-sizing">
+          <div class="row no-gutters">
             <div class="col-md-8">
-            <div class="card-body">
+              <div class="card-body">
                 <h5 class="card-title" style="color:rgb(8, 51, 194);">WISSEN FÜR ELTERN</h5>
-                <p class="card-text font-color">Wir haben die wichtigsten Informationen für Eltern von Babys und jungen Kindern zusammengestellt, damit sie Wissen worauf es ankommt.</p>
-              </div> 
+                <p class="card-text font-color">Wir haben die wichtigsten Informationen für Eltern von
+                  Babys
+                  und jungen Kindern zusammengestellt, damit sie Wissen worauf es ankommt.</p>
+              </div>
             </div>
-                <a href="#"  class="btn  bnts_card4 mehr-erfahren">Mehr Erfahren</a>
-              
-            </div> 
-            
-        </div>
-    </div>
+            <a href="#" class="btn  mehr-erfahren">Mehr Erfahren</a>
 
-    <div class="col-sm-6">
-    <div class="card card-2-sizing">
-        <div class="row no-gutters">
+          </div>
+
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-xl-6 col-md-12 col-lg-12">
+        <div class="card card-2-sizing">
+          <div class="row no-gutters">
             <div class="col-md-8">
-            <div class="card-body">
+              <div class="card-body">
                 <h5 class="card-title" style="color:rgb(8, 51, 194);">RUFEN SIE UNS AN</h5>
                 <p class="card-text under-font"><small>AquaTime GmbH</small></p>
                 <p class="card-text font-color">Bahnhofstrasse 32, 6403 Küssnacht am Rig</p>
                 <p class="card-text font-color">Mobil 077 423 58 38; Festnetz 041 852 05 53</p>
-            
-              </div> 
+
+              </div>
             </div>
-           
-                <a href="#"  class="btn  btn_email" >Email</a>
-            
-                <a href="#"  class="btn  btn_auf" >Anrufen</a>
-                </div> 
-            </div>
+
+            <a href="mailto:info@aquatime.ch?subject=Mehr%20informationen%20über%20Aquatime"
+              class="btn  btn_email">Email</a>
+
+            <a href="tel:+41774235838" class="btn  btn_auf">Anrufen</a>
+          </div>
         </div>
+      </div>
     </div>
-</div>
-</div>
+
+  </div>
+
+
+  </div>
+  </div>
 
 
 
-<!--footer wird eingebunden-->
-<?php
-include 'include/footer.php';
+
+
+
+
+  <!--footer wird eingebunden-->
+  <?php
+include $url_helper . 'include/footer.php';
 ?>
-<!--------------ende der einbindung------------------>
+  <!--------------ende der einbindung------------------>
