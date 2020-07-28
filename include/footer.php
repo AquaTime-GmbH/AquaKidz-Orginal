@@ -171,7 +171,6 @@
 
 
 
-
 <!-- Cookie popup style -->
 
 <div id="cookie_popup">
