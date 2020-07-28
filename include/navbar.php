@@ -1,7 +1,7 @@
 <!--Navbar-->
 <div class="aqua-navbar">
   <div class="container">
-    <nav class="navbar navbar-expand-md" style="height:88px;">
+    <nav class="navbar navbar-expand-lg" style="height:88px;">
 
       <div class="logo navbar-brand">
         <a href="<?php echo $url_helper;?>index">

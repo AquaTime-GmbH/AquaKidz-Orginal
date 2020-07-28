@@ -219,41 +219,6 @@ include $url_helper .'include/navbar.php';
 
   </div>
   </div>
-  <?php
-
-
-            $kurs_text = htmlspecialchars($_POST['kurs_k']);
-            $_SESSION['kurs_text'] = $kurs_text; 
-
-            $name_kind = $_POST['name_k'];
-            $_SESSION['name_kind'] = $name_kind; 
-
-            $vorname_kind = $_POST['vorname_k'];
-            $_SESSION['vorname_kind'] = $vorname_kind; 
-
-            if(isset($_POST['danke_buchen'])){
-              $kurs_text = $_POST['kurs_k'];
-              $name_kind = $_POST['name_k'];
-              $vorname_kind = $_POST['vorname_k'];
-              $geburtstag_kind = $_POST['geburtstag_k'];
-
-              //$all_form = $kurs_text . $name_kid;
-            }
-            if ($kurs_text){
-              echo ' <script> window.location="danke_buchen";</script>';
-            }
-            elseif ($name_kind){
-              echo ' <script> window.location="danke_buchen";</script>';
-            }
-
-            elseif ($vorname_kind){
-              echo ' <script> window.location="danke_buchen";</script>';
-            }
-
-            elseif ($geburtstag_kind){
-              echo ' <script> window.location="danke_buchen";</script>';
-            }
-            ?>
 
   </form>
 
