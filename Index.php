@@ -630,7 +630,7 @@ include $url_helper .'include/navbar.php';
                 <div class="card-body">
                     <div class="font-color">
                         <h1 class="card-title text-card5"> Den Fortschritt Ihres Kindes immer im Blick</h1>
-                        <p class="card5-text" style="font-size:22px; height:188px; width:530px;">AquaKidz bietet
+                        <p class="card5-text" style="font-size:22px; width:530px;">AquaKidz bietet
                             allen Eltern eine Möglichkeit Rückmeldungen zum Erfolg der Kinder im Kurs zu
                             erhalten, auch wenn sie nicht vor Ort sind. Unsere Trainer notieren und bewerten
                             für sie die Schritte die Ihr Kind im Kurs macht. Sie erhalten frühzeitig
