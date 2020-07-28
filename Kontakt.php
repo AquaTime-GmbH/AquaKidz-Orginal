@@ -124,12 +124,12 @@ include $url_helper .'include/navbar.php';
             <div class="card-body">
               <div class="font-color">
                 <h1 class="card-title card-title-style" style="font-size:32px"> Kontaktieren sie uns</h1>
-               
+
 
 
               </div>
             </div>
-            
+
           </div>
 
           <!---button zum kurs ort-->
@@ -150,6 +150,52 @@ include $url_helper .'include/navbar.php';
   </div>
 
 
+  <?php
+  
+                $empfaenger = 'djordje.aksentijevic@aquatime.ch';
+                $absender = 'postmaster@aquatime.ch';
+
+
+     if(isset($_POST['kontakt_absenden'])){
+                    if(empty($_POST['name_kunde'])) $err[] = '<li> - den Namen angeben</li>';
+                    if(empty($_POST['vorname_kontakt'])) $err[] = '<li> - den Vornamen angeben</li>';
+                    if(empty($_POST['natel_kontakt'])) $err[] = '<li> - die Natel nummer angeben</li>';
+                    if(empty($_POST['email_kontakt'])) $err[] = '<li> - die Email-Adresse angeben</li>';
+                    if(empty($_POST['text'])) $err[] = '<li> - welchen Wunsch haben Sie? Bitte den Text eingeben</li>';
+
+
+
+             if(!empty($err)) {
+                        echo '<div class="alert alert-danger">Bitte korrigieren Sie folgende Fehler:<br>
+            <ul class="list-unstyled content-list text-danger">';
+                        foreach($err as $fehler){
+                            echo $fehler;
+                        }
+                        echo '</ul></div>';
+                    }else {
+
+                        $mail_header = "From:".$absender."\r\n";
+                        $mail_header .= "X-Sender-IP: ".$_SERVER['REMOTE_ADDR']."\r\n";
+                        $mail_header .= "MIME-Version: 1.0\r\n";
+                        $mail_header .= "Content-Type: text/html; charset=UTF-8;\r\n";
+
+                        $mailnachricht = '<html><body>';
+                        while(list($feld,$wert)=each($_POST)) {
+                            if($feld!="abschicken" && $feld!="contact_antispam") {
+                                $mailnachricht.=ucfirst($feld).": <br>".preg_replace("/(content-type:|bcc:|cc:|to:|from:)/im", "",$wert)."<br><br>";
+                            }
+                        }
+                        $email = preg_replace("/[^a-z0-9 !?:;,.\/_\-=+@#$&\*\(\)]/im", "", $_POST['email_kontakt']);
+                        $email = preg_replace("/(content-type:|bcc:|cc:|to:|from:)/im", "", $email);
+                        $mailnachricht.="\nDatum/Zeit: ".date("d.m.Y H:i:s");
+                        $mailnachricht.= '</body></html>';
+                        mail($empfaenger, "Neue Kontaktanfrage von AquaTime", $mailnachricht,$mail_header);
+                        echo '<div class="alert alert-success">Vielen Dank für Ihre E-Mail!<br><br>Wir werden schnellstmöglich diese bearbeiten.</div>';
+                        $submitted = true;
+                    }
+                }
+  ?>
+
   <!--Anfang Buchungs form-->
 
   <div class="big-box-more">
@@ -158,7 +204,7 @@ include $url_helper .'include/navbar.php';
 
 
 
-
+<?php if($submitted != true){ ?> 
       <form action="" method="post" class="form-color-overall">
 
 
@@ -170,44 +216,45 @@ include $url_helper .'include/navbar.php';
 
           <div class="form-group col-md-2">
             <label class="first-card-text">Ihr Name*</label>
-            <input type="text" class="form-control labelshape" name="name_kunde">
+            <input type="text" class="form-control labelshape" name="name_kontakt" value="<?= $_POST['name_kunde'] ?>">
           </div>
 
           <div class="form-group col-md-2">
             <label class="first-card-text">Vorname*</label>
-            <input type="text" class="form-control labelshape" name="vorname_kunde">
+            <input type="text" class="form-control labelshape" name="vorname_kontakt" value="<?= $_POST['vorname_kontakt'] ?>">
           </div>
-     </div>
-<div class="form-row">
- <div class="form-group col-md-4">
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-4">
             <label class="first-card-text">Ihre E-Mail-Adresse*</label>
-            <input type="email" class="form-control labelshape" name="email_kunde">
+            <input type="email" class="form-control labelshape" name="email_kontakt" value="<?= $_POST['email_kontakt'] ?>">
           </div>
-          </div>
-          <div class="form-row">
- <div class="form-group col-md-4">
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-4">
             <label class="first-card-text">Natel</label>
-            <input type="email" class="form-control labelshape" name="natel_kunde">
+            <input type="email" class="form-control labelshape" name="natel_kontakt" value="<?= $_POST['natel_kontakt'] ?>">
           </div>
-</div>
-       
-     <div class="form-row">
-<div class="form-group col-md-4">
-    <label class="first-card-text" >Beschereibung</label>
-    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-  </div>
-
-     </div>   
-
-          <input type="submit" href="" class="btn buchen-buttom" name="buchen_button" value="senden!" style="margin-left:0px !important;">
         </div>
 
+        <div class="form-row">
+          <div class="form-group col-md-4">
+            <label class="first-card-text">Beschereibung</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" value="<?= $_POST['text'] ?>"></textarea>
+          </div>
 
- 
+        </div>
 
-         
-      
-  
+        <input type="submit" href="" class="btn buchen-buttom" name="kontakt_absenden" value="senden!"
+          style="margin-left:0px !important;">
+    </div>
+
+  <?php	} ?>
+
+
+
+
+
   </div>
 
 
