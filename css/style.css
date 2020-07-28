@@ -564,8 +564,8 @@ color: white !important;
 }
 
 .nav-link-ueber {
-  background-color: white !important;
-  color: #416cb2 !important;
+  background-color: white ;
+  color: #416cb2 ;
   font-family: 'Fjalla One',
     sans-serif;
 }
