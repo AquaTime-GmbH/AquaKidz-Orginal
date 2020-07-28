@@ -377,40 +377,39 @@ include $url_helper .'include/navbar.php';
           <div class="form-group col-md-1">
             <label class="first-card-text">Anrede*</label>
             <div class="dropdown-firstcard">
-              <Select class="form-control labelshape" name="angaben_kunde">
-                <?php 
-                if($angaben_k = "1"){
+
+              <?php 
+                if($angaben_k == "1"){
                 ?>
+              <Select class="form-control labelshape" id="angaben_anrede" name="angaben_kunde" type="text"
+                value="<?= $session_anrede; ?>">
                 <option disabled selected value style="color:white;"></option>
-                <option value="1">Herr</option>
+                <option value="1" selected>Herr</option>
                 <option value="2">Frau</option>
                 <option value="3">Familie</option>
               </select>
-              <?php 
-              }
 
-              ?>
-              <Select class="form-control labelshape" name="angaben_kunde">
-                <?php 
-                if($angaben_k = "2"){
+              <?php 
+                }else if($angaben_k == "2"){
                 ?>
+              <Select class="form-control labelshape" id="angaben_anrede" name="angaben_kunde" type="text"
+                value="<?= $session_anrede; ?>">
                 <option disabled selected value style="color:white;"></option>
                 <option value="1">Herr</option>
-                <option value="2">Frau</option>
+                <option value="2" selected>Frau</option>
                 <option value="3">Familie</option>
               </select>
-              <?php 
-              }
 
-              ?>
-              <Select class="form-control labelshape" name="angaben_kunde">
-                <?php 
-                if($angaben_k = "3"){
+
+              <?php 
+                 }else if($angaben_k == "3"){
                 ?>
+              <Select class="form-control labelshape" id="angaben_anrede" name="angaben_kunde" type="text"
+                value="<?= $session_anrede; ?>">
                 <option disabled selected value style="color:white;"></option>
                 <option value="1">Herr</option>
                 <option value="2">Frau</option>
-                <option value="3">Familie</option>
+                <option value="3" selected>Familie</option>
               </select>
               <?php 
               }

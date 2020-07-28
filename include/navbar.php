@@ -35,7 +35,7 @@
 
 
           <li class="nav-item ">
-            <a class="nav-link <?= $aktivueberuns;  ?> nav-link-über" href="<?php echo $url_helper;?>Ueber_uns">ÜBER
+            <a class="nav-link <?= $aktivueberuns;  ?> nav-link-ueber" href="<?php echo $url_helper;?>Ueber_uns">ÜBER
               UNS</i></a>
           </li>
 

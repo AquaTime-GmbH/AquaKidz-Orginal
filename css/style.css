@@ -177,12 +177,286 @@ ul {
 /*----------------- handy Protrait -----------------------*/
 @media screen and (min-width: 375px) and (max-width: 667px) {
 
-  .container {
-    max-width: 355px !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
+body {
+  line-height: 1 !important;
+}
 
-  }
+.container {
+  max-width: 355px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  display: table !important;
+  position: relative !important;
+  perspective: 1000px;
+
+}
+
+html {
+  display: table !important;
+  position: absolute !important;
+  width: 100% !important;
+}
+
+.first-card {
+  max-width: 356px !important;
+  max-height: 414px !important;
+
+}
+
+.card-title {
+  font-size: 18px !important;
+  width: 315px !important;
+  margin-bottom: 5px !important;
+}
+
+.card-text {
+  font-size: 16px !important;
+  width: 315px !important;
+  word-wrap: break-word !important;
+}
+
+.first-card-text {
+  font-size: 16px !important;
+}
+
+.search-buttom {
+  font-size: 22px !important;
+  max-width: 356px !important;
+  max-height: 50px !important;
+}
+
+.card-sizing1 {
+  width: 356px !important;
+  height: 435px !important;
+  margin-top: 20px !important;
+  margin-bottom: 20px !important;
+}
+
+.card-sizing2 {
+  width: 356px !important;
+  height: 351px !important;
+  margin-top: 20px !important;
+  margin-bottom: 20px !important;
+}
+
+.card-sizing3 {
+  width: 356px !important;
+  height: 352px !important;
+  margin-top: 20px !important;
+  margin-bottom: 20px !important;
+}
+
+.title-card1 {
+  height: 4rem !important;
+}
+
+.title-card2 {
+
+  height: 1rem !important;
+}
+
+.title-card3 {
+
+  height: 2rem !important;
+}
+
+.card-body {
+  max-width: 356px !important;
+  max-height: 414px !important;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.imgcard {
+  max-width: 356px !important;
+  max-height: 160px !important;
+  background-repeat: no-repeat;
+  background-size: cover !important;
+  overflow: hidden !important;
+}
+
+.btn_card1 {
+  max-width: 162px !important;
+  max-height: 58px !important;
+  font-size: 18px !important;
+}
+
+.btn_card2 {
+  max-width: 162px !important;
+  max-height: 58px !important;
+  font-size: 18px !important;
+}
+
+.btn_card3 {
+  max-width: 162px !important;
+  max-height: 58px !important;
+  font-size: 18px !important;
+
+}
+
+.kurse-text {
+  font-size: 18px !important;
+  max-width: 355px !important;
+  max-height: 53px !important;
+  display: flex !important;
+  position: relative !important;
+  margin-left: auto;
+  margin-right: auto;
+  /*      margin-top: 75px !important; /  / Jana Fragen Wegen Abstand Zwischen Dem Tittel "Kurse Für Jedes Alter" Und Den Karten*/
+}
+
+.text-kurse {
+  max-height: 147px !important;
+  max-width: 355px !important;
+  font-size: 16px !important;
+  display: table !important;
+  position: relative !important;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 12px !important;
+}
+
+.card-4-sizing {
+  height: 490px !important;
+  width: 355px !important;
+  margin-top: 20px !important;
+  margin-bottom: 20px !important;
+}
+
+.card-4-img {
+  max-width: 355px !important;
+  max-height: 199px !important;
+  width: 355px !important;
+  height: 199px !important;
+  border-radius: 35px 35px 0px 0px !important;
+}
+
+.bnts_card4 {
+  max-width: 162px !important;
+  max-height: 58px !important;
+  font-size: 18px !important;
+}
+
+.slideshow-container {
+  height: auto !important;
+}
+
+.kreis-slider {
+  display: table !important;
+  margin-bottom: 1rem !important;
+  width: 150px !important;
+  height: 150px !important;
+}
+
+.position-slider-name {
+  float: none !important;
+  font-size: 16px !important;
+}
+
+.text-index-size {
+  width: 355px !important;
+  font-size: 16px !important;
+}
+
+.text-spiezial {
+  margin-top: 40px !important;
+  font-size: 18px !important;
+}
+
+.text-sp {
+  max-width: 355px !important;
+  max-height: 101px !important;
+}
+
+.textcontainer {
+  max-width: 355px !important;
+}
+
+.slider-card-sizing {
+  height: 417px !important;
+  width: 355px !important;
+}
+
+.imgcard-slider {
+  width: 355px !important;
+  height: 173px !important;
+}
+
+.card5-size {
+  margin-top: 10px !important;
+  max-width: 357px !important;
+  max-height: 488px !important;
+}
+
+.card5-text {
+  font-size: 16px !important;
+  max-width: 300px !important;
+  word-wrap: break-word !important;
+}
+
+.text-card5 {
+  height: 2rem !important;
+}
+
+.font-sizing-card5 {
+  font-size: 18px !important;
+  max-width: 315px !important;
+  max-height: 30px !important;
+}
+
+.text-spezial {
+  font-size: 18px !important;
+}
+
+.hintergrundbild-card5 {
+  max-width: 100% !important;
+  height: 510px !important;
+}
+
+.card-1-sizing {
+  max-width: 355px !important;
+  max-height: 244px !important;
+  display: table !important;
+  position: relative !important;
+  margin-top: 19px !important;
+  margin-bottom: 19px !important;
+}
+
+.card-2-sizing {
+  max-width: 355px !important;
+  max-height: 244px !important;
+  display: table !important;
+  position: relative !important;
+  margin-top: 19px !important;
+  margin-bottom: 19px !important;
+}
+
+.mehr-erfahren {
+  max-width: 153px !important;
+  max-height: 58px !important;
+  font-size: 18px !important;
+}
+
+.btn_auf {
+  max-width: 137px !important;
+  max-height: 58px !important;
+}
+
+.btn_email {
+  max-width: 126px !important;
+  margin-right: 150px !important;
+}
+
+.btn-card5 {
+  max-width: 153px !important;
+  max-height: 58 !important;
+  font-size: 18px !important;
+}
+
+.footer-white {
+  display: table-row;
+  position: absolute;
+}
 .styling-aqua-collapse {
   background-color: var(--maincolor) !important;
   text-align: center !important;
@@ -195,7 +469,7 @@ ul {
   background-color: var(--maincolor) !important;
 color: white !important;
 }
-.nav-link-über{
+.nav-link-ueber{
   background-color: var(--maincolor) !important;
 color: white !important;
 }
@@ -216,6 +490,7 @@ color: white !important;
 .nav-link-login:hover{
   color: white !important;
 }
+
 }
 
 /* Default settings */
@@ -227,8 +502,6 @@ color: white !important;
 }
 
 /* ------navbar -----*/
-
-
 
 .navbar-style-content {
   background-color: var(--maincolor);
@@ -270,9 +543,9 @@ color: white !important;
     sans-serif;
 }
 
-.nav-link-über {
-  background-color: white;
-  color: #416cb2;
+.nav-link-ueber {
+  background-color: white !important;
+  color: #416cb2 !important;
   font-family: 'Fjalla One',
     sans-serif;
 }
@@ -337,6 +610,26 @@ color: white !important;
 }
 
 /*alle bilder im card(flexbox) gleiche grösse machen */
+.card-sizing1 {
+  box-shadow: 0px 6px 3px rgba(0, 0, 0, 0.2);
+  border-radius: 35px;
+  width: 415px;
+  height: 553px;
+}
+
+.card-sizing2 {
+  box-shadow: 0px 6px 3px rgba(0, 0, 0, 0.2);
+  width: 415px;
+  border-radius: 35px;
+  height: 553px;
+}
+
+.card-sizing3 {
+  box-shadow: 0px 6px 3px rgba(0, 0, 0, 0.2);
+  width: 415px;
+  border-radius: 35px;
+  height: 553px;
+}
 
 .imgcard {
   width: 414px;
@@ -885,7 +1178,7 @@ select {
   padding: 5px;
 }
 
-.dot-slider {
+.dotslider {
   cursor: pointer;
   height: 11px;
   width: 11px;
@@ -899,7 +1192,7 @@ select {
   bottom: 0;
 }
 
-.active .dot-slider:hover {
+.active .dotslider:hover {
   background-color: var(--maincolor);
 }
 

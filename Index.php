@@ -78,7 +78,7 @@ include $url_helper .'include/navbar.php';
 
 
 
-        
+
 
         <div class="col-md-5">
             <div class="card first-card">
@@ -92,10 +92,10 @@ include $url_helper .'include/navbar.php';
                     <p class="card-text first-card-text font-color">Sichere und altersgerechte Kurse für Babys und
                         Kinder.
                         Denn schwimmen lernen soll Spass machen.</p>
-<form action="search_function" method="post">
-                    <label class="col-4 col-form-label first-card-text font-color">Plz</label>
+                    <form action="search_function" method="post">
+                        <label class="col-4 col-form-label first-card-text font-color">Plz</label>
 
-                    
+
                         <div class="col-12">
                             <input pattern="^[0-9]{4}$" class="form-control labelshape" id="search_ort"
                                 name="search_ort" type="text" value="<?= $cookie_kursort; ?>">
@@ -184,11 +184,11 @@ include $url_helper .'include/navbar.php';
 
 
             <div class="row">
-            
-            
+
+
                 <div class="col-xl-4 col-lg-6 col-md-12 col-sm-12">
 
-                    <div class="card card-sizing">
+                    <div class="card card-sizing1">
                         <img class="imgcard imgshape card-img-top img-border1" src="images/Block1.png"
                             alt="Bild ladet nicht!">
                         <div class="card-body">
@@ -206,7 +206,7 @@ include $url_helper .'include/navbar.php';
                 </div>
 
                 <div class="col-xl-4 col-lg-6 col-md-12 col-sm-12">
-                    <div class="card card-sizing">
+                    <div class="card card-sizing2">
                         <img class="imgcard imgshape card-img-top img-border2" src="images/Block2.png"
                             alt="Bild ladet nicht!">
                         <div class="card-body">
@@ -232,7 +232,7 @@ include $url_helper .'include/navbar.php';
                 </div>
 
                 <div class="col-xl-4 col-lg-6 col-md-12 col-sm-12">
-                    <div class="card card-sizing">
+                    <div class="card card-sizing3">
                         <img class="imgcard imgshape card-img-top img-border3" src="images/Block3.png"
                             alt="Bild ladet nicht!">
                         <div class="card-body">
@@ -245,8 +245,8 @@ include $url_helper .'include/navbar.php';
                         </div>
                     </div>
                 </div>
-                </div>
-            
+            </div>
+
         </section>
         <!-- text über den 4 cards -->
 
@@ -299,7 +299,8 @@ include $url_helper .'include/navbar.php';
 
 
 
-                    <div class="text-index-size ">Wir fanden die Kursleitung super und sie war sehr engagiert, motiviert und
+                    <div class="text-index-size ">Wir fanden die Kursleitung super und sie war sehr engagiert, motiviert
+                        und
                         voll da.
                         Uns hat der Kurs sehr gut gefallen und wir werden später weitere Kurse besuchen. Ich fand
                         insbesondere auch die Gruppengrösse sehr perfekt. Herzlichen Dank für alles!
@@ -312,7 +313,8 @@ include $url_helper .'include/navbar.php';
                     <img class="kreis-slider" src="<?php echo $url_helper;?>img/Frau.jpg"
                         alt="Bild konnte nicht geladen werden!">
 
-                    <div class="text-index-size ">Ich habe mit meiner Tochter bereits zwei Kurse bei Aquakidz besucht. Die
+                    <div class="text-index-size ">Ich habe mit meiner Tochter bereits zwei Kurse bei Aquakidz besucht.
+                        Die
                         Lektionen werden sehr abwechslungsreich gestaltet und es gibt auch schöne wiederkehrende
                         Rituale, die den Kindern Sicherheit geben. Die Kursleitung ist sehr kompetent und reagiert
                         stets angemessen auf die individuellen Bedürfnisse der Babys.
@@ -433,30 +435,15 @@ include $url_helper .'include/navbar.php';
         </style>
 
 
-
-
-
-
-
-
-
-        <!--slider-->
+<!--slider-->
         <div class="container">
 
 
 
 
-            <!----------------------------------------fist slide cards------------------------->
+            <!----------------------------------------first slide card------------------------->
 
             <div class="row">
-
-
-                <div class="col-sm" style="margin-top:auto; margin-bottom:auto;">
-                    <div class="arrow-left" style="margin-top:auto; margin-bottom:auto;" onclick="plusDivs(-1)"></div>
-                </div>
-
-
-
 
 
                 <div class="card slider-card-sizing mySlides">
@@ -483,7 +470,7 @@ include $url_helper .'include/navbar.php';
 
 
 
-                <!----------------------------------------second 2 slide cards------------------------->
+                <!----------------------------------------second slide card------------------------->
 
 
 
@@ -518,7 +505,7 @@ include $url_helper .'include/navbar.php';
 
 
 
-                <!----------------------------------------third slide cards------------------------->
+                <!----------------------------------------third slide card------------------------->
 
 
 
@@ -551,7 +538,7 @@ include $url_helper .'include/navbar.php';
 
 
 
-                <!----------------------------------------four slide cards------------------------->
+                <!----------------------------------------fourth slide card------------------------->
 
 
 
@@ -579,53 +566,43 @@ include $url_helper .'include/navbar.php';
 
 
 
-                <!----------------------------------------five slide cards------------------------->
 
 
 
-
-
-                <div class="col-sm" style="margin-top:auto; margin-bottom:auto;">
-                    <div class="arrow-right" style="margin-top:auto; margin-bottom:auto;" onclick="plusDivs(1)">
-                    </div>
-                </div>
-
-
-
-
-
-
-
-
-
-            </div>
-            <div style="text-align:center; margin-bottom:100px;">
-                <span class="dot-slider" onclick="currentSlide(1)"></span>
-                <span class="dot-slider" onclick="currentSlide(2)"></span>
-                <span class="dot-slider" onclick="currentSlide(3)"></span>
-                <span class="dot-slider" onclick="currentSlide(4)"></span>
-
-            </div>
+            </div> 
+            <!-- <div style="text-align:center; margin-bottom:100px;">
+                <span class="dotslider" onclick="plusDivs(1)"></span>
+                <span class="dotslider" onclick="plusDivs(2)"></span>
+                <span class="dotslider" onclick="plusDivs(3)"></span>
+                <span class="dotslider" onclick="plusDivs(4)"></span>
+<!-- </div> -->
+           
 
         </div>
 
         <!--slider javascript-->
-        <script>
+        <!-- <script>
             var slideIndex = 1;
+            var timer = null;
             showDivs(slideIndex);
 
             function plusDivs(n) {
+                clearTimeout(timer);
                 showDivs(slideIndex += n);
             }
 
             function currentSlide(n) {
+                clearTimeout(timer);
                 showDivs(slideIndex = n);
             }
 
             function showDivs(n) {
                 var i;
                 var mySlides = document.getElementsByClassName("mySlides");
-                var dots = document.getElementsByClassName("dot-slider");
+                var dots = document.getElementsByClassName("dotslider");
+                if(n == undefined){
+                    n = ++slideIndex
+                }
                 if (n > mySlides.length) {
                     slideIndex = 1
                 }
@@ -640,49 +617,50 @@ include $url_helper .'include/navbar.php';
                  }
                 mySlides[slideIndex - 1].style.display = "block";
                 dots[slideIndex - 1].className += " active";
+                
+            timer = setTimeout(showDivs, 2000);
             }
-        </script>
+        </script> --> 
 
         <!--card 5 -->
         <div class="hintergrundbild-card5"></div>
         <div class="container">
-              
-                    <div class="card card5-size">
-                        <div class="card-body">
-                            <div class="font-color">
-                                <h1 class="card-title text-card5"> Den Fortschritt Ihres Kindes immer im Blick</h1>
-                                <p class="card-text" style="font-size:22px; height:188px; width:530px;">AquaKidz bietet
-                                    allen Eltern eine Möglichkeit Rückmeldungen zum Erfolg der Kinder im Kurs zu
-                                    erhalten, auch wenn sie nicht vor Ort sind. Unsere Trainer notieren und bewerten
-                                    für sie die Schritte die Ihr Kind im Kurs macht. Sie erhalten frühzeitig
-                                    Rückmeldung zu möglichen Problemen und Potenzial.</p>
-                                <ul class="bullet-testing font-color font-sizing-card5 "
-                                    style="padding-left:38px !important;">
 
-                                    <li class="a-sizing-index">
-                                        <a>graphische Übersicht jeder Basiskompetenz</a>
-                                    </li>
-                                    <li class="a-sizing-index">
-                                        <a>Übersicht Kurstermine (Kursstart und Ende)</a>
-                                    </li>
-                                    <li class="a-sizing-index">
-                                        <a>Einfache Ersatzterminbuchung</a>
-                                    </li>
-                                    <li class="a-sizing-index">
-                                        <a>Krankenkassenbestätigung zur Rückerstattung</a>
-                                    </li>
-                                    <li class="a-sizing-index">
-                                        <a>direkter Kontakt zum Kursleiter</a>
-                                    </li>
+            <div class="card card5-size">
+                <div class="card-body">
+                    <div class="font-color">
+                        <h1 class="card-title text-card5"> Den Fortschritt Ihres Kindes immer im Blick</h1>
+                        <p class="card5-text" style="font-size:22px; height:188px; width:530px;">AquaKidz bietet
+                            allen Eltern eine Möglichkeit Rückmeldungen zum Erfolg der Kinder im Kurs zu
+                            erhalten, auch wenn sie nicht vor Ort sind. Unsere Trainer notieren und bewerten
+                            für sie die Schritte die Ihr Kind im Kurs macht. Sie erhalten frühzeitig
+                            Rückmeldung zu möglichen Problemen und Potenzial.</p>
+                        <ul class="bullet-testing font-color font-sizing-card5 " style="padding-left:38px !important;">
 
-                                </ul>
-                            </div>
+                            <li class="a-sizing-index">
+                                <a>graphische Übersicht jeder Basiskompetenz</a>
+                            </li>
+                            <li class="a-sizing-index">
+                                <a>Übersicht Kurstermine (Kursstart und Ende)</a>
+                            </li>
+                            <li class="a-sizing-index">
+                                <a>Einfache Ersatzterminbuchung</a>
+                            </li>
+                            <li class="a-sizing-index">
+                                <a>Krankenkassenbestätigung zur Rückerstattung</a>
+                            </li>
+                            <li class="a-sizing-index">
+                                <a>direkter Kontakt zum Kursleiter</a>
+                            </li>
 
-                        </div>
-                        <a href="#" class="btn btn-card5 ">Mehr Erfahren</a>
+                        </ul>
+                    </div>
 
-              
-                
+                </div>
+                <a href="#" class="btn btn-card5 ">Mehr Erfahren</a>
+
+
+
             </div>
         </div>
 
