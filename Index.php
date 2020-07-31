@@ -4,7 +4,8 @@
 $url_helper= "";
 /* einbingung der database connection*/
 include  $url_helper .'include/database.php';
-
+//Sprachen
+include 'sprachen_func.php';
 
 ?>
 
@@ -87,8 +88,8 @@ include $url_helper .'include/navbar.php';
 
 
 
-                    <h1 class="card-title card-title-style" style="font-size:32px">SCHWIMMEN LERNEN, SCHWIMMEN
-                        LIEBEN</h1>
+                    <h1 class="card-title card-title-style" style="font-size:32px">
+                        <?php echo $sprache['INDEX_TITEL_CARD_1']; ?></h1>
                     <p class="card-text first-card-text font-color">Sichere und altersgerechte Kurse für Babys und
                         Kinder.
                         Denn schwimmen lernen soll Spass machen.</p>
@@ -435,7 +436,7 @@ include $url_helper .'include/navbar.php';
         </style>
 
 
-<!--slider-->
+        <!--slider-->
         <div class="container">
 
 
@@ -569,19 +570,19 @@ include $url_helper .'include/navbar.php';
 
 
 
-            </div> 
-            <!-- <div style="text-align:center; margin-bottom:100px;">
+            </div>
+            <div style="text-align:center; margin-bottom:100px;">
                 <span class="dotslider" onclick="plusDivs(1)"></span>
                 <span class="dotslider" onclick="plusDivs(2)"></span>
                 <span class="dotslider" onclick="plusDivs(3)"></span>
                 <span class="dotslider" onclick="plusDivs(4)"></span>
-<!-- </div> -->
-           
+            </div>
+
 
         </div>
 
         <!--slider javascript-->
-        <!-- <script>
+        <script>
             var slideIndex = 1;
             var timer = null;
             showDivs(slideIndex);
@@ -600,7 +601,7 @@ include $url_helper .'include/navbar.php';
                 var i;
                 var mySlides = document.getElementsByClassName("mySlides");
                 var dots = document.getElementsByClassName("dotslider");
-                if(n == undefined){
+                if (n == undefined) {
                     n = ++slideIndex
                 }
                 if (n > mySlides.length) {
@@ -614,13 +615,13 @@ include $url_helper .'include/navbar.php';
                 }
                 for (i = 0; i < dots.length; i++) {
                     dots[i].className = dots[i].className.replace(" active", "");
-                 }
+                }
                 mySlides[slideIndex - 1].style.display = "block";
                 dots[slideIndex - 1].className += " active";
-                
-            timer = setTimeout(showDivs, 2000);
+
+                timer = setTimeout(showDivs, 2000);
             }
-        </script> --> 
+        </script>
 
         <!--card 5 -->
         <div class="hintergrundbild-card5"></div>
