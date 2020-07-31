@@ -87,15 +87,15 @@
 
                         <li>
                             <div class="raster-aussen-footer">
-                                <img style="width:130px;" class="footer-picture-sizing"
-                                    src="<?php echo $url_helper;?>images/footerpic.png" alt="Bild ladet nicht!">
+                                 <a  href="https://www.kindersicherheit.de"><img style="width:130px;" class="footer-picture-sizing"
+                                    src="<?php echo $url_helper;?>images/footerpic.png" alt="Bild ladet nicht!"></a>
                             </div>
                         </li>
 
                         <li>
                             <div class="raster-aussen-footer">
-                                <img class="footer-picture-sizing" src="<?php echo $url_helper;?>images/footerpic2.png"
-                                    alt="Bild ladet nicht!">
+                                <a  href="https://www.swimsports.ch"><img class="footer-picture-sizing" src="<?php echo $url_helper;?>images/footerpic2.png"
+                                    alt="Bild ladet nicht!"></a>
                             </div>
                         </li>
 
@@ -109,15 +109,15 @@
 
                         <li>
                             <div class="raster-aussen-footer">
-                                <img style="width:220px !important;" class="footer-picture-sizing"
-                                    src="<?php echo $url_helper;?>images/footerpic3.png" alt="Bild ladet nicht!">
+                                <a  href="https://www.svss.ch"><img style="width:220px !important;" class="footer-picture-sizing"
+                                    src="<?php echo $url_helper;?>images/footerpic3.png" alt="Bild ladet nicht!"></a>
                             </div>
                         </li>
 
                         <li>
                             <div class="raster-aussen-footer">
-                                <img style="width:200px !important;" class="footer-picture-sizing"
-                                    src="<?php echo $url_helper;?>images/footerpic4.png" alt="Bild ladet nicht!">
+                                <a  href="https://www.swiss-swimming.ch/alt-de/leistungssport/swimming/swimrankings"><img style="width:200px !important;" class="footer-picture-sizing"
+                                    src="<?php echo $url_helper;?>images/footerpic4.png" alt="Bild ladet nicht!"></a>
                             </div>
                         </li>
 
@@ -132,15 +132,15 @@
                     <ul class="ul-footer-links">
                         <li>
                             <div class="raster-aussen-footer">
-                                <img style="width:240px !important;" class="footer-picture-sizing"
-                                    src="<?php echo $url_helper;?>images/footerpic5.png" alt="Bild ladet nicht!">
+                                <a  href="https://www.bfu.ch/de"><img style="width:240px !important;" class="footer-picture-sizing"
+                                    src="<?php echo $url_helper;?>images/footerpic5.png" alt="Bild ladet nicht!"></a>
                             </div>
                         </li>
 
                         <li>
                             <div class="raster-aussen-footer">
-                                <img style="width:200px !important;" class="footer-picture-sizing"
-                                    src="<?php echo $url_helper;?>images/footerpic6.png" alt="Bild ladet nicht!">
+                                <a  href="https://www.sporthilfe.ch"><img style="width:200px !important;" class="footer-picture-sizing"
+                                    src="<?php echo $url_helper;?>images/footerpic6.png" alt="Bild ladet nicht!"></a>
                             </div>
                         </li>
                     </ul>
