@@ -11,7 +11,10 @@ body {
   padding-top: 88px !important;
   margin: 0;
 }
-
+footer{
+  width: 100% !important;
+  margin-top: 150px;
+}
 :root {
   --maincolor: #416cb2;
   --secondcolor: #749cd2;
@@ -99,12 +102,6 @@ ul {
     overflow: hidden !important;
     left: 0 !important;
   }
-
-  /*.first-card {
-    width: 414px !important;
-    height: 507px !important;
-    margin-top: 0 !important;
-  }*/
 
   .card-2-sizing {
     width: 877px !important;
@@ -259,6 +256,7 @@ html {
   margin-left: auto;
   margin-right: auto;
 }
+
 
 .imgcard {
   max-width: 356px !important;
@@ -1375,6 +1373,9 @@ select {
 .ul-footer-links {
   list-style-type: none;
 }
+row#footer-right{
+
+}
 
 .small-footer-style {
   color: white;
@@ -1407,13 +1408,14 @@ select {
 }
 
 .footer-text {
-  color: white;
+  color: red;
 
 }
 
 .copyright-text {
   color: white;
   text-align: center;
+  padding-top: 10px;
 }
 
 .zentrierung-bilder-footer {
@@ -1421,9 +1423,9 @@ select {
 }
 
 .raster-aussen-footer {
-  height: 150px;
-  width: 260px;
-
+  /* height: 150px;
+  width: 260px; */
+  text-align: center;
 }
 
 .copyright-box {
@@ -1432,11 +1434,21 @@ select {
   height: 44px !important;
 
 }
-
-.footer-right-abstand {
+.footer-img{
+  margin: 0 auto;
+}
+.footer-left-abstand {
   margin-bottom: 5px;
 }
 
+.footer-links-margin{
+  display: inline-block;
+  margin: 0 auto;
+  padding: 0 0 0 10px;
+}
+.footer-rechts-margin{
+
+}
 .bullet-testing li:before {
   content: "\2022";
   color: red;

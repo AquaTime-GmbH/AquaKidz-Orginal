@@ -1,123 +1,82 @@
 <footer>
 
-    <div class="row">
-        <div class="footer-blau col-md-6">
+    <div class="container">
 
+        <div class="row">
 
+            <div id="footer-left" class="footer-links-margin col-md-6 col-xl-6 col-lg-6 col-sm-6 col-xs-6">
+                <div class="col-md-3 col-xl-3 col-lg-3 col-sm-3 col-xs-3">
+                    <a class="footer-text" href="<?php echo $url_helper;?>">KURSE</a>
 
-            <div class="container">
+                    <ul class="ul-footer-links">
+                        <li style="margin-top:10px;"><a class="footer-text"
+                                href="<?php echo $url_helper?>Kursarten/AquaBaby">AquaBaby</a>
+                            <p class="small-footer-style"><small>ca. 10 Wochen - 24 Monate</small></p>
+                        </li>
+                        <li><a class="footer-text" href="<?php echo $url_helper;?>Kursarten/AquaKidz-Mini">AquaKidz
+                                Mini</a>
+                            <p class="small-footer-style"><small>ca. 2 bis 3 Jahre</small></p>
+                        </li>
+                        <li><a class="footer-text" href="<?php echo $url_helper;?>Kursarten/AquaKidz-Maxi">AquaKidz
+                                Maxi</a>
+                            <p class="small-footer-style"><small>ca. 3,5 bis 7,5 Jahre</small></p>
+                        </li>
+                        <li><a class="footer-text" href="<?php echo $url_helper;?>Kursarten/AquaKidz-Mixed">AquaKidz
+                                Mixed</a>
+                            <p class="small-footer-style"><small>Ab ca. 7 Jahre</small></p>
+                        </li>
+                    </ul>
+                </div>
 
+                <div class="col-md-3 col-xl-3 col-lg-3 col-sm-3 col-xs-3">
+                    <a class="footer-text" href="<?php echo $url_helper;?>Ueber_uns">ÜBER UNS</a>
 
-
-                <div class="row">
-
-                    <div class="col-md-4"></div>
-
-
-
-                    <div class="col-md-4">
-
-                        <a class="footer-text" href="<?php echo $url_helper;?>">KURSE</a>
-
-                        <ul class="ul-footer-links">
-                            <li style="margin-top:10px;"><a class="footer-text"
-                                    href="<?php echo $url_helper?>Kursarten/AquaBaby">AquaBaby</a>
-                                <p class="small-footer-style"><small>ca. 10 Wochen - 24 Monate</small></p>
-                            </li>
-                            <li><a class="footer-text" href="<?php echo $url_helper;?>Kursarten/AquaKidz-Mini">AquaKidz
-                                    Mini</a>
-                                <p class="small-footer-style"><small>ca. 2 bis 3 Jahre</small></p>
-                            </li>
-                            <li><a class="footer-text" href="<?php echo $url_helper;?>Kursarten/AquaKidz-Maxi">AquaKidz
-                                    Maxi</a>
-                                <p class="small-footer-style"><small>ca. 3,5 bis 7,5 Jahre</small></p>
-                            </li>
-                            <li><a class="footer-text" href="<?php echo $url_helper;?>Kursarten/AquaKidz-Mixed">AquaKidz
-                                    Mixed</a>
-                                <p class="small-footer-style"><small>Ab ca. 7 Jahre</small></p>
-                            </li>
-                        </ul>
-
-                    </div>
-
-
-
-                    <div class="col-md-4">
-
-                        <a class="footer-text" href="<?php echo $url_helper;?>Ueber_uns">ÜBER UNS</a>
-
-                        <ul class="ul-footer-links">
-                            <li class="footer-right-abstand" style="margin-top:10px;"><a class="footer-text"
-                                    href="<?php echo $url_helper;?>Ueber_uns#sectionvonefk">Von Eltern für Kinder</a>
-                            </li>
-                            <li class="footer-right-abstand"><a class="footer-text"
-                                    href="<?php echo $url_helper;?>Ueber_uns#sectionmotivation">Motivation</a></li>
-                            <li class="footer-right-abstand"><a class="footer-text"
-                                    href="<?php echo $url_helper;?>Ueber_uns#sectionqualli">Unsere
-                                    Qualitätsstandards</a></li>
-                            <li class="footer-right-abstand"><a class="footer-text"
-                                    href="<?php echo $url_helper;?>Ueber_uns#sectionteam">Unser Team</a></li>
-                            <li class="footer-right-abstand"><a class="footer-text"
-                                    href="<?php echo $url_helper;?>AquaNews">News</a></li>
-                            <li class="footer-right-abstand"><a class="footer-text"
-                                    href="<?php echo $url_helper;?>Aquasium">AquaVision</a></li>
-                            <li class="footer-right-abstand"><a class="footer-text"
-                                    href="<?php echo $url_helper;?>Haftausschluss">Haftausschluss</a></li>
-                            <li class="footer-right-abstand"><a class="footer-text"
-                                    href="<?php echo $url_helper;?>Agb">AGB</a></li>
-                            <li class="footer-right-abstand"><a class="footer-text"
-                                    href="<?php echo $url_helper;?>impressum">impressum</a></li>
-                        </ul>
-
-                    </div>
-
+                    <ul class="ul-footer-links">
+                        <li class="footer-left-abstand" style="margin-top:10px;"><a class="footer-text"
+                                href="<?php echo $url_helper;?>Ueber_uns#sectionvonefk">Von Eltern für Kinder</a>
+                        </li>
+                        <li class="footer-left-abstand"><a class="footer-text"
+                                href="<?php echo $url_helper;?>Ueber_uns#sectionmotivation">Motivation</a></li>
+                        <li class="footer-left-abstand"><a class="footer-text"
+                                href="<?php echo $url_helper;?>Ueber_uns#sectionqualli">Unsere
+                                Qualitätsstandards</a></li>
+                        <li class="footer-left-abstand"><a class="footer-text"
+                                href="<?php echo $url_helper;?>Ueber_uns#sectionteam">Unser Team</a></li>
+                        <li class="footer-left-abstand"><a class="footer-text"
+                                href="<?php echo $url_helper;?>AquaNews">News</a></li>
+                        <li class="footer-left-abstand"><a class="footer-text"
+                                href="<?php echo $url_helper;?>Aquasium">AquaVision</a></li>
+                        <li class="footer-left-abstand"><a class="footer-text"
+                                href="<?php echo $url_helper;?>Haftausschluss">Haftausschluss</a></li>
+                        <li class="footer-left-abstand"><a class="footer-text"
+                                href="<?php echo $url_helper;?>Agb">AGB</a>
+                        </li>
+                        <li class="footer-left-abstand"><a class="footer-text"
+                                href="<?php echo $url_helper;?>impressum">impressum</a></li>
+                    </ul>
                 </div>
             </div>
 
 
-        </div>
 
-        <div class="col-sm-6 footer-white">
-            <div class="row">
-
-
-                <div style="" class="col-sm zentrierung-bilder-footer">
+ <div id="footer-right" class="footer-rechts-margin col-md-6 col-xl-6 col-lg-6 col-sm-6 col-xs-6">
+<div class="row">
+    
+                <div class="col-md-4 col-xl-4 col-lg-4 col-sm-4 col-xs-4">
 
                     <ul class="ul-footer-links">
 
-                        <li>
+                        <li class="footer-rechts-abnstand">
                             <div class="raster-aussen-footer">
-                                 <a  href="https://www.kindersicherheit.de"><img style="width:130px;" class="footer-picture-sizing"
-                                    src="<?php echo $url_helper;?>images/footerpic.png" alt="Bild ladet nicht!"></a>
+                                <img style="width:130px;" class="footer-img footer-picture-sizing"
+                                    src="<?php echo $url_helper;?>images/footerpic.png" alt="Bild ladet nicht!">
                             </div>
                         </li>
 
-                        <li>
+                        <li class="footer-rechts-abnstand">
                             <div class="raster-aussen-footer">
-                                <a  href="https://www.swimsports.ch"><img class="footer-picture-sizing" src="<?php echo $url_helper;?>images/footerpic2.png"
-                                    alt="Bild ladet nicht!"></a>
-                            </div>
-                        </li>
-
-                    </ul>
-
-                </div>
-
-                <div style="" class="col-sm zentrierung-bilder-footer">
-
-                    <ul class="ul-footer-links">
-
-                        <li>
-                            <div class="raster-aussen-footer">
-                                <a  href="https://www.svss.ch"><img style="width:220px !important;" class="footer-picture-sizing"
-                                    src="<?php echo $url_helper;?>images/footerpic3.png" alt="Bild ladet nicht!"></a>
-                            </div>
-                        </li>
-
-                        <li>
-                            <div class="raster-aussen-footer">
-                                <a  href="https://www.swiss-swimming.ch/alt-de/leistungssport/swimming/swimrankings"><img style="width:200px !important;" class="footer-picture-sizing"
-                                    src="<?php echo $url_helper;?>images/footerpic4.png" alt="Bild ladet nicht!"></a>
+                                <img class="footer-img footer-picture-sizing" src="<?php echo $url_helper;?>images/footerpic2.png"
+                                    alt="Bild ladet nicht!">
                             </div>
                         </li>
 
@@ -126,38 +85,66 @@
                 </div>
 
 
+           
 
-                <div style="" class="col-sm zentrierung-bilder-footer">
+                <div class="col-md-4 col-xl-4 col-lg-4 col-sm-4 col-xs-4">
 
                     <ul class="ul-footer-links">
-                        <li>
+
+                        <li class="footer-rechts-abnstand">
                             <div class="raster-aussen-footer">
-                                <a  href="https://www.bfu.ch/de"><img style="width:240px !important;" class="footer-picture-sizing"
-                                    src="<?php echo $url_helper;?>images/footerpic5.png" alt="Bild ladet nicht!"></a>
+                                <img style="width:220px !important;" class="footer-img footer-picture-sizing"
+                                    src="<?php echo $url_helper;?>images/footerpic3.png" alt="Bild ladet nicht!">
                             </div>
                         </li>
 
-                        <li>
+                        <li class="footer-rechts-abnstand">
                             <div class="raster-aussen-footer">
-                                <a  href="https://www.sporthilfe.ch"><img style="width:200px !important;" class="footer-picture-sizing"
-                                    src="<?php echo $url_helper;?>images/footerpic6.png" alt="Bild ladet nicht!"></a>
+                                <img style="width:200px !important;" class="footer-img footer-picture-sizing"
+                                    src="<?php echo $url_helper;?>images/footerpic4.png" alt="Bild ladet nicht!">
+                            </div>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <div class="col-md-4 col-xl-4 col-lg-4 col-sm-4 col-xs-4">
+
+                    <ul class="ul-footer-links">
+                        <li class="footer-rechts-abnstand">
+                            <div class="raster-aussen-footer">
+                                <img style="width:240px !important;" class="footer-img footer-picture-sizing"
+                                    src="<?php echo $url_helper;?>images/footerpic5.png" alt="Bild ladet nicht!">
+                            </div>
+                        </li>
+
+                        <li class="footer-rechts-abnstand">
+                            <div class="raster-aussen-footer">
+                                <img style="width:200px !important;" class="footer-img footer-picture-sizing"
+                                    src="<?php echo $url_helper;?>images/footerpic6.png" alt="Bild ladet nicht!">
                             </div>
                         </li>
                     </ul>
 
                 </div>
-
 
             </div>
+</div>
         </div>
+
+
     </div>
 
 
 
 
     <div class="copyright-box">
-        <div class="copyright-text">
-            <?= "&copy AquaTime GmbH " . "2014 - " . date('Y');?>
+        <div class="container">
+            <div class="copyright-text">
+                <?= "&copy AquaTime GmbH " . "2014 - " . date('Y');?>
+            </div>
         </div>
     </div>
 
@@ -176,29 +163,29 @@
 <div id="cookie_popup">
     <p class="text-pos-popup">Wir verwenden Cookies. Durch die weitere Nutzung der Webseite stimmen Sie der
         Verwendung von Cookies zu.</p>
-        <div class="container">
-            <div class="row" style="justify-content:center;">
-            
-                
+    <div class="container">
+        <div class="row" style="justify-content:center;">
+
+
 
             <button class="btn btn_details" id="myBtn">Details</button>
-                <form method="post">
-                
-                    <!-- beim klicken von dem button bleibt manauf der seite und der pop up fenster verschwindet -->
-                    <button
-                        onClick="var d = new Date(); d = new Date(d.getTime() +1000*60*60*24*730); document.cookie = 'Akzeptiert=1; expires='+ d.toGMTString() + ';'; document.getElementById('cookie_popup').style.display = 'none';"
-                        class="btn btn_ok_cookie" type="submit" name="ok_cookie_button">Akzeptieren</button>
+            <form method="post">
 
-                    <!-- beim klicken von diesem button kommt eine altert warnung die sagt ob man wirklich die cookies ablehnen will und wird dann auf die seite von session weiter geleitet -->
-                    <button class="btn btn_alert_cookie" type="submit" name="session_cookie">Verweigern</button>
+                <!-- beim klicken von dem button bleibt manauf der seite und der pop up fenster verschwindet -->
+                <button
+                    onClick="var d = new Date(); d = new Date(d.getTime() +1000*60*60*24*730); document.cookie = 'Akzeptiert=1; expires='+ d.toGMTString() + ';'; document.getElementById('cookie_popup').style.display = 'none';"
+                    class="btn btn_ok_cookie" type="submit" name="ok_cookie_button">Akzeptieren</button>
 
-            </div>
+                <!-- beim klicken von diesem button kommt eine altert warnung die sagt ob man wirklich die cookies ablehnen will und wird dann auf die seite von session weiter geleitet -->
+                <button class="btn btn_alert_cookie" type="submit" name="session_cookie">Verweigern</button>
 
-            </form>
         </div>
-    </div>
 
-    
+        </form>
+    </div>
+</div>
+
+
 
 
 
@@ -210,11 +197,11 @@
     <!-- Modal content -->
     <div class="modal-content">
         <!-- Das Kreuz zum schliessen -->
-        
+
 
         <div class="border-boxd">
 
-<span class="close">&times;</span>
+            <span class="close">&times;</span>
 
         </div>
 

@@ -68,8 +68,6 @@ include $url_helper .'include/navbar.php';
   }
 
 ?>
-
-
     <div class="hintergrundbild">
         <div class="border_under">
         </div>
@@ -77,15 +75,9 @@ include $url_helper .'include/navbar.php';
     <div class="container">
 
 
-
-
-
-
         <div class="col-md-5">
             <div class="card first-card">
                 <div class="card-body">
-
-
 
 
                     <h1 class="card-title card-title-style" style="font-size:32px">

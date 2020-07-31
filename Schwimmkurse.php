@@ -270,21 +270,9 @@ include $url_helper .'include/navbar.php';
 
 
 
-        <!--slider-->
-        <div class="container">
+         <!----------------------------------------first slide card------------------------->
 
-
-
-
-            <!----------------------------------------fist slide cards------------------------->
-
-            <div class="row">
-
-
-           
-
-
-
+ <div class="container">
 
 
                 <div class="card slider-card-sizing mySlides">
@@ -311,7 +299,7 @@ include $url_helper .'include/navbar.php';
 
 
 
-                <!----------------------------------------second 2 slide cards------------------------->
+                <!----------------------------------------second slide card------------------------->
 
 
 
@@ -346,7 +334,7 @@ include $url_helper .'include/navbar.php';
 
 
 
-                <!----------------------------------------third slide cards------------------------->
+                <!----------------------------------------third slide card------------------------->
 
 
 
@@ -379,7 +367,7 @@ include $url_helper .'include/navbar.php';
 
 
 
-                <!----------------------------------------four slide cards------------------------->
+                <!----------------------------------------fourth slide card------------------------->
 
 
 
@@ -404,42 +392,42 @@ include $url_helper .'include/navbar.php';
                 </div>
 
 
+</div>
 
-
-
-                <!----------------------------------------five slide cards------------------------->
-
-
-
-
-            </div>
+      
             <div style="text-align:center; margin-bottom:100px;">
-                <span class="dot-slider" onclick="currentSlide(1)"></span>
-                <span class="dot-slider" onclick="currentSlide(2)"></span>
-                <span class="dot-slider" onclick="currentSlide(3)"></span>
-                <span class="dot-slider" onclick="currentSlide(4)"></span>
-
+                <span class="dotslider" onclick="plusDivs(1)"></span>
+                <span class="dotslider" onclick="plusDivs(2)"></span>
+                <span class="dotslider" onclick="plusDivs(3)"></span>
+                <span class="dotslider" onclick="plusDivs(4)"></span>
             </div>
+
 
         </div>
 
         <!--slider javascript-->
         <script>
             var slideIndex = 1;
+            var timer = null;
             showDivs(slideIndex);
 
             function plusDivs(n) {
+                clearTimeout(timer);
                 showDivs(slideIndex += n);
             }
 
             function currentSlide(n) {
+                clearTimeout(timer);
                 showDivs(slideIndex = n);
             }
 
             function showDivs(n) {
                 var i;
                 var mySlides = document.getElementsByClassName("mySlides");
-                var dots = document.getElementsByClassName("dot-slider");
+                var dots = document.getElementsByClassName("dotslider");
+                if (n == undefined) {
+                    n = ++slideIndex
+                }
                 if (n > mySlides.length) {
                     slideIndex = 1
                 }
@@ -454,6 +442,8 @@ include $url_helper .'include/navbar.php';
                 }
                 mySlides[slideIndex - 1].style.display = "block";
                 dots[slideIndex - 1].className += " active";
+
+                timer = setTimeout(showDivs, 2000);
             }
         </script>
 
