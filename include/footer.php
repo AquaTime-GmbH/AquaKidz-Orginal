@@ -1,10 +1,10 @@
 <footer>
-
+<div class="footer-blau"></div>
     <div class="container">
 
         <div class="row">
 
-            <div id="footer-left" class="footer-links-margin col-md-6 col-xl-6 col-lg-6 col-sm-6 col-xs-6">
+            <div id="footer-left" class="footer-links-margin col-md-12 col-xl-6 col-lg-12 col-sm-12 col-xs-12">
                 <div class="col-md-3 col-xl-3 col-lg-3 col-sm-3 col-xs-3">
                     <a class="footer-text" href="<?php echo $url_helper;?>">KURSE</a>
 
@@ -59,10 +59,11 @@
 
 
 
- <div id="footer-right" class="footer-rechts-margin col-md-6 col-xl-6 col-lg-6 col-sm-6 col-xs-6">
-<div class="row">
+ <div id="footer-right" class="footer-rechts-margin col-md-12 col-xl-6 col-lg-12 col-sm-12 col-xs-12">
     
-                <div class="col-md-4 col-xl-4 col-lg-4 col-sm-4 col-xs-4">
+
+     <!-- <p class="footer-right-title">IN ZUSAMMENARBEIT MIT</p> -->
+                <div class="">
 
                     <ul class="ul-footer-links">
 
@@ -75,7 +76,7 @@
 
                         <li class="footer-rechts-abnstand">
                             <div class="raster-aussen-footer">
-                                <img class="footer-img footer-picture-sizing" src="<?php echo $url_helper;?>images/footerpic2.png"
+                                <img style="width:200px !important;" class="footer-img footer-picture-sizing" src="<?php echo $url_helper;?>images/footerpic2.png"
                                     alt="Bild ladet nicht!">
                             </div>
                         </li>
@@ -87,7 +88,7 @@
 
            
 
-                <div class="col-md-4 col-xl-4 col-lg-4 col-sm-4 col-xs-4">
+                <div class="">
 
                     <ul class="ul-footer-links">
 
@@ -110,19 +111,19 @@
                 </div>
 
 
-                <div class="col-md-4 col-xl-4 col-lg-4 col-sm-4 col-xs-4">
+                <div class="">
 
                     <ul class="ul-footer-links">
                         <li class="footer-rechts-abnstand">
                             <div class="raster-aussen-footer">
-                                <img style="width:240px !important;" class="footer-img footer-picture-sizing"
+                                <img style="width:180px !important;" class="footer-img footer-picture-sizing"
                                     src="<?php echo $url_helper;?>images/footerpic5.png" alt="Bild ladet nicht!">
                             </div>
                         </li>
 
                         <li class="footer-rechts-abnstand">
                             <div class="raster-aussen-footer">
-                                <img style="width:200px !important;" class="footer-img footer-picture-sizing"
+                                <img style="width:150px !important;" class="footer-img footer-picture-sizing"
                                     src="<?php echo $url_helper;?>images/footerpic6.png" alt="Bild ladet nicht!">
                             </div>
                         </li>
@@ -131,7 +132,7 @@
                 </div>
 
             </div>
-</div>
+
         </div>
 
 

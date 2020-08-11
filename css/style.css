@@ -1373,9 +1373,6 @@ select {
 .ul-footer-links {
   list-style-type: none;
 }
-row#footer-right{
-
-}
 
 .small-footer-style {
   color: white;
@@ -1395,11 +1392,11 @@ row#footer-right{
 }
 
 .footer-blau {
-  overflow: hidden;
   border-radius: 0px 20px 0px 0px;
   background-color: var(--maincolor);
-  margin-top: 100px;
   height: 350px;
+  width: 50%;
+  position: absolute;
 }
 
 .footer-white {
@@ -1408,7 +1405,7 @@ row#footer-right{
 }
 
 .footer-text {
-  color: red;
+  color: white;
 
 }
 
@@ -1423,9 +1420,9 @@ row#footer-right{
 }
 
 .raster-aussen-footer {
-  /* height: 150px;
-  width: 260px; */
   text-align: center;
+  height: 150px;
+  /* width: 260px; */
 }
 
 .copyright-box {
@@ -1444,11 +1441,8 @@ row#footer-right{
 .footer-links-margin{
   display: inline-block;
   margin: 0 auto;
-  padding: 0 0 0 10px;
 }
-.footer-rechts-margin{
 
-}
 .bullet-testing li:before {
   content: "\2022";
   color: red;
@@ -1472,8 +1466,14 @@ ok .row {
 .col-4 {
   max-width: 34.333% !important;
 }
-
-
+.footer-rechts-margin{
+  flex-wrap: wrap;
+  display: flex;
+}
+.footer-right-title{
+  color: var(--maincolor);
+  font-size: 21px;
+}
 
 /*<------------------------------------------------------------------------>*/
 /*<--------------------------------AQUABABY-------------------------------->*/

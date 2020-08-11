@@ -5,7 +5,7 @@ $url_helper= "";
 /* einbingung der database connection*/
 include  $url_helper .'include/database.php';
 //Sprachen
-include 'sprachen_func.php';
+
 
 ?>
 
@@ -81,7 +81,7 @@ include $url_helper .'include/navbar.php';
 
 
                     <h1 class="card-title card-title-style" style="font-size:32px">
-                        <?php echo $sprache['INDEX_TITEL_CARD_1']; ?></h1>
+                        SCHWIMMEN LERNEN, SCHWIMMEN LIEBEN</h1>
                     <p class="card-text first-card-text font-color">Sichere und altersgerechte Kurse für Babys und
                         Kinder.
                         Denn schwimmen lernen soll Spass machen.</p>
@@ -176,7 +176,7 @@ include $url_helper .'include/navbar.php';
         <section style="margin-top: 150px !important;">
 
 
-            <div class="row">
+            <div class="row row-no-gutters p-0 m-0">
 
 
                 <div class="col-xl-4 col-lg-6 col-md-12 col-sm-12">
