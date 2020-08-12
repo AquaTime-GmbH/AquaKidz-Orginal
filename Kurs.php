@@ -309,6 +309,105 @@ include $url_helper .'include/navbar.php';
 
 
 
+  <style>
+    #map{
+      height:400px;
+      width:100%;
+    }
+  </style>
+
+  <div id="map"></div>
+  <script>
+    function initMap(){
+
+      // karten optionen
+      var options = {
+          //zoom um so höher umso gezoomter
+        zoom:8,
+        //koordinaten z.b für küssnacht
+        center:{lat:47.08557,lng:8.44206}
+      }
+
+      // zuerst wird eine neue karte erstellt
+      var map = new google.maps.Map(document.getElementById('map'), options);
+
+      // die funktion listener schaut obmanauf das icon gedrückt hat(click event) wenn kommt ein pop auf 
+      google.maps.event.addListener(map, 'click', function(event){
+        // marker wird hinzugefügt
+        addMarker({coords:event.latLng});
+      });
+
+      /*
+      // Add marker
+      var marker = new google.maps.Marker({
+        position:{lat::47.08557,lng:-70.9495},
+        map:map,
+        icon:'https://developers.google.com/maps/documentation/javascript/examples/full/images/aquatime.png'
+      });
+
+      var infoWindow = new google.maps.InfoWindow({
+        content:'<h1>Lynn MA</h1>'
+      });
+
+      marker.addListener('click', function(){
+        infoWindow.open(map, marker);
+      });
+      */
+
+      // ab hier werden mehrere marker erstellt
+      var markers = [
+        {
+          coords:{lat:42.4668,lng:-70.9495},
+          iconImage:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
+          content:'<h1>küssnacht bad 2</h1>'
+        },
+        {
+          coords:{lat:42.8584,lng:-70.9300},
+          content:'<h1>küssnacht bad1</h1>'
+        },
+        {
+          coords:{lat:42.7762,lng:-71.0773}
+        }
+      ];
+
+      // die schleife geht durch alle marker
+      for(var i = 0;i < markers.length;i++){
+        // und überall wird ein marker platziert
+        addMarker(markers[i]);
+      }
+
+     
+      function addMarker(props){
+        var marker = new google.maps.Marker({
+          position:props.coords,
+          map:map,
+          //icon:props.iconImage
+        });
+
+  
+        if(props.iconImage){
+          marker.setIcon(props.iconImage);
+        }
+
+        // Check content
+        if(props.content){
+          var infoWindow = new google.maps.InfoWindow({
+            content:props.content
+          });
+
+          marker.addListener('click', function(){
+            infoWindow.open(map, marker);
+          });
+        }
+      }
+    }
+  </script>
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA372PcuJQKYrKADjhHTLLDVcfsoCzF-4M&callback=initMap">
+    </script>
+
+
+
 
   <!--Anfang Buchungs form-->
 
