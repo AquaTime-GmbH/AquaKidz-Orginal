@@ -5,7 +5,7 @@
         <div class="row">
 
             <div id="footer-left" class="footer-links-margin col-md-12 col-xl-6 col-lg-12 col-sm-12 col-xs-12">
-                <div class="col-md-3 col-xl-3 col-lg-3 col-sm-3 col-xs-3">
+                <div class="col-md-3 col-xl-3 col-lg-3  col-xs-3">
                     <a class="footer-text" href="<?php echo $url_helper;?>">KURSE</a>
 
                     <ul class="ul-footer-links">
@@ -28,7 +28,7 @@
                     </ul>
                 </div>
 
-                <div class="col-md-3 col-xl-3 col-lg-3 col-sm-3 col-xs-3">
+                <div class="col-md-3 col-xl-3 col-lg-3  col-xs-3">
                     <a class="footer-text" href="<?php echo $url_helper;?>Ueber_uns">ÜBER UNS</a>
 
                     <ul class="ul-footer-links">
@@ -62,9 +62,9 @@
  <div id="footer-right" class="footer-rechts-margin col-md-12 col-xl-6 col-lg-12 col-sm-12 col-xs-12">
     
 
-     <!-- <p class="footer-right-title">IN ZUSAMMENARBEIT MIT</p> -->
+ 
                 <div class="">
-
+    <!-- <p class="footer-right-title">IN ZUSAMMENARBEIT MIT</p> -->
                     <ul class="ul-footer-links">
 
                         <li class="footer-rechts-abnstand">

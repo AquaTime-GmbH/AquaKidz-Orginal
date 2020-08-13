@@ -72,7 +72,9 @@ ul {
 /*----------------- tablet version -----------------------*/
 
 @media screen and (max-width: 1024px) and (min-width: 668px) {
-
+.footer-blau{
+  width: 100% !important;
+}
   .card-4-sizing {
     width: 854px !important;
     height: 274px !important;
@@ -159,7 +161,9 @@ ul {
     margin-right: auto !important;
     background-color: blue;
   }
-
+.footer-blau {
+  width: 100% !important;
+}
 
 
 }
@@ -170,7 +174,10 @@ ul {
 body {
   line-height: 1 !important;
 }
-
+.footer-blau {
+  width: 100% !important;
+  height: 470px !important;
+}
 .container {
   max-width: 355px !important;
   margin-left: auto !important;
@@ -1394,7 +1401,7 @@ select {
 .footer-blau {
   border-radius: 0px 20px 0px 0px;
   background-color: var(--maincolor);
-  height: 350px;
+  height: 354px;
   width: 50%;
   position: absolute;
 }
