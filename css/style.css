@@ -50,10 +50,13 @@ p {
 ul {
   padding-inline-start: 0px;
 }
+.card{
+  border: 0px solid !important;
+}
 
 /*------------------ Desktop version -------------------*/
 
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 1026px) {
 
   .container {
     max-width: 1336px !important;
@@ -69,9 +72,25 @@ ul {
 
 }
 
-/*----------------- tablet version -----------------------*/
+/*----------------- Tablet Landscape -----------------------*/
+@media screen and (max-width: 767px) and (min-width: 1025px) {
 
-@media screen and (max-width: 1024px) and (min-width: 668px) {
+  .container {
+    max-width: 599px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    background-color: blue;
+  }
+.footer-blau {
+  width: 100% !important;
+}
+  .height-ajust-nav {
+    height: 88px !important;
+    align-items: flex-end !important;
+  }
+}
+/*----------------- Tablet Portrait -----------------------*/
+@media screen and (max-width: 1024px) and (min-width: 768px) {
 .footer-blau{
   width: 100% !important;
 }
@@ -113,57 +132,10 @@ ul {
   .card-1-sizing {
     width: 877px !important;
   }
-
-.styling-aqua-collapse {
-  background-color: var(--maincolor) !important;
-  text-align: center !important;
-  border-bottom: 4px solid white !important;
-  border-right: 4px solid white !important;
-  border-left: 4px solid white !important;
-  box-shadow: 0px 6px 3px rgba(0, 0, 0, 0.2) !important;
-}
-
-.nav-link-kontakt {
-  background-color: var(--maincolor) !important;
-  color: white !important;
-}
-
-.nav-link-ueber {
-  background-color: var(--maincolor) !important;
-  color: white !important;
-}
-
-.nav-link-schwimmkurse {
-  background-color: var(--maincolor) !important;
-  color: white !important;
-}
-
-.nav-link-kursort {
-  background-color: var(--maincolor) !important;
-  color: white !important;
-}
-
-.aktiv {
-  color: var(--maincolor) !important;
-  background-color: white !important;
-  border: none !important;
-  border-bottom: 0px;
-}
-
-}
-
-/*----------------- Tablet Protrait -----------------------*/
-@media screen and (max-width: 768px) and (min-width: 1024px) {
-
-  .container {
-    max-width: 599px !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-    background-color: blue;
+  .height-ajust-nav {
+    height: 88px !important;
+    align-items: flex-end !important;
   }
-.footer-blau {
-  width: 100% !important;
-}
 
 
 }
@@ -1831,10 +1803,8 @@ ok .row {
   border-radius: 35px;
   height: 557px;
   width: 414px;
-  margin-bottom: 30%;
   border-radius: 35px;
   top: 30px;
-  bottom: 30px;
 }
 
 
@@ -2089,7 +2059,6 @@ ok .row {
 
 .form-color-overall {
   font-family: "Fjalla One", sans-serif;
-  color: white;
 }
 
 .form-title-buchen {

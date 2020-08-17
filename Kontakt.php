@@ -112,44 +112,6 @@ while($row = mysqli_fetch_array($result_mitarbeiter))
 include $url_helper .'include/navbar.php';
 ?>
   <!--------------ende der einbindung------------------>
-
-  <div class="blue-box-kurs">
-    <div class="container">
-
-      <div class="row">
-
-        <div class="col-6">
-
-          <div class="card first-card-kurs">
-            <div class="card-body">
-              <div class="font-color">
-                <h1 class="card-title card-title-style" style="font-size:32px"> Kontaktieren sie uns</h1>
-
-
-
-              </div>
-            </div>
-
-          </div>
-
-          <!---button zum kurs ort-->
-
-        </div>
-
-
-        <div class="col-6" style="height:624px !important;">
-
-
-          <section class="jetzt-buchen-pos" id="section1">
-            <a class="jetzt-buchen-style" href="#section2">Jetzt Kontaktieren!</a>
-          </section>
-        </div>
-
-      </div>
-    </div>
-  </div>
-
-
   <?php
   
                 $empfaenger = 'djordje.aksentijevic@aquatime.ch';
@@ -196,81 +158,86 @@ include $url_helper .'include/navbar.php';
                 }
   ?>
 
-  <!--Anfang Buchungs form-->
-
-  <div class="big-box-more">
-    <div id="section2" class="container">
+  <div class="blue-box-kurs">
+    <div class="container" style="display:flex !important; width:100% !important;">
 
 
 
+      <div class="col-6" style="flex:1 !important;">
 
-<?php if($submitted != true){ ?> 
-      <form action="" method="post" class="form-color-overall">
+        <div class="card first-card-kurs">
+          <div class="card-body">
+            <div class="font-color">
+              <h1 class="card-title card-title-style" style="font-size:32px"> Kontaktieren sie uns</h1>
 
 
 
-        <!----------------Angaben Kunden ------------->
-        <div class="form-row">
+              <!--Anfang Buchungs form-->
 
-          <!-- form content -->
 
-          <div class="form-group col-md-2">
-            <label class="first-card-text">Ihr Name*</label>
-            <input type="text" class="form-control labelshape" name="name_kontakt" value="<?= $_POST['name_kunde'] ?>">
+              <?php if($submitted != true){ ?>
+              <form action="" method="post" class="form-color-overall">
+
+                <div class="form-row ">
+                   <div class="form-group col-6">
+                    <label class="first-card-text">Ihr Name*</label>
+                    <input type="text" class="form-control labelshape" name="name_kontakt"
+                      value="<?= $_POST['name_kunde'] ?>">
+                  </div>
+
+                  <div class="form-group col-6">
+                    <label class="first-card-text">Vorname*</label>
+                    <input type="text" class="form-control labelshape" name="vorname_kontakt"
+                      value="<?= $_POST['vorname_kontakt'] ?>">
+                  </div>
+                </div>
+                 
+                <div class="form-group col-12">
+                  <label class="first-card-text">Ihre E-Mail-Adresse*</label>
+                  <input type="email" class="form-control labelshape" name="email_kontakt"
+                    value="<?= $_POST['email_kontakt'] ?>">
+                </div>
+
+                <div class="form-group col-12">
+                  <label class="first-card-text">Natel</label>
+                  <input type="email" class="form-control labelshape" name="natel_kontakt"
+                    value="<?= $_POST['natel_kontakt'] ?>">
+                </div>
+                <div class="form-group col-12">
+                  <label class="first-card-text">Beschereibung</label>
+                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                    value="<?= $_POST['text'] ?>"></textarea>
+                </div>
+
+                <input type="submit" href="" class="btn buchen-buttom" name="kontakt_absenden" value="senden!"
+                  style="margin-left:0px !important;">
+              </form>
+              <?php	} ?>
+            </div>
           </div>
 
-          <div class="form-group col-md-2">
-            <label class="first-card-text">Vorname*</label>
-            <input type="text" class="form-control labelshape" name="vorname_kontakt" value="<?= $_POST['vorname_kontakt'] ?>">
-          </div>
         </div>
-        <div class="form-row">
-          <div class="form-group col-md-4">
-            <label class="first-card-text">Ihre E-Mail-Adresse*</label>
-            <input type="email" class="form-control labelshape" name="email_kontakt" value="<?= $_POST['email_kontakt'] ?>">
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="form-group col-md-4">
-            <label class="first-card-text">Natel</label>
-            <input type="email" class="form-control labelshape" name="natel_kontakt" value="<?= $_POST['natel_kontakt'] ?>">
-          </div>
-        </div>
 
-        <div class="form-row">
-          <div class="form-group col-md-4">
-            <label class="first-card-text">Beschereibung</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" value="<?= $_POST['text'] ?>"></textarea>
-          </div>
+        <!---button zum kurs ort-->
 
-        </div>
+      </div>
 
-        <input type="submit" href="" class="btn buchen-buttom" name="kontakt_absenden" value="senden!"
-          style="margin-left:0px !important;">
+
+
+
+
+
     </div>
-
-  <?php	} ?>
-
-
-
-
-
   </div>
 
 
-  </form>
 
 
 
 
 
-  </div>
-  </div>
-
-  </form>
 
 
-  </div>
 
 
 

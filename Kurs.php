@@ -300,7 +300,7 @@ include $url_helper .'include/navbar.php';
         
 
           <iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAvf8MRWi1ignKqBJnfCcvwTKwUdehvMzU
-    &q=Space+Needle,Seattle+WA" allowfullscreen>
+    &q=Space+küssnacht" allowfullscreen>
           </iframe>
         </div>
       </div>
@@ -312,7 +312,7 @@ include $url_helper .'include/navbar.php';
   <style>
     #map{
       height:400px;
-      width:100%;
+      width:500px;
     }
   </style>
 
@@ -323,7 +323,7 @@ include $url_helper .'include/navbar.php';
       // karten optionen
       var options = {
           //zoom um so höher umso gezoomter
-        zoom:8,
+        zoom:13,
         //koordinaten z.b für küssnacht
         center:{lat:47.08557,lng:8.44206}
       }
@@ -403,7 +403,7 @@ include $url_helper .'include/navbar.php';
     }
   </script>
   <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA372PcuJQKYrKADjhHTLLDVcfsoCzF-4M&callback=initMap">
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAvf8MRWi1ignKqBJnfCcvwTKwUdehvMzU&callback=initMap">
     </script>
 
 
@@ -436,19 +436,19 @@ include $url_helper .'include/navbar.php';
 
           <div class="form-group col-xl-3">
             <label class="first-card-text">Name Kind*</label>
-            <input type="text" class="form-control labelshape" name="name_k" value="<?= $name_kind; ?>" required>
+            <input type="text" class="form-control labelshape" name="name_k" value="<?= $name_kind; ?>" >
           </div>
 
 
           <div class="form-group col-md-3">
             <label class="first-card-text">Vorname Kind*</label>
-            <input type="text" class="form-control labelshape" name="vorname_k" value="<?= $vorname_kind?>" required>
+            <input type="text" class="form-control labelshape" name="vorname_k" value="<?= $vorname_kind?>" >
           </div>
 
           <div class="form-group col-md-3">
             <label class="first-card-text">Geburtsdatum Kind*</label>
             <input type="text" placeholder="tt.mm.jjjj" class="form-control labelshape" name="geburtstag_k"
-              value="<?= $geburtstag_kind ?>" required>
+              value="<?= $geburtstag_kind ?>" >
           </div>
 
 
@@ -562,18 +562,18 @@ include $url_helper .'include/navbar.php';
 
           <div class="form-group col-md-4">
             <label class="first-card-text">Telefon</label>
-            <input type="email" class="form-control labelshape" name="telefon_kunde">
+            <input type="text" class="form-control labelshape" name="telefon_kunde">
           </div>
 
           <div class="form-group col-md-4">
             <label class="first-card-text">Natel</label>
-            <input type="email" class="form-control labelshape" name="natel_kunde">
+            <input type="text" class="form-control labelshape" name="natel_kunde">
           </div>
         </div>
         <div class="form-row">
           <div class="form-group col-md-4">
             <label class="first-card-text">Gutscheincode</label>
-            <input type="email" class="form-control labelshape" name="gutschein_kunde">
+            <input type="text" class="form-control labelshape" name="gutschein_kunde">
           </div>
           <div class="form-group col-md-2">
             <label class="first-card-text">Zahlugsart</label>
