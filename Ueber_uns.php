@@ -105,17 +105,6 @@ include $url_helper .'include/navbar.php';
 
 
 
-
-
-
-
-
-
-
-
-
-
-
              <div class="row">
                  <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12">
                      <div class="card card-4-sizing-über-uns">

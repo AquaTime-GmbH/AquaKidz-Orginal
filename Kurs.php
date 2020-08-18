@@ -41,6 +41,7 @@ while($row = mysqli_fetch_array($result))
     $sql_fm_bad_strasse = $row['fm_bad_strasse'];
     $sql_fm_bad_ort = $row['fm_bad_ort'];
     $sql_fm_offene_plaetze = $row['fm_offene_plaetze'];
+    $sql_fm_bad_postleitzahl = $row['fm_bad_postleitzahl'];
     $sql_fm_von_datum_html = new DateTime($row['fm_von_datum_html']);
     $sql_fm_bis_datum_html = new DateTime($row['fm_bis_datum_html']);
     $sql_fm_text_kursinfo = $row['fm_text_kursinfo'];
@@ -115,7 +116,6 @@ include $url_helper .'include/navbar.php';
 
   <div class="blue-box-kurs">
     <div class="container">
-
       <div class="row">
 
         <div class="col-5">
@@ -140,11 +140,10 @@ include $url_helper .'include/navbar.php';
                             $sql_termin_endzeit = $row['endzeit'];
                             $sql_termin_created_at = new DateTime($row['created_at']);
                             $sql_termin_updated_at = new DateTime($row['updated_at']);
+
                 ?>
 
                 <?php } ?>
-
-
 
 
                 <ul style="list-style-type:none;">
@@ -157,6 +156,14 @@ include $url_helper .'include/navbar.php';
                   <?php } ?>
                   <li>KURSLEKTIONEN:......LEKTIONEN</li>
                   <li>KURSGELD: <?= $sql_fm_kurskosten; ?> CHF</li>
+
+
+                  <!------------->
+                  <!-- Testing -->
+                  <!------------->
+
+
+                  <li> postleitzahl: <?= $sql_fm_bad_postleitzahl ?>
                 </ul>
 
               </div>
@@ -589,7 +596,7 @@ include $url_helper .'include/navbar.php';
             <input class="" type="checkbox"><a class="" href="Agb" style="color:white;">AGB</a>
           </div>
 
-          <input type="submit" href="" class="btn buchen-buttom" name="buchen_button" value="Jetzt Buchen!">
+          <input type="submit" href="" class="btn buchen-bottom" name="buchen_button" value="Jetzt Buchen!">
         </div>
     </div>
   </div>

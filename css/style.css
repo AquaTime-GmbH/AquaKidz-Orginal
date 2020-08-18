@@ -2023,7 +2023,18 @@ ok .row {
   right: 0;
 
 }
-
+.buchen-bottom{
+  height: 50px;
+  border-radius: 35px 35px 35px 35px;
+  background-color: white;
+  color: var(--maincolor);
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 15px;
+}
+.buchen-bottom:hover{
+  color: var(--maincolor-hover);
+}
 .jetzt-buchen-pos a:hover {
   text-decoration: none;
   color: var(--maincolor-hover);
@@ -2058,6 +2069,7 @@ ok .row {
 
 .form-color-overall {
   font-family: "Fjalla One", sans-serif;
+  color: white;
 }
 
 .form-title-buchen {
