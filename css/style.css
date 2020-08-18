@@ -636,6 +636,7 @@ color: white !important;
 /*alle text in den cards */
 .card-title-style {
   color: var(--maincolor);
+
 }
 
 .font-color {
@@ -1988,7 +1989,10 @@ ok .row {
   text-align: center !important;
 
 }
-
+.ueber-uns-title-size{
+  font-size:32px;
+  font-weight:bold;
+}
 .active,
 .collapsible-detail-footer:hover {
   background-color: var(--maincolor-hover) !important;

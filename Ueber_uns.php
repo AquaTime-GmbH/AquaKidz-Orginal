@@ -49,14 +49,14 @@ include $url_helper .'include/navbar.php';
          <div class="card überuns-card">
              <div class="card-body">
 
-                 <h1 class="card-title card-title-style" style="font-size:32px; font-weight:bold;"> ÜBER AQUAKIDZ </h1>
+                 <h1 class="card-title card-title-style ueber-uns-title-size"> &Uuml;BER AQUAKIDZ </h1>
 
                  <p class="card-text überuns-card-text">"Ich wollte ein Angebot das für meine Kinder und für mich
                      gemacht ist."</p>
 
                  <p class="jana-gesch">Jana Mantz - Geschäftsführerin </p>
              </div>
-         </div >
+         </div>
 
 
 
@@ -67,7 +67,7 @@ include $url_helper .'include/navbar.php';
 
          <div class="row" id="sectionvonefk">
              <div class="col-md-6" style="margin-top:auto !important; margin-bottom:auto !important;">
-                 <h2 style="color:var(--maincolor);" >VON ELTERN FÜR KINDER</h2>
+                 <h2 style="color:var(--maincolor);">VON ELTERN FÜR KINDER</h2>
                  <p class="text-über-eltern">Sicher schwimmen lernen war wichtig für uns als Eltern. Doch das Angebot
                      das es gab wurde entweder meinen Kindern oder meinen Anforderungen nicht gerecht. Da es nichts gab,
                      das der Qualität, Sicherheit und Flexibilität die man braucht im heutigen Lebensalltag entsprach,
@@ -96,12 +96,12 @@ include $url_helper .'include/navbar.php';
 
 
          <!--end of container-->
-     </div >
+     </div>
 
 
      <div class="über-uns-box" id="sectionmotivation">
          <div class="container">
-             <p  class="motivation-über-title">UNSERE MOTIVATION</p>
+             <p class="motivation-über-title">UNSERE MOTIVATION</p>
 
 
 
@@ -316,48 +316,52 @@ while($row = mysqli_fetch_array($result))
 
      <div class="über-uns-box2">
 
-         <div class="container">
 
+         <div class="container">
              <p id="sectionteam" class="überschirft-team-über">UNSER TEAM</p>
 
              <div class="row slides">
                  <div class="col-md-3">
-              
-                     <div class="vier-kreise-über-uns-slider"><i
-                             class="fas fa-plus-circle posi-style-icon-über myBtn" style="color:black !important;"></i></div>
+
+                     <div class="vier-kreise-über-uns-slider"><i class="fas fa-plus-circle posi-style-icon-über myBtn"
+                             style="color:black !important;"></i></div>
 
                  </div>
                  <div class="col-md-3">
 
-                     <div class="vier-kreise-über-uns-slider"><i
-                             class="fas fa-plus-circle posi-style-icon-über myBtn" style="color:black !important;"></i></div>
+                     <div class="vier-kreise-über-uns-slider"><i class="fas fa-plus-circle posi-style-icon-über myBtn"
+                             style="color:black !important;"></i></div>
 
                  </div>
 
                  <div class="col-md-3">
 
-                     <div class="vier-kreise-über-uns-slider"><i
-                             class="fas fa-plus-circle posi-style-icon-über myBtn" style="color:black !important;"></i></div>
+                     <div class="vier-kreise-über-uns-slider"><i class="fas fa-plus-circle posi-style-icon-über myBtn"
+                             style="color:black !important;"></i></div>
 
                  </div>
                  <div class="col-md-3">
 
-                     <div class="vier-kreise-über-uns-slider"><i
-                             class="fas fa-plus-circle posi-style-icon-über myBtn" style="color:black !important;"></i></div>
-                            </div>
+                     <div class="vier-kreise-über-uns-slider"><i class="fas fa-plus-circle posi-style-icon-über myBtn"
+                             style="color:black !important;"></i></div>
+                 </div>
+
+
+                 <div class="ueber-uns-buttons">
+                     <span class="dot-slider" onclick="currentSlide(1)"></span>
+                     <span class="dot-slider" onclick="currentSlide(2)"></span>
+                     <span class="dot-slider" onclick="currentSlide(3)"></span>
+                     <span class="dot-slider" onclick="currentSlide(4)"></span>
+                 </div>
+
+
 
                  
-  <div class="ueber-uns-buttons">
-            <span class="dot-slider" onclick="currentSlide(1)"></span>
-            <span class="dot-slider" onclick="currentSlide(2)"></span>
-            <span class="dot-slider" onclick="currentSlide(3)"></span>
-            <span class="dot-slider" onclick="currentSlide(4)"></span>
-        </div>
              </div>
 
          </div>
 
-       
+
      </div>
 
      <!-- The Modal -->
@@ -375,7 +379,7 @@ while($row = mysqli_fetch_array($result))
 
 
      </div>
-            
+
 
 
 
