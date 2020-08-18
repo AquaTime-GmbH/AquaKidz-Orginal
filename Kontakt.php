@@ -192,24 +192,24 @@ include $url_helper .'include/navbar.php';
                   </div>
                 </div>
                  
-                <div class="form-group col-12">
+                <div class="form-group col-12" style="padding-right:0px !important; padding-left:0px !important;">
                   <label class="first-card-text">Ihre E-Mail-Adresse*</label>
                   <input type="email" class="form-control labelshape" name="email_kontakt"
                     value="<?= $_POST['email_kontakt'] ?>">
                 </div>
 
-                <div class="form-group col-12">
+                <div class="form-group col-12" style="padding-right:0px !important; padding-left:0px !important;">
                   <label class="first-card-text">Natel</label>
                   <input type="email" class="form-control labelshape" name="natel_kontakt"
                     value="<?= $_POST['natel_kontakt'] ?>">
                 </div>
-                <div class="form-group col-12">
+                <div class="form-group col-12" style="padding-right:0px !important; padding-left:0px !important;">
                   <label class="first-card-text">Beschereibung</label>
                   <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
                     value="<?= $_POST['text'] ?>"></textarea>
                 </div>
 
-                <input type="submit" href="" class="btn buchen-buttom" name="kontakt_absenden" value="senden!"
+                <input type="submit" href="" class="btn kontakt-senden-buttom" name="kontakt_absenden" value="senden!"
                   style="margin-left:0px !important;">
               </form>
               <?php	} ?>
@@ -233,6 +233,215 @@ include $url_helper .'include/navbar.php';
 
 
 
+  <div class="container">
+            <h2 class="text-spiezial">AKTUELLE SPEZIALANGEBOTE</h2>
+            <div class="textcontainer">
+                <p class="text-sp">Für einen Tag Meerjungfrau sein? Eine Geburtstagsparty im Becken machen? Mit unseren
+                    Sonderangeboten bieten wir einmalige Erlebnisse mit bewährter AquaKidz Qualität.</p>
+            </div>
+        </div>
+
+
+
+
+
+
+        <!--slider style-->
+        <style>
+            .mySlides {
+                display: none
+            }
+
+            .w3-badge {
+                height: 13px;
+                width: 13px;
+                padding: 0
+            }
+        </style>
+
+
+        <!--slider-->
+        <div class="container">
+
+
+
+
+            <!----------------------------------------first slide card------------------------->
+
+            <div class="row">
+
+
+                <div class="card slider-card-sizing mySlides">
+                    <img class="imgcard-slider imgshape-slider  img-border-slider1" src="images/Block3.png"
+                        alt="Bild ladet nicht!">
+                    <div class="card-body">
+
+                        <h2 class="card-title slider-title-card1">AquaKidz Private</h2>
+                        <p class="card-text font-color text-slider-cutting">Braucht Ihr Kind mehr Förderung?
+                            Passen unsere Kurse nicht in Ihren Zeitplan? Wünschen sie mehr Betreuung oder haben
+                            sie individuelle Zielsetzungen? Wir haben ein flexibles Angebot erschaffen um genau
+                            diese Bedürfnisse zu beantworten. In Privatkursen oder Halbprivatkursen können wir
+                            intensiv an den persönlichen Zielen arbeiten. Sie können mit uns Kursinhalt, Zeit
+                            und Ort besprechen, wir arbeiten mit Ihnen den passenden Trainingsplan aus.</p>
+
+
+                    </div>
+                    <div style="float:right;">
+                        <a href="<?php echo $url_helper;?>Kursarten/........" class="btn  slider-card-button1">Mehr
+                            Erfahren</a>
+                    </div>
+                </div>
+
+
+
+
+                <!----------------------------------------second slide card------------------------->
+
+
+
+
+
+                <div class="card slider-card-sizing mySlides">
+                    <img class="imgcard-slider imgshape-slider  img-border-slider2" src="images/Block3.png"
+                        alt="Bild ladet nicht!">
+                    <div class="card-body">
+
+                        <h2 class="card-title slider-title-card2">AquaKidz Mermaid</h2>
+                        <p class="card-text font-color text-slider-cutting">Das Mythische Geschöpf der Meerjungfrau
+                            fasziniert viele Kinder. Mithilfe der Monoflosse können Kinder die bereits Sicherheit im
+                            Wasser haben eine ganz besondere Erfahrung machen. Mithilfe der Monoflosse können Kinder
+                            ab 6 Jahren abtauchen und sich wie ein Teil des Meervolkes fühlen. Monoflossen sind auch
+                            bei Erfahrenen Tauchern beliebt, wir bieten einen sicheren Einstieg in den Umgang mit
+                            diesem Equipment.</p>
+
+
+                    </div>
+                    <div style="float:right;">
+                        <a href="<?php echo $url_helper;?>Kursarten/......." class="btn  slider-card-button2">Mehr
+                            Erfahren</a>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+                <!----------------------------------------third slide card------------------------->
+
+
+
+
+
+
+                <div class="card slider-card-sizing mySlides">
+                    <img class="imgcard-slider imgshape-slider  img-border-slider3" src="images/Block3.png"
+                        alt="Bild ladet nicht!">
+                    <div class="card-body">
+
+                        <h2 class="card-title slider-title-card3">AquaKidz Vacation</h2>
+                        <p class="card-text font-color text-slider-cutting">In den Intensiv-Ferienkursen der
+                            AquaKidz Schwimmschule erfahren die Kids vor allem den Spass am Nass. Egal ob Anfänger
+                            oder Fortgeschrittene, die Kids lernen die Freude und den sicheren Umgang mit der
+                            Bewegung im Wasser. In niveaugerechten kleinen Kursgruppen bis max. 8 Kids werden wir
+                            gemeinsam step by step mit altersgerechten Spielen das Schwimmen erlernen.</p>
+
+
+                    </div>
+                    <div style="float:right;">
+                        <a href="<?php echo $url_helper;?>Kursarten/....." class="btn  slider-card-button3">Mehr
+                            Erfahren</a>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+                <!----------------------------------------fourth slide card------------------------->
+
+
+
+                <div class="card slider-card-sizing mySlides">
+                    <img class="imgcard-slider imgshape-slider  img-border-slider4" src="images/Block3.png"
+                        alt="Bild ladet nicht!">
+                    <div class="card-body">
+
+                        <h2 class="card-title slider-title-card4">AquaKidz Birthday</h2>
+                        <p class="card-text font-color text-slider-cutting">Machen sie den nächsten Geburtstag an
+                            dem Ort wo sich Kinder wohl fühlen. Wir helfen mit unserer Erfahrung, das es ein
+                            fantasievolles Erlebnis wird. Ob als fürchterliche Piratenmannschaft ein Schiff entern,
+                            mit der Meerjungfrau nach den schönsten Perlen tauchen oder bei den Olympischen Spielen
+                            in Langnau Medaillen abräumen, wir finden das passende erlebnis für den großen Tag.</p>
+
+
+                    </div>
+                    <div style="float:right;">
+                        <a href="<?php echo $url_helper;?>Kursarten/......" class="btn  slider-card-button4">Mehr
+                            Erfahren</a>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+            <div style="text-align:center; margin-bottom:100px;">
+                <span class="dotslider" onclick="plusDivs(1)"></span>
+                <span class="dotslider" onclick="plusDivs(2)"></span>
+                <span class="dotslider" onclick="plusDivs(3)"></span>
+                <span class="dotslider" onclick="plusDivs(4)"></span>
+            </div>
+
+
+        </div>
+
+        <!--slider javascript-->
+        <script>
+            var slideIndex = 1;
+            var timer = null;
+            showDivs(slideIndex);
+
+            function plusDivs(n) {
+                clearTimeout(timer);
+                showDivs(slideIndex += n);
+            }
+
+            function currentSlide(n) {
+                clearTimeout(timer);
+                showDivs(slideIndex = n);
+            }
+
+            function showDivs(n) {
+                var i;
+                var mySlides = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("dotslider");
+                if (n == undefined) {
+                    n = ++slideIndex
+                }
+                if (n > mySlides.length) {
+                    slideIndex = 1
+                }
+                if (n < 1) {
+                    slideIndex = mySlides.length
+                }
+                for (i = 0; i < mySlides.length; i++) {
+                    mySlides[i].style.display = "none";
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                mySlides[slideIndex - 1].style.display = "block";
+                dots[slideIndex - 1].className += " active";
+
+                timer = setTimeout(showDivs, 2000);
+            }
+        </script>
 
 
 

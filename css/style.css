@@ -124,10 +124,6 @@ ul {
     left: 0 !important;
   }
 
-  .card-2-sizing {
-    width: 877px !important;
-
-  }
 
   .card-1-sizing {
     width: 877px !important;
@@ -1266,7 +1262,7 @@ select {
 
 /* 2 cards  */
 .card-1-sizing {
-  border-top: 40px solid #ebd73f;
+  border-top: 40px solid var(--coloryellow) !important;
   border-radius: 35px;
   height: 254px;
   box-shadow: 0px 6px 3px rgba(0, 0, 0, 0.2);
@@ -1274,7 +1270,7 @@ select {
 }
 
 .card-2-sizing {
-  border-top: 40px solid var(--colorgreen);
+  border-top: 40px solid var(--colorgreen) !important;
   border-radius: 35px;
   height: 254px;
   box-shadow: 0px 6px 3px rgba(0, 0, 0, 0.2);
@@ -1800,7 +1796,6 @@ ok .row {
 
 .first-card-kurs {
   background-color: rgba(255, 255, 255, 0.9);
-  border-radius: 35px;
   height: 557px;
   width: 414px;
   border-radius: 35px;
@@ -2079,20 +2074,23 @@ ok .row {
   margin-top: 50px;
 }
 
-.buchen-buttom {
-  height: 50px;
+.kontakt-senden-buttom {
+  height: 73px;
+  position: absolute;
+  right: 1px;
+  bottom: 0;
   margin: -1px;
-  border-radius: 35px 35px 35px 35px;
+  border-radius: 0px 0px 35px 35px;
   font-size: 32px;
-  background-color: white;
-  color: var(--maincolor);
-  margin-top: auto;
-  margin-bottom: auto;
-  margin-left: 10px;
+  background-color: var(--maincolor);
+  color: white;
+  width: 100%;
 }
 
-.buchen-buttom:hover {
-  color: var(--maincolor-hover);
+
+.kontakt-senden-buttom:hover {
+  background-color: var(--maincolor-hover);
+  color: white;
 }
 
 .footer-picture-sizing {

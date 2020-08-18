@@ -160,8 +160,6 @@ include $url_helper .'include/navbar.php';
                             </div>
                         </div>
 
-
-
                         <input type="submit" class="btn search-buttom" name="search_button" value="Suchen">
                 </div>
             </div>
@@ -554,10 +552,6 @@ include $url_helper .'include/navbar.php';
                             Erfahren</a>
                     </div>
                 </div>
-
-
-
-
 
 
 
