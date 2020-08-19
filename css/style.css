@@ -1476,7 +1476,7 @@ ok .row {
   margin-bottom: 100px;
   box-shadow: 0px 6px 3px rgba(0, 0, 0, 0.2);
   margin-top: 200px;
-  overflow: hidden;
+  overflow: scroll;
 }
 
 .block-card-aqua {
