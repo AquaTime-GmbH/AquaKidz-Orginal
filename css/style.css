@@ -1604,8 +1604,8 @@ ok .row {
 }
 
 .row {
-  margin-left: 0 !important;
-  margin-right: 0 !important;
+  margin-left: -1px !important ;
+  margin-right: -1px !important ;
 }
 /*<------------------------------------------------------------------------>*/
 /*<--------------------------------SCHWIMMKURSE---------------------------->*/

@@ -7,8 +7,6 @@ include  $url_helper .'include/database.php';
 
 
 
-
-
   if( isset($_COOKIE['kursort'])) {
     $cookie_kursort = $_COOKIE["kursort"]; 
     } else {
@@ -156,6 +154,7 @@ include $url_helper .'include/navbar.php';
                   <?php } ?>
                   <li>KURSLEKTIONEN:......LEKTIONEN</li>
                   <li>KURSGELD: <?= $sql_fm_kurskosten; ?> CHF</li>
+                  <li>kurs id: <?= $sql_fm_kurs_id; ?> </li>
 
 
                   <!------------->

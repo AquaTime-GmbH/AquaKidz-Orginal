@@ -147,7 +147,7 @@ include $url_helper .'include/navbar.php';
       </div>
 <?php
 
-$result = mysqli_query($con_mysqli,"SELECT * FROM kurse WHERE kurs_id=$Getid ");
+$result = mysqli_query($con_mysqli,"SELECT * FROM kurse WHERE fm_kurs_id=$Getid ");
 
 
 

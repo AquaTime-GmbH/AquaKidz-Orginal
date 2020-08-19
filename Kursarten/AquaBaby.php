@@ -175,7 +175,7 @@ while($row = mysqli_fetch_array($result))
      
     
 
-    if ($sql_fm_von_datum_html->format('d.m.Y') >= $viewsearch_aquababy_kursstart) {     
+    if ($sql_fm_von_datum_html->format('YYYY-MM-DD') >= $viewsearch_aquababy_kursstart) {     
            $countergebnisse = ++$countergebnisse;
            
 
@@ -254,7 +254,7 @@ while($row = mysqli_fetch_array($result))
          <div class="col-md-12">
              <div class="card-aqua-sizing">
 
-                 <div class="row">
+                 <div class="row" style="margin-left: -1px !important; margin-right: -1px !important;">
 
                      <div class="col-2">
                          <img src="<?php echo $url_helper;?>images/little-boy-learning-to-swim-in-a-swimming-pool-P93KRDN.jpg"
