@@ -124,12 +124,11 @@ if ($viewsearch_aquababy_kursstart == ""){
 }else{
     $viewsearch_aquababy_kursstart = date("d.m.Y", strtotime("$viewsearch_aquababy_kursstart") - (3600 * 24 * 14)); 
 }
-
    
 if($viewsearch_aquababy_postleitzahl == "x"){
-    $result = mysqli_query($con_mysqli,"SELECT * FROM kurse  order by fm_von_datum_html DESC");
+    $result = mysqli_query($con_mysqli,"SELECT * FROM kurse  order by fm_von_datum_html ASC");
 } else{
-    $result = mysqli_query($con_mysqli,"SELECT * FROM kurse WHERE fm_bad_ort LIKE '%$viewsearch_aquababy_postleitzahl%' order by fm_von_datum_html DESC");
+    $result = mysqli_query($con_mysqli,"SELECT * FROM kurse WHERE fm_bad_ort LIKE '%$viewsearch_aquababy_postleitzahl%' order by fm_von_datum_html ASC");
 }
 
 
@@ -177,12 +176,8 @@ while($row = mysqli_fetch_array($result))
 
     if ($sql_fm_von_datum_html->format('YYYY-MM-DD') >= $viewsearch_aquababy_kursstart) {     
            $countergebnisse = ++$countergebnisse;
-           
-
-
 
 ?>
-
 
          <div class="col-md-12">
              <div class="card-aqua-sizing">
@@ -193,10 +188,15 @@ while($row = mysqli_fetch_array($result))
                          <img src="<?php echo $url_helper;?>images/little-boy-learning-to-swim-in-a-swimming-pool-P93KRDN.jpg"
                              class="card-img card-aqua-img" alt="Bild Konnte nicht Geladen werden!">
                      </div>
-                     <div class="col-md-4">
+                     <div class="col-md-6">
                          <div class="card-body">
                              <h5 class="card-title card-title-style">
-                                 <?=  $sql_fm_von_datum_html->format('d.m.Y'). " - " . $sql_fm_bis_datum_html->format('d.m.Y')  .  " - " .$sql_fm_bad_postleitzahl ;  ?>
+                             <div class="row">
+                                <?=  $sql_fm_von_datum_html->format('d.m.Y'). " - " . $sql_fm_bis_datum_html->format('d.m.Y')  . " - " .$sql_fm_bad_ort . " - ". $sql_fm_Startzeit->format('H:i:s');  ?>
+                             </div>
+                                 <div class="row" style="margin-top:15px;">
+                                     <?= " Anzahl verbleibende Termine: ". $sql_fm_offene_plaetze . " - " ."Dauer: " . $sql_fm_Dauer . "min";  ?>
+                                 </div>
                              </h5>
 
                              <p class="card-text under-font"><small>CA. 10 Wochen - 24 Monate</small></p>
@@ -204,7 +204,7 @@ while($row = mysqli_fetch_array($result))
                      </div>
 
 
-                     <div class="col-6">
+                     <div class="col-4">
                          <?php if($sql_fm_offene_plaetze != '0'){?>
 
                          <a href="#" class="btn  btn_kursort_aqua_noch">Noch <span
