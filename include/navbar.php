@@ -48,7 +48,7 @@
         </ul>
 
 
-        <a class="btn nav-link-login" href="<?php echo $url_helper;?>Index" target="_blank">LOGIN</a>
+        <a class="btn nav-link-login" href="<?php echo $url_helper;?>login" target="_blank">LOGIN</a>
 
       </div>
 

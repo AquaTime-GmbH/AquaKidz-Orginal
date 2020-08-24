@@ -126,9 +126,9 @@ if ($viewsearch_aquababy_kursstart == ""){
 }
    
 if($viewsearch_aquababy_postleitzahl == "x"){
-    $result = mysqli_query($con_mysqli,"SELECT * FROM kurse  order by fm_von_datum_html ASC");
+    $result = mysqli_query($con_mysqli,"SELECT * FROM kurse  order by fm_von_datum_html DESC");
 } else{
-    $result = mysqli_query($con_mysqli,"SELECT * FROM kurse WHERE fm_bad_ort LIKE '%$viewsearch_aquababy_postleitzahl%' order by fm_von_datum_html ASC");
+    $result = mysqli_query($con_mysqli,"SELECT * FROM kurse WHERE fm_bad_ort LIKE '%$viewsearch_aquababy_postleitzahl%' order by fm_von_datum_html DESC");
 }
 
 
@@ -208,9 +208,12 @@ while($row = mysqli_fetch_array($result))
                          <?php if($sql_fm_offene_plaetze != '0'){?>
 
                          <a href="#" class="btn  btn_kursort_aqua_noch">Noch <span
+
                                  style="color:red;"><?= $sql_fm_offene_plaetze;?></span> Frei </a>
+                    
                          <?php }else{?>
                          <a href="#" class="btn  btn_kursort_aqua_noch">Warteliste</a>
+                         <h1>testo</h1>
                          <?php }?>
                          <div class="row">
 
