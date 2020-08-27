@@ -213,7 +213,7 @@ while($row = mysqli_fetch_array($result))
                     
                          <?php }else{?>
                          <a href="#" class="btn  btn_kursort_aqua_noch">Warteliste</a>
-                         <h1>testo</h1>
+                
                          <?php }?>
                          <div class="row">
 

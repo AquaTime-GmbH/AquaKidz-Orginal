@@ -101,7 +101,15 @@ while($row = mysqli_fetch_array($result_mitarbeiter))
   <link rel="stylesheet" type="text/css" href="<?php echo $url_helper;?>css/style.css">
 
   <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Lato&display=swap" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.2.1/build/ol.js"></script>
+
+  <script src="https://maps.googleapis.com/maps/api/js?libraries=places"></script>
+  <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
+  </script>
+
+  <script defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAjTbeyDhVSfoZW2bolDIXd9L6msWNqAl8&callback=initMap">
+  </script>
+
 </head>
 
 <body>
@@ -154,15 +162,7 @@ include $url_helper .'include/navbar.php';
                   <?php } ?>
                   <li>KURSLEKTIONEN:......LEKTIONEN</li>
                   <li>KURSGELD: <?= $sql_fm_kurskosten; ?> CHF</li>
-                  <li>kurs id: <?= $sql_fm_kurs_id; ?> </li>
 
-
-                  <!------------->
-                  <!-- Testing -->
-                  <!------------->
-
-
-                  <li> postleitzahl: <?= $sql_fm_bad_postleitzahl ?>
                 </ul>
 
               </div>
@@ -177,7 +177,6 @@ include $url_helper .'include/navbar.php';
 
 
         <div class="col-5" style="height:624px !important;">
-
 
           <section class="jetzt-buchen-pos" id="section1">
             <a class="jetzt-buchen-style" href="#section2">Jetzt Buchen!</a>
@@ -293,7 +292,7 @@ include $url_helper .'include/navbar.php';
               -->
 
             <h1 class="">ADRESSE:</h1>
-            <p class=""></p>
+            <p class="<?= $sql_fm_bad_name_druck . " , " . $sql_fm_bad_strasse . " , " . $sql_fm_bad_ort;?>"></p>
 
             <h1 class="">ANREISE:</h1>
             <p class=""></p>
@@ -303,11 +302,322 @@ include $url_helper .'include/navbar.php';
           </form>
         </div>
         <div class="col-xl-6">
-        
 
-          <iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAvf8MRWi1ignKqBJnfCcvwTKwUdehvMzU
-    &q=Space+küssnacht" allowfullscreen>
-          </iframe>
+          <style>
+            #map {
+              height: 400px;
+              width: 500px;
+            }
+          </style>
+
+          <div id="map"></div>
+
+          <script>
+            function initMap() {
+              // map options
+              var options = {
+                zoom: 6,
+                center: {
+                  lat: 46.818188,
+                  lng: 8.227512
+                }
+              }
+              var map = new google.maps.Map(document.getElementById('map'), options);
+              // Add a marker clusterer to manage the markers.
+
+              //Add marker
+              var markers = [
+
+                //Schweiz
+                {
+                  coords: {
+                    lat: 53.338741,
+                    lng: 8.227512
+                  },
+                  iconImage: 'assets/img/places/stparkdublin.png',
+                  content: '<h1>St Stephen’s Green</h1>' + '<br>' + '<h2>Learn More</h2>' +
+                    '<a>http://ststephensgreenpark.ie/</a>'
+                },
+                {
+                  coords: {
+                    lat: 53.3755012,
+                    lng: -6.2735677
+                  },
+                  iconImage: 'assets/img/places/botanic garden.png',
+                  content: '<h1>Botanic Garden</h1>' + '<br>' + '<h2>Learn More</h2>' +
+                    '<a>http://botanicgardens.ie/</a>'
+                },
+                {
+                  coords: {
+                    lat: 53.355998576,
+                    lng: -6.32166538
+                  },
+                  iconImage: 'assets/img/places/stparkdublin.png', ////////////////////add picture
+                  content: '<h1>Phoenix Park</h1>' + '<br>' + '<h2>Learn More</h2>' + '<a>http://phoenixpark.ie/</a>'
+                },
+                {
+                  coords: {
+                    lat: 53.460259,
+                    lng: -6.219985
+                  },
+                  iconImage: 'assets/img/places/swordscastle.png',
+                  content: '<h1>Swords Castle</h1>' + '<br>' + '<h2>Learn More</h2>' +
+                    '<a>https://swordscastle.events/</a>'
+                },
+                {
+                  coords: {
+                    lat: 53.37923,
+                    lng: -6.07201
+                  },
+                  iconImage: 'assets/img/places/Howth.png',
+                  content: '<h1>Howth</h1>' + '<br>' + '<h2>Learn More</h2>' + '<a>http://www.visithowth.ie/</a>'
+                },
+                {
+                  coords: {
+                    lat: 55.1364,
+                    lng: -7.456
+                  },
+                  iconImage: 'assets/img/places/buncrana1.png',
+                  content: '<h1>Buncrana</h1>' + '<br>' + '<h2>Learn More</h2>' +
+                    '<a>https://en.wikipedia.org/wiki/Buncrana</a>'
+                },
+
+                {
+                  coords: {
+                    lat: 53.152999388,
+                    lng: -6.1499994
+                  },
+                  iconImage: 'assets/img/places/sugarloaf_icon.png',
+                  content: '<h1>Great sugar loaf</h1>' + '<br>' + '<h2>Learn More</h2>' +
+                    '<a>http://visitwicklow.ie/item/the-sugarloaf-trail/</a>'
+                },
+                {
+                  coords: {
+                    lat: 52.0058,
+                    lng: -9.5562
+                  },
+                  iconImage: 'assets/img/places/killarney.png',
+                  content: '<h1>Killarney National Park </h1>' + '<br>' + '<h2>Learn More</h2>' +
+                    '<a>https://www.killarneynationalpark.ie/</a>'
+                },
+                {
+                  coords: {
+                    lat: 51.942662896,
+                    lng: -9.917162998
+                  },
+                  iconImage: 'assets/img/places/clifs.png',
+                  content: '<h1>Ring of Kerry</h1>' + '<br>' + '<h2>Learn More</h2>' +
+                    '<a>https://ringofkerrytourism.com/</a>'
+                },
+                {
+                  coords: {
+                    lat: 52.679,
+                    lng: -7.814
+                  },
+                  iconImage: 'assets/img/places/clifs.png', //add picture!!!!!!!!!!!!!!!
+                  content: '<h1>Thurles</h1>' + '<br>' + '<h2>Learn More</h2>' +
+                    '<a>https://www.tipperary.com/thurles</a>'
+                },
+                {
+                  coords: {
+                    lat: 52.348,
+                    lng: -6.517
+                  },
+                  iconImage: 'assets/img/places/wexford museum.png',
+                  content: '<h1>Irish National Heritage Park</h1>' + '<br>' + '<h2>Learn More</h2>' +
+                    '<a>http://www.irishheritage.ie/</a>'
+                },
+                {
+                  coords: {
+                    lat: 53.018,
+                    lng: -6.398
+                  },
+                  iconImage: 'assets/img/places/wicklow.png',
+                  content: '<h1> Wicklow Mountains National Park</h1>' + '<br>' + '<h2>Learn More</h2>' +
+                    '<a>https://www.wicklowmountainsnationalpark.ie/</a>'
+                },
+                {
+                  coords: {
+                    lat: 53.011299,
+                    lng: -6.326156
+                  },
+                  iconImage: 'assets/img/places/glendalough.png',
+                  content: '<h1> Glendalough </h1>' + '<br>' + '<h2>Learn More</h2>' +
+                    '<a>http://www.glendalough.ie/</a>'
+                },
+                {
+                  coords: {
+                    lat: 53.1876492494,
+                    lng: -6.083832998
+                  },
+                  iconImage: 'assets/img/places/Bray.png',
+                  content: '<h1> Bray</h1>' + '<br>' + '<h2>Learn More</h2>' + '<a>http://www.bray.ie/</a>'
+                },
+                {
+                  coords: {
+                    lat: 53.144,
+                    lng: -6.072
+                  },
+                  iconImage: 'assets/img/places/greystones.png',
+                  content: '<h1>Greystones</h1>' + '<br>' + '<h2>Learn More</h2>' +
+                    '<a>http://visitwicklow.ie/item/greystones/</a>'
+                },
+                {
+                  coords: {
+                    lat: 52.518664592,
+                    lng: -7.887329784
+                  },
+                  iconImage: 'assets/img/places/Cashel.png',
+                  content: '<h1>Rock of Cashel</h1>' + '<br>' + '<h2>Learn More</h2>' +
+                    '<a>https://www.cashel.ie/</a>'
+                },
+                {
+                  coords: {
+                    lat: 52.6477,
+                    lng: -7.2561
+                  },
+                  iconImage: 'assets/img/places/kilkenny.png',
+                  content: '<h1>Killenny</h1>' + '<br>' + '<h2>Learn More</h2>' + '<a>https://visitkilkenny.ie/</a>'
+                },
+                //cork
+                {
+                  coords: {
+                    lat: 51.902694,
+                    lng: -8.4767
+                  },
+                  iconImage: 'assets/img/places/butterCork.png',
+                  content: '<h1>Museum of Butter</h1>' + '<br>' + '<h2>Learn More</h2>' +
+                    '<a>http://thebuttermuseum.com/</a>'
+                },
+                {
+                  coords: {
+                    lat: 51.89953,
+                    lng: -8.499022
+                  },
+                  iconImage: 'assets/img/places/prisoncork.png',
+                  content: '<h1>Cork City Gaol</h1>' + '<br>' + '<h2>Learn More</h2>' +
+                    '<a>https://corkcitygaol.com/</a>'
+                },
+
+                {
+                  coords: {
+                    lat: 53.4513204,
+                    lng: -6.140871
+                  },
+                  iconImage: 'assets/img/places/malahideB.png',
+                  content: '<h1>Malahide</h1>' + '<br>' + '<h2>Learn More</h2>' + '<a>https://www.malahide.ie/</a>'
+                },
+
+                {
+                  coords: {
+                    lat: 53.2839577,
+                    lng: -9.0837658
+                  },
+                  iconImage: 'assets/img/places/galway.png',
+                  content: '<h1>Galway</h1>' + '<br>' + '<h2>Learn More</h2>' + '<a>https://www.galwaytourism.ie/</a>'
+                },
+                {
+                  coords: {
+                    lat: 53.470580,
+                    lng: -6.122405
+                  },
+                  iconImage: 'assets/img/places/galway.png',
+                  content: '<h1>Donabate Beach</h1>' + '<br>' + '<h2>Learn More</h2>' +
+                    '<a>https://en.wikipedia.org/wiki/Donabate</a>'
+                },
+                {
+                  coords: {
+                    lat: 52.9713299,
+                    lng: -9.4300415
+                  },
+                  iconImage: 'assets/img/places/clifsofmoher.png',
+                  content: '<h1>Donabate Beach</h1>' + '<br>' + '<h2>Learn More</h2>' +
+                    '<a>https://www.cliffsofmoher.ie/</a>'
+                },
+                {
+                  coords: {
+                    lat: 51.8960528,
+                    lng: -8.4980693
+                  },
+                  iconImage: 'assets/img/places/Cork.png',
+                  content: '<h1>Cork</h1>' + '<br>' + '<h2>Learn More</h2>' + '<a>https://purecork.ie/</a>'
+                },
+                {
+                  coords: {
+                    lat: 53.3667776,
+                    lng: -6.5064198
+                  },
+                  iconImage: 'assets/img/places/Leixlip.png',
+                  content: '<h1>Leixlip</h1>' + '<br>' + '<h2>Learn More</h2>' +
+                    '<a>https://pl.wikipedia.org/wiki/Leixlip</a>'
+                },
+                {
+                  coords: {
+                    lat: 53.1654628,
+                    lng: -6.125499
+                  },
+                  iconImage: 'assets/img/places/littlesugarloaf.png',
+                  content: '<h1>Little Sugar Loaf</h1>' + '<br>' + '<h2>Learn More</h2>' +
+                    '<a>https://www.greystonesguide.ie/little-sugar-loafs-big-day/</a>'
+                },
+                {
+                  coords: {
+                    lat: 53.5474019,
+                    lng: -6.0933048
+                  },
+                  iconImage: 'assets/img/places/rockabill view.png',
+                  content: '<h1>Rockabill View</h1>' + '<br>' + '<h2>Learn More</h2>' +
+                    '<a>http://www.skerriesseatours.ie/trips.html</a>'
+                },
+                {
+                  coords: {
+                    lat: 52.3337499,
+                    lng: -6.4906996
+                  },
+                  iconImage: 'assets/img/places/wexford.png',
+                  content: '<h1>Wexford</h1>' + '<br>' + '<h2>Learn More</h2>' + '<a>https://www.visitwexford.ie/</a>'
+                },
+              ];
+
+              // Loop through markers
+              var gmarkers = [];
+              for (var i = 0; i < markers.length; i++) {
+                gmarkers.push(addMarker(markers[i]));
+
+              }
+
+              //Add MArker function
+              function addMarker(props) {
+                var marker = new google.maps.Marker({
+                  position: props.coords,
+                  map: map,
+
+                });
+
+                /* if(props.iconImage){
+                  marker.setIcon(props.iconImage);
+                } */
+
+                //Check content
+                if (props.content) {
+                  var infoWindow = new google.maps.InfoWindow({
+                    content: props.content
+                  });
+                  marker.addListener('click', function () {
+                    infoWindow.open(map, marker);
+                  });
+                }
+                return marker;
+              }
+              var markerCluster = new MarkerClusterer(map, gmarkers, {
+                imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'
+              });
+            }
+            google.maps.event.addDomListener(window, 'load', initMap)
+          </script>
+
+
+
         </div>
       </div>
     </div>
@@ -315,102 +625,7 @@ include $url_helper .'include/navbar.php';
 
 
 
-  <style>
-    #map{
-      height:400px;
-      width:500px;
-    }
-  </style>
 
-  <div id="map"></div>
-  <script>
-    function initMap(){
-
-      // karten optionen
-      var options = {
-          //zoom um so höher umso gezoomter
-        zoom:13,
-        //koordinaten z.b für küssnacht
-        center:{lat:47.08557,lng:8.44206}
-      }
-
-      // zuerst wird eine neue karte erstellt
-      var map = new google.maps.Map(document.getElementById('map'), options);
-
-      // die funktion listener schaut obmanauf das icon gedrückt hat(click event) wenn kommt ein pop auf 
-      google.maps.event.addListener(map, 'click', function(event){
-        // marker wird hinzugefügt
-        addMarker({coords:event.latLng});
-      });
-
-      /*
-      // Add marker
-      var marker = new google.maps.Marker({
-        position:{lat::47.08557,lng:-70.9495},
-        map:map,
-        icon:'https://developers.google.com/maps/documentation/javascript/examples/full/images/aquatime.png'
-      });
-
-      var infoWindow = new google.maps.InfoWindow({
-        content:'<h1>Lynn MA</h1>'
-      });
-
-      marker.addListener('click', function(){
-        infoWindow.open(map, marker);
-      });
-      */
-
-      // ab hier werden mehrere marker erstellt
-      var markers = [
-        {
-          coords:{lat:42.4668,lng:-70.9495},
-          iconImage:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
-          content:'<h1>küssnacht bad 2</h1>'
-        },
-        {
-          coords:{lat:42.8584,lng:-70.9300},
-          content:'<h1>küssnacht bad1</h1>'
-        },
-        {
-          coords:{lat:42.7762,lng:-71.0773}
-        }
-      ];
-
-      // die schleife geht durch alle marker
-      for(var i = 0;i < markers.length;i++){
-        // und überall wird ein marker platziert
-        addMarker(markers[i]);
-      }
-
-     
-      function addMarker(props){
-        var marker = new google.maps.Marker({
-          position:props.coords,
-          map:map,
-          //icon:props.iconImage
-        });
-
-  
-        if(props.iconImage){
-          marker.setIcon(props.iconImage);
-        }
-
-        // Check content
-        if(props.content){
-          var infoWindow = new google.maps.InfoWindow({
-            content:props.content
-          });
-
-          marker.addListener('click', function(){
-            infoWindow.open(map, marker);
-          });
-        }
-      }
-    }
-  </script>
-  <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAvf8MRWi1ignKqBJnfCcvwTKwUdehvMzU&callback=initMap">
-    </script>
 
 
 
@@ -442,19 +657,19 @@ include $url_helper .'include/navbar.php';
 
           <div class="form-group col-xl-3">
             <label class="first-card-text">Name Kind*</label>
-            <input type="text" class="form-control labelshape" name="name_k" value="<?= $name_kind; ?>" >
+            <input type="text" class="form-control labelshape" name="name_k" value="<?= $name_kind; ?>">
           </div>
 
 
           <div class="form-group col-md-3">
             <label class="first-card-text">Vorname Kind*</label>
-            <input type="text" class="form-control labelshape" name="vorname_k" value="<?= $vorname_kind?>" >
+            <input type="text" class="form-control labelshape" name="vorname_k" value="<?= $vorname_kind?>">
           </div>
 
           <div class="form-group col-md-3">
             <label class="first-card-text">Geburtsdatum Kind*</label>
             <input type="text" placeholder="tt.mm.jjjj" class="form-control labelshape" name="geburtstag_k"
-              value="<?= $geburtstag_kind ?>" >
+              value="<?= $geburtstag_kind ?>">
           </div>
 
 
