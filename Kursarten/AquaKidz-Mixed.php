@@ -37,7 +37,18 @@ $viewsearch_aquababy_ort_cookie = $_COOKIE["kursort"];
 include $url_helper .'include/navbar.php';
 ?>
      <!--------------ende der einbindung------------------>
+<script>
+      
+      function isNumberKey(evt)
+      {
+         var charCode = (evt.which) ? evt.which : event.keyCode
+         if (charCode > 31 && (charCode < 48 || charCode > 57))
+            return false;
 
+         return true;
+      }
+    
+   </script>
 
      <div class="hintergrundbild"></div>
      <div class="container">
@@ -71,7 +82,7 @@ include $url_helper .'include/navbar.php';
 
                          <label class="col-6 col-form-label text-card-aqua"><span>plz</span></label>
 
-                         <input pattern="^[0-9]{4}$" class="form-control labelshape" id="search_aquababy_ort" name="search_aquababy_ort"
+                         <input onkeypress="return isNumberKey(event)" minlength="4" maxlength="4" pattern="^[0-9]{4}$" class="form-control labelshape" id="search_aquababy_ort" name="search_aquababy_ort"
                              type="text" placeholder="überall" value="<?= $viewsearch_aquababy_ort_cookie; ?>">
                      </div>
 

@@ -9,12 +9,14 @@
 /*Standart werte*/
 body {
   padding-top: 88px !important;
-  margin: 0;
+  margin: 0 auto !important;
 }
-footer{
+
+footer {
   width: 100% !important;
   margin-top: 150px;
 }
+
 :root {
   --maincolor: #416cb2;
   --secondcolor: #749cd2;
@@ -50,13 +52,14 @@ p {
 ul {
   padding-inline-start: 0px;
 }
-.card{
+
+.card {
   border: 0px solid !important;
 }
 
 /*------------------ Desktop version -------------------*/
 
-@media screen and (min-width: 1026px) {
+@media screen and (min-width: 1200px) {
 
   .container {
     max-width: 1336px !important;
@@ -70,10 +73,17 @@ ul {
     align-items: flex-end !important;
   }
 
+  #carusel-test {
+    display: none !important;
+  }
 }
 
 /*----------------- Tablet Landscape -----------------------*/
-@media screen and (max-width: 767px) and (min-width: 1025px) {
+@media screen and (max-width: 768px) and (min-width: 1199.98px) {
+  #carusel-index {
+    display: none !important;
+  }
+
 
   .container {
     max-width: 599px !important;
@@ -81,23 +91,37 @@ ul {
     margin-right: auto !important;
     background-color: blue;
   }
-.footer-blau {
-  width: 100% !important;
-}
+
+  .footer-blau {
+    width: 100% !important;
+  }
+
   .height-ajust-nav {
     height: 88px !important;
     align-items: flex-end !important;
   }
 }
-/*----------------- Tablet Portrait -----------------------*/
-@media screen and (max-width: 1024px) and (min-width: 768px) {
-.footer-blau{
-  width: 100% !important;
-}
-  .card-4-sizing {
-    width: 854px !important;
-    height: 274px !important;
 
+/*----------------- Tablet Portrait -----------------------*/
+@media screen and (max-width: 1199.98px) and (min-width: 768px) {
+
+  .kurse-text {
+    margin: 0 auto !important;
+    margin-top: 75px !important;
+  }
+
+  #carusel-index {
+    display: none !important;
+  }
+
+  .footer-blau {
+    width: 100% !important;
+  }
+
+  .card-4-sizing {
+    width: 600px !important;
+    height: 318px !important;
+    margin: 0 auto !important;
   }
 
   .text-index-size {
@@ -125,9 +149,7 @@ ul {
   }
 
 
-  .card-1-sizing {
-    width: 877px !important;
-  }
+
   .height-ajust-nav {
     height: 88px !important;
     align-items: flex-end !important;
@@ -137,345 +159,384 @@ ul {
 }
 
 /*----------------- handy Protrait -----------------------*/
-@media screen and (min-width: 375px) and (max-width: 667px) {
+@media screen and (max-width: 767.98px) {
+  #carusel-test {
+    display: none !important;
+  }
 
-body {
-  line-height: 1 !important;
-}
-.footer-blau {
-  width: 100% !important;
-  height: 470px !important;
-}
-.container {
-  max-width: 355px !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
-  display: table !important;
-  position: relative !important;
-  perspective: 1000px;
+  body {
+    line-height: 1 !important;
+  }
 
-}
+  .footer-blau {
+    width: 100% !important;
+    height: 470px !important;
+  }
 
-html {
-  display: table !important;
-  position: absolute !important;
-  width: 100% !important;
-}
+  .container {
+    max-width: 355px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    display: table !important;
+    position: relative !important;
+    perspective: 1000px;
 
-.first-card {
-  max-width: 356px !important;
-  max-height: 414px !important;
+  }
 
-}
+  html {
+    display: table !important;
+    position: absolute !important;
+    width: 100% !important;
+  }
 
-.card-title {
-  font-size: 18px !important;
-  width: 315px !important;
-  margin-bottom: 5px !important;
-}
+  .first-card {
+    max-width: 356px !important;
+    max-height: 414px !important;
 
-.card-text {
-  font-size: 16px !important;
-  width: 315px !important;
-  word-wrap: break-word !important;
-}
+  }
 
-.first-card-text {
-  font-size: 16px !important;
-}
+  .card-title {
+    font-size: 18px !important;
+    width: 315px !important;
+    margin-bottom: 5px !important;
+  }
 
-.search-buttom {
-  font-size: 22px !important;
-  max-width: 356px !important;
-  max-height: 50px !important;
-}
+  .card-text {
+    font-size: 16px !important;
+    width: 315px !important;
+    word-wrap: break-word !important;
+  }
 
-.card-sizing1 {
-  width: 356px !important;
-  height: 435px !important;
-  margin-top: 20px !important;
-  margin-bottom: 20px !important;
-}
+  .first-card-text {
+    font-size: 16px !important;
+  }
 
-.card-sizing2 {
-  width: 356px !important;
-  height: 351px !important;
-  margin-top: 20px !important;
-  margin-bottom: 20px !important;
-}
+  .search-buttom {
+    font-size: 22px !important;
+    max-width: 356px !important;
+    max-height: 50px !important;
+  }
 
-.card-sizing3 {
-  width: 356px !important;
-  height: 352px !important;
-  margin-top: 20px !important;
-  margin-bottom: 20px !important;
-}
+  .card-sizing1 {
+    width: 356px !important;
+    height: 435px !important;
+    margin-top: 20px !important;
+    margin-bottom: 20px !important;
+  }
 
-.title-card1 {
-  height: 4rem !important;
-}
+  .card-sizing2 {
+    width: 356px !important;
+    height: 351px !important;
+    margin-top: 20px !important;
+    margin-bottom: 20px !important;
+  }
 
-.title-card2 {
+  .card-sizing3 {
+    width: 356px !important;
+    height: 352px !important;
+    margin-top: 20px !important;
+    margin-bottom: 20px !important;
+    margin: 0 auto !important;
+  }
 
-  height: 1rem !important;
-}
+  .title-card1 {
+    height: 4rem !important;
+  }
 
-.title-card3 {
+  .title-card2 {
 
-  height: 2rem !important;
-}
+    height: 1rem !important;
+  }
 
-.card-body {
-  max-width: 356px !important;
-  max-height: 414px !important;
-  margin-left: auto;
-  margin-right: auto;
-}
+  .title-card3 {
+
+    height: 2rem !important;
+  }
+
+  .dot-3cards {
+    cursor: pointer;
+    height: 11px;
+    width: 11px;
+    margin: 0 2px;
+    background-color: var(--maincolor);
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.8s ease;
+    text-align: center;
+    border: 1px solid white;
+    bottom: 0;
+  }
+
+  .active,
+  .dot-3cards:hover {
+    background-color: white !important;
+  }
+
+  .dot-container-slider-3 {
+    text-align: center;
+  }
+
+  .card-body {
+    max-width: 356px !important;
+    max-height: 414px !important;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
 
-.imgcard {
-  max-width: 356px !important;
-  max-height: 160px !important;
-  background-repeat: no-repeat;
-  background-size: cover !important;
-  overflow: hidden !important;
-}
+  .imgcard {
+    max-width: 356px !important;
+    max-height: 160px !important;
+    background-repeat: no-repeat;
+    background-size: cover !important;
+    overflow: hidden !important;
+  }
 
-.btn_card1 {
-  max-width: 162px !important;
-  max-height: 58px !important;
-  font-size: 18px !important;
-}
+  .btn_card1 {
+    max-width: 162px !important;
+    max-height: 58px !important;
+    font-size: 18px !important;
+  }
 
-.btn_card2 {
-  max-width: 162px !important;
-  max-height: 58px !important;
-  font-size: 18px !important;
-}
+  .btn_card2 {
+    max-width: 162px !important;
+    max-height: 58px !important;
+    font-size: 18px !important;
+  }
 
-.btn_card3 {
-  max-width: 162px !important;
-  max-height: 58px !important;
-  font-size: 18px !important;
+  .btn_card3 {
+    max-width: 162px !important;
+    max-height: 58px !important;
+    font-size: 18px !important;
 
-}
+  }
 
-.kurse-text {
-  font-size: 18px !important;
-  max-width: 355px !important;
-  max-height: 53px !important;
-  display: flex !important;
-  position: relative !important;
-  margin-left: auto;
-  margin-right: auto;
-  /*      margin-top: 75px !important; /  / Jana Fragen Wegen Abstand Zwischen Dem Tittel "Kurse Für Jedes Alter" Und Den Karten*/
-}
-    .card5-size {
-      margin-top: 10px !important;
-      max-width: 357px !important;
-      max-height: 488px !important;
-    }
+  .kurse-text {
+    font-size: 18px !important;
+    max-width: 355px !important;
+    max-height: 53px !important;
+    display: flex !important;
+    position: relative !important;
+    margin-left: auto;
+    margin-right: auto;
+    /*      margin-top: 75px !important; /  / Jana Fragen Wegen Abstand Zwischen Dem Tittel "Kurse Für Jedes Alter" Und Den Karten*/
+  }
 
-    .card5-text {
-      font-size: 16px !important;
-      max-width: 300px !important;
-      word-wrap: break-word !important;
-    }
+  .card5-size {
+    margin-top: 10px !important;
+    max-width: 357px !important;
+    max-height: 488px !important;
+  }
 
-    .text-card5 {
-      height: 2rem !important;
-    }
+  .card5-text {
+    font-size: 16px !important;
+    max-width: 300px !important;
+    word-wrap: break-word !important;
+  }
 
-    .font-sizing-card5 {
-      font-size: 18px !important;
-      max-width: 315px !important;
-      max-height: 30px !important;
-    }
-.text-kurse {
-  max-height: 147px !important;
-  max-width: 355px !important;
-  font-size: 16px !important;
-  display: table !important;
-  position: relative !important;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 12px !important;
-}
+  .text-card5 {
+    height: 2rem !important;
+  }
 
-.card-4-sizing {
-  height: 490px !important;
-  width: 355px !important;
-  margin-top: 20px !important;
-  margin-bottom: 20px !important;
-}
+  .font-sizing-card5 {
+    font-size: 18px !important;
+    max-width: 315px !important;
+    max-height: 30px !important;
+  }
 
-.card-4-img {
-  max-width: 355px !important;
-  max-height: 199px !important;
-  width: 355px !important;
-  height: 199px !important;
-  border-radius: 35px 35px 0px 0px !important;
-}
+  .text-kurse {
+    max-height: 147px !important;
+    max-width: 355px !important;
+    font-size: 16px !important;
+    display: table !important;
+    position: relative !important;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 12px !important;
 
-.bnts_card4 {
-  max-width: 162px !important;
-  max-height: 58px !important;
-  font-size: 18px !important;
-}
+  }
 
-.slideshow-container {
-  height: auto !important;
-}
+  .card-4-sizing {
+    height: 490px !important;
+    width: 355px !important;
+    margin-top: 20px !important;
+    margin-bottom: 20px !important;
+  }
 
-.kreis-slider {
-  display: table !important;
-  margin-bottom: 1rem !important;
-  width: 150px !important;
-  height: 150px !important;
-}
+  .card-4-img {
+    max-width: 355px !important;
+    max-height: 199px !important;
+    width: 355px !important;
+    height: 199px !important;
+    border-radius: 35px 35px 0px 0px !important;
+  }
 
-.position-slider-name {
-  float: none !important;
-  font-size: 16px !important;
-}
+  .bnts_card4 {
+    max-width: 162px !important;
+    max-height: 58px !important;
+    font-size: 18px !important;
+  }
 
-.text-index-size {
-  width: 355px !important;
-  font-size: 16px !important;
-}
+  .slideshow-container {
+    height: auto !important;
+  }
 
-.text-spiezial {
-  margin-top: 40px !important;
-  font-size: 18px !important;
-}
+  .kreis-slider {
+    display: table !important;
+    margin-bottom: 1rem !important;
+    width: 150px !important;
+    height: 150px !important;
+  }
 
-.text-sp {
-  max-width: 355px !important;
-  max-height: 101px !important;
-}
+  .position-slider-name {
+    float: none !important;
+    font-size: 16px !important;
+  }
 
-.textcontainer {
-  max-width: 355px !important;
-}
+  .text-index-size {
+    width: 355px !important;
+    font-size: 16px !important;
+  }
 
-.slider-card-sizing {
-  height: 417px !important;
-  width: 355px !important;
-}
+  .text-spiezial {
+    margin-top: 40px !important;
+    font-size: 18px !important;
+  }
 
-.imgcard-slider {
-  width: 355px !important;
-  height: 173px !important;
-}
+  .text-sp {
+    max-width: 355px !important;
+    max-height: 101px !important;
+  }
 
-.card5-size {
-  margin-top: 10px !important;
-  max-width: 357px !important;
-  max-height: 488px !important;
-}
+  .textcontainer {
+    max-width: 355px !important;
+  }
 
-.card5-text {
-  font-size: 16px !important;
-  max-width: 300px !important;
-  word-wrap: break-word !important;
-}
+  .slider-card-sizing {
+    height: 417px !important;
+    width: 355px !important;
+  }
 
-.text-card5 {
-  height: 2rem !important;
-}
+  .imgcard-slider {
+    width: 355px !important;
+    height: 173px !important;
+  }
 
-.font-sizing-card5 {
-  font-size: 18px !important;
-  max-width: 315px !important;
-  max-height: 30px !important;
-}
+  .card5-size {
+    margin-top: 10px !important;
+    max-width: 357px !important;
+    max-height: 488px !important;
+  }
 
-.text-spezial {
-  font-size: 18px !important;
-}
+  .card5-text {
+    font-size: 16px !important;
+    max-width: 300px !important;
+    word-wrap: break-word !important;
+  }
 
-.hintergrundbild-card5 {
-  max-width: 100% !important;
-  height: 510px !important;
-}
+  .text-card5 {
+    height: 2rem !important;
+  }
 
-.card-1-sizing {
-  max-width: 355px !important;
-  max-height: 244px !important;
-  display: table !important;
-  position: relative !important;
-  margin-top: 19px !important;
-  margin-bottom: 19px !important;
-}
+  .font-sizing-card5 {
+    font-size: 18px !important;
+    max-width: 315px !important;
+    max-height: 30px !important;
+  }
 
-.card-2-sizing {
-  max-width: 355px !important;
-  max-height: 244px !important;
-  display: table !important;
-  position: relative !important;
-  margin-top: 19px !important;
-  margin-bottom: 19px !important;
-}
+  .text-spezial {
+    font-size: 18px !important;
+  }
 
-.mehr-erfahren {
-  max-width: 153px !important;
-  max-height: 58px !important;
-  font-size: 18px !important;
-}
+  .hintergrundbild-card5 {
+    max-width: 100% !important;
+    height: 510px !important;
+  }
 
-.btn_auf {
-  max-width: 137px !important;
-  max-height: 58px !important;
-}
+  .card-1-sizing {
+    max-width: 355px !important;
+    max-height: 244px !important;
+    display: table !important;
+    position: relative !important;
+    margin-top: 19px !important;
+    margin-bottom: 19px !important;
+  }
 
-.btn_email {
-  max-width: 126px !important;
-  margin-right: 150px !important;
-}
+  .card-2-sizing {
+    max-width: 355px !important;
+    max-height: 244px !important;
+    display: table !important;
+    position: relative !important;
+    margin-top: 19px !important;
+    margin-bottom: 19px !important;
+  }
 
-.btn-card5 {
-  max-width: 153px !important;
-  max-height: 58 !important;
-  font-size: 18px !important;
-}
+  .mehr-erfahren {
+    max-width: 153px !important;
+    max-height: 58px !important;
+    font-size: 18px !important;
+  }
 
-.footer-white {
-  display: table-row;
-  position: absolute;
-}
-.styling-aqua-collapse {
-  background-color: var(--maincolor) !important;
-  text-align: center !important;
-  border-bottom: 4px solid white !important;
-  border-right: 4px solid white !important;
-  border-left: 4px solid white !important;
-  box-shadow: 0px 6px 3px rgba(0, 0, 0, 0.2) !important;
-}
-.nav-link-kontakt{
-  background-color: var(--maincolor) !important;
-color: white !important;
-}
-.nav-link-ueber{
-  background-color: var(--maincolor) !important;
-color: white !important;
-}
-.nav-link-schwimmkurse{
-  background-color: var(--maincolor) !important;
-color: white !important;
-}
-.nav-link-kursort{
-  background-color: var(--maincolor) !important;
-  color: white !important;
-}
-.aktiv {
-  color: var(--maincolor) !important;
-  background-color: white !important;
-  border: none !important;
-  border-bottom: 0px;
-}
-.nav-link-login:hover{
-  color: white !important;
-}
+  .btn_auf {
+    max-width: 137px !important;
+    max-height: 58px !important;
+  }
+
+  .btn_email {
+    max-width: 126px !important;
+    margin-right: 150px !important;
+  }
+
+  .btn-card5 {
+    max-width: 153px !important;
+    max-height: 58 !important;
+    font-size: 18px !important;
+  }
+
+  .footer-white {
+    display: table-row;
+    position: absolute;
+  }
+
+  .styling-aqua-collapse {
+    background-color: var(--maincolor) !important;
+    text-align: center !important;
+    border-bottom: 4px solid white !important;
+    border-right: 4px solid white !important;
+    border-left: 4px solid white !important;
+    box-shadow: 0px 6px 3px rgba(0, 0, 0, 0.2) !important;
+  }
+
+  .nav-link-kontakt {
+    background-color: var(--maincolor) !important;
+    color: white !important;
+  }
+
+  .nav-link-ueber {
+    background-color: var(--maincolor) !important;
+    color: white !important;
+  }
+
+  .nav-link-schwimmkurse {
+    background-color: var(--maincolor) !important;
+    color: white !important;
+  }
+
+  .nav-link-kursort {
+    background-color: var(--maincolor) !important;
+    color: white !important;
+  }
+
+  .aktiv {
+    color: var(--maincolor) !important;
+    background-color: white !important;
+    border: none !important;
+    border-bottom: 0px;
+  }
+
+  .nav-link-login:hover {
+    color: white !important;
+  }
 
 }
 
@@ -530,8 +591,8 @@ color: white !important;
 }
 
 .nav-link-ueber {
-  background-color: white ;
-  color: #416cb2 ;
+  background-color: white;
+  color: #416cb2;
   font-family: 'Fjalla One',
     sans-serif;
 }
@@ -549,9 +610,11 @@ color: white !important;
   font-family: 'Fjalla One',
     sans-serif;
 }
+
 .nav-link-login:hover {
   color: white !important;
 }
+
 .navbar-toggler {
   position: absolute !important;
   right: 0 !important;
@@ -637,6 +700,10 @@ color: white !important;
 .card-title-style {
   color: var(--maincolor);
 
+}
+
+.card-hidden-3 {
+  margin: 0 auto !important;
 }
 
 .font-color {
@@ -846,6 +913,7 @@ select {
   height: 149px;
   font-size: 21px;
   margin-bottom: 21px;
+
 }
 
 .textcontainer {
@@ -861,6 +929,7 @@ select {
   width: 639px;
   height: 314px;
   border-radius: 35px;
+  margin: 0 auto;
 }
 
 .bnts_card4 {
@@ -1268,6 +1337,7 @@ select {
   height: 254px;
   box-shadow: 0px 6px 3px rgba(0, 0, 0, 0.2);
   width: 637px;
+  margin: 0 auto !important;
 }
 
 .card-2-sizing {
@@ -1276,6 +1346,7 @@ select {
   height: 254px;
   box-shadow: 0px 6px 3px rgba(0, 0, 0, 0.2);
   width: 637px;
+  margin: 0 auto !important;
 }
 
 .btn_email {
@@ -1407,14 +1478,16 @@ select {
   height: 44px !important;
 
 }
-.footer-img{
+
+.footer-img {
   margin: 0 auto;
 }
+
 .footer-left-abstand {
   margin-bottom: 5px;
 }
 
-.footer-links-margin{
+.footer-links-margin {
   display: inline-block;
   margin: 0 auto;
 }
@@ -1442,11 +1515,13 @@ ok .row {
 .col-4 {
   max-width: 34.333% !important;
 }
-.footer-rechts-margin{
+
+.footer-rechts-margin {
   flex-wrap: wrap;
   display: flex;
 }
-.footer-right-title{
+
+.footer-right-title {
   color: var(--maincolor);
   font-size: 21px;
 }
@@ -1540,9 +1615,6 @@ ok .row {
   background-size: cover;
 }
 
-.col-2 {
-  padding-left: 0;
-}
 
 .btn_kursort_aqua {
   font-size: 22px;
@@ -1604,9 +1676,10 @@ ok .row {
 }
 
 .row {
-  margin-left: -1px !important ;
-  margin-right: -1px !important ;
+  margin-left: -1px !important;
+  margin-right: -1px !important;
 }
+
 /*<------------------------------------------------------------------------>*/
 /*<--------------------------------SCHWIMMKURSE---------------------------->*/
 /*<------------------------------------------------------------------------>*/
@@ -1631,6 +1704,7 @@ ok .row {
   background-size: cover;
   overflow: hidden;
 }
+
 /*<------------------------------------------------------------------------>*/
 /*<--------------------------------KURSORT-------- ------------------------>*/
 /*<------------------------------------------------------------------------>*/
@@ -1640,25 +1714,24 @@ ok .row {
   height: 180px;
   width: 414px !important;
   border-radius: 35px;
-  margin-top:200px;
-  margin-bottom: 300px;
+  margin-top: 200px;
+  box-shadow: 0px 6px 3px rgba(0, 0, 0, 0.2);
 }
 
-.input-group-text{
+.input-group-text {
   background-color: white !important;
   border-color: rgb(0, 123, 255) !important;
   border-width: 2px;
   height: calc(1.5em + .75rem + 2px);
   border-radius: 0px 35px 0px 35px;
 }
-.styling-checkbox-kursort{
+
+.styling-checkbox-kursort {
   color: var(--maincolor) !important;
   background-color: red !important;
 }
 
-.abstand-col-1-kurs{
-  padding-right: 20px;
-}
+
 
 /*<------------------------------------------------------------------------>*/
 /*<--------------------------------KUSSEITE EINZELN------------------------>*/
@@ -1770,6 +1843,11 @@ ok .row {
   color: var(--maincolor-hover);
 }
 
+.background-kursort {
+  background-color: var(--maincolor);
+  height: 600px;
+  width: 100%;
+}
 
 .big-box-text {
   width: 100%;
@@ -1779,6 +1857,7 @@ ok .row {
 .map {
   height: 350px;
   width: 450px;
+
 }
 
 .big-box-map {
@@ -1989,10 +2068,12 @@ ok .row {
   text-align: center !important;
 
 }
-.ueber-uns-title-size{
-  font-size:32px;
-  font-weight:bold;
+
+.ueber-uns-title-size {
+  font-size: 32px;
+  font-weight: bold;
 }
+
 .active,
 .collapsible-detail-footer:hover {
   background-color: var(--maincolor-hover) !important;
@@ -2023,7 +2104,8 @@ ok .row {
   right: 0;
 
 }
-.buchen-bottom{
+
+.buchen-bottom {
   height: 50px;
   border-radius: 35px 35px 35px 35px;
   background-color: white;
@@ -2032,9 +2114,11 @@ ok .row {
   margin-bottom: auto;
   margin-left: 15px;
 }
-.buchen-bottom:hover{
+
+.buchen-bottom:hover {
   color: var(--maincolor-hover);
 }
+
 .jetzt-buchen-pos a:hover {
   text-decoration: none;
   color: var(--maincolor-hover);

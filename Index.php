@@ -115,7 +115,15 @@ while($row = mysqli_fetch_array($result))
     </div>
     <div class="container">
 
+<script>
+         function isNumberKey(evt) {
+             var charCode = (evt.which) ? evt.which : event.keyCode
+             if (charCode > 31 && (charCode < 48 || charCode > 57))
+                 return false;
 
+             return true;
+         }
+     </script>
         <div class="col-md-5">
             <div class="card first-card">
                 <div class="card-body">
@@ -131,7 +139,7 @@ while($row = mysqli_fetch_array($result))
 
 
                         <div class="col-12">
-                            <input pattern="^[0-9]{4}$" class="form-control labelshape" id="search_ort"
+                            <input onkeypress="return isNumberKey(event)" minlength="4" maxlength="4" pattern="^[0-9]{4}$" class="form-control labelshape" id="search_ort"
                                 name="search_ort" type="text" value="<?= $cookie_kursort; ?>">
                         </div>
 
@@ -212,13 +220,13 @@ while($row = mysqli_fetch_array($result))
 
 
         <!-- Das sind alle 3 Cards(flexboxen) in der mitte der Webseite -->
-        <section style="margin-top: 150px !important;">
+        <section id="carusel-index" style="margin-top: 150px !important; ">
 
 
             <div class="row row-no-gutters p-0 m-0">
 
 
-                <div class="col-xl-4 col-lg-6 col-md-12 col-sm-12">
+                <div class="col-xl-4 col-lg-6 col-md-12 col-sm-12" style="margin:0 auto !important;">
 
                     <div class="card card-sizing1">
                         <img class="imgcard imgshape card-img-top img-border1" src="images/Block1.png"
@@ -237,7 +245,7 @@ while($row = mysqli_fetch_array($result))
                     </div>
                 </div>
 
-                <div class="col-xl-4 col-lg-6 col-md-12 col-sm-12">
+                <div class="col-xl-4 col-lg-6 col-md-12 col-sm-12" style="margin:0 auto !important;">
                     <div class="card card-sizing2">
                         <img class="imgcard imgshape card-img-top img-border2" src="images/Block2.png"
                             alt="Bild ladet nicht!">
@@ -263,7 +271,7 @@ while($row = mysqli_fetch_array($result))
                     </div>
                 </div>
 
-                <div class="col-xl-4 col-lg-6 col-md-12 col-sm-12">
+                <div class="col-xl-4 col-lg-6 col-md-12 col-sm-12" >
                     <div class="card card-sizing3">
                         <img class="imgcard imgshape card-img-top img-border3" src="images/Block3.png"
                             alt="Bild ladet nicht!">
@@ -280,15 +288,139 @@ while($row = mysqli_fetch_array($result))
             </div>
 
         </section>
+
+        <section id="carusel-test" style="margin-top: 150px !important;">
+            <div class="row row-no-gutters p-0 ">
+
+
+                <div class="col-12 slides_div_3">
+
+                    <div class="card card-sizing1 card-hidden-3">
+                        <img class="imgcard imgshape card-img-top img-border1" src="images/Block1.png"
+                            alt="Bild ladet nicht!">
+                        <div class="card-body">
+                            <h2 class="card-title title-card1">SICHER SCHWIMMEN LERNEN MUSS SPASS MACHEN</h2>
+                            <p class="card-text font-color" style="height:149px; width:366px;">Kinder lernen wenn sie
+                                richtig gefördert werden. Unsere Kurse sind auf die Fähigkeiten und das alter unserer
+                                Schüler zugeschnitten. Wir setzen auf erfahrene Lehrpersonen die die Zeit im Wasser zu
+                                einem wunderbaren Erlebnis machen.</p>
+
+                        </div>
+                        <div style="float:right;">
+                            <a href="#" class="btn  btn_card1">Mehr Erfahren</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 slides_div_3" >
+                    <div class="card card-sizing2 card-hidden-3">
+                        <img class="imgcard imgshape card-img-top img-border2" src="images/Block2.png"
+                            alt="Bild ladet nicht!">
+                        <div class="card-body">
+                            <h2 class="card-title title-card2">UNSER PRINZIP FÜR ERFOLG</h2>
+
+                            <ul style="list-style:none; padding-inline-start:15px !important;"
+                                class="bullet-testing font-color">
+                                <li>
+                                    <a>Schwimmen lernen ohne Druck und Zwang</a>
+                                </li>
+                                <li>
+                                    <a>Betreuung von Erfahrenen Pädagogen</a>
+                                </li>
+                                <li>
+                                    <a>Konstante Steigerung von Sicherheit und Kompetenz</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div style="float:right;">
+                            <a href="#" class="btn  btn_card2">Mehr Erfahren</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 slides_div_3">
+                    <div class="card card-sizing3 card-hidden-3">
+                        <img class="imgcard imgshape card-img-top img-border3" src="images/Block3.png"
+                            alt="Bild ladet nicht!">
+                        <div class="card-body">
+                            <h2 class="card-title title-card3">ERFAHRUNG ZAHLT SICH AUS</h2>
+                            <p class="card-text font-color">Nach X Jahren und X Kunden wissen wir worauf es ankommt.
+                                Einfacher Zugang zum richtigen Kurs. Sie finden uns an 15 Orten in der Schweiz</p>
+                        </div>
+                        <div style="float:right;">
+                            <a href="#" class="btn  btn_card3">Mehr Erfahren</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+             <div class="dot-container-slider-3">
+                <span class="dot-3cards" onclick="slidenow_3(1)"></span>
+                <span class="dot-3cards" onclick="slidenow_3(2)"></span>
+                <span class="dot-3cards" onclick="slidenow_3(3)"></span>
+            </div>
+
+        </section> 
+
+      
+
+        <!--javascript für die Slideshow-->
+        <script>
+            var slideIndex = 1;
+            var timer = null;
+            showSlides(slideIndex);
+
+            function slidenow_3(n) {
+                clearTimeout(timer);
+                showSlides(slideIndex += n);
+            }
+
+    function currentSlide(n) {
+                clearTimeout(timer);
+                showDivs(slideIndex = n);
+            }
+
+            function showSlides(n) {
+                var i;
+                var slides_div_3 = document.getElementsByClassName("slides_div_3");
+                var dotsslider = document.getElementsByClassName("dot-3cards");
+
+                if (n == undefined) {
+                    n = ++slideIndex
+                }
+                if (n > slides_div_3.length) {
+                    slideIndex = 1
+                }
+                if (n < 1) {
+                    slideIndex = slides_div_3.length
+                }
+                for (i = 0; i < slides_div_3.length; i++) {
+                    slides_div_3[i].style.display = "none";
+                }
+                for (i = 0; i < dotsslider.length; i++) {
+                    dotsslider[i].className = dotsslider[i].className.replace(" active", "");
+                }
+                slides_div_3[slideIndex - 1].style.display = "block";
+                dotsslider[slideIndex - 1].className += " active";
+                /* timer auf 20 sekunden gesetzt */
+                timer = setTimeout(showSlides, 2000);
+            }
+        </script>
         <!-- text über den 4 cards -->
 
-        <h2 class="kurse-text">KURSE FÜR JEDES ALTER</h2>
+<div class="container">
+<h2 class="kurse-text">KURSE FÜR JEDES ALTER</h2>
         <div class="text-kurse">
             <p>Wir gestalten Kurse nach den altersgerechten Bedürfnissen Ihres Kindes. Ob sanfte Wassergewöhnung für
                 Babys, Sicherheit im Wasser oder der mit Grundlagen-Abzeichen qualifizierte Kurs für Kids, wir schaffen
                 die richtige Umgebung, um das Potenzial/ Fähigkeiten unserer kleinen und großen AquaKidz bestens zu
                 fördern.</p>
         </div>
+
+</div>
+
+
+        
         <!-- Das sind alle 4 Cards(flexboxen) in der mitte der Webseite -->
 
         <?php
