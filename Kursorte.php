@@ -20,8 +20,8 @@ include  $url_helper .'include/database.php';
          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
      <link rel="stylesheet" type="text/css" href="<?php echo $url_helper;?>css/style.css">
      <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Lato&display=swap" rel="stylesheet">
-     
-     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+   <script src="jquery-3.5.1.min.js"></script>
      <!--google maps -->
      <script
          src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
@@ -49,6 +49,54 @@ include $url_helper .'include/navbar.php';
 
 
      <?php 
+ 
+    $result = mysqli_query($con_mysqli,"SELECT * FROM kurse ");
+while($row = mysqli_fetch_array($result))
+{  
+    $sql_kurs_id = $row['kurs_id'];
+    $sql_fm_kurs_id = $row['fm_kurs_id'];
+    $sql_fm_bad_id = $row['fm_bad_id'];
+    $sql_fm_bad_name_druck = $row['fm_bad_name_druck'];
+    $sql_fm_bad_strasse = $row['fm_bad_strasse'];
+    $sql_fm_bad_ort = $row['fm_bad_ort'];
+    $sql_fm_bad_postleitzahl = $row['fm_bad_postleitzahl'];
+    $sql_fm_offene_plaetze = $row['fm_offene_plaetze'];
+    $sql_fm_von_datum_html = new DateTime($row['fm_von_datum_html']);
+    $sql_fm_bis_datum_html = new DateTime($row['fm_bis_datum_html']);
+    $sql_fm_text_kursinfo = $row['fm_text_kursinfo'];
+    $sql_fm_kurskosten = $row['fm_kurskosten'];
+    $sql_fm_kurstrainer_erster_id = $row['fm_kurstrainer_erster_id'];
+    $sql_fm_marken_id = $row['fm_marken_id'];
+    $sql_fm_marke = $row['fm_marke'];
+    $sql_fm_markenfamilie = $row['fm_markenfamilie'];
+    $sql_fm_Niveau_Description_Internet = $row['fm_Niveau_Description_Internet'];
+    $sql_fm_Alter = $row['fm_Alter'];
+    $sql_fm_wochentag = $row['fm_wochentag'];
+    $sql_fm_Startzeit = new DateTime($row['fm_Startzeit']);
+    $sql_fm_Dauer = $row['fm_Dauer'];
+    $sql_fm_taeglich = $row['fm_taeglich'];
+    $sql_fm_Bad_Eintritt = $row['fm_Bad_Eintritt'];
+    $sql_fm_sonst_Kosten = $row['fm_sonst_Kosten'];
+    $sql_diagramm_kz1_text = $row['diagramm_kz1_text'];
+    $sql_diagramm_kz2_text = $row['diagramm_kz2_text'];
+    $sql_diagramm_kz3_text = $row['diagramm_kz3_text'];
+    $sql_diagramm_kz4_text = $row['diagramm_kz4_text'];
+    $sql_diagramm_kz5_text = $row['diagramm_kz5_text'];
+    $sql_diagramm_kz6_text = $row['diagramm_kz6_text'];
+    $sql_diagramm_kz7_text = $row['diagramm_kz7_text'];
+    $sql_diagramm_kz8_text = $row['diagramm_kz8_text'];
+    $sql_fm_status = $row['fm_status'];
+    $sql_counter = $row['counter'];
+    $sql_updated_at = new DateTime($row['updated_at']);
+    $sql_created_at = new DateTime($row['created_at']);
+
+    
+$maps_bad_ort = $con_mysqli_connect->prepare("SELECT fm_bad_ort from kurse group by fm_bad_name_druck ");
+$maps_bad_name_druck = $con_mysqli_connect->prepare("SELECT fm_bad_name_druck from kurse group by fm_bad_name_druck ");
+
+}
+
+
 
  if( isset($_COOKIE['kursstart'])) {
     $cookie_kursstart = $_COOKIE["kursstart"]; 
@@ -91,17 +139,24 @@ include $url_helper .'include/navbar.php';
 
 
 
+                             <script>
+                            $('.mirror').on('keyup', function() {
+                                $('.'+$(this).attr('class')).val($(this).val());
+                            });
+                             </script>
+                                
+                            
+
 
                              <div class="card kursort-card">
                                  <div class="card-body">
                                      <div class="font-color">
                                          <h1 class="card-title card-title-style" style="font-size:32px">Finde deinen Ort
                                          </h1>
+
                                          <label class="col-4 col-form-label first-card-text font-color">Plz</label>
                                          <div class="col-12">
-                                             <input onkeypress="return isNumberKey(event)" minlength="4" maxlength="4"
-                                                 pattern="^[0-9]{4}$" class="form-control labelshape" id="search_ort"
-                                                 name="search_ort" type="text" value="<?= $cookie_kursort; ?>">
+                                             <input onkeypress="return isNumberKey(event)" minlength="4" maxlength="4"pattern="^[0-9]{4}$" class="form-control labelshape mirror" name="search_ort" type="text" value="<?= $cookie_kursort; ?>">
                                          </div>
 
 
@@ -110,6 +165,7 @@ include $url_helper .'include/navbar.php';
                                  </div>
                              </div>
                      </div>
+
                      <div class="col-xl-6">
 
                          <style>
@@ -127,8 +183,8 @@ include $url_helper .'include/navbar.php';
                          <script>
                              function initMap() {
                                  // map options 
-                                  const directionsService = new google.maps.DirectionsService();
-                                const directionsRenderer = new google.maps.DirectionsRenderer();
+                                 const directionsService = new google.maps.DirectionsService();
+                                 const directionsRenderer = new google.maps.DirectionsRenderer();
                                  //Schweiz
                                  var options = {
                                      zoom: 7,
@@ -143,7 +199,6 @@ include $url_helper .'include/navbar.php';
                                  //Add marker
                                  var markers = [
 
-                                     //
                                      {
                                          coords: {
                                              lat: 47.347113,
@@ -152,14 +207,6 @@ include $url_helper .'include/navbar.php';
                                          icon: 'img/Logomaps.png',
                                          content: '<h1>Bremgarten 7</h1>' + '<br>' + '<h2>5620 Bremgarten</h2>'
 
-                                     },
-                                     {
-                                         coords: {
-                                             lat: 47.281945,
-                                             lng: 8.550983
-                                         },
-                                         iconImage: '',
-                                         content: '<h1>Obstgartenstrasse 4</h1>' + '<br>' + '<h2>8136 Gattikon</h2>'
                                      },
                                  ];
                                  var image = {
@@ -236,11 +283,9 @@ include $url_helper .'include/navbar.php';
 
 
 
-
                      <div class="col-1">
                          <label class="col-form-label text-card-aqua"><span>PLZ</span></label>
-                         <input class="form-control labelshape" id="search_aquababy_ort" name="search_aquababy_ort"
-                             type="text" placeholder="XXXX" value="<?= $viewsearch_aquababy_ort_cookie; ?>" >
+                         <input pattern="^[0-9]{4}$" minlength="4" maxlength="4" onkeypress="return isNumberKey(event)" class="form-control labelshape mirror" name="search_aquababy_ort" type="text" placeholder="XXXX" value="<?= $cookie_kursort; ?>">
                      </div>
 
 
@@ -273,11 +318,12 @@ include $url_helper .'include/navbar.php';
 
 
                          <div class="dropdown-firstcard">
-                        
 
-                             <Select id="kursort_select" name="select_kursort[]" class="col-form-label labelshape" multiple="multiple">
-                                 <option disabled selected value style="color:white;" ></option>
-                                 <option value="1" >Alle</option>
+
+                             <Select id="kursort_select" name="select_kursort[]" class="col-form-label labelshape"
+                                 multiple="multiple">
+                                 <option disabled selected value style="color:white;"></option>
+                                 <option value="1">Alle</option>
                                  <option value="2">Montag</option>
                                  <option value="3">Dienstag</option>
                                  <option value="4">Mittwoch</option>
@@ -296,11 +342,11 @@ include $url_helper .'include/navbar.php';
 
 
 
-<script>
-$(document).ready(function() {
-        $('#kursort_select').multiselect();
-    });
-</script>
+                         <script>
+                             $(document).ready(function () {
+                                 $('#kursort_select').multiselect();
+                             });
+                         </script>
 
 
 

@@ -1,3 +1,7 @@
+
+
+
+
 <?php 
             
              
@@ -46,6 +50,7 @@
                     setcookie("kursort","$viewsearch_ort",time()+(3600*168)); 
 
                    echo ' <script> window.location="Kursorte";</script>';
+                   
                     exit();
                    
                 
@@ -54,3 +59,5 @@
 
         
             ?>
+
+            

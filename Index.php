@@ -30,6 +30,11 @@ include  $url_helper .'include/database.php';
 
     <!-- Required meta tags -->
 
+ <!-- google maps -->
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+   <script defer
+         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAjTbeyDhVSfoZW2bolDIXd9L6msWNqAl8&callback=initMap">
+     </script>
 
 
 
