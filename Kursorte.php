@@ -21,7 +21,7 @@ include  $url_helper .'include/database.php';
      <link rel="stylesheet" type="text/css" href="<?php echo $url_helper;?>css/style.css">
      <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Lato&display=swap" rel="stylesheet">
 
-   <script src="jquery-3.5.1.min.js"></script>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
      <!--google maps -->
      <script
          src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
@@ -29,7 +29,6 @@ include  $url_helper .'include/database.php';
      <script defer
          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAjTbeyDhVSfoZW2bolDIXd9L6msWNqAl8&callback=initMap">
      </script>
-
 
  </head>
 
@@ -139,13 +138,18 @@ $maps_bad_name_druck = $con_mysqli_connect->prepare("SELECT fm_bad_name_druck fr
 
 
 
-                             <script>
-                            $('.mirror').on('keyup', function() {
-                                $('.'+$(this).attr('class')).val($(this).val());
-                            });
+                             <script type="text/javascript">
+                                 function myFunction(test) {
+
+                                     document.getElementById("yourName").value = test.value;
+                                 }
+
+                                 function myFunction2(test2) {
+                                     document.getElementById("copie").value = test2.value;
+                                 }
                              </script>
-                                
-                            
+
+
 
 
                              <div class="card kursort-card">
@@ -156,7 +160,9 @@ $maps_bad_name_druck = $con_mysqli_connect->prepare("SELECT fm_bad_name_druck fr
 
                                          <label class="col-4 col-form-label first-card-text font-color">Plz</label>
                                          <div class="col-12">
-                                             <input onkeypress="return isNumberKey(event)" minlength="4" maxlength="4"pattern="^[0-9]{4}$" class="form-control labelshape mirror" name="search_ort" type="text" value="<?= $cookie_kursort; ?>">
+                                             <input id="yourName" onKeyUp="myFunction2(this)" onkeypress="return isNumberKey(event)" minlength="4" maxlength="4"
+                                                 pattern="^[0-9]{4}$" class="form-control labelshape mirror"
+                                                 name="search_ort" type="text" value="<?= $cookie_kursort; ?>">
                                          </div>
 
 
@@ -285,7 +291,9 @@ $maps_bad_name_druck = $con_mysqli_connect->prepare("SELECT fm_bad_name_druck fr
 
                      <div class="col-1">
                          <label class="col-form-label text-card-aqua"><span>PLZ</span></label>
-                         <input pattern="^[0-9]{4}$" minlength="4" maxlength="4" onkeypress="return isNumberKey(event)" class="form-control labelshape mirror" name="search_aquababy_ort" type="text" placeholder="XXXX" value="<?= $cookie_kursort; ?>">
+                         <input onKeyUp="myFunction(this)" id="copie" pattern="^[0-9]{4}$" minlength="4" maxlength="4" onkeypress="return isNumberKey(event)"
+                             class="form-control labelshape mirror" name="search_aquababy_ort" type="text"
+                             placeholder="XXXX" value="<?= $cookie_kursort; ?>">
                      </div>
 
 
