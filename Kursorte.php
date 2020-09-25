@@ -160,7 +160,8 @@ $maps_bad_name_druck = $con_mysqli_connect->prepare("SELECT fm_bad_name_druck fr
 
                                          <label class="col-4 col-form-label first-card-text font-color">Plz</label>
                                          <div class="col-12">
-                                             <input id="yourName" onKeyUp="myFunction2(this)" onkeypress="return isNumberKey(event)" minlength="4" maxlength="4"
+                                             <input id="yourName" onKeyUp="myFunction2(this)"
+                                                 onkeypress="return isNumberKey(event)" minlength="4" maxlength="4"
                                                  pattern="^[0-9]{4}$" class="form-control labelshape mirror"
                                                  name="search_ort" type="text" value="<?= $cookie_kursort; ?>">
                                          </div>
@@ -291,9 +292,9 @@ $maps_bad_name_druck = $con_mysqli_connect->prepare("SELECT fm_bad_name_druck fr
 
                      <div class="col-1">
                          <label class="col-form-label text-card-aqua"><span>PLZ</span></label>
-                         <input onKeyUp="myFunction(this)" id="copie" pattern="^[0-9]{4}$" minlength="4" maxlength="4" onkeypress="return isNumberKey(event)"
-                             class="form-control labelshape mirror" name="search_aquababy_ort" type="text"
-                             placeholder="XXXX" value="<?= $cookie_kursort; ?>">
+                         <input onKeyUp="myFunction(this)" id="copie" pattern="^[0-9]{4}$" minlength="4" maxlength="4"
+                             onkeypress="return isNumberKey(event)" class="form-control labelshape mirror"
+                             name="search_aquababy_ort" type="text" placeholder="XXXX" value="<?= $cookie_kursort; ?>">
                      </div>
 
 
@@ -328,8 +329,8 @@ $maps_bad_name_druck = $con_mysqli_connect->prepare("SELECT fm_bad_name_druck fr
                          <div class="dropdown-firstcard">
 
 
-                             <Select id="kursort_select" name="select_kursort[]" class="col-form-label labelshape"
-                                 multiple="multiple">
+                             <Select onclick="showCheckboxes()" id="kursort_select" name="select_kursort[]" class="form-control labelshape"
+                                 >
                                  <option disabled selected value style="color:white;"></option>
                                  <option value="1">Alle</option>
                                  <option value="2">Montag</option>
@@ -351,9 +352,18 @@ $maps_bad_name_druck = $con_mysqli_connect->prepare("SELECT fm_bad_name_druck fr
 
 
                          <script>
-                             $(document).ready(function () {
-                                 $('#kursort_select').multiselect();
-                             });
+                             var expanded = false;
+
+                             function showCheckboxes() {
+                                 var checkboxes = document.getElementById("checkboxes");
+                                 if (!expanded) {
+                                     checkboxes.style.display = "block";
+                                     expanded = true;
+                                 } else {
+                                     checkboxes.style.display = "none";
+                                     expanded = false;
+                                 }
+                             }
                          </script>
 
 
