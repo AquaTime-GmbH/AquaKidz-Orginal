@@ -1711,7 +1711,7 @@ ok .row {
 
 .kursort-card {
   background-color: rgba(255, 255, 255, 0.9);
-  height: 180px;
+  height: 240px;
   width: 414px !important;
   border-radius: 35px;
   margin-top: 200px;
@@ -1760,6 +1760,25 @@ ok .row {
   right: 0;
   top: 0;
   bottom: 0;
+}
+
+.search-plz-kursort {
+  height: 73px;
+  position: absolute;
+  right: 1px;
+  bottom: 0;
+  margin: -1px;
+  border-radius: 0px 0px 35px 35px;
+  font-size: 32px;
+  background-color: var(--maincolor);
+  color: white;
+  width: 100%;
+
+}
+
+.search-plz-kursort:hover {
+  color: white;
+  background-color: var(--maincolor-hover) !important;
 }
 
 /*<------------------------------------------------------------------------>*/
