@@ -2,7 +2,7 @@
 <h2 class="text-spiezial">BRAUCHEN SIE MEHR INFORMATIONEN?</h2>
 
     <div class="row">
-        <div class="col-sm-12 col-xl-6 col-md-12 col-lg-12">
+        <div class="col-xs-12 col-sm-12 col-xl-6 col-md-12 col-lg-12">
             <div class="card card-1-sizing">
                 <div class="row no-gutters">
                     <div class="col-md-8">
@@ -20,7 +20,7 @@
             </div>
         </div>
 
-        <div class="col-sm-12 col-xl-6 col-md-12 col-lg-12">
+        <div class="col-xs-12 col-sm-12 col-xl-6 col-md-12 col-lg-12">
             <div class="card card-2-sizing">
                 <div class="row no-gutters">
                     <div class="col-md-8">

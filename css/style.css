@@ -65,6 +65,7 @@ ul {
     max-width: 1336px !important;
     margin-left: auto !important;
     margin-right: auto !important;
+    display: table !important;
   }
 
 
@@ -89,7 +90,7 @@ ul {
     max-width: 599px !important;
     margin-left: auto !important;
     margin-right: auto !important;
-    background-color: blue;
+    display: table !important;
   }
 
   .footer-blau {
@@ -171,20 +172,29 @@ ul {
   .footer-blau {
     width: 100% !important;
     height: 470px !important;
+    bottom: 0 !important;
+    position: absolute !important;
+
+  }
+  .footer-links-margin {
+    display: inline-block !important;
+    margin: 0 auto !important;
+    position: absolute !important;
+    bottom: 0 !important;
   }
 
   .container {
     max-width: 355px !important;
     margin-left: auto !important;
     margin-right: auto !important;
-    display: table !important;
+display: table !important;
     position: relative !important;
     perspective: 1000px;
 
   }
 
   html {
-    display: table !important;
+  display: table !important;
     position: absolute !important;
     width: 100% !important;
   }
@@ -348,7 +358,6 @@ ul {
     max-height: 147px !important;
     max-width: 355px !important;
     font-size: 16px !important;
-    display: table !important;
     position: relative !important;
     margin-left: auto;
     margin-right: auto;
@@ -382,7 +391,7 @@ ul {
   }
 
   .kreis-slider {
-    display: table !important;
+    
     margin-bottom: 1rem !important;
     width: 150px !important;
     height: 150px !important;
@@ -456,7 +465,7 @@ ul {
   .card-1-sizing {
     max-width: 355px !important;
     max-height: 244px !important;
-    display: table !important;
+
     position: relative !important;
     margin-top: 19px !important;
     margin-bottom: 19px !important;
@@ -465,7 +474,7 @@ ul {
   .card-2-sizing {
     max-width: 355px !important;
     max-height: 244px !important;
-    display: table !important;
+
     position: relative !important;
     margin-top: 19px !important;
     margin-bottom: 19px !important;

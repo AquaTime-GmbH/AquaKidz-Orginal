@@ -133,11 +133,11 @@ $maps_bad_name_druck = $con_mysqli_connect->prepare("SELECT fm_bad_name_druck fr
                              <script type="text/javascript">
                                  function myFunction(test) {
 
-                                     document.getElementById("yourName").value = test.value;
+                                     document.getElementById("plz_input1").value = test.value;
                                  }
 
                                  function myFunction2(test2) {
-                                     document.getElementById("copie").value = test2.value;
+                                     document.getElementById("plz_input2").value = test2.value;
                                  }
                              </script>
 
@@ -152,22 +152,23 @@ $maps_bad_name_druck = $con_mysqli_connect->prepare("SELECT fm_bad_name_druck fr
 
                                          <label class="col-4 col-form-label first-card-text font-color">Plz</label>
                                          <div class="col-12">
-                                             <input id="yourName" onKeyUp="myFunction2(this)"
+                                             <input id="plz_input1" onKeyUp="myFunction2(this)"
                                                  onkeypress="return isNumberKey(event)" minlength="4" maxlength="4"
                                                  pattern="^[0-9]{4}$" class="form-control labelshape mirror"
-                                                 name="search_ort" type="text" value="<?= $cookie_kursort; ?>">
+                                                 name="search_ort_plz1" type="text" value="<?= $cookie_kursort; ?>" >
                                          </div>
 
 
 
                                      </div>
-                                         <input type="submit" class="btn search-plz-kursort" name="search_button" value="Suchen" >
-                                 </div> 
-                               
-                                 
+                                     <input type="submit" class="btn search-plz-kursort" name="search_button"
+                                         value="Suchen">
+                                 </div>
+
+
                              </div>
                      </div>
-</form>
+                     </form>
                      <div class="col-xl-6">
 
                          <style>
@@ -287,9 +288,9 @@ $maps_bad_name_druck = $con_mysqli_connect->prepare("SELECT fm_bad_name_druck fr
 
                      <div class="col-1">
                          <label class="col-form-label text-card-aqua"><span>PLZ</span></label>
-                         <input onKeyUp="myFunction(this)" id="copie" pattern="^[0-9]{4}$" minlength="4" maxlength="4"
+                         <input onKeyUp="myFunction(this)" id="plz_input2" pattern="^[0-9]{4}$" minlength="4" maxlength="4"
                              onkeypress="return isNumberKey(event)" class="form-control labelshape mirror"
-                             name="search_aquababy_ort" type="text" placeholder="XXXX" value="<?= $cookie_kursort; ?>">
+                             name="search_ort_plz2" type="text" placeholder="XXXX" value="<?= $cookie_kursort; ?>">
                      </div>
 
 
@@ -299,54 +300,54 @@ $maps_bad_name_druck = $con_mysqli_connect->prepare("SELECT fm_bad_name_druck fr
                              <?php
                             if($session_umkreis == "1"){
                                 ?>
-                                <Select class="form-control labelshape" id="search_alt" name="search_alt" type="text"
-                                    value="<?= $session_umkreis; ?>">
-                                    <option disabled selected value style="color:white;"></option>
-                                    <option value="1" selected>5</option>
-                                    <option value="2">10</option>
-                                    <option value="3">15</option>
-                                    <option value="4">20</option>
-                                </select><?php
+                             <Select class="form-control labelshape" id="search_alt" name="search_alt" type="text"
+                                 value="<?= $session_umkreis; ?>">
+                                 <option disabled selected value style="color:white;"></option>
+                                 <option value="1" selected>5</option>
+                                 <option value="2">10</option>
+                                 <option value="3">15</option>
+                                 <option value="4">20</option>
+                             </select><?php
                             } elseif($session_umkreis == "2"){
                                 ?>
-                                <Select class="form-control labelshape" id="search_alt" name="search_alt" type="text"
-                                    value="<?= $session_umkreis; ?>">
-                                    <option disabled selected value style="color:white;"></option>
-                                    <option value="1">5</option>
-                                    <option value="2" selected>10</option>
-                                    <option value="3">15</option>
-                                    <option value="4">20</option>
-                                </select><?php
+                             <Select class="form-control labelshape" id="search_alt" name="search_alt" type="text"
+                                 value="<?= $session_umkreis; ?>">
+                                 <option disabled selected value style="color:white;"></option>
+                                 <option value="1">5</option>
+                                 <option value="2" selected>10</option>
+                                 <option value="3">15</option>
+                                 <option value="4">20</option>
+                             </select><?php
                             } elseif($session_umkreis == "4"){
                                 ?>
-                                <Select class="form-control labelshape" id="search_alt" name="search_alt" type="text"
-                                    value="<?= $session_umkreis; ?>">
-                                    <option disabled selected value style="color:white;"></option>
-                                    <option value="1">5</option>
-                                    <option value="2">10</option>
-                                    <option value="3" selected>15</option>
-                                    <option value="4">20</option>
-                                </select><?php
+                             <Select class="form-control labelshape" id="search_alt" name="search_alt" type="text"
+                                 value="<?= $session_umkreis; ?>">
+                                 <option disabled selected value style="color:white;"></option>
+                                 <option value="1">5</option>
+                                 <option value="2">10</option>
+                                 <option value="3" selected>15</option>
+                                 <option value="4">20</option>
+                             </select><?php
                             } elseif($session_umkreis == "7"){
                                 ?>
-                                <Select class="form-control labelshape" id="search_alt" name="search_alt" type="text"
-                                    value="<?= $session_umkreis; ?>">
-                                    <option disabled selected value style="color:white;"></option>
-                                    <option value="1">5</option>
-                                    <option value="2">10</option>
-                                    <option value="3">15</option>
-                                    <option value="4" selected>20</option>
-                                </select><?php
+                             <Select class="form-control labelshape" id="search_alt" name="search_alt" type="text"
+                                 value="<?= $session_umkreis; ?>">
+                                 <option disabled selected value style="color:white;"></option>
+                                 <option value="1">5</option>
+                                 <option value="2">10</option>
+                                 <option value="3">15</option>
+                                 <option value="4" selected>20</option>
+                             </select><?php
                             } else{
                                 ?>
-                                <Select class="form-control labelshape" id="search_alt" name="search_alt" type="text"
-                                    value="">
-                                    <option disabled selected value style="color:white;"></option>
-                                    <option value="1">5</option>
-                                    <option value="2">10</option>
-                                    <option value="3">15</option>
-                                    <option value="4">20</option>
-                                </select><?php
+                             <Select class="form-control labelshape" id="search_alt" name="search_alt" type="text"
+                                 value="">
+                                 <option disabled selected value style="color:white;"></option>
+                                 <option value="1">5</option>
+                                 <option value="2">10</option>
+                                 <option value="3">15</option>
+                                 <option value="4">20</option>
+                             </select><?php
 
                       
                             }
@@ -362,57 +363,57 @@ $maps_bad_name_druck = $con_mysqli_connect->prepare("SELECT fm_bad_name_druck fr
                      <div class="col-4">
                          <label class="col-form-label text-card-aqua"><span>Wie alt ist Ihr Kind</span></label>
                          <div class="input-group">
-                                   <?php
+                             <?php
                             if($session_kursalter == "1"){
                                 ?>
-                                <Select class="form-control labelshape" id="search_alt" name="search_alt" type="text"
-                                    value="<?= $session_kursalter; ?>">
-                                    <option disabled selected value style="color:white;"></option>
-                                    <option value="1" selected>CA. 10 WOCHEN - 24 MONATE</option>
-                                    <option value="2">CA. 2 BIS 3 JAHRE</option>
-                                    <option value="4">CA. 3,5 BIS 7,5 JAHRE</option>
-                                    <option value="7">AB CA. 7 JAHRE</option>
-                                </select><?php
+                             <Select class="form-control labelshape" id="search_alt" name="search_alt" type="text"
+                                 value="<?= $session_kursalter; ?>">
+                                 <option disabled selected value style="color:white;"></option>
+                                 <option value="1" selected>CA. 10 WOCHEN - 24 MONATE</option>
+                                 <option value="2">CA. 2 BIS 3 JAHRE</option>
+                                 <option value="4">CA. 3,5 BIS 7,5 JAHRE</option>
+                                 <option value="7">AB CA. 7 JAHRE</option>
+                             </select><?php
                             } elseif($session_kursalter == "2"){
                                 ?>
-                                <Select class="form-control labelshape" id="search_alt" name="search_alt" type="text"
-                                    value="<?= $session_kursalter; ?>">
-                                    <option disabled selected value style="color:white;"></option>
-                                    <option value="1">CA. 10 WOCHEN - 24 MONATE</option>
-                                    <option value="2" selected>CA. 2 BIS 3 JAHRE</option>
-                                    <option value="4">CA. 3,5 BIS 7,5 JAHRE</option>
-                                    <option value="7">AB CA. 7 JAHRE</option>
-                                </select><?php
+                             <Select class="form-control labelshape" id="search_alt" name="search_alt" type="text"
+                                 value="<?= $session_kursalter; ?>">
+                                 <option disabled selected value style="color:white;"></option>
+                                 <option value="1">CA. 10 WOCHEN - 24 MONATE</option>
+                                 <option value="2" selected>CA. 2 BIS 3 JAHRE</option>
+                                 <option value="4">CA. 3,5 BIS 7,5 JAHRE</option>
+                                 <option value="7">AB CA. 7 JAHRE</option>
+                             </select><?php
                             } elseif($session_kursalter == "4"){
                                 ?>
-                                <Select class="form-control labelshape" id="search_alt" name="search_alt" type="text"
-                                    value="<?= $session_kursalter; ?>">
-                                    <option disabled selected value style="color:white;"></option>
-                                    <option value="1">CA. 10 WOCHEN - 24 MONATE</option>
-                                    <option value="2">CA. 2 BIS 3 JAHRE</option>
-                                    <option value="4" selected>CA. 3,5 BIS 7,5 JAHRE</option>
-                                    <option value="7">AB CA. 7 JAHRE</option>
-                                </select><?php
+                             <Select class="form-control labelshape" id="search_alt" name="search_alt" type="text"
+                                 value="<?= $session_kursalter; ?>">
+                                 <option disabled selected value style="color:white;"></option>
+                                 <option value="1">CA. 10 WOCHEN - 24 MONATE</option>
+                                 <option value="2">CA. 2 BIS 3 JAHRE</option>
+                                 <option value="4" selected>CA. 3,5 BIS 7,5 JAHRE</option>
+                                 <option value="7">AB CA. 7 JAHRE</option>
+                             </select><?php
                             } elseif($session_kursalter == "7"){
                                 ?>
-                                <Select class="form-control labelshape" id="search_alt" name="search_alt" type="text"
-                                    value="<?= $session_kursalter; ?>">
-                                    <option disabled selected value style="color:white;"></option>
-                                    <option value="1">CA. 10 WOCHEN - 24 MONATE</option>
-                                    <option value="2">CA. 2 BIS 3 JAHRE</option>
-                                    <option value="4">CA. 3,5 BIS 7,5 JAHRE</option>
-                                    <option value="7" selected>AB CA. 7 JAHRE</option>
-                                </select><?php
+                             <Select class="form-control labelshape" id="search_alt" name="search_alt" type="text"
+                                 value="<?= $session_kursalter; ?>">
+                                 <option disabled selected value style="color:white;"></option>
+                                 <option value="1">CA. 10 WOCHEN - 24 MONATE</option>
+                                 <option value="2">CA. 2 BIS 3 JAHRE</option>
+                                 <option value="4">CA. 3,5 BIS 7,5 JAHRE</option>
+                                 <option value="7" selected>AB CA. 7 JAHRE</option>
+                             </select><?php
                             } else{
                                 ?>
-                                <Select class="form-control labelshape" id="search_alt" name="search_alt" type="text"
-                                    value="">
-                                    <option disabled selected value style="color:white;"></option>
-                                    <option value="1">CA. 10 WOCHEN - 24 MONATE</option>
-                                    <option value="2">CA. 2 BIS 3 JAHRE</option>
-                                    <option value="4">CA. 3,5 BIS 7,5 JAHRE</option>
-                                    <option value="7">AB CA. 7 JAHRE</option>
-                                </select><?php
+                             <Select class="form-control labelshape" id="search_alt" name="search_alt" type="text"
+                                 value="">
+                                 <option disabled selected value style="color:white;"></option>
+                                 <option value="1">CA. 10 WOCHEN - 24 MONATE</option>
+                                 <option value="2">CA. 2 BIS 3 JAHRE</option>
+                                 <option value="4">CA. 3,5 BIS 7,5 JAHRE</option>
+                                 <option value="7">AB CA. 7 JAHRE</option>
+                             </select><?php
 
                       
                             }
@@ -424,12 +425,12 @@ $maps_bad_name_druck = $con_mysqli_connect->prepare("SELECT fm_bad_name_druck fr
                          </div>
                      </div>
 
-             
 
 
 
 
-               
+
+
 
 
                      <div class="col-2">
@@ -501,13 +502,11 @@ $maps_bad_name_druck = $con_mysqli_connect->prepare("SELECT fm_bad_name_druck fr
 
 if(isset($_POST['search_button'])){
     
-    $viewsearch_aquababy_ort = $_POST['search_aquababy_ort'];
+    $viewsearch_aquababy_ort = $_POST['search_ort_plz2'];
     $viewsearch_aquababy_kursstart = $_POST['search_aquababy_kursstart'];
 
 
     setcookie("kursort","$viewsearch_aquababy_ort",time()+(3600*168));
-
-   
 
 
 if ($viewsearch_aquababy_postleitzahl == ""){
@@ -522,11 +521,11 @@ if ($viewsearch_aquababy_kursstart == ""){
     $viewsearch_aquababy_kursstart = date("d.m.Y", strtotime("$viewsearch_aquababy_kursstart") - (3600 * 24 * 14)); 
 }
 
-   
+
 if($viewsearch_aquababy_postleitzahl == "x"){
-    $result = mysqli_query($con_mysqli,"SELECT * FROM kurse  order by fm_von_datum_html ASC");
+    $result = mysqli_query($con_mysqli,"SELECT * FROM kurse  order by fm_von_datum_html DESC");
 } else{
-    $result = mysqli_query($con_mysqli,"SELECT * FROM kurse WHERE fm_bad_ort LIKE '%$viewsearch_aquababy_postleitzahl%' order by fm_von_datum_html ASC");
+    $result = mysqli_query($con_mysqli,"SELECT * FROM kurse WHERE fm_bad_ort LIKE '%$viewsearch_aquababy_postleitzahl%' order by fm_von_datum_html DESC");
 }
 
 
@@ -572,7 +571,7 @@ while($row = mysqli_fetch_array($result))
      
     
 
-    if ($sql_fm_von_datum_html->format('d.m.Y') >= $viewsearch_aquababy_kursstart) {     
+    if ($sql_fm_von_datum_html->format('YYYY-MM-DD') >= $viewsearch_aquababy_kursstart) {     
            $countergebnisse = ++$countergebnisse;
            
 
@@ -590,10 +589,16 @@ while($row = mysqli_fetch_array($result))
                      <img src="<?php echo $url_helper;?>images/little-boy-learning-to-swim-in-a-swimming-pool-P93KRDN.jpg"
                          class="card-img card-aqua-img" alt="Bild Konnte nicht Geladen werden!">
                  </div>
-                 <div class="col-md-4">
+                 <div class="col-md-6">
                      <div class="card-body">
                          <h5 class="card-title card-title-style">
-                             <?=  $sql_fm_von_datum_html->format('d.m.Y'). " - " . $sql_fm_bis_datum_html->format('d.m.Y')  .  " - " .$sql_fm_bad_postleitzahl ;  ?>
+                             <div class="row">
+                                 <?=  $sql_fm_von_datum_html->format('d.m.Y'). " - " . $sql_fm_bis_datum_html->format('d.m.Y')  . " - " .$sql_fm_bad_ort . " - ". $sql_fm_Startzeit->format('H:i:s');  ?>
+                             </div>
+
+                             <div class="row" style="margin-top:15px;">
+                                 <?= " Anzahl verbleibende Termine: ". $sql_fm_offene_plaetze . " - " ."Dauer: " . $sql_fm_Dauer . "min";  ?>
+                             </div>
                          </h5>
 
                          <p class="card-text under-font"><small></small></p>
@@ -601,7 +606,7 @@ while($row = mysqli_fetch_array($result))
                  </div>
 
 
-                 <div class="col-6">
+                 <div class="col-4">
                      <?php if($sql_fm_offene_plaetze != '0'){?>
 
                      <a href="#" class="btn  btn_kursort_aqua_noch">Noch <span
@@ -632,8 +637,6 @@ while($row = mysqli_fetch_array($result))
   
 }
 
-   
-
     if($countergebnisse == '0'){ 
         $result = mysqli_query($con_mysqli,"SELECT * FROM kurse order by starttermin limit 3 " );
        
@@ -643,8 +646,6 @@ while($row = mysqli_fetch_array($result))
 
     $sql_kursort = $row['ort'];
     $view_kursstart = new DateTime($row['starttermin']);
-
-
       
 ?>
 
