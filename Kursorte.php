@@ -258,7 +258,7 @@ $maps_bad_name_druck = $con_mysqli_connect->prepare("SELECT fm_bad_name_druck fr
                              }
                              var crosshair = "img/marker.png";
 
-                             google.maps.event.addDomListener(window, 'load', initMap)
+                             //google.maps.event.addDomListener(window, 'load', initMap)
                          </script>
 
 
@@ -518,8 +518,8 @@ if(isset($_POST['search_button_plz2'])){
     setcookie("kursort","$viewsearch_aquababy_ort",time()+(3600*168));
 
 // wenn die postleit zahl leer ist soll er mit alles vom datum aufwert sortieren neuste zuerst
-if ($viewsearch_aquababy_postleitzahl == ""){
-    $viewsearch_aquababy_postleitzahl = "x";
+if ($viewsearch_aquababy_ort == ""){
+    $viewsearch_aquababy_ort = "x";
 }
 
 if ($viewsearch_aquababy_kursstart == ""){
@@ -531,14 +531,15 @@ if ($viewsearch_aquababy_kursstart == ""){
 }
 
 
-if($viewsearch_aquababy_postleitzahl == "x"){
+if($viewsearch_aquababy_ort == "x"){
     $result = mysqli_query($con_mysqli,"SELECT * FROM kurse  order by fm_von_datum_html ASC");
 } else{
     //wenn es ein wert hat soll er von tabelle kurse wo der badort gleich die eingegebene postleitzahl ist und sortiert nach datum muss geändert werden (badort zu postleitzahl)
 
     //SELECT * FROM kurse WHERE fm_bad_postleitzahl LIKE '%viewsearch_aquababy_postleitzahl%' and  fm_status="veršffentlicht" or fm_status="ongoing" order by fm_von_datum_html DESC
     //veröffentlicht geht nicht weil 
-    $result = mysqli_query($con_mysqli,"SELECT * FROM kurse WHERE fm_bad_postleitzahl LIKE '%viewsearch_aquababy_postleitzahl%' and  fm_status='veršffentlicht' or fm_status='ongoing' order by fm_von_datum_html DESC");
+    // er kommt bis hier her und erkennt das eine postleitzahl angegeben wurde
+    $result = mysqli_query($con_mysqli,"SELECT * FROM kurse WHERE fm_bad_postleitzahl LIKE '%viewsearch_aquababy_ort%' and  fm_status='veršffentlicht' or fm_status='ongoing' order by fm_von_datum_html ASC");
 }
 
 
