@@ -161,7 +161,8 @@ $maps_bad_name_druck = $con_mysqli_connect->prepare("SELECT fm_bad_name_druck fr
 
 
                                      </div>
-                                     <input type="submit" class="btn search-plz-kursort" name="search_button"
+                                     <!--bei dem button muss ich den namen noch ändern hier soll bei suchen alle angezeigt werden-->
+                                     <input type="submit" class="btn search-plz-kursort" name="search_button_plz1"
                                          value="Suchen">
                                  </div>
 
@@ -440,16 +441,16 @@ $maps_bad_name_druck = $con_mysqli_connect->prepare("SELECT fm_bad_name_druck fr
                          <div class="dropdown-firstcard">
 
 
-                             <Select id="kursort_select" name="select_kursort[]" class="form-control labelshape">
+                             <Select id="kursort_select" name="select_wochentag[]" class="form-control labelshape" multiple="multiple">
                                  <option disabled selected value style="color:white;"></option>
-                                 <option value="1">Alle</option>
-                                 <option value="2">Montag</option>
-                                 <option value="3">Dienstag</option>
-                                 <option value="4">Mittwoch</option>
-                                 <option value="5">Donnerstag</option>
-                                 <option value="6">Freitag</option>
-                                 <option value="7">Samstag</option>
-                                 <option value="8">Sonntag</option>
+                                 <option value="select_wochentag[]">Alle</option>
+                                 <option value="select_wochentag[]">Montag</option>
+                                 <option value="select_wochentag[]">Dienstag</option>
+                                 <option value="select_wochentag[]">Mittwoch</option>
+                                 <option value="select_wochentag[]">Donnerstag</option>
+                                 <option value="select_wochentag[]">Freitag</option>
+                                 <option value="select_wochentag[]">Samstag</option>
+                                 <option value="select_wochentag[]">Sonntag</option>
                              </select>
 
                              <?php
@@ -485,7 +486,8 @@ $maps_bad_name_druck = $con_mysqli_connect->prepare("SELECT fm_bad_name_druck fr
 
 
      </div>
-     <input href="#" type="submit" class="btn  btn_suchen_aqua" name="search_button" value="Suchen">
+     <!--hier soll gefiltert werden via werte die der nutzer angibt-->
+     <input href="#" type="submit" class="btn  btn_suchen_aqua" name="search_button_plz2" value="Suchen">
      </div>
 
      <?php
@@ -500,15 +502,19 @@ $maps_bad_name_druck = $con_mysqli_connect->prepare("SELECT fm_bad_name_druck fr
 //ist der wert vom index value nicht gleich wie der wert von aquababy dann delete cookie and set a new one 
 
 
-if(isset($_POST['search_button'])){
-    
+
+//button mit Filter
+
+if(isset($_POST['search_button_plz2'])){
+    //hier wird der wert von der plz genommen 
     $viewsearch_aquababy_ort = $_POST['search_ort_plz2'];
+    // kursstart filter muss eventuell abgeändert werden 
     $viewsearch_aquababy_kursstart = $_POST['search_aquababy_kursstart'];
 
 
     setcookie("kursort","$viewsearch_aquababy_ort",time()+(3600*168));
 
-
+// wenn die postleit zahl leer ist soll er mit alles vom datum aufwert sortieren neuste zuerst
 if ($viewsearch_aquababy_postleitzahl == ""){
     $viewsearch_aquababy_postleitzahl = "x";
 }
@@ -525,7 +531,8 @@ if ($viewsearch_aquababy_kursstart == ""){
 if($viewsearch_aquababy_postleitzahl == "x"){
     $result = mysqli_query($con_mysqli,"SELECT * FROM kurse  order by fm_von_datum_html DESC");
 } else{
-    $result = mysqli_query($con_mysqli,"SELECT * FROM kurse WHERE fm_bad_ort LIKE '%$viewsearch_aquababy_postleitzahl%' order by fm_von_datum_html DESC");
+    //wenn es ein wert hat soll er von tabelle kurse wo der badort gleich die eingegebene postleitzahl ist und sortiert nach datum muss geändert werden (badort zu postleitzahl)
+    $result = mysqli_query($con_mysqli,"SELECT * FROM kurse WHERE fm_bad_postleitzahl LIKE '%$viewsearch_aquababy_postleitzahl%' order by fm_von_datum_html DESC");
 }
 
 
