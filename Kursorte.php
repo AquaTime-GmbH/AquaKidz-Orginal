@@ -4,6 +4,8 @@
 $url_helper= "";
 /* einbingung der database connection*/
 include  $url_helper .'include/database.php';
+
+
 ?>
 
  <!DOCTYPE html>
@@ -99,8 +101,10 @@ $maps_bad_name_druck = $con_mysqli_connect->prepare("SELECT fm_bad_name_druck fr
 
 
   if( isset($_COOKIE['kursort'])) {
+      //nimmt den wert vom cookie und übergibt es der variable
     $cookie_kursort = $_COOKIE["kursort"]; 
     } else {
+        //sonst ist der cookie leet
         $cookie_kursort = "";
   }
 
@@ -129,7 +133,7 @@ $maps_bad_name_druck = $con_mysqli_connect->prepare("SELECT fm_bad_name_druck fr
                          <form action="" method="post">
 
 
-
+<!--funktion das die werte der 2 input feldern vom plz sich spiegeln wenn man etwas schreibt-->
                              <script type="text/javascript">
                                  function myFunction(test) {
 
@@ -502,13 +506,12 @@ $maps_bad_name_druck = $con_mysqli_connect->prepare("SELECT fm_bad_name_druck fr
 //ist der wert vom index value nicht gleich wie der wert von aquababy dann delete cookie and set a new one 
 
 
-
 //button mit Filter
 
 if(isset($_POST['search_button_plz2'])){
     //hier wird der wert von der plz genommen 
     $viewsearch_aquababy_ort = $_POST['search_ort_plz2'];
-    // kursstart filter muss eventuell abgeändert werden 
+    // kursstart filter muss eventuell abgeändert werden oder gelöscht werden
     $viewsearch_aquababy_kursstart = $_POST['search_aquababy_kursstart'];
 
 
@@ -529,10 +532,13 @@ if ($viewsearch_aquababy_kursstart == ""){
 
 
 if($viewsearch_aquababy_postleitzahl == "x"){
-    $result = mysqli_query($con_mysqli,"SELECT * FROM kurse  order by fm_von_datum_html DESC");
+    $result = mysqli_query($con_mysqli,"SELECT * FROM kurse  order by fm_von_datum_html ASC");
 } else{
     //wenn es ein wert hat soll er von tabelle kurse wo der badort gleich die eingegebene postleitzahl ist und sortiert nach datum muss geändert werden (badort zu postleitzahl)
-    $result = mysqli_query($con_mysqli,"SELECT * FROM kurse WHERE fm_bad_postleitzahl LIKE '%$viewsearch_aquababy_postleitzahl%' order by fm_von_datum_html DESC");
+
+    //SELECT * FROM kurse WHERE fm_bad_postleitzahl LIKE '%viewsearch_aquababy_postleitzahl%' and  fm_status="veršffentlicht" or fm_status="ongoing" order by fm_von_datum_html DESC
+    //veröffentlicht geht nicht weil 
+    $result = mysqli_query($con_mysqli,"SELECT * FROM kurse WHERE fm_bad_postleitzahl LIKE '%viewsearch_aquababy_postleitzahl%' and  fm_status='veršffentlicht' or fm_status='ongoing' order by fm_von_datum_html DESC");
 }
 
 

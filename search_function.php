@@ -6,6 +6,7 @@
             
              
             if(isset($_POST['search_button'])){
+                //der wert von index input felder wird hier übergeben
                 $viewsearch_ort = $_POST['search_ort']; 
                 
                 $viewsearch_alt = $_POST['search_alt']; 
@@ -16,7 +17,8 @@
                     //session start mit den übergebenen werten 
 
                     //$_SESSION['username'] = $name;
-                   
+
+                   //vom wert alter und plz wird ein cookie gesetzt 
                     setcookie("kursalter","$viewsearch_alt",time()+(3600*168));
                     setcookie("kursort","$viewsearch_ort",time()+(3600*168));
                 
