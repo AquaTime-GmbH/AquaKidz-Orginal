@@ -159,7 +159,7 @@ $maps_bad_name_druck = $con_mysqli_connect->prepare("SELECT fm_bad_name_druck fr
                                              <input id="plz_input1" onKeyUp="myFunction2(this)"
                                                  onkeypress="return isNumberKey(event)" minlength="4" maxlength="4"
                                                  pattern="^[0-9]{4}$" class="form-control labelshape mirror"
-                                                 name="search_ort_plz1" type="text" value="<?= $cookie_kursort; ?>" >
+                                                 name="search_ort_plz1" type="text" value="<?= $cookie_kursort; ?>">
                                          </div>
 
 
@@ -188,81 +188,55 @@ $maps_bad_name_druck = $con_mysqli_connect->prepare("SELECT fm_bad_name_druck fr
 
                          <div id="map"></div>
 
+
+
                          <script>
                              function initMap() {
                                  // map options 
-                                 const directionsService = new google.maps.DirectionsService();
-                                 const directionsRenderer = new google.maps.DirectionsRenderer();
-                                 //Schweiz
-                                 var options = {
-                                     zoom: 7,
-                                     center: {
-                                         lat: 46.818188,
-                                         lng: 8.227512
-                                     }
-                                 }
-                                 var map = new google.maps.Map(document.getElementById('map'), options);
+
+                                var directionsService = new google.maps.DirectionsService();
+                                var directionsDisplay = new google.maps.DirectionsRenderer();
+
+                                var map = new google.maps.Map(document.getElementById('map'), {
+                                zoom:7,
+                                //muss noch anders gemacht werden erkennt keine postleit zahl entweder mit geocode oder umformatieren lassen vom koordinaten zu plz
+                                // center:<?= $_POST["search_ort_plz1"]; ?>,
+                                mapTypeId: google.maps.MapTypeId.ROADMAP
+                                });
+
+                                directionsDisplay.setMap(map);
 
 
-                                 //Add marker
-                                 var markers = [
+                                var request = {
+                                origin: '<?=  $_POST["search_ort_plz1"] ?>', 
+                                destination: '<?= $sql_fm_bad_ort , $sql_fm_bad_strasse  ?>',
+                                travelMode: google.maps.DirectionsTravelMode.DRIVING
+                                };
 
-                                     {
-                                         coords: {
-                                             lat: 47.347113,
-                                             lng: 8.343420
-                                         },
-                                         icon: 'img/Logomaps.png',
-                                         content: '<h1>Bremgarten 7</h1>' + '<br>' + '<h2>5620 Bremgarten</h2>'
+                                directionsService.route(request, function(response, status) {
+                                    //schaut ob der status ok ist 
+                                if (status == google.maps.DirectionsStatus.OK) {
+                                    directionsDisplay.setDirections(response);
+                                }
 
-                                     },
-                                 ];
-                                 var image = {
-                                     url: crosshair,
-                                     anchor: new google.maps.Point(25, 25),
-                                     scaledSize: new google.maps.Size(35, 60)
-                                 };
-                                 // Loop through markers
-                                 var gmarkers = [];
-                                 for (var i = 0; i < markers.length; i++) {
-                                     gmarkers.push(addMarker(markers[i]));
+                                var myRoute = response.routes[0].legs[0];
+                                var duration = myRoute.duration.value;
+                                var distance = myRoute.distance.value;  
 
-                                 }
+                                var distanceP = document.getElementById('distance');
+                      //ausgabe der berechnung 
+                              document.getElementById('distance').innerHTML=response.routes[0].legs[0].distance.text;
 
-                                 //Add MArker function
-                                 function addMarker(props) {
-                                     var marker = new google.maps.Marker({
-                                         position: props.coords,
-                                         map: map,
-                                         icon: image
-                                     });
 
-                                     /* if(props.iconImage){
-                                       marker.setIcon(props.iconImage);
-                                     } */
+                                });
 
-                                     //Check content
-                                     if (props.content) {
-                                         var infoWindow = new google.maps.InfoWindow({
-                                             content: props.content
-                                         });
-                                         marker.addListener('click', function () {
-                                             infoWindow.open(map, marker);
-                                         });
-                                     }
-                                     return marker;
-                                 }
-                                 var markerCluster = new MarkerClusterer(map, gmarkers, {
-                                     imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'
-                                 });
                              }
-                             var crosshair = "img/marker.png";
 
-                            // google.maps.event.addDomListener(window, 'load', initMap)
+                             // google.maps.event.addDomListener(window, 'load', initMap)
                          </script>
 
 
-
+                        <span id="distance"></span>
 
 
                      </div>
@@ -293,8 +267,8 @@ $maps_bad_name_druck = $con_mysqli_connect->prepare("SELECT fm_bad_name_druck fr
 
                      <div class="col-1">
                          <label class="col-form-label text-card-aqua"><span>PLZ</span></label>
-                         <input onKeyUp="myFunction(this)" id="plz_input2" pattern="^[0-9]{4}$" minlength="4" maxlength="4"
-                             onkeypress="return isNumberKey(event)" class="form-control labelshape mirror"
+                         <input onKeyUp="myFunction(this)" id="plz_input2" pattern="^[0-9]{4}$" minlength="4"
+                             maxlength="4" onkeypress="return isNumberKey(event)" class="form-control labelshape mirror"
                              name="search_ort_plz2" type="text" placeholder="XXXX" value="<?= $cookie_kursort; ?>">
                      </div>
 
@@ -445,7 +419,7 @@ $maps_bad_name_druck = $con_mysqli_connect->prepare("SELECT fm_bad_name_druck fr
                          <div class="dropdown-firstcard">
 
 
-                             <Select id="kursort_select" name="select_wochentag[]" class="form-control labelshape" multiple="multiple">
+                             <Select id="select_wochentag" name="select_wochentag[]" class="form-control labelshape">
                                  <option disabled selected value style="color:white;"></option>
                                  <option value="select_wochentag[]">Alle</option>
                                  <option value="select_wochentag[]">Montag</option>
@@ -511,7 +485,7 @@ $maps_bad_name_druck = $con_mysqli_connect->prepare("SELECT fm_bad_name_druck fr
 if(isset($_POST['search_button_plz2'])){
     //hier wird der wert von der plz genommen 
     $viewsearch_aquababy_ort = $_POST['search_ort_plz2'];
-    // kursstart filter muss eventuell abgeändert werden oder gelöscht werden
+    // kursstart filter muss eventuell abgeändert werden oder gelöscht werden weil der nutzer keinen kursstart mehr eingibt 
     $viewsearch_aquababy_kursstart = $_POST['search_aquababy_kursstart'];
 
 

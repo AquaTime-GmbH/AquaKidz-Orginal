@@ -176,6 +176,7 @@ ul {
     position: absolute !important;
 
   }
+
   .footer-links-margin {
     display: inline-block !important;
     margin: 0 auto !important;
@@ -187,14 +188,14 @@ ul {
     max-width: 355px !important;
     margin-left: auto !important;
     margin-right: auto !important;
-display: table !important;
+    display: table !important;
     position: relative !important;
     perspective: 1000px;
 
   }
 
   html {
-  display: table !important;
+    display: table !important;
     position: absolute !important;
     width: 100% !important;
   }
@@ -391,7 +392,7 @@ display: table !important;
   }
 
   .kreis-slider {
-    
+
     margin-bottom: 1rem !important;
     width: 150px !important;
     height: 150px !important;
@@ -1746,7 +1747,7 @@ ok .row {
   border: 1px #dadada solid;
 }
 
-#checkboxes  {
+#checkboxes {
   display: block;
 }
 
