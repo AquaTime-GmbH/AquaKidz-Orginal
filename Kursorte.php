@@ -188,55 +188,80 @@ $maps_bad_name_druck = $con_mysqli_connect->prepare("SELECT fm_bad_name_druck fr
 
                          <div id="map"></div>
 
-
-
-                         <script>
+           <script>
                              function initMap() {
                                  // map options 
-
-                                var directionsService = new google.maps.DirectionsService();
-                                var directionsDisplay = new google.maps.DirectionsRenderer();
-
-                                var map = new google.maps.Map(document.getElementById('map'), {
-                                zoom:7,
-                                //muss noch anders gemacht werden erkennt keine postleit zahl entweder mit geocode oder umformatieren lassen vom koordinaten zu plz
-                                // center:<?= $_POST["search_ort_plz1"]; ?>,
-                                mapTypeId: google.maps.MapTypeId.ROADMAP
-                                });
-
-                                directionsDisplay.setMap(map);
-
-
-                                var request = {
-                                origin: '<?=  $_POST["search_ort_plz1"] ?>', 
-                                destination: '<?= $sql_fm_bad_ort , $sql_fm_bad_strasse  ?>',
-                                travelMode: google.maps.DirectionsTravelMode.DRIVING
-                                };
-
-                                directionsService.route(request, function(response, status) {
-                                    //schaut ob der status ok ist 
-                                if (status == google.maps.DirectionsStatus.OK) {
-                                    directionsDisplay.setDirections(response);
-                                }
-
-                                var myRoute = response.routes[0].legs[0];
-                                var duration = myRoute.duration.value;
-                                var distance = myRoute.distance.value;  
-
-                                var distanceP = document.getElementById('distance');
-                      //ausgabe der berechnung 
-                              document.getElementById('distance').innerHTML=response.routes[0].legs[0].distance.text;
+                                 const directionsService = new google.maps.DirectionsService();
+                                 const directionsRenderer = new google.maps.DirectionsRenderer();
+                                 //Schweiz
+                                 var options = {
+                                     zoom: 7,
+                                     center: {
+                                         lat: 46.818188,
+                                         lng: 8.227512
+                                     }
+                                 }
+                                 var map = new google.maps.Map(document.getElementById('map'), options);
 
 
-                                });
+                                 //Add marker
+                                 var markers = [
 
+                                     {
+                                         origin: {
+                                             destination: '<?= $sql_fm_bad_ort , $sql_fm_bad_strasse  ?>',
+                                         },
+                                        
+                                         icon: 'img/Logomaps.png',
+                                         content: '<h1>Bremgarten 7</h1>' + '<br>' + '<h2>5620 Bremgarten</h2>'
+
+                                     },
+                                     
+                                 ];
+                                 var image = {
+                                     url: crosshair,
+                                     anchor: new google.maps.Point(25, 25),
+                                     scaledSize: new google.maps.Size(35, 60)
+                                 };
+                                 // Loop through markers
+                                 var gmarkers = [];
+                                 for (var i = 0; i < markers.length; i++) {
+                                     gmarkers.push(addMarker(markers[i]));
+
+                                 }
+
+                                 //Add MArker function
+                                 function addMarker(props) {
+                                     var marker = new google.maps.Marker({
+                                         position: props.coords,
+                                         map: map,
+                                         icon: image
+                                     });
+
+                                     /* if(props.iconImage){
+                                       marker.setIcon(props.iconImage);
+                                     } */
+
+                                     //Check content
+                                     if (props.content) {
+                                         var infoWindow = new google.maps.InfoWindow({
+                                             content: props.content
+                                         });
+                                         marker.addListener('click', function () {
+                                             infoWindow.open(map, marker);
+                                         });
+                                     }
+                                     return marker;
+                                 }
+                                 var markerCluster = new MarkerClusterer(map, gmarkers, {
+                                     imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'
+                                 });
                              }
+                             var crosshair = "img/marker.png";
 
-                             // google.maps.event.addDomListener(window, 'load', initMap)
+                             //google.maps.event.addDomListener(window, 'load', initMap)
                          </script>
 
-
-                        <span id="distance"></span>
 
 
                      </div>
