@@ -189,77 +189,7 @@ $maps_bad_name_druck = $con_mysqli_connect->prepare("SELECT fm_bad_name_druck fr
                          <div id="map"></div>
 
            <script>
-                             function initMap() {
-                                 // map options 
-                                 const directionsService = new google.maps.DirectionsService();
-                                 const directionsRenderer = new google.maps.DirectionsRenderer();
-                                 //Schweiz
-                                 var options = {
-                                     zoom: 7,
-                                     center: {
-                                         lat: 46.818188,
-                                         lng: 8.227512
-                                     }
-                                 }
-                                 var map = new google.maps.Map(document.getElementById('map'), options);
-
-
-                                 //Add marker
-                                 var markers = [
-
-                                     {
-                                         origin: {
-                                             destination: '<?= $sql_fm_bad_ort , $sql_fm_bad_strasse  ?>',
-                                         },
-                                        
-                                         icon: 'img/Logomaps.png',
-                                         content: '<h1>Bremgarten 7</h1>' + '<br>' + '<h2>5620 Bremgarten</h2>'
-
-                                     },
-                                     
-                                 ];
-                                 var image = {
-                                     url: crosshair,
-                                     anchor: new google.maps.Point(25, 25),
-                                     scaledSize: new google.maps.Size(35, 60)
-                                 };
-                                 // Loop through markers
-                                 var gmarkers = [];
-                                 for (var i = 0; i < markers.length; i++) {
-                                     gmarkers.push(addMarker(markers[i]));
-
-                                 }
-
-                                 //Add MArker function
-                                 function addMarker(props) {
-                                     var marker = new google.maps.Marker({
-                                         position: props.coords,
-                                         map: map,
-                                         icon: image
-                                     });
-
-                                     /* if(props.iconImage){
-                                       marker.setIcon(props.iconImage);
-                                     } */
-
-                                     //Check content
-                                     if (props.content) {
-                                         var infoWindow = new google.maps.InfoWindow({
-                                             content: props.content
-                                         });
-                                         marker.addListener('click', function () {
-                                             infoWindow.open(map, marker);
-                                         });
-                                     }
-                                     return marker;
-                                 }
-                                 var markerCluster = new MarkerClusterer(map, gmarkers, {
-                                     imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'
-                                 });
-                             }
-                             var crosshair = "img/marker.png";
-
-                             //google.maps.event.addDomListener(window, 'load', initMap)
+                            
                          </script>
 
 
@@ -272,7 +202,57 @@ $maps_bad_name_druck = $con_mysqli_connect->prepare("SELECT fm_bad_name_druck fr
      </div>
 
      <div class="container">
+<script>
 
+
+
+
+
+var markerArray = [];
+  function initMap() {
+      
+    geocoder = new google.maps.Geocoder();
+    var center = new google.maps.LatLng(47.082652, 8.438101);
+
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 7,
+      center: center,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    });
+
+
+     var data = {
+  'address': [
+    {
+      'address': '<?= $sql_fm_bad_ort?>'
+    },
+    
+  ]
+};
+
+    var address;
+    var markers = [];
+    for (var level in data) {
+        for (var i = 0; i < data[level].length; i++) {
+       //   var dataPhoto = data.photos[i];
+          var dataAdd =  data[level][i];
+        //  alert(dataAdd.address);
+        geocoder.geocode({ 'address': dataAdd.address}, function(results){            
+          var marker  = new google.maps.Marker({
+              map: map, 
+              position: results[0].geometry.location
+          });
+         markerArray[i] = marker;         
+        });
+        }
+    }
+    var markerCluster = new MarkerClusterer(map, markerArray);
+  }
+
+
+
+
+</script>
 
 
 
@@ -438,34 +418,59 @@ $maps_bad_name_druck = $con_mysqli_connect->prepare("SELECT fm_bad_name_druck fr
 
 
                      <div class="col-2">
-                         <label class="col-form-label text-card-aqua"><span>Wochentag</span></label>
+                      
 
 
                          <div class="dropdown-firstcard">
 
 
-                             <Select id="select_wochentag" name="select_wochentag[]" class="form-control labelshape">
-                                 <option disabled selected value style="color:white;"></option>
-                                 <option value="select_wochentag[]">Alle</option>
-                                 <option value="select_wochentag[]">Montag</option>
-                                 <option value="select_wochentag[]">Dienstag</option>
-                                 <option value="select_wochentag[]">Mittwoch</option>
-                                 <option value="select_wochentag[]">Donnerstag</option>
-                                 <option value="select_wochentag[]">Freitag</option>
-                                 <option value="select_wochentag[]">Samstag</option>
-                                 <option value="select_wochentag[]">Sonntag</option>
-                             </select>
-
-                             <?php
-
-                          
-                            ?>
+                              <div class="multiselect">
+                                <div class="selectBox" onclick="showCheckboxes()">  
+                                <label class="text-card-aqua col-form-label">
+                                
+                                <span >Wochentag</span>
+                                </label>
+                                <select class="labelshape form-control">
+                                </select>
+                                <div class="overSelect"></div>
+                                </div>
+                                <div id="checkboxes">
+                                    <label><input type="checkbox" id="select-all" />Alle</label>
+                                    <label><input type="checkbox"/>Montag</label>
+                                    <label><input type="checkbox"/>Dienstag</label>
+                                    <label><input type="checkbox"/>Mittwoch</label>
+                                    <label><input type="checkbox"/>Donnerstag</label>           
+                                    <label><input type="checkbox"/>Freitag</label>                   
+                                    <label><input type="checkbox"/>Samstag</label>                               
+                                    <label><input type="checkbox"/>Sonntag</label>
+                                </div>
+                            </div>
 
                          </div>
 
 
 
                          <script>
+                        //nimmt ei id slelect all wenn es geklickt wurde dann soll ein event passieren
+                        $('#select-all').click(function(event) {   
+                            if(this.checked) {
+                                // suche alle mit classe checkbox und fügt checked hinzu
+                                $(':checkbox').each(function() {
+                                    this.checked = true;                        
+                                });
+                            } else {
+                                $(':checkbox').each(function() {
+                                    this.checked = false;                       
+                                });
+                            }
+                        });
+
+
+
+
+
+
+
                              var expanded = false;
 
                              function showCheckboxes() {
