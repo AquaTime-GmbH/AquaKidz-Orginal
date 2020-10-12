@@ -313,79 +313,53 @@ include $url_helper .'include/navbar.php';
 
           <div id="map"></div>
 
-          <script>
-            function initMap() {
-              // map options 
-              //Schweiz
-              var options = {
-                zoom: 7,
-                center: {
-                  lat: 46.818188,
-                  lng: 8.227512
-                }
-              }
-              var map = new google.maps.Map(document.getElementById('map'), options);
-              // Add a marker clusterer to manage the markers.
+        <script>
+                             function initMap() {
+                                 // map options 
 
-              //Add marker
-              var markers = [
+                                var directionsService = new google.maps.DirectionsService();
+                                var directionsDisplay = new google.maps.DirectionsRenderer();
 
-                //
-                {
-                  coords: {
-                    lat: 47.347113,
-                    lng: 8.343420
-                  },
-                  icon: 'img/Logomaps.png',
-                  content: '<h1>Bremgarten 7</h1>' + '<br>' + '<h2>5620 Bremgarten</h2>' 
-                  
-                },
-                {
-                  coords: {
-                    lat: 47.281945,
-                    lng: 8.550983
-                  },
-                  iconImage: '',
-                  content: '<h1>Obstgartenstrasse 4</h1>' + '<br>' + '<h2>8136 Gattikon</h2>' 
-                },
-              ];
+                                var map = new google.maps.Map(document.getElementById('map'), {
+                                zoom:7,
+                                //muss noch anders gemacht werden erkennt keine postleit zahl entweder mit geocode oder umformatieren lassen vom koordinaten zu plz
+                                // center:<?= $_POST["search_ort_plz1"]; ?>,
+                                mapTypeId: google.maps.MapTypeId.ROADMAP
+                                });
 
-              // Loop through markers
-              var gmarkers = [];
-              for (var i = 0; i < markers.length; i++) {
-                gmarkers.push(addMarker(markers[i]));
+                                directionsDisplay.setMap(map);
 
-              }
 
-              //Add MArker function
-              function addMarker(props) {
-                var marker = new google.maps.Marker({
-                  position: props.coords,
-                  map: map,
+                                var request = {
+                                origin: '<?=  $_POST["search_ort_plz1"] ?>', 
+                                destination: '<?= $sql_fm_bad_ort , $sql_fm_bad_strasse  ?>',
+                                travelMode: google.maps.DirectionsTravelMode.DRIVING
+                                };
 
-                });
+                                directionsService.route(request, function(response, status) {
+                                    //schaut ob der status ok ist 
+                                if (status == google.maps.DirectionsStatus.OK) {
+                                    directionsDisplay.setDirections(response);
+                                }
 
-                /* if(props.iconImage){
-                  marker.setIcon(props.iconImage);
-                } */
+                                var myRoute = response.routes[0].legs[0];
+                                var duration = myRoute.duration.value;
+                                var distance = myRoute.distance.value;  
 
-                //Check content
-                if (props.content) {
-                  var infoWindow = new google.maps.InfoWindow({
-                    content: props.content
-                  });
-                  marker.addListener('click', function () {
-                    infoWindow.open(map, marker);
-                  });
-                }
-                return marker;
-              }
-              var markerCluster = new MarkerClusterer(map, gmarkers, {
-                imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'
-              });
-            }
-            google.maps.event.addDomListener(window, 'load', initMap)
-          </script>
+                                var distanceP = document.getElementById('distance');
+                      //ausgabe der berechnung 
+                              document.getElementById('distance').innerHTML=response.routes[0].legs[0].distance.text;
+
+
+                                });
+
+                             }
+
+                             // google.maps.event.addDomListener(window, 'load', initMap)
+                         </script>
+
+
+                        <span id="distance"></span>
 
 
 
