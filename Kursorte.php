@@ -108,8 +108,12 @@ $maps_bad_name_druck = $con_mysqli_connect->prepare("SELECT fm_bad_name_druck fr
         $cookie_kursort = "";
   }
 
+   
 ?>
-
+<script>
+document.cookie = "username=<?= $cookie_kursort ?>";
+var cookiename = document.cookie;
+</script>
 
      <script>
          function isNumberKey(evt) {
@@ -167,9 +171,27 @@ $maps_bad_name_druck = $con_mysqli_connect->prepare("SELECT fm_bad_name_druck fr
                                      </div>
                                      <!--bei dem button muss ich den namen noch ändern hier soll bei suchen alle angezeigt werden-->
                                      <input type="submit" class="btn search-plz-kursort" name="search_button_plz1"
-                                         value="Suchen">
+                                         value="Suchen" onclick="deleteCookie2()">
                                  </div>
+<?php
 
+
+// if(isset($_POST["search_button_plz1"]) && $cookie_kursort != $_POST['search_ort_plz1']){
+
+//     setcookie("kursort",$cookie_kursort,time()-3600);
+    
+// }else{
+    
+// }
+
+?>
+
+<script>
+function deleteCookie2(){
+document.cookie = "username=<?= $cookie_kursort ?>; max-age=0; ";
+}
+
+</script>
 
                              </div>
                      </div>
@@ -203,10 +225,6 @@ $maps_bad_name_druck = $con_mysqli_connect->prepare("SELECT fm_bad_name_druck fr
 
      <div class="container">
 <script>
-
-
-
-
 
 var markerArray = [];
   function initMap() {
@@ -266,9 +284,6 @@ var markerArray = [];
                  </div>
 
                  <div class="row">
-
-
-
 
                      <div class="col-1">
                          <label class="col-form-label text-card-aqua"><span>PLZ</span></label>
@@ -435,21 +450,32 @@ var markerArray = [];
                                 <div class="overSelect"></div>
                                 </div>
                                 <div id="checkboxes">
-                                    <label><input type="checkbox" id="select-all" />Alle</label>
-                                    <label><input type="checkbox"/>Montag</label>
-                                    <label><input type="checkbox"/>Dienstag</label>
-                                    <label><input type="checkbox"/>Mittwoch</label>
-                                    <label><input type="checkbox"/>Donnerstag</label>           
-                                    <label><input type="checkbox"/>Freitag</label>                   
-                                    <label><input type="checkbox"/>Samstag</label>                               
-                                    <label><input type="checkbox"/>Sonntag</label>
+                                    <label><input class="selectall" type="checkbox" id="select-all" name="wochentag_all[]"/>Alle</label>
+                                    <label><input class="justone" type="checkbox" name="wochentag[]"/>Montag</label>
+                                    <label><input class="justone" type="checkbox" name="wochentag[]"/>Dienstag</label>
+                                    <label><input class="justone" type="checkbox" name="wochentag[]"/>Mittwoch</label>
+                                    <label><input class="justone" type="checkbox" name="wochentag[]"/>Donnerstag</label>           
+                                    <label><input class="justone" type="checkbox" name="wochentag[]"/>Freitag</label>                   
+                                    <label><input class="justone" type="checkbox" name="wochentag[]"/>Samstag</label>                               
+                                    <label><input class="justone" type="checkbox" name="wochentag[]"/>Sonntag</label>
                                 </div>
                             </div>
 
                          </div>
+<?php
+
+
+$wochentag = $_POST['wochentag'];
+if(isset($_POST['wochentag'])){
+    //soll er mit alle ausgeben 
+    //sortiert
+}
 
 
 
+
+
+?>
                          <script>
                         //nimmt ei id slelect all wenn es geklickt wurde dann soll ein event passieren
                         $('#select-all').click(function(event) {   
@@ -465,11 +491,15 @@ var markerArray = [];
                             }
                         });
 
-
-
-
-
-
+                        $("input[type='checkbox'].justone").change(function(){
+                            var a = $("input[type='checkbox'].justone");
+                            if(a.length == a.filter(":checked").length){
+                                $('.selectall').prop('checked', true);
+                            }
+                            else {
+                                $('.selectall').prop('checked', false);
+                            }
+                        });
 
                              var expanded = false;
 
