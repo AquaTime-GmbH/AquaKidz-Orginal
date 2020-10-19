@@ -110,10 +110,7 @@ $maps_bad_name_druck = $con_mysqli_connect->prepare("SELECT fm_bad_name_druck fr
 
    
 ?>
-<script>
-document.cookie = "username=<?= $cookie_kursort ?>";
-var cookiename = document.cookie;
-</script>
+
 
      <script>
          function isNumberKey(evt) {
@@ -175,21 +172,25 @@ var cookiename = document.cookie;
                                  </div>
 <?php
 
+// if($_POST["search_button_plz1"] && $cookie_kursort != $_POST['search_ort_plz1']){
 
-// if(isset($_POST["search_button_plz1"]) && $cookie_kursort != $_POST['search_ort_plz1']){
-
-//     setcookie("kursort",$cookie_kursort,time()-3600);
+ //setcookie("kursort",$cookie_kursort,time()-3600);
     
-// }else{
+ // }else{
     
-// }
+ //}
 
 ?>
 
 <script>
 function deleteCookie2(){
-document.cookie = "username=<?= $cookie_kursort ?>; max-age=0; ";
-}
+    
+        var PLZ = document.getElementById("plz_input1").value;
+         //document.cookie = "kursort=<?= Null; ?>; max-age=0; ";
+         document.cookie = "kursort =" + PLZ +"; getTime() + (exdays*24*60*60*1000)  ";
+          //document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+       
+           }
 
 </script>
 
@@ -242,7 +243,7 @@ var markerArray = [];
      var data = {
   'address': [
     {
-      'address': '<?= $sql_fm_bad_ort?>'
+      'address': '<?php echo $sql_fm_bad_ort;?>'
     },
     
   ]

@@ -68,7 +68,7 @@ while($row = mysqli_fetch_array($result))
     $sql_counter = $row['counter'];
     $sql_updated_at = new DateTime($row['updated_at']);
     $sql_created_at = new DateTime($row['created_at']);
-
+    $view_profilbild = $row[''];
     
 }
 $result_mitarbeiter = mysqli_query($con_mysqli,"SELECT * FROM mitarbeiter  WHERE mitarbeiter_id=$Getid");
@@ -273,7 +273,28 @@ include $url_helper .'include/navbar.php';
         <div class="col-6">
           <h1>IHR TRAINER</h1>
           <p></p>
+          <?php
+   while($row = mysqli_fetch_array($result))
+                        {
+                            $view_profilbild = $row['profilbild_pfad'];
+                            $view_anrede = $row['anrede'];
+                            if ($view_profilbild != NULL){
 
+                            }else
+                                if ($view_anrede == 'Herr'){
+                                    $view_profilbild = $BildHerr;
+
+                                }elseif ($view_anrede == 'Frau')
+                                    $view_profilbild = $BildFrau;
+
+                                else{
+                                    $view_profilbild = $BildNeutral;
+
+                                }
+
+                            echo "<img src=" . $view_profilbild . " alt=\"Profilbild\" width=\"50px\" height=\"50px\"/>";
+                              }
+                            ?>
         </div>
 
         <div class="kreis-slider">
