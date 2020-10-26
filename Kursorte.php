@@ -93,8 +93,7 @@ while($row = mysqli_fetch_array($result))
     $sql_created_at = new DateTime($row['created_at']);
 
     
-$maps_bad_ort = $con_mysqli_connect->prepare("SELECT fm_bad_ort from kurse group by fm_bad_name_druck ");
-$maps_bad_name_druck = $con_mysqli_connect->prepare("SELECT fm_bad_name_druck from kurse group by fm_bad_name_druck ");
+
 
 }
 
@@ -110,7 +109,11 @@ $maps_bad_name_druck = $con_mysqli_connect->prepare("SELECT fm_bad_name_druck fr
 
    
 ?>
+<?php 
 
+echo $maps_bad_name_druck;
+
+?>
 
      <script>
          function isNumberKey(evt) {
@@ -251,6 +254,7 @@ var markerArray = [];
 
     var address;
     var markers = [];
+    var markerCluster = new MarkerClusterer(map, markerArray);
     for (var level in data) {
         for (var i = 0; i < data[level].length; i++) {
        //   var dataPhoto = data.photos[i];
@@ -265,14 +269,13 @@ var markerArray = [];
         });
         }
     }
-    var markerCluster = new MarkerClusterer(map, markerArray);
+    
   }
 
 
 
 
 </script>
-
 
 
 
@@ -426,10 +429,19 @@ var markerArray = [];
                      </div>
 
 
+<!-- $maps_bad_name_druck = mysqli_query($con_mysqli,"SELECT fm_bad_name_druck from kurse group by fm_bad_name_druck "); -->
+<?php 
+
+$maps_bad_ort = mysqli_query($con_mysqli,"SELECT fm_bad_ort from kurse group by fm_bad_name_druck ");
+
+while($row = mysqli_fetch_array($maps_bad_ort))
+{  
+
+echo $row;
 
 
-
-
+}
+?>
 
 
 
@@ -442,41 +454,29 @@ var markerArray = [];
 
                               <div class="multiselect">
                                 <div class="selectBox" onclick="showCheckboxes()">  
+                               
+                                <form method="post"> 
                                 <label class="text-card-aqua col-form-label">
-                                
-                                <span >Wochentag</span>
+                                  <span >Wochentag</span>
                                 </label>
-                                <select class="labelshape form-control">
-                                </select>
-                                <div class="overSelect"></div>
-                                </div>
-                                <div id="checkboxes">
-                                    <label><input class="selectall" type="checkbox" id="select-all" name="wochentag_all[]"/>Alle</label>
-                                    <label><input class="justone" type="checkbox" name="wochentag[]"/>Montag</label>
-                                    <label><input class="justone" type="checkbox" name="wochentag[]"/>Dienstag</label>
-                                    <label><input class="justone" type="checkbox" name="wochentag[]"/>Mittwoch</label>
-                                    <label><input class="justone" type="checkbox" name="wochentag[]"/>Donnerstag</label>           
-                                    <label><input class="justone" type="checkbox" name="wochentag[]"/>Freitag</label>                   
-                                    <label><input class="justone" type="checkbox" name="wochentag[]"/>Samstag</label>                               
-                                    <label><input class="justone" type="checkbox" name="wochentag[]"/>Sonntag</label>
+                                <select class="labelshape form-control" name="wochentag[]" multiple="multiple">
+                               
+                                    <option class="selectall" id="select-all" name="Alle" >Alle</option>
+                                    <option class="justone" name="Montag">Montag</option>
+                                    <option class="justone" name="Dienstag">Dienstag</option>
+                                    <option class="justone" name="Mittwoch">Mittwoch</option>
+                                    <option class="justone" name="Donnerstag">Donnerstag</option>           
+                                    <option class="justone" name="Freitag">Freitag</option>                   
+                                    <option class="justone" name="Samstag">Samstag</option>                               
+                                    <option class="justone" name="Sonntag">Sonntag</option>
+                                    </select>
+                                </form>
+                              
                                 </div>
                             </div>
 
                          </div>
-<?php
 
-
-$wochentag = $_POST['wochentag'];
-if(isset($_POST['wochentag'])){
-    //soll er mit alle ausgeben 
-    //sortiert
-}
-
-
-
-
-
-?>
                          <script>
                         //nimmt ei id slelect all wenn es geklickt wurde dann soll ein event passieren
                         $('#select-all').click(function(event) {   
@@ -528,7 +528,13 @@ if(isset($_POST['wochentag'])){
      <!--hier soll gefiltert werden via werte die der nutzer angibt-->
      <input href="#" type="submit" class="btn  btn_suchen_aqua" name="search_button_plz2" value="Suchen">
      </div>
+<?php
 
+if(isset($_POST['search_button_plz2'])){
+
+ }
+
+?>
      <?php
 
             $countergebnisse = 0;
@@ -577,6 +583,7 @@ if($viewsearch_aquababy_ort == "x"){
     $result = mysqli_query($con_mysqli,"SELECT * FROM kurse WHERE fm_bad_postleitzahl LIKE '%$viewsearch_aquababy_ort%' and  fm_status='veršffentlicht' or fm_status='ongoing' order by fm_von_datum_html DESC");
     
 }
+
 
 
 while($row = mysqli_fetch_array($result))

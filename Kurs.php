@@ -12,13 +12,11 @@ include  $url_helper .'include/database.php';
     } else {
         $cookie_kursort = "";
   }
-  if( isset($_COOKIE['kursalter'])) {
-    $cookie_kursalter = $_COOKIE["kursalter"]; 
-    } else {
-        $cookie_kursalter = "";
-  }
+ 
 
-
+$BildHerr = 'img/Bild_Platzhalter_Mann.jpg';
+$BildFrau = 'img/Bild_Platzhalter_Frau.jpg';
+$BildNeutral = 'img/StandartProfilbild.jpg';
 
 
 
@@ -68,7 +66,7 @@ while($row = mysqli_fetch_array($result))
     $sql_counter = $row['counter'];
     $sql_updated_at = new DateTime($row['updated_at']);
     $sql_created_at = new DateTime($row['created_at']);
-    $view_profilbild = $row[''];
+   
     
 }
 $result_mitarbeiter = mysqli_query($con_mysqli,"SELECT * FROM mitarbeiter  WHERE mitarbeiter_id=$Getid");
@@ -80,6 +78,7 @@ while($row = mysqli_fetch_array($result_mitarbeiter))
     $sql_fm_mitarbeiter_fm_id= $row['mitarbeiter_fm_id'];
     $sql_fm_vorname = $row['vorname'];
     $sql_fm_nachname= $row['nachname'];
+    $view_profilbild = $row['profilbild_arbeit'];
 }
 ?>
 
@@ -102,7 +101,7 @@ while($row = mysqli_fetch_array($result_mitarbeiter))
 
   <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Lato&display=swap" rel="stylesheet">
 
-  <script src="https://maps.googleapis.com/maps/api/js?libraries=places"></script>
+  <!-- <script src="https://maps.googleapis.com/maps/api/js?libraries=places"></script> -->
   <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
   
   </script>
@@ -274,7 +273,10 @@ include $url_helper .'include/navbar.php';
           <h1>IHR TRAINER</h1>
           <p></p>
           <?php
-   while($row = mysqli_fetch_array($result))
+
+$result_mitarbeiter_bilder = mysqli_query($con_mysqli,"SELECT * FROM mitarbeiter  WHERE mitarbeiter_id=$Getid");
+
+   while($row = mysqli_fetch_array($result_mitarbeiter_bilder))
                         {
                             $view_profilbild = $row['profilbild_pfad'];
                             $view_anrede = $row['anrede'];
@@ -291,8 +293,9 @@ include $url_helper .'include/navbar.php';
                                     $view_profilbild = $BildNeutral;
 
                                 }
-
-                            echo "<img src=" . $view_profilbild . " alt=\"Profilbild\" width=\"50px\" height=\"50px\"/>";
+                            echo '<div class="kreis-slider"">';
+                              echo "<img src=" . $view_profilbild . " alt=\"Profilbild\" width=\"300px\" height=\"300px\" border-radius=\"50%\"/>";
+                            echo "</div>";
                               }
                             ?>
         </div>
@@ -314,9 +317,10 @@ include $url_helper .'include/navbar.php';
               -->
 
             <h1 class="">ADRESSE:</h1>
-            <p class="<?= $sql_fm_bad_name_druck . " , " . $sql_fm_bad_strasse . " , " . $sql_fm_bad_ort;?>"></p>
+            <p class=""><?= $sql_fm_bad_name_druck . "</br>" . $sql_fm_bad_strasse . "</br>" . $sql_fm_bad_ort;?></p>
 
             <h1 class="">ANREISE:</h1>
+
             <p class=""></p>
 
 
@@ -333,6 +337,7 @@ include $url_helper .'include/navbar.php';
           </style>
 
           <div id="map"></div>
+
 
         <script>
                              function initMap() {
@@ -352,7 +357,7 @@ include $url_helper .'include/navbar.php';
 
 
                                 var request = {
-                                origin: '<?=  $_POST["search_ort_plz1"] ?>', 
+                                origin: '<?=  $cookie_kursort?>', 
                                 destination: '<?= $sql_fm_bad_ort , $sql_fm_bad_strasse  ?>',
                                 travelMode: google.maps.DirectionsTravelMode.DRIVING
                                 };
@@ -380,7 +385,7 @@ include $url_helper .'include/navbar.php';
                          </script>
 
 
-                        <span id="distance"></span>
+                        <!-- <span id="distance"></span> -->
 
 
 

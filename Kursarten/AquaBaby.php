@@ -338,8 +338,8 @@ else{
 
 
      <?php
-    $result = mysqli_query($con_mysqli,"SELECT internetseite_ FROM marken where marken_name=''  ");
- 
+    // $result = mysqli_query($con_mysqli,"SELECT internetseite_ FROM marken where marken_name=''  ");
+ $result = mysqli_query($con_mysqli,"SELECT fm_marke FROM kurse where marken_name=''  ");
  ?>
 
 

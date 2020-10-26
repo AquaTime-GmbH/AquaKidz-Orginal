@@ -60,6 +60,7 @@ include $url_helper .'include/navbar.php';
 
     <?php 
     $result = mysqli_query($con_mysqli,"SELECT * FROM kurse ");
+
 while($row = mysqli_fetch_array($result))
 {  
     $sql_kurs_id = $row['kurs_id'];
@@ -98,8 +99,6 @@ while($row = mysqli_fetch_array($result))
     $sql_counter = $row['counter'];
     $sql_updated_at = new DateTime($row['updated_at']);
     $sql_created_at = new DateTime($row['created_at']);
-
-    
 }
 
   if( isset($_COOKIE['kursort'])) {
@@ -145,7 +144,7 @@ while($row = mysqli_fetch_array($result))
 
                         <div class="col-12">
                             <input onkeypress="return isNumberKey(event)" minlength="4" maxlength="4" pattern="^[0-9]{4}$" class="form-control labelshape" id="search_ort"
-                                name="search_ort" type="text" value="<?= $cookie_kursort; ?>">
+                                name="search_ort" type="text" value="<?= $cookie_kursort;?> ">
                         </div>
 
 

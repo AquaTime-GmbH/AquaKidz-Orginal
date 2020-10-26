@@ -1763,6 +1763,8 @@ box-shadow .15s ease-in-out;
 }
 
 #checkboxes label:hover {
+  background-color: blue;
+  color:white;
 }
 
 .selectBox {
