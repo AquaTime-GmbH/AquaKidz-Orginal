@@ -3,7 +3,6 @@
 
 
 <?php 
-            
              
             if(isset($_POST['search_button'])){
                 //der wert von index input felder wird hier übergeben
@@ -27,6 +26,8 @@
             if($viewsearch_alt == "1"){
                 
                 echo '<script> window.location="Kursarten/AquaBaby";</script>';
+           
+
                     exit();
                     
 

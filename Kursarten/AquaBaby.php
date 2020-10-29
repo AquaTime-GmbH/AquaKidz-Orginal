@@ -95,7 +95,9 @@ include $url_helper .'include/navbar.php';
                      </div>
 
 
-
+  <?php 
+                         include $url_helper .'search_function_test.php';
+                         ?>
 
                      <input href="#" type="submit" class="btn  btn_suchen_aqua" name="search_button" value="Suchen">
                  </div>
@@ -188,6 +190,9 @@ while($row = mysqli_fetch_array($result))
     if ($sql_fm_von_datum_html->format('YYYY-MM-DD') >= $viewsearch_aquababy_kursstart) {     
            $countergebnisse = ++$countergebnisse;
 
+                
+// $result = mysqli_query($con_mysqli,"SELECT internetseite_ FROM marken where marken_name=''  ");
+$result = mysqli_query($con_mysqli,"SELECT internetseite_ FROM marken where marken_name=''  ");
 ?>
 
          <div class="col-md-12">
@@ -261,8 +266,6 @@ while($row = mysqli_fetch_array($result))
     $sql_kursort = $row['ort'];
     $view_kursstart = new DateTime($row['starttermin']);
 
-
-      
 ?>
 
          <div class="col-md-12">
@@ -337,15 +340,9 @@ else{
      </div>
 
 
-     <?php
-    // $result = mysqli_query($con_mysqli,"SELECT internetseite_ FROM marken where marken_name=''  ");
- $result = mysqli_query($con_mysqli,"SELECT fm_marke FROM kurse where marken_name=''  ");
- ?>
-
 
      <div class="aquababy-blauebox">
          <div class="container">
-
 
              <div class="row">
 
@@ -354,6 +351,7 @@ else{
 
                      <ul class="blauebox-unterschrift">
                          <li>
+                       
                          </li>
                      </ul>
                  </div>

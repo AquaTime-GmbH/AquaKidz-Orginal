@@ -32,8 +32,10 @@ include  $url_helper .'include/database.php';
      <script defer
          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAjTbeyDhVSfoZW2bolDIXd9L6msWNqAl8&callback=initMap">
      </script>
+<script type="text/javascript">
+        google.load("maps", "3",{other_params:"sensor=false&libraries=geometry"});
+      </script>
 
- </head>
 
  <body>
 
@@ -92,12 +94,10 @@ while($row = mysqli_fetch_array($result))
     $sql_updated_at = new DateTime($row['updated_at']);
     $sql_created_at = new DateTime($row['created_at']);
 
-    
-
+$maps_bad_ort = $con_mysqli_connect->prepare("SELECT fm_bad_ort from kurse group by fm_bad_name_druck ");
+$maps_bad_name_druck = $con_mysqli_connect->prepare("SELECT fm_bad_name_druck from kurse group by fm_bad_name_druck");
 
 }
-
-
 
   if( isset($_COOKIE['kursort'])) {
       //nimmt den wert vom cookie und übergibt es der variable
@@ -106,12 +106,6 @@ while($row = mysqli_fetch_array($result))
         //sonst ist der cookie leet
         $cookie_kursort = "";
   }
-
-   
-?>
-<?php 
-
-echo $maps_bad_name_druck;
 
 ?>
 
@@ -127,9 +121,7 @@ echo $maps_bad_name_druck;
 
      <div class="background-kursort">
 
-
          <div class="container">
-
              <section>
                  <div class="row">
 
@@ -148,8 +140,6 @@ echo $maps_bad_name_druck;
                                      document.getElementById("plz_input2").value = test2.value;
                                  }
                              </script>
-
-
 
 
                              <div class="card kursort-card">
@@ -173,6 +163,11 @@ echo $maps_bad_name_druck;
                                      <input type="submit" class="btn search-plz-kursort" name="search_button_plz1"
                                          value="Suchen" onclick="deleteCookie2()">
                                  </div>
+
+
+
+
+
 <?php
 
 // if($_POST["search_button_plz1"] && $cookie_kursort != $_POST['search_ort_plz1']){
@@ -229,10 +224,29 @@ function deleteCookie2(){
 
      <div class="container">
 <script>
-
+var radius_circle = null;
 var markerArray = [];
+var map = null;
+
   function initMap() {
       
+      var radius_km = $('#radius_km').val();
+  	var address = $('#address').val();
+
+//remove all radii and markers from map before displaying new ones
+  	if (radius_circle) {
+  		radius_circle.setMap(null);
+  		radius_circle = null;
+  	}
+      
+var address_lat_lng = e.latLng;
+  	radius_circle = new google.maps.Circle({
+  		center: address_lat_lng,
+  		radius: radius_km * 1000,
+  		clickable: false,
+  		map: map
+  	});
+
     geocoder = new google.maps.Geocoder();
     var center = new google.maps.LatLng(47.082652, 8.438101);
 
@@ -300,68 +314,22 @@ var markerArray = [];
                      <div class="col-2">
                          <label class="col-form-label text-card-aqua"><span>Im Umkreis von</span></label>
                          <div class="input-group">
-                             <?php
-                            if($session_umkreis == "1"){
-                                ?>
-                             <Select class="form-control labelshape" id="search_alt" name="search_alt" type="text"
+                            
+                             <Select class="form-control labelshape" id="radius_km" name="search_alt" type="text"
                                  value="<?= $session_umkreis; ?>">
                                  <option disabled selected value style="color:white;"></option>
-                                 <option value="1" selected>5</option>
-                                 <option value="2">10</option>
-                                 <option value="3">15</option>
-                                 <option value="4">20</option>
-                             </select><?php
-                            } elseif($session_umkreis == "2"){
-                                ?>
-                             <Select class="form-control labelshape" id="search_alt" name="search_alt" type="text"
-                                 value="<?= $session_umkreis; ?>">
-                                 <option disabled selected value style="color:white;"></option>
-                                 <option value="1">5</option>
-                                 <option value="2" selected>10</option>
-                                 <option value="3">15</option>
-                                 <option value="4">20</option>
-                             </select><?php
-                            } elseif($session_umkreis == "4"){
-                                ?>
-                             <Select class="form-control labelshape" id="search_alt" name="search_alt" type="text"
-                                 value="<?= $session_umkreis; ?>">
-                                 <option disabled selected value style="color:white;"></option>
-                                 <option value="1">5</option>
-                                 <option value="2">10</option>
-                                 <option value="3" selected>15</option>
-                                 <option value="4">20</option>
-                             </select><?php
-                            } elseif($session_umkreis == "7"){
-                                ?>
-                             <Select class="form-control labelshape" id="search_alt" name="search_alt" type="text"
-                                 value="<?= $session_umkreis; ?>">
-                                 <option disabled selected value style="color:white;"></option>
-                                 <option value="1">5</option>
-                                 <option value="2">10</option>
-                                 <option value="3">15</option>
-                                 <option value="4" selected>20</option>
-                             </select><?php
-                            } else{
-                                ?>
-                             <Select class="form-control labelshape" id="search_alt" name="search_alt" type="text"
-                                 value="">
-                                 <option disabled selected value style="color:white;"></option>
-                                 <option value="1">5</option>
-                                 <option value="2">10</option>
-                                 <option value="3">15</option>
-                                 <option value="4">20</option>
-                             </select><?php
-
-                      
-                            }
+                                 <option value="5" selected>5</option>
+                                 <option value="10">10</option>
+                                 <option value="15">15</option>
+                                 <option value="20">20</option>
+                             </select>
                           
-                            ?>
+                         
                              <div class="input-group-append">
                                  <span class="input-group-text">km</span>
                              </div>
                          </div>
                      </div>
-
 
                      <div class="col-4">
                          <label class="col-form-label text-card-aqua"><span>Wie alt ist Ihr Kind</span></label>
@@ -521,9 +489,6 @@ echo $row;
          </form>
 
 
-
-
-
      </div>
      <!--hier soll gefiltert werden via werte die der nutzer angibt-->
      <input href="#" type="submit" class="btn  btn_suchen_aqua" name="search_button_plz2" value="Suchen">
@@ -554,7 +519,6 @@ if(isset($_POST['search_button_plz2'])){
     $viewsearch_aquababy_ort = $_POST['search_ort_plz2'];
     // kursstart filter muss eventuell abgeändert werden oder gelöscht werden weil der nutzer keinen kursstart mehr eingibt 
     $viewsearch_aquababy_kursstart = $_POST['search_aquababy_kursstart'];
-
 
     setcookie("kursort","$viewsearch_aquababy_ort",time()+(3600*168));
 

@@ -255,10 +255,6 @@ include $url_helper .'include/navbar.php';
 
         </div>
 
-
-
-
-
       </div>
     </div>
   </div>
@@ -338,11 +334,10 @@ $result_mitarbeiter_bilder = mysqli_query($con_mysqli,"SELECT * FROM mitarbeiter
 
           <div id="map"></div>
 
-
         <script>
                              function initMap() {
                                  // map options 
-
+                               
                                 var directionsService = new google.maps.DirectionsService();
                                 var directionsDisplay = new google.maps.DirectionsRenderer();
 
@@ -367,10 +362,11 @@ $result_mitarbeiter_bilder = mysqli_query($con_mysqli,"SELECT * FROM mitarbeiter
                                 if (status == google.maps.DirectionsStatus.OK) {
                                     directionsDisplay.setDirections(response);
                                 }
-
+                             
                                 var myRoute = response.routes[0].legs[0];
                                 var duration = myRoute.duration.value;
                                 var distance = myRoute.distance.value;  
+                               
 
                                 var distanceP = document.getElementById('distance');
                       //ausgabe der berechnung 
