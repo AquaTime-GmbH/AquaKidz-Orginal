@@ -95,9 +95,7 @@ include $url_helper .'include/navbar.php';
                      </div>
 
 
-  <?php 
-                         include $url_helper .'search_function_test.php';
-                         ?>
+  
 
                      <input href="#" type="submit" class="btn  btn_suchen_aqua" name="search_button" value="Suchen">
                  </div>
@@ -139,7 +137,8 @@ if ($viewsearch_aquababy_kursstart == ""){
 }
    
 if($viewsearch_aquababy_postleitzahl == "x"){
-    $result = mysqli_query($con_mysqli,"SELECT * FROM kurse  order by fm_von_datum_html DESC");
+    //and where fm wochentag like post value from wochentag input 
+    $result = mysqli_query($con_mysqli,"SELECT * FROM kurse where fm_marke='AquaKidz Mini' order by fm_von_datum_html DESC");
 } else{
     $result = mysqli_query($con_mysqli,"SELECT * FROM kurse WHERE fm_bad_ort LIKE '%$viewsearch_aquababy_postleitzahl%' order by fm_von_datum_html DESC");
 }
@@ -331,7 +330,9 @@ else{
          </div>
 
 
-
+<?php 
+                         include $url_helper .'search_function.php';
+                         ?>
 
          <input type="submit" name="mehr_anzeigen" class="btn btn_mehr_laden" value="Mehr Laden">
      </div>

@@ -314,6 +314,9 @@ else{
          </div>
 
 
+<?php 
+                         include $url_helper .'search_function.php';
+                         ?>
 
 
          <input type="submit" name="mehr_anzeigen" class="btn btn_mehr_laden" value="Mehr Laden">

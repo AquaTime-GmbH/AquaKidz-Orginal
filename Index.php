@@ -144,7 +144,7 @@ while($row = mysqli_fetch_array($result))
 
                         <div class="col-12">
                             <input onkeypress="return isNumberKey(event)" minlength="4" maxlength="4" pattern="^[0-9]{4}$" class="form-control labelshape" id="search_ort"
-                                name="search_ort" type="text" value="<?= $cookie_kursort;?> ">
+                                name="search_ort" type="text" value="<?=$cookie_kursort;?>">
                         </div>
 
 
