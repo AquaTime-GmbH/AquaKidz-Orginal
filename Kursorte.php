@@ -537,7 +537,7 @@ if ($viewsearch_aquababy_kursstart == ""){
 
 
 if($viewsearch_aquababy_ort == "x"){
-    $result = mysqli_query($con_mysqli,"SELECT * FROM kurse  order by fm_von_datum_html ASC");
+    $result = mysqli_query($con_mysqli,"SELECT * FROM kurse WHERE (fm_marke in ('AquaVacation','AquaKidz Maxi','AquaMermaid','Aquakidz Mini',) AND fm_status='verffentlicht') OR (fm_status='ongoing' AND fm_marke in ('AquaVacation','AquaKidz Maxi','AquaMermaid')) order by fm_status='ongoing' DESC,  fm_von_datum_html ASC");
     
 } else{
     //wenn es ein wert hat soll er von tabelle kurse wo der badort gleich die eingegebene postleitzahl ist und sortiert nach datum muss geändert werden (badort zu postleitzahl)

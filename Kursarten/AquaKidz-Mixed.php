@@ -128,9 +128,8 @@ if ($viewsearch_aquababy_kursstart == ""){
     $viewsearch_aquababy_kursstart = date("d.m.Y", strtotime("$viewsearch_aquababy_kursstart") - (3600 * 24 * 14)); 
 }
 
-   
 if($viewsearch_aquababy_postleitzahl == "x"){
-    $result = mysqli_query($con_mysqli,"SELECT * FROM kurse  order by fm_von_datum_html ASC");
+    $result = mysqli_query($con_mysqli,"SELECT * FROM kurse WHERE (fm_marke in ('AquaVacation','AquaKidz Maxi','AquaMermaid') AND fm_status='verffentlicht') OR (fm_status='ongoing' AND fm_marke in ('AquaVacation','AquaKidz Maxi','AquaMermaid')) order by fm_status='ongoing' DESC,  fm_von_datum_html ASC");
 } else{
     $result = mysqli_query($con_mysqli,"SELECT * FROM kurse WHERE fm_bad_ort LIKE '%$viewsearch_aquababy_postleitzahl%' order by fm_von_datum_html ASC");
 }

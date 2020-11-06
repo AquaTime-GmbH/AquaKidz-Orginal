@@ -31,25 +31,25 @@
                 
                 echo '<script> window.location="Kursarten/AquaBaby";</script>';
            //if anfrage wenn bestimmtes gewählt wird nach bestimmten marken filtern
-                    $result_aquababy = mysqli_query($con_mysqli,"SELECT Aquakidz Mini,AquaMixed Training,AquaVacation,AquaKidz Maxi,AquaKidz Schwimmschule,AquaMermaid FROM marken order by id");
+                    
                     exit();
                     
 
                 }elseif($viewsearch_alt == "2"){
                     echo ' <script> window.location="Kursarten/AquaKidz-Mini";</script>';
-                    $result_aquakidzmini = mysqli_query($con_mysqli,"SELECT AquaMixed Training,AquaVacation,AquaKidz Maxi,AquaKidz Schwimmschule,AquaMermaid FROM marken order by id");
+                   
                     exit();
                     
                   
                 }elseif($viewsearch_alt == "4"){
                     echo ' <script> window.location="Kursarten/AquaKidz-Maxi";</script>';
-                    $result_aquakidzmaxi = mysqli_query($con_mysqli,"SELECT AquaMixed Training,AquaVacation,AquaKidz Maxi,AquaKidz Schwimmschule,AquaMermaid FROM marken order by id");
+   
                     exit();
                     
                     
                 }elseif($viewsearch_alt == "7"){
                     echo ' <script> window.location="Kursarten/AquaKidz-Mixed";</script>';
-                    $result_aquakidzmixed = mysqli_query($con_mysqli,"SELECT AquaMixed Training,AquaVacation,AquaKidz Maxi,AquaKidz Schwimmschule,AquaMermaid FROM marken order by id");
+                 
                     exit();
                 }
 
@@ -85,12 +85,17 @@ if ($viewsearch_aquababy_postleitzahl == ""){
 }
    
 if($viewsearch_aquababy_postleitzahl == "x"){
-    $result = mysqli_query($con_mysqli,"SELECT * FROM kurse where fm_marke='AquaKidz Mini' order by fm_von_datum_html DESC");
+    $result = mysqli_query($con_mysqli,"SELECT * FROM kurse WHERE fm_marke in ('AquaVacation','AquaKidz Maxi') and fm_status='veröffentlicht' or fm_status='ongoing' order by fm_von_datum_html ASC");
   
     //$result_marken = mysqli_query($con_mysqli,"SELECT markenname FROM marken where markenname in ('AquaMixed Training','AquaVacation','AquaKidz Maxi','AquaKidz Schwimmschule','AquaMermaid') group by markenname; "); 
+
+    //aquakidz maxi
+    //SELECT * FROM kurse WHERE (fm_marke in ('AquaVacation','AquaKidz Maxi') AND fm_status="verffentlicht") OR (fm_status="ongoing" AND fm_marke='AquaKidz Mini') order by fm_status="ongoing" DESC,  fm_von_datum_html ASC
    
+   //aquakidz mini
+  //SELECT * FROM kurse WHERE (fm_marke='AquaKidz Mini' AND fm_status="verffentlicht") OR (fm_status="ongoing" AND fm_marke='AquaKidz Mini') order by fm_status="ongoing" DESC,  fm_von_datum_html ASC
 } else{
-    $result = mysqli_query($con_mysqli,"SELECT * FROM kurse WHERE fm_bad_ort LIKE '%$viewsearch_aquababy_postleitzahl%' order by fm_von_datum_html DESC");
+    $result = mysqli_query($con_mysqli,"SELECT * FROM kurse WHERE fm_bad_ort LIKE '%$viewsearch_aquababy_postleitzahl%' order by fm_von_datum_html ASC");
 }
 
 while($row = mysqli_fetch_array($result))
