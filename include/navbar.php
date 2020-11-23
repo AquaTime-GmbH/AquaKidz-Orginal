@@ -10,7 +10,6 @@
       </div>
 
 
-
       <!-- Collapse button -->
       <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#collapse_target"
         aria-controls="collapse_target" aria-expanded="false" aria-label="Toggle navigation">

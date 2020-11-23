@@ -298,57 +298,54 @@ while($row = mysqli_fetch_array($result))
 
 }
 
+
 ?>
 
-
-
-
      <div class="über-uns-box2">
-
-
          <div class="container">
              <p id="sectionteam" class="überschirft-team-über">UNSER TEAM</p>
+<div class="row slides">
+             
+                 <?php 
 
-             <div class="row slides">
-                 <div class="col-md-3">
+$result_mitarbeiter_bilder = mysqli_query($con_mysqli,"SELECT profilbild_pfad from mitarbeiter where profilbild_pfad is not NULL group by profilbild_pfad ");
 
-                     <div class="vier-kreise-über-uns-slider"><i class="fas fa-plus-circle posi-style-icon-über myBtn"
-                             style="color:black !important;"></i></div>
-
-                 </div>
-                 <div class="col-md-3">
-
-                     <div class="vier-kreise-über-uns-slider"><i class="fas fa-plus-circle posi-style-icon-über myBtn"
-                             style="color:black !important;"></i></div>
-
-                 </div>
-
-                 <div class="col-md-3">
-
-                     <div class="vier-kreise-über-uns-slider"><i class="fas fa-plus-circle posi-style-icon-über myBtn"
-                             style="color:black !important;"></i></div>
-
-                 </div>
-                 <div class="col-md-3">
-
-                     <div class="vier-kreise-über-uns-slider"><i class="fas fa-plus-circle posi-style-icon-über myBtn"
-                             style="color:black !important;"></i></div>
-                 </div>
+while($row = mysqli_fetch_array($result_mitarbeiter_bilder))
+{  
+  
+    $view_profilbild = $row['profilbild_pfad']; 
+    
 
 
-                 <div class="ueber-uns-buttons">
-                     <span class="dot-slider" onclick="currentSlide(1)"></span>
-                     <span class="dot-slider" onclick="currentSlide(2)"></span>
-                     <span class="dot-slider" onclick="currentSlide(3)"></span>
-                     <span class="dot-slider" onclick="currentSlide(4)"></span>
-                 </div>
-
-
-
+            echo ' <div class="vier-kreise-über-uns-slider">';
+                echo ' <div class="col-md-3">';
                  
+                        echo "<img src=" . $url_helper . $view_profilbild . ">";   
+                        echo ' <i class="fas fa-plus-circle posi-style-icon-über myBtn" style="color:black !important;"></i>';
+                    echo '</div>';
+                echo '</div>';
+          
+  
+}
+
+?>
              </div>
 
-         </div>
+
+
+
+             <div class="ueber-uns-buttons">
+                 <span class="dot-slider" onclick="currentSlide(1)"></span>
+                 <span class="dot-slider" onclick="currentSlide(2)"></span>
+                 <span class="dot-slider" onclick="currentSlide(3)"></span>
+                 <span class="dot-slider" onclick="currentSlide(4)"></span>
+             </div>
+
+
+
+
+       
+     </div>
      </div>
 
      <!-- The Modal -->

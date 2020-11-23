@@ -94,9 +94,9 @@ while($row = mysqli_fetch_array($result))
     $sql_updated_at = new DateTime($row['updated_at']);
     $sql_created_at = new DateTime($row['created_at']);
 
-$maps_bad_ort = $con_mysqli_connect->prepare("SELECT fm_bad_ort from kurse group by fm_bad_name_druck ");
-$maps_bad_name_druck = $con_mysqli_connect->prepare("SELECT fm_bad_name_druck from kurse group by fm_bad_name_druck");
+$maps_marker = mysqli_query($con_mysqli,"SELECT fm_bad_ort from kurse group by fm_bad_ort");
 
+// SELECT fm_bad_ort,fm_bad_name_druck from kurse group by fm_bad_name_druck,fm_bad_name_druck
 }
 
   if( isset($_COOKIE['kursort'])) {
@@ -223,29 +223,48 @@ function deleteCookie2(){
      </div>
 
      <div class="container">
-<script>
-var radius_circle = null;
+<script>    
+
+
+var data = {
+  'address': [
+    {
+      'address': '<? echo $maps_marker ?>'
+    },
+    {
+      'address': '8022 Caminito Mallorca'
+    },
+    {
+      'address': '2750 Wheatstone St # 26'
+    },
+    {
+      'address': '335 49th St'
+    }  
+  ]
+};
+
+
+// var radius_circle = null;
 var markerArray = [];
 var map = null;
 
   function initMap() {
-      
-      var radius_km = $('#radius_km').val();
-  	var address = $('#address').val();
+    //   var radius_km = $('#radius_km').val();
+  	// var address = $('#address').val();
 
 //remove all radii and markers from map before displaying new ones
-  	if (radius_circle) {
-  		radius_circle.setMap(null);
-  		radius_circle = null;
-  	}
+//   	if (radius_circle) {
+//   		radius_circle.setMap(null);
+//   		radius_circle = null;
+//   	}
       
-var address_lat_lng = e.latLng;
-  	radius_circle = new google.maps.Circle({
-  		center: address_lat_lng,
-  		radius: radius_km * 1000,
-  		clickable: false,
-  		map: map
-  	});
+// var address_lat_lng = e.latLng;
+//   	radius_circle = new google.maps.Circle({
+//   		center: address_lat_lng,
+//   		radius: radius_km * 1000,
+//   		clickable: false,
+//   		map: map
+//   	});
 
     geocoder = new google.maps.Geocoder();
     var center = new google.maps.LatLng(47.082652, 8.438101);
@@ -256,19 +275,9 @@ var address_lat_lng = e.latLng;
       mapTypeId: google.maps.MapTypeId.ROADMAP
     });
 
-
-     var data = {
-  'address': [
-    {
-      'address': '<?php echo $sql_fm_bad_ort;?>'
-    },
-    
-  ]
-};
-
     var address;
     var markers = [];
-    var markerCluster = new MarkerClusterer(map, markerArray);
+    // var markerCluster = new MarkerClusterer(map, markerArray);
     for (var level in data) {
         for (var i = 0; i < data[level].length; i++) {
        //   var dataPhoto = data.photos[i];
@@ -277,6 +286,7 @@ var address_lat_lng = e.latLng;
         geocoder.geocode({ 'address': dataAdd.address}, function(results){            
           var marker  = new google.maps.Marker({
               map: map, 
+
               position: results[0].geometry.location
           });
          markerArray[i] = marker;         
@@ -420,26 +430,67 @@ echo $row;
                          <div class="dropdown-firstcard">
 
 
-                              <div class="multiselect">
-                                <div class="selectBox" onclick="showCheckboxes()">  
+                              <!-- <div class="multiselect">
+                                <div class="selectBox" onclick="showCheckboxes()">   -->
                                
                                 <form method="post"> 
                                 <label class="text-card-aqua col-form-label">
                                   <span >Wochentag</span>
                                 </label>
-                                <select class="labelshape form-control" name="wochentag[]" multiple="multiple">
+                                <select class="labelshape form-control" name="wochentag[]" >
                                
-                                    <option class="selectall" id="select-all" name="Alle" >Alle</option>
-                                    <option class="justone" name="Montag">Montag</option>
-                                    <option class="justone" name="Dienstag">Dienstag</option>
-                                    <option class="justone" name="Mittwoch">Mittwoch</option>
-                                    <option class="justone" name="Donnerstag">Donnerstag</option>           
-                                    <option class="justone" name="Freitag">Freitag</option>                   
-                                    <option class="justone" name="Samstag">Samstag</option>                               
-                                    <option class="justone" name="Sonntag">Sonntag</option>
+                                    <option class="selectall" id="select-all" name="Alle" value="all" >Alle</option>
+                                    <option class="justone" name="Montag" value="1 - Montag" >Montag</option>
+                                    <option class="justone" name="Dienstag" value="2 - Dienstag">Dienstag</option>
+                                    <option class="justone" name="Mittwoch" value="3 - Mittwoch">Mittwoch</option>
+                                    <option class="justone" name="Donnerstag" value="4 - Donnerstag">Donnerstag</option>           
+                                    <option class="justone" name="Freitag" value="5 - Freitag">Freitag</option>                   
+                                    <option class="justone" name="Samstag" value="6 - Samstag">Samstag</option>                               
+                                    <option class="justone" name="Sonntag" value="7 - Sonntag">Sonntag</option>
                                     </select>
+                                 
                                 </form>
-                              
+                                <?php
+
+
+
+                                if(isset($_POST['testdsa'])){
+                                   $wochentag_filter =  mysqli_query($con_mysqli,"SELECT * FROM kurse WHERE (fm_wochentag = '$wochentag') and (fm_marke='AquaKidz Mini' AND fm_status='veröffentlicht') OR (fm_status='ongoing' AND fm_marke='AquaKidz Mini') and (fm_wochentag = '$wochentag')  order by fm_status='ongoing' DESC,  fm_von_datum_html ASC");
+                                 
+                                    foreach($_POST['wochentag'] as $wochentag) {
+                                  
+                                    }
+                                
+                                }
+                        //    switch($_POST['wochentag']){
+                        //        case 'all':
+                        //             $wochentag_filter =  mysqli_query($con_mysqli,"SELECT * FROM kurse WHERE fm_wochentag in ('1 - Montag','2 - Dienstag') and (fm_marke='AquaKidz Mini' AND fm_status='veröffentlicht') OR (fm_status='ongoing' AND fm_marke='AquaKidz Mini') and fm_wochentag in ('1 - Montag','2 - Dienstag')  order by fm_status='ongoing' DESC,  fm_von_datum_html ASC ");
+                        //         break;
+                        //         case '1 - Montag':
+                        //              $wochentag_filter =  mysqli_query($con_mysqli,"SELECT * FROM kurse WHERE  (fm_wochentag = '1 - Montag') and (fm_marke='AquaKidz Mini' AND fm_status='veröffentlicht') OR (fm_status='ongoing' AND fm_marke='AquaKidz Mini') and (fm_wochentag = '1 - Montag')  order by fm_status='ongoing' DESC,  fm_von_datum_html ASC");
+                        //         break;
+                        //         case '2 - Dienstag':
+                        //             $wochentag_filter =  mysqli_query($con_mysqli,"SELECT * FROM kurse WHERE  (fm_wochentag = '2 - Dienstag') and (fm_marke='AquaKidz Mini' AND fm_status='veröffentlicht') OR (fm_status='ongoing' AND fm_marke='AquaKidz Mini') and (fm_wochentag = '2 - Dienstag')  order by fm_status='ongoing' DESC,  fm_von_datum_html ASC");
+                        //         break;
+                        //         case '3 - Mittwoch':
+                        //           $wochentag_filter =  mysqli_query($con_mysqli,"SELECT * FROM kurse WHERE  (fm_wochentag = '3 - Mittwoch') and (fm_marke='AquaKidz Mini' AND fm_status='veröffentlicht') OR (fm_status='ongoing' AND fm_marke='AquaKidz Mini') and (fm_wochentag = '3 - Mittwoch')  order by fm_status='ongoing' DESC,  fm_von_datum_html ASC");
+                        //         break;
+                        //          case '4 - Donnerstag':
+                        //           $wochentag_filter =  mysqli_query($con_mysqli,"SELECT * FROM kurse WHERE  (fm_wochentag = '4 - Donnerstag') and (fm_marke='AquaKidz Mini' AND fm_status='veröffentlicht') OR (fm_status='ongoing' AND fm_marke='AquaKidz Mini') and (fm_wochentag = '4 - Donnerstag')  order by fm_status='ongoing' DESC,  fm_von_datum_html ASC");
+                        //         break;
+                        //          case '5 - Freitag':
+                        //           $wochentag_filter =  mysqli_query($con_mysqli,"SELECT * FROM kurse WHERE  (fm_wochentag = '5 - Freitag') and (fm_marke='AquaKidz Mini' AND fm_status='veröffentlicht') OR (fm_status='ongoing' AND fm_marke='AquaKidz Mini') and (fm_wochentag = '5 - Freitag')  order by fm_status='ongoing' DESC,  fm_von_datum_html ASC");
+                        //         break;
+                        //          case '6 - Samstag':
+                        //           $wochentag_filter =  mysqli_query($con_mysqli,"SELECT * FROM kurse WHERE  (fm_wochentag = '6 - Samstag') and (fm_marke='AquaKidz Mini' AND fm_status='veröffentlicht') OR (fm_status='ongoing' AND fm_marke='AquaKidz Mini') and (fm_wochentag = '6 - Samstag')  order by fm_status='ongoing' DESC,  fm_von_datum_html ASC");
+                        //         break;
+                        //          case '7 - Sonntag':
+                        //           $wochentag_filter =  mysqli_query($con_mysqli,"SELECT * FROM kurse WHERE  (fm_wochentag = '7 - Sonntag') and (fm_marke='AquaKidz Mini' AND fm_status='veröffentlicht') OR (fm_status='ongoing' AND fm_marke='AquaKidz Mini') and (fm_wochentag = '7 - Sonntag')  order by fm_status='ongoing' DESC,  fm_von_datum_html ASC");
+                        //         break;
+                        //         default: 
+                                  
+                        //         }
+                                ?>
                                 </div>
                             </div>
 
@@ -447,41 +498,41 @@ echo $row;
 
                          <script>
                         //nimmt ei id slelect all wenn es geklickt wurde dann soll ein event passieren
-                        $('#select-all').click(function(event) {   
-                            if(this.checked) {
-                                // suche alle mit classe checkbox und fügt checked hinzu
-                                $(':checkbox').each(function() {
-                                    this.checked = true;                        
-                                });
-                            } else {
-                                $(':checkbox').each(function() {
-                                    this.checked = false;                       
-                                });
-                            }
-                        });
+                        // $('#select-all').click(function(event) {   
+                        //     if(this.checked) {
+                        //         // suche alle mit classe checkbox und fügt checked hinzu
+                        //         $(':checkbox').each(function() {
+                        //             this.checked = true;                        
+                        //         });
+                        //     } else {
+                        //         $(':checkbox').each(function() {
+                        //             this.checked = false;                       
+                        //         });
+                        //     }
+                        // });
 
-                        $("input[type='checkbox'].justone").change(function(){
-                            var a = $("input[type='checkbox'].justone");
-                            if(a.length == a.filter(":checked").length){
-                                $('.selectall').prop('checked', true);
-                            }
-                            else {
-                                $('.selectall').prop('checked', false);
-                            }
-                        });
+                        // $("input[type='checkbox'].justone").change(function(){
+                        //     var a = $("input[type='checkbox'].justone");
+                        //     if(a.length == a.filter(":checked").length){
+                        //         $('.selectall').prop('checked', true);
+                        //     }
+                        //     else {
+                        //         $('.selectall').prop('checked', false);
+                        //     }
+                        // });
 
-                             var expanded = false;
+                        //      var expanded = false;
 
-                             function showCheckboxes() {
-                                 var checkboxes = document.getElementById("checkboxes");
-                                 if (!expanded) {
-                                     checkboxes.style.display = "block";
-                                     expanded = true;
-                                 } else {
-                                     checkboxes.style.display = "none";
-                                     expanded = false;
-                                 }
-                             }
+                        //      function showCheckboxes() {
+                        //          var checkboxes = document.getElementById("checkboxes");
+                        //          if (!expanded) {
+                        //              checkboxes.style.display = "block";
+                        //              expanded = true;
+                        //          } else {
+                        //              checkboxes.style.display = "none";
+                        //              expanded = false;
+                        //          }
+                        //      }
                          </script>
 
 
@@ -493,13 +544,6 @@ echo $row;
      <!--hier soll gefiltert werden via werte die der nutzer angibt-->
      <input href="#" type="submit" class="btn  btn_suchen_aqua" name="search_button_plz2" value="Suchen">
      </div>
-<?php
-
-if(isset($_POST['search_button_plz2'])){
-
- }
-
-?>
      <?php
 
             $countergebnisse = 0;
@@ -538,7 +582,7 @@ if ($viewsearch_aquababy_kursstart == ""){
 
 if($viewsearch_aquababy_ort == "x"){
     $result = mysqli_query($con_mysqli,"SELECT * FROM kurse WHERE (fm_marke in ('AquaVacation','AquaKidz Maxi','AquaMermaid','Aquakidz Mini',) AND fm_status='verffentlicht') OR (fm_status='ongoing' AND fm_marke in ('AquaVacation','AquaKidz Maxi','AquaMermaid')) order by fm_status='ongoing' DESC,  fm_von_datum_html ASC");
-    
+  
 } else{
     //wenn es ein wert hat soll er von tabelle kurse wo der badort gleich die eingegebene postleitzahl ist und sortiert nach datum muss geändert werden (badort zu postleitzahl)
 
@@ -547,8 +591,7 @@ if($viewsearch_aquababy_ort == "x"){
     $result = mysqli_query($con_mysqli,"SELECT * FROM kurse WHERE fm_bad_postleitzahl LIKE '%$viewsearch_aquababy_ort%' and  fm_status='veršffentlicht' or fm_status='ongoing' order by fm_von_datum_html DESC");
     
 }
-
-
+  
 
 while($row = mysqli_fetch_array($result))
 {  
@@ -595,9 +638,6 @@ while($row = mysqli_fetch_array($result))
     if ($sql_fm_von_datum_html->format('YYYY-MM-DD') >= $viewsearch_aquababy_kursstart) {     
            $countergebnisse = ++$countergebnisse;
            
-
-
-
 ?>
 
 
@@ -748,10 +788,6 @@ else{
     $result = mysqli_query($con_mysqli,"SELECT internetseite_ FROM marken where marken_name=''  ");
  
  ?>
-
-
-
-
 
 
 

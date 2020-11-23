@@ -85,7 +85,7 @@ if ($viewsearch_aquababy_postleitzahl == ""){
 }
    
 if($viewsearch_aquababy_postleitzahl == "x"){
-    $result = mysqli_query($con_mysqli,"SELECT * FROM kurse WHERE fm_marke in ('AquaVacation','AquaKidz Maxi') and fm_status='veröffentlicht' or fm_status='ongoing' order by fm_von_datum_html ASC");
+    $result = mysqli_query($con_mysqli,"SELECT * FROM kurse WHERE  (fm_wochentag = '1 - Montag') and (fm_marke='AquaKidz Mini' AND fm_status='veröffentlicht') OR (fm_status='ongoing' AND fm_marke='AquaKidz Mini') and (fm_wochentag = '1 - Montag')  order by fm_status='ongoing' DESC,  fm_von_datum_html ASC");
   
     //$result_marken = mysqli_query($con_mysqli,"SELECT markenname FROM marken where markenname in ('AquaMixed Training','AquaVacation','AquaKidz Maxi','AquaKidz Schwimmschule','AquaMermaid') group by markenname; "); 
 

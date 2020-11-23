@@ -1,6 +1,11 @@
+<?php 
+session_start();
+?>
+
+
 <!-- organisation der url -->
 <?php 
- session_start();
+ 
 $url_helper= "";
 /* einbingung der database connection*/
 include  $url_helper .'include/database.php';
@@ -27,6 +32,9 @@ include  $url_helper .'include/database.php';
 
   <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Lato&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.2.1/build/ol.js"></script>
+ <script src="https://www.google.com/recaptcha/api.js?render=6LeVNYIUAAAAAAMui4J45WU34kjzw2kCPY3krPhk"></script>
+
+
 </head>
 
 <body>
@@ -81,6 +89,17 @@ include $url_helper .'include/navbar.php';
                     }
                 }
   ?>
+ 
+   <script>
+      function onClick(e) {
+        e.preventDefault();
+        grecaptcha.ready(function() {
+          grecaptcha.execute('6LeVNYIUAAAAAAMui4J45WU34kjzw2kCPY3krPhk', {action: 'submit'}).then(function(token) {
+         colsole.log(token);
+          });
+        });
+      }
+  </script>
 
   <div class="blue-box-kurs">
     <div class="container" style="display:flex !important; width:100% !important;">
@@ -192,16 +211,6 @@ while($row = mysqli_fetch_array($result))
 
    
 }
-
-
-
-  foreach($result as $ausgabe){
-    $sql_fm_mitarbeiter_fm_id= $row['mitarbeiter_fm_id'];
-    $sql_fm_vorname = $row['vorname'];
-    $sql_fm_nachname= $row['nachname'];
-    $sql_fm_bad_postleitzahl = $row['fm_bad_postleitzahl'];
-  }
-  
 
 
 ?>
