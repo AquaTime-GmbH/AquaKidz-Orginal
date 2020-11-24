@@ -379,7 +379,7 @@ while($row = mysqli_fetch_array($result))
                 showSlides(slideIndex += n);
             }
 
-    function currentSlide(n) {
+            function currentSlide(n) {
                 clearTimeout(timer);
                 showDivs(slideIndex = n);
             }
