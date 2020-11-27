@@ -20,9 +20,9 @@ include  $url_helper .'include/database.php';
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="autor" content="">
-  <meta name="keywords" content="">
+    <meta name="description" content="Richtig schwimmen lernen bei den AquaKidz. Unser Engagement – für Ihre Sicherheit! Kompetenter Schwimmunterricht unterstützt bestens und altersgerecht ...">
+    <meta name="autor" content="Djordje Aksentijevic">
+    <meta name="keywords" content="Kinderschwimmen, Kursorte, Babyschwimmen, Ferien">
 
   <!-- Bootstrap,w3schools,fotawsome CSS -->
 
@@ -130,7 +130,7 @@ while($row = mysqli_fetch_array($result))
 
   <?php
   
-                $empfaenger = 'djordje.aksentijevic@aquatime.ch';
+                $empfaenger = 'schwimmschule@aquakidz.ch';
                 $absender = 'postmaster@aquatime.ch';
 
 
@@ -185,26 +185,26 @@ while($row = mysqli_fetch_array($result))
                 <div class="form-row ">
                    <div class="form-group col-6">
                     <label class="first-card-text">Ihr Name*</label>
-                    <input type="text" class="form-control labelshape" name="name_kontakt"
+                    <input type="text" placeholder="Mustermann" class="form-control labelshape" name="name_kontakt"
                       value="<?= $_POST['name_kontakt'] ?>">
                   </div>
 
                   <div class="form-group col-6">
                     <label class="first-card-text">Vorname*</label>
-                    <input type="text" class="form-control labelshape" name="vorname_kontakt"
+                    <input type="text"  placeholder="Max" class="form-control labelshape" name="vorname_kontakt"
                       value="<?= $_POST['vorname_kontakt'] ?>">
                   </div>
                 </div>
                  
                 <div class="form-group col-12" style="padding-right:0px !important; padding-left:0px !important;">
                   <label class="first-card-text">Ihre E-Mail-Adresse*</label>
-                  <input type="email" class="form-control labelshape" name="email_kontakt"
+                  <input type="email" placeholder="max.muster@muster.com" class="form-control labelshape" name="email_kontakt"
                     value="<?= $_POST['email_kontakt'] ?>">
                 </div>
 
                 <div class="form-group col-12" style="padding-right:0px !important; padding-left:0px !important;">
                   <label class="first-card-text">Natel</label>
-                  <input type="tel" class="form-control labelshape" id="number" pattern="[0-9]{12}" name="natel_kontakt"
+                  <input type="tel" class="form-control labelshape" placeholder="0774235838" id="number" pattern="[0-9]{10}" name="natel_kontakt"
                     value="<?= $_POST['natel_kontakt'] ?>">
                 </div>
                 <div class="form-group col-12" style="padding-right:0px !important; padding-left:0px !important;">

@@ -264,10 +264,14 @@ include $url_helper .'include/navbar.php';
   <div class="big-box-map">
     <div class="container">
 
-      <div class="row styling-form-kurs">
-        <div class="col-6">
-          <h1>IHR TRAINER</h1>
+     
+        <div class="row">
+
+       
+        <div class="col-xl-6">
+          <h1 style="color: white;">IHR TRAINER</h1>
           <p></p>
+           </div>
           <?php
 
 $result_mitarbeiter_bilder = mysqli_query($con_mysqli,"SELECT * FROM mitarbeiter  WHERE mitarbeiter_id=$Getid");
@@ -288,36 +292,28 @@ $result_mitarbeiter_bilder = mysqli_query($con_mysqli,"SELECT * FROM mitarbeiter
                                 else{
                                     $view_profilbild = $BildNeutral;
 
-                                }
+                                } 
+                                echo '<div class="col-xl-6">';
                             echo '<div class="kreis-slider"">';
                               echo "<img src=" . $view_profilbild . " alt=\"Profilbild\" width=\"300px\" height=\"300px\" border-radius=\"50%\"/>";
                             echo "</div>";
+                            echo "</div>";
                               }
                             ?>
-        </div>
-
-        <div class="kreis-slider">
-          <img class="kreis-slider" src="<?php echo $url_helper;?>img/Frau.jpg" alt="Bild konnte nicht geladen werden!">
-        </div>
+       
       </div>
-
       <div class="row">
         <div class="col-xl-6">
           <form action="" method="" class="styling-form-kurs">
-
-
             <!-- er soll rechnen wenn er auf der aquababy seite ist und auf kur drückt form action? und google maps auf andere seite oder session
-
               <input class="btn btn-primary" type="submit" value="rechen" /></form>
-
               -->
+            <h1 class="kurs-seite-einzel-text">ADRESSE:</h1>
+            <p class="kurs-seite-einzel-text"><?= $sql_fm_bad_name_druck . "</br>" . $sql_fm_bad_strasse . "</br>" . $sql_fm_bad_ort;?></p>
 
-            <h1 class="">ADRESSE:</h1>
-            <p class=""><?= $sql_fm_bad_name_druck . "</br>" . $sql_fm_bad_strasse . "</br>" . $sql_fm_bad_ort;?></p>
+            <h1 class="kurs-seite-einzel-text">ANREISE:</h1>
 
-            <h1 class="">ANREISE:</h1>
-
-            <p class=""></p>
+            <p class="kurs-seite-einzel-text"></p>
 
 
 
@@ -370,7 +366,7 @@ $result_mitarbeiter_bilder = mysqli_query($con_mysqli,"SELECT * FROM mitarbeiter
 
                                 var distanceP = document.getElementById('distance');
                       //ausgabe der berechnung 
-                              document.getElementById('distance').innerHTML=response.routes[0].legs[0].distance.text;
+                              //document.getElementById('distance').innerHTML=response.routes[0].legs[0].distance.text;
 
 
                                 });
@@ -483,7 +479,6 @@ $result_mitarbeiter_bilder = mysqli_query($con_mysqli,"SELECT * FROM mitarbeiter
                 <option value="2" selected>Frau</option>
                 <option value="3">Familie</option>
               </select>
-
 
               <?php 
                  }else if($angaben_k == "3"){

@@ -17,9 +17,12 @@ include  $url_helper .'include/database.php';
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="autor" content="">
-    <meta name="keywords" content="">
+    <meta name="description" content="Richtig schwimmen lernen bei den AquaKidz. Unser Engagement – für Ihre Sicherheit! Kompetenter Schwimmunterricht unterstützt bestens und altersgerecht ...">
+    <meta name="autor" content="Jana Mantz">
+    <meta name="keywords" content="Kinderschwimmen, Kursorte, Babyschwimmen, Ferien">
+
+
+
     <!-- Bootstrap,w3schools,fotawsome CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">

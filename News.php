@@ -14,6 +14,7 @@ include  $url_helper .'include/database.php';
     <title>AquaNews von der AquaTime GmbH - Schöne Wasserzeit</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
+    
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="autor" content="">
@@ -24,7 +25,7 @@ include  $url_helper .'include/database.php';
     <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Lato&display=swap" rel="stylesheet">
 
     <!-- Fontawesome -->
-   <link href="font/css/all.css" rel="stylesheet">
+   <link href="fonts/css/all.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style-news.css">
 
     <!-- Style für die News Blöcke -->
@@ -60,9 +61,8 @@ include $url_helper .'include/navbar.php';
 <!--------------ende der einbindung------------------>
 
 
-<hr style="padding-top: 100px">
 
-<h1>test</h1>
+
 <!-- Hauptinhalt des News-System -->
 <div class="container">
     <div class="row">
@@ -85,7 +85,7 @@ include $url_helper .'include/navbar.php';
         // SQL Abfrage, welche alle Werte der News Tabelle ausgibt
         // mit den Werten: "status" = Online und "firma" = AquaTime und diese nach Datum und ID sortieren
         // Durch das Ändern der "firma" kann die News für die anderen Seite verwendet werden (zb. AquaKidz)
-        $result = mysqli_query($con_mysqli, "SELECT * FROM news WHERE status = 'Online' AND firma = 'AquaKidz' ORDER BY online_datum DESC, news_id DESC");
+        $result = mysqli_query($con_news_aquatime_anzeigen, "SELECT * FROM news WHERE status = 'Online' AND firma = 'AquaKidz' ORDER BY online_datum DESC, news_id DESC");
 
         //Jedes gefundende Resultat wird nun durch eine Schleife geleitet
         //In dieser Schleife werden die Variablen festgelegt und dementsprechend die News Blöcke erstellt
@@ -186,7 +186,8 @@ include $url_helper .'include/navbar.php';
             }
         }
         echo "</table>";
-
+//Datenbank Verbindung schliessen
+        mysqli_close($con_news_aquatime_anzeigen);
         ?>
     </div>
 </div>
