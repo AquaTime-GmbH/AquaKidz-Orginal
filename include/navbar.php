@@ -4,7 +4,7 @@
     <nav class="navbar navbar-expand-md" style="height:88px;">
 
       <div class="logo navbar-brand">
-        <a href="<?php echo $url_helper;?>index">
+        <a href="<?php echo $url_helper;?>index.php">
           <img src="<?php echo $url_helper;?>images/Logo.png" class="card-img-top" alt="Bild ladet nicht!">
         </a>
       </div>
@@ -22,32 +22,32 @@
         <ul class="nav navbar-nav ml-auto height-ajust-nav">
           <li class="nav-item ">
             <a class="nav-link <?= $aktivschwimmkurse; ?> nav-link-schwimmkurse"
-              href="<?php echo $url_helper;?>Schwimmkurse">SCHWIMMKURSE</a>
+              href="<?php echo $url_helper;?>Schwimmkurse.php">SCHWIMMKURSE</a>
           </li>
 
 
 
           <li class="nav-item ">
             <a class="nav-link <?= $aktivkursort;  ?> nav-link-kursort"
-              href="<?php echo $url_helper;?>Kursorte">KURSORT</a>
+              href="<?php echo $url_helper;?>Kursorte.php">KURSORT</a>
           </li>
 
 
           <li class="nav-item ">
-            <a class="nav-link <?= $aktivueberuns;  ?> nav-link-ueber" href="<?php echo $url_helper;?>Ueber_uns">ÜBER
+            <a class="nav-link <?= $aktivueberuns;  ?> nav-link-ueber" href="<?php echo $url_helper;?>Ueber_uns.php">ÜBER
               UNS</i></a>
           </li>
 
 
           <li class="nav-item ">
             <a class="nav-link <?= $aktivkontakt; ?> nav-link-kontakt"
-              href="<?php echo $url_helper;?>Kontakt">KONTAKT</a>
+              href="<?php echo $url_helper;?>Kontakt.php">KONTAKT</a>
           </li>
 
         </ul>
 
 
-        <a class="btn nav-link-login" href="<?php echo $url_helper;?>login" target="_blank">LOGIN</a>
+        <a class="btn nav-link-login" href="<?php echo $url_helper;?>login.php" target="_blank">LOGIN</a>
 
       </div>
 

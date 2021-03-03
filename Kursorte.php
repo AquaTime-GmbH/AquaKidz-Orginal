@@ -1,6 +1,9 @@
- <!-- organisation der url -->
+<?php
+session_start();
+?>
+<!-- organisation der url -->
  <?php 
- session_start();
+    
 $url_helper= "";
 /* einbingung der database connection*/
 include  $url_helper .'include/database.php';
@@ -120,7 +123,7 @@ $maps_marker = mysqli_query($con_mysqli,"SELECT fm_bad_ort from kurse group by f
      </script>
 
      <div class="background-kursort">
-
+   
          <div class="container">
              <section>
                  <div class="row">
@@ -147,7 +150,7 @@ $maps_marker = mysqli_query($con_mysqli,"SELECT fm_bad_ort from kurse group by f
                                      <div class="font-color">
                                          <h1 class="card-title card-title-style" style="font-size:32px">Finde deinen Ort
                                          </h1>
-
+                                         <h1>test</h1>
                                          <label class="col-4 col-form-label first-card-text font-color">Plz</label>
                                          <div class="col-12">
                                              <input id="plz_input1" onKeyUp="myFunction2(this)"
@@ -408,7 +411,7 @@ var map = null;
 
 
 <!-- $maps_bad_name_druck = mysqli_query($con_mysqli,"SELECT fm_bad_name_druck from kurse group by fm_bad_name_druck "); -->
-<?php 
+ <?php 
 
 $maps_bad_ort = mysqli_query($con_mysqli,"SELECT fm_bad_ort from kurse group by fm_bad_name_druck ");
 
@@ -419,7 +422,7 @@ echo $row;
 
 
 }
-?>
+?> 
 
 
 

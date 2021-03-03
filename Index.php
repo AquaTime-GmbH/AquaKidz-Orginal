@@ -1,4 +1,14 @@
 <?php
+session_start();
+
+
+if(!isset($_SESSION['userid'])) {
+    header("location: login.php");
+    exit();
+}
+
+// Abfrage der Nutzer ID vom Login
+$userid = $_SESSION['userid'];
 
 // organisation der url
 $url_helper= "";
@@ -141,7 +151,7 @@ while($row = mysqli_fetch_array($result))
                     <p class="card-text first-card-text font-color">Sichere und altersgerechte Kurse für Babys und
                         Kinder.
                         Denn schwimmen lernen soll Spass machen.</p>
-                    <form action="search_function" method="post">
+                    <form action="search_function.php" method="post">
                         <label class="col-4 col-form-label first-card-text font-color">Plz</label>
 
 

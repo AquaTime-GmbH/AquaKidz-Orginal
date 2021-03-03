@@ -29,26 +29,26 @@
 
             if($viewsearch_alt == "1"){
                 
-                echo '<script> window.location="Kursarten/AquaBaby";</script>';
+                echo '<script> window.location="Kursarten/AquaBaby.php";</script>';
            //if anfrage wenn bestimmtes gewählt wird nach bestimmten marken filtern
                     
                     exit();
                     
 
                 }elseif($viewsearch_alt == "2"){
-                    echo ' <script> window.location="Kursarten/AquaKidz-Mini";</script>';
+                    echo ' <script> window.location="Kursarten/AquaKidz-Mini.php";</script>';
                    
                     exit();
                     
                   
                 }elseif($viewsearch_alt == "4"){
-                    echo ' <script> window.location="Kursarten/AquaKidz-Maxi";</script>';
+                    echo ' <script> window.location="Kursarten/AquaKidz-Maxi.php";</script>';
    
                     exit();
                     
                     
                 }elseif($viewsearch_alt == "7"){
-                    echo ' <script> window.location="Kursarten/AquaKidz-Mixed";</script>';
+                    echo ' <script> window.location="Kursarten/AquaKidz-Mixed.php";</script>';
                  
                     exit();
                 }
@@ -59,7 +59,7 @@
                 else{
                     setcookie("kursort","$viewsearch_ort",time()+(3600*168)); 
 
-                   echo ' <script> window.location="Kursorte";</script>';
+                   echo ' <script> window.location="Kursorte.php";</script>';
                    
                     exit();
                    

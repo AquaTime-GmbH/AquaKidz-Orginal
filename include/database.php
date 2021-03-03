@@ -8,7 +8,7 @@ $db_host = "localhost";
 $db_user = "web156";
 
 //PASSWORT
-$db_password = "tpVjHF1R";
+$db_password = "nexruK-joqjyn-8bitqy";
 
 //DATENBANK
 $db_database = "usr_web156_22";
@@ -36,11 +36,14 @@ $con_mysqli_connect = mysqli_connect("$db_host", "$db_user", "$db_password", "$d
 ///////////
 $pdo_PDO = new PDO('mysql:host=' . $db_host . ';dbname=' . $db_database . '', "$db_user", "$db_password");
 
+$pdo = new PDO('mysql:host=' . $db_host . ';dbname=' . $db_database . '', "$db_user", "$db_password");
 ///////////
 //VERSION 3
 ///////////
 $con_mysqli = new mysqli($db_host, $db_user, $db_password, $db_database);
 
+//login
+$con_Login = new mysqli($db_host, $db_user, $db_password, $db_database);
 
 //DATENBANK ERROR HANDELING FOR 
 

@@ -1312,12 +1312,13 @@ select {
 }
 
 .hintergrundbild-card5 {
-  background-image: url(../images/Banner.PNG);
+  background-image: url("../images/Banner.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
   width: 100%;
+  text-shadow: #000;
   height: 943px;
   padding: 10px;
   position: absolute;
