@@ -56,9 +56,9 @@ include  $url_helper .'include/database.php';
 <body>
 
 
-    <!--navbar wird eingebunden-->
+    
     <?php
-
+//------------- Variabeln für active navbar labels-------------//
 $aktivschwimmkurse = '';
 $aktivkursort = '';
 $aktivueberuns = '';
@@ -66,16 +66,20 @@ $aktivkontakt = '';
 $aktivlogin = '';
 
 
+//------------------navbar wird eingebunden---------------//
 include $url_helper .'include/navbar.php';
 
 ?>
     <!--------------ende der einbindung------------------>
 
     <?php 
+    // übergabe der kurse tabelle in variable result
     $result = mysqli_query($con_mysqli,"SELECT * FROM kurse ");
 
+// schleife nimmt ergebnis von result und stellt es variable row zur verfügung
 while($row = mysqli_fetch_array($result))
 {  
+    //spalten in datenbank abfragen
     $sql_kurs_id = $row['kurs_id'];
     $sql_fm_kurs_id = $row['fm_kurs_id'];
     $sql_fm_bad_id = $row['fm_bad_id'];
@@ -112,8 +116,9 @@ while($row = mysqli_fetch_array($result))
     $sql_counter = $row['counter'];
     $sql_updated_at = new DateTime($row['updated_at']);
     $sql_created_at = new DateTime($row['created_at']);
+    //spalten in datenbank ende
 }
-
+//
   if( isset($_COOKIE['kursort'])) {
     $cookie_kursort = $_COOKIE["kursort"]; 
     } else {
