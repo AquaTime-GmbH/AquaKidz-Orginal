@@ -107,7 +107,7 @@ while($row = mysqli_fetch_array($result_mitarbeiter))
   </script>
 
   <script defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAjTbeyDhVSfoZW2bolDIXd9L6msWNqAl8&callback=initMap">
+    src="https://maps.googleapis.com/maps/api/js?key=XXXX&callback=initMap">
   </script>
 
 </head>
